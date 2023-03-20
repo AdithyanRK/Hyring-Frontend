@@ -21,12 +21,12 @@ const NavbarComponent = ({className}) => {
 >
   <div className="flex justify-between md:px-10 items-center w-full text-xl font-medium   ">
     <div className="scale-[0.6] xl:scale-[1]" >
-      <Logo />
+    <Link href={"/"} scroll={false} ><Logo /></Link>
     </div>
     <div className="md:flex gap-10 items-center hidden">
-      <Link href={"#whyIndia"} scroll={false} >Why India</Link>
-      <Link href={""}>Pricing</Link>
-      <Link href={"/contact-us"}>Contact Us</Link>
+      <Link href={"/#whyIndia"} scroll={false} >Why India</Link>
+      <Link href={"/#pricing" } scroll={false}>Pricing</Link>
+      <Link href={"/contact-us"} scroll={false}>Contact Us</Link>
     </div>
     <div className="flex gap-1 md:gap-6 items-center">
     <Link href={""} className="text-base md:text-xl">Login</Link>

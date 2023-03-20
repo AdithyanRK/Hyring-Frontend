@@ -6,7 +6,7 @@ import PricingAccordian from "./pricing-section-accordian-wrapper";
 
 export default function PricingSection() {
   return (
-    <div className="mt-5 lg:mt-20 mx-auto flex w-[85vw] xl:w-[80vw] 2xl:w-[75vw] flex-col items-center ">
+    <div className="mt-5 lg:mt-20 mx-auto flex w-[85vw] xl:w-[80vw] 2xl:w-[75vw] flex-col items-center  " id="pricing">
       <div className="text-center my-5 md:my-10 w-full text-3xl md:text-4xl lg:text-[58px] font-bold">Pricing</div>
 
       <div className="flex gap-5 flex-col w-full  lg:flex-row">

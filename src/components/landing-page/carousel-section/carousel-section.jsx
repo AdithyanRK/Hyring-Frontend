@@ -65,7 +65,7 @@ export default function CarouselSection() {
   const settings1 = {
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 4000,
+    speed: 5000,
     cssEase: 'linear',
     pauseOnFocus: false,
     pauseOnHover: false,

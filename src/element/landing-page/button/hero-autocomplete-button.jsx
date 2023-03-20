@@ -37,6 +37,7 @@ export default function HeroAutocompleteButton({ className }) {
     </InputAdornment>} sx={{"& .MuiOutlinedInput-notchedOutline":{display:"none"} }} {...params}  />}
     /> */}
       <Autocomplete
+      defaultValue="Product Designer"
         sx={{
           display: "inline-block",
           "& input": {
@@ -49,6 +50,7 @@ export default function HeroAutocompleteButton({ className }) {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
+
           },
          
         }}

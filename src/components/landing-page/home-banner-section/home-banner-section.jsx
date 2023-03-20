@@ -22,7 +22,6 @@ import PlayVideoIcon from "@/assets/icons/landing-page/play_video";
 import HomeListComponent from "./home-list-items-component/home-list-items-component";
 
 const HomeBannerSection = () => {
-
   const lottieOptions = {
     animationData: HomeBannerAnimation,
     loop: true,
@@ -32,22 +31,22 @@ const HomeBannerSection = () => {
     autoplay: true,
     autoplaySpeed: 0,
     speed: 8000,
-    cssEase: 'linear',
+    cssEase: "linear",
     rtl: false,
     variableWidth: true,
     adaptiveHeight: true,
-    infinte:true,
+    infinte: true,
     swipeToSlide: true,
-    
   };
 
-  const RunnerList =({text,icon})=>{
-    return(
-      <div className=" flex w-fit items-center text-white gap-2 "> {icon} {text}</div>
-      
-    )
-  }
- 
+  const RunnerList = ({ text, icon }) => {
+    return (
+      <div className=" flex w-fit items-center text-white gap-2 ">
+        {" "}
+        {icon} {text}
+      </div>
+    );
+  };
 
   return (
     <div className="w-[100vw] overflow-hidden ">
@@ -59,26 +58,33 @@ const HomeBannerSection = () => {
               <span className="text-secondary-orange">Remote Hyring</span>
             </h1>
             <p className=" text-xl xl:text-3xl mt-5 xl:mt-[40px] mb-8 xl:mb-[60px] text-center lg:text-start">
-              Hire from a pool of 
-              <span className="relative mx-2 xl:mx-3" >
-              <span className="absolute -left-[18px] -top-4 xl:-left-1 xl:-top-3 scale-[0.75] xl:scale-[1.1]  "><TextMark id={"text-mark"} /></span>
-                vetted 
-              </span>candidates.
+              Hire from a pool of
+              <span className="relative mx-2 xl:mx-3">
+                <span className="absolute -left-[18px] -top-4 xl:-left-1 xl:-top-3 scale-[0.75] xl:scale-[1.1]  ">
+                  <TextMark id={"text-mark"} />
+                </span>
+                vetted
+              </span>
+              candidates.
             </p>
             <div className="text-lg xl:text-2xl font-medium flex flex-wrap gap-0 md:gap-2 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
-              I Need <HeroAwitchButton className="scale-[0.8] md:scale-[1]" /> in <HeroAutocompleteButton className="scale-[0.8] md:scale-[1]" />{" "}
+              I Need <HeroAwitchButton className="scale-[0.8] md:scale-[1]" />{" "}
+              in <HeroAutocompleteButton className="scale-[0.8] md:scale-[1]" />{" "}
               <HeroSubmitButton className="scale-[0.8] md:scale-[1]" />
             </div>
               <HomeListComponent className="hidden lg:block"/>
           </div>
           <div className="relative flex basis-2/5  lg:scale-[1.3] ">
-            <Lottie options={lottieOptions}   />
+            <Lottie options={lottieOptions} />
             <div className="absolute bottom-[1%] left-[10%] xl:bottom-[13%] xl:left-[17%] lg:bottom-[20%] lg:left-[15%] md:bottom-[14%] md:left-[18%] sm:bottom-[10%] sm:left-[16%]">
               {/* <div className="absolute bottom-[13%] left-[17%] "> */}
-              <div className="relative">
+              <div className="relative bg-transparent">
                 <PlayVideoIcon />
-                <div className="absolute bottom-[39%] left-[43%] z-10  ">
-                  <FaPlay style={{color:"red"}}  color={"#46574d"} size={22} />
+                <div className="absolute bottom-[39%] left-[43%] z-90  ">
+                  <FaPlay
+                    color={"#FFB65E"}
+                    size={22}
+                  />
                 </div>
               </div>
             </div>
@@ -91,30 +97,23 @@ const HomeBannerSection = () => {
 
       <div className="w-[102vw] -rotate-3 border border-primary-brown h-[82px] flex items-center -ml-2 mb-20">
         <div className="h-[71px] bg-primary-brown w-full">
-        
-        <Slider {...settings1} className="py-5 ">
-          {
-            [{text:"UI UX Designer",icon:<Union/>},
-             {text:"Frontend Developer",icon:<Diamond/>},
-             {text:"Data Analyst",icon:<Circle/>},
-             {text:"Azure Cloud Engineer",icon:<Rectangle/>},
-             {text:"Graphics Designer",icon:<Triangle/>},
-             {text:"Product Designer",icon:<Star6/>},
-             {text:"System Architect",icon:<Polygon/>},
-            ].map((data,index)=>(
+          <Slider {...settings1} className="py-5 ">
+            {[
+              { text: "UI UX Designer", icon: <Union /> },
+              { text: "Frontend Developer", icon: <Diamond /> },
+              { text: "Data Analyst", icon: <Circle /> },
+              { text: "Azure Cloud Engineer", icon: <Rectangle /> },
+              { text: "Graphics Designer", icon: <Triangle /> },
+              { text: "Product Designer", icon: <Star6 /> },
+              { text: "System Architect", icon: <Polygon /> },
+            ].map((data, index) => (
               <RunnerList text={data.text} icon={data.icon} key={index} />
-            ))
-          }
-        </Slider>
+            ))}
+          </Slider>
         </div>
       </div>
-
-         
-
     </div>
   );
 };
 
 export default HomeBannerSection;
-
-

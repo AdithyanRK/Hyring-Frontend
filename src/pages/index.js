@@ -1,20 +1,18 @@
-
-
 import Head from "next/head";
 import HomeBannerSection from "@/components/landing-page/home-banner-section/home-banner-section";
 import CarouselSection from "@/components/landing-page/carousel-section/carousel-section";
 import PricingSection from "@/components/landing-page/pricing-section/pricing-section";
 import TalentSection from "@/components/landing-page/talents-section/talents-section";
 import Footer from "@/common/landing-page/footer/footer";
-import { useScroll, useTransform ,motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
 import PromiseSection from "@/components/landing-page/promises-section/promises-section";
 import HomePromisesSection from "@/components/landing-page/our-promises-section/home-promises-section";
 
 export default function Home() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 3120], [0, 154]);
-  const rotate = useTransform(scrollY, [0, 3120], [-1080, 0]);
+  const y = useTransform(scrollY, [0, 4800], [0, 154]);
+  const rotate = useTransform(scrollY, [0, 4800], [-1080, 0]);
   return (
     <>
       <Head>
@@ -41,11 +39,9 @@ export default function Home() {
         {/* <HomePromisesSection /> */}
         <TalentSection />
         <CarouselSection />
-        <PricingSection/>
-        <Footer/>
-       
+        <PricingSection />
+        <Footer />
       </>
-
     </>
   );
 }

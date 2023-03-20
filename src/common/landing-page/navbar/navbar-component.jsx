@@ -37,7 +37,7 @@ const NavbarComponent = ({className}) => {
     <div onClick={()=>setIsNavOpen(!isNavOpen)} className={`w-8 md:hidden h-8 border border-primary-brown rounded-[2px] bg-custom-green cursor-pointer flex justify-center items-center  `}>
           <div className={`${isNavOpen ? "rotate-45 delay-[600ms] ease-in-out duration-300" : "" }`}>
           <span className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out mt-1 block ${isNavOpen ? "delay-300 translate-y-[3px]" : ""}`}></span>
-          <span className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out mt-1 block ${isNavOpen ? "w-0" : ""}`}></span>
+          <span className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out mt-1 block ${isNavOpen ? "w-[0px]" : ""}`}></span>
           <span className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out mt-1 block ${isNavOpen ? " delay-300  -translate-y-[9px] rotate-90" : ""}`}></span>
           </div>
     </div>

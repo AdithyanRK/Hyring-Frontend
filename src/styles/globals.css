@@ -1,107 +1,311 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* @font-face {
+  font-family: "Helvetica Neue TH Pro2";
+  src: url("../fonts/HelveticaNeueLTPro-Th.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueLTPro-Th.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  ascent-override: 100%;
+  descent-override: 20%;
+  line-gap-override: normal;
+  advance-override: 10;
+} */
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+@font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../../public/fonts/whyte/WhyteInktrap-Regular.eot');
+  src: local('Whyte Inktrap Regular'), local('WhyteInktrap-Regular'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.woff2') format('woff2'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.woff') format('woff'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  ascent-override: 100%;
+  descent-override: 20%;
+  line-gap-override: normal;
+  advance-override: 10;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+html{
+  scroll-behavior:smooth
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  color: #462b34;
+  font-family: 'Whyte Inktrap'!important ;
+
 }
 
-html,
+
+
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  color: #462b34;
+  background-image: url("../../public/Rectangle.svg");
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.slick-prev::before {
+  content: "" !important;
+}
+.slick-next::before {
+  content: "" !important;
+}
+.slick-prev {
+  left: -45px !important;
+  margin-top: -20px !important;
+}
+.slick-next {
+  right: -10px !important;
+  margin-top: -20px !important;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.slick-slide > div {
+  padding: 0 10px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media screen and (min-width: 640px) {
+  .slick-prev {
+    left: -65px !important;
+    margin-top: -20px !important;
   }
+  .slick-next {
+    right: -40px !important;
+    margin-top: -20px !important;
+  }
+}
+
+.card-ani {
+  animation: circle 0.5s;
+}
+
+@keyframes circle {
+  0% {
+    clip-path: circle(10%);
+  }
+  100% {
+    clip-path: circle(75%);
+  }
+}
+
+#text-mark {
+  overflow: visible;
+}
+
+#text-mark path {
+  animation: draw 1s linear forwards;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 535;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+#smile-expression path:first-child {
+  animation: draw1 0.5s linear forwards;
+}
+#smile-expression path:nth-child(2) {
+  animation: draw1 0.5s linear forwards;
+  animation-delay: 1s;
+}
+
+#smile-expression path:last-child {
+  animation: draw1 0.5s linear forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes draw1 {
+  from {
+    stroke-dashoffset: 23;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* contact page hover effect  */
+
+.contact-tab {
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.4s ease;
+  z-index: 1;
+}
+.contact-tab:before,
+.contact-tab:after {
+  transition: 0.3s ease;
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.contact-tab:before {
+  top: 0;
+  right: 50%;
+  bottom: 0;
+  left: 50%;
+}
+.contact-tab:hover:before {
+  right: 0;
+  left: 0;
+}
+
+.contact-tab:hover + div {
+  background-color: #462b34;
+  opacity: 1;
+}
+.contact-tab:hover > div > div >  svg:first-child {
+  fill: white;
+}
+
+
+/* contact page arrow bounce animation  */
+
+.contact-tab:hover > div > div > div >.arrow-bounce{
+  animation: arrowBounce 0.7s linear forwards;
+}
+@keyframes arrowBounce {
+  0% {
+    left: 0%;
+  }
+  40% {
+    left:79%;
+    
+  }
+   60% {
+    left: 55%;
+
+  }
+  80%{
+    left: 79%;
+  }
+  90%{
+    left: 70%;
+  }
+  100% {
+    left: 79%;
+
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .contact-tab:hover > div > div {
+    display: block;
+  }
+  
+}
+
+
+.get{
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+
+}
+.get::before{
+  content: "";
+  width: 344px;
+  height: 379px;
+  border-radius: 20px;
+  position: absolute;
+  top: -242px;
+  left: -35px;
+  z-index: -1;
+  background-color: white;
+
+}
+.get:hover:before{
+  animation: circle 0.5s;
+  background-color: #FFB65E;
+}
+
+
+
+.animate-glow {
+  overflow: hidden;
+}
+
+.animate-glow:after {
+  content: '';
+  top: 0;
+  left: 10;
+  width: 120%;
+  height: 50%;
+  transform: translateX(50%);
+  position: absolute;
+  z-index: 5;
+  animation: slide 2s infinite;
+  animation-direction: reverse;
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.579) 25%, rgba(255, 255, 255, 0.20) 50%, rgba(255, 255, 255, 0.579) 75%, rgba(255, 255, 255, 0.20) 100%);
+  transform: translate(100%, -50%) rotate(45deg);
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translate(100%) rotate(45deg);
+  }
+}
+
+
+
+/* Promise  section */
+.promises_progresses {
+  scroll-snap-type: y mandatory;
+}
+
+.promise_card_section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+}
+
+.promise_card_section > div {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+}
+.rotate-to-0 {
+  transition: ease-out 0.75s 0.1s;
+  transform: rotate(0deg);
+}
+
+.rotate-to-180 {
+  transition: all 0.75s 0.25s;
+  transform: rotate(220deg);
+}
+.rotate-to-220 {
+  transition: all 0.75s 0.25s;
+  transform: rotate(180deg);
+}
+.rotate-to-360 {
+  transition: all 0.75s 0.25s;
+  transform: rotate(360deg);
+}
+
+.promise_bg_image {
+  background-image: url("../../public/Rectangle.svg");
 }

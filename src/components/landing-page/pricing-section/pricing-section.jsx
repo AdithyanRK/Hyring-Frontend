@@ -7,14 +7,15 @@ import PricingAccordian from "./pricing-section-accordian-wrapper";
 export default function PricingSection() {
   return (
     <div className="mt-5 lg:mt-20 mx-auto flex w-[85vw] xl:w-[80vw] 2xl:w-[75vw] flex-col items-center  " id="pricing">
-      <div className="text-center my-5 md:my-10 w-full text-3xl md:text-4xl lg:text-[58px] font-bold">Pricing</div>
+      <div className="text-center my-5 md:my-10 w-full text-3xl md:text-4xl lg:text-[58px] font-bold pb-3">Pricing</div>
 
-      <div className="flex gap-5 flex-col w-full  lg:flex-row">
-        <div className="flex gap-3 basis-1/4 items-center flex-col sm:justify-around sm:flex-row lg:flex-col">
+      <div className="flex gap-5 flex-col w-full  md:flex-row">
+        <div className="flex gap-3 basis-1/4 items-center flex-col xs:justify-around xs:flex-row md:flex-col">
           <PricingSectionCard
             title={"Job Seekers"}
             svg={<JobPriceSvg />}
             price={0}
+            subText={<span className="invisible text-base font-normal"> Dummy text dummy text</span>}
             starColor={"custom-yellow"}
             boxColor={"custom-blue"}
           />

@@ -211,13 +211,13 @@ body {
 }
 
 
-.get{
+.hover-bgCircle-fill{
   position: relative;
   overflow: hidden;
   background-color: white;
 
 }
-.get::before{
+.hover-bgCircle-fill::before{
   content: "";
   width: 344px;
   height: 379px;
@@ -229,7 +229,7 @@ body {
   background-color: white;
 
 }
-.get:hover:before{
+.hover-bgCircle-fill:hover:before{
   animation: circle 0.5s;
   background-color: #FFB65E;
 }

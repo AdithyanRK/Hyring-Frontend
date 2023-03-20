@@ -17,15 +17,15 @@ export default function PricingSectionCard({
   return (
     <BoxTheme
       className={`${className} h-[313px]   lg:h-[398px] w-fit cursor-pointer  `}
-      boxStyle={`w-[300px] lg:w-[344px] h-[300px] lg:h-[379px] border-2 bg-white rounded-[20px] border-primary-brown    `}
+      boxStyle={`w-[240px]  lg:w-[344px] h-[300px] lg:h-[379px] border-2 bg-white rounded-[20px] border-primary-brown    `}
       bgBoxStyle={`w-full h-[300px] lg:h-[379px]  rounded-[20px] ${
         hover ? "bg-primary-brown card-ani" : ""
       }   top-[13px] left-[9px] `}
     >
       <div className="w-full h-full px-4 lg:px-8 py-4 lg:py-12">
         <div>{svg}</div>
-        <div className="text-2xl lg:text-[26px] text-medium">{title}</div>
-        <div className="text-3xl lg:text-[40px] text-medium">
+        <div className="text-lg md:text-2xl lg:text-[26px] text-medium">{title}</div>
+        <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium">
           ${price} <span className="text-base font-normal">{subText}</span>
         </div>
         <div
@@ -35,8 +35,8 @@ export default function PricingSectionCard({
 
         >
           <GetStartedButton
-            className=" mt-7 lg:mt-14 "
-            
+            className=" mt-14 md:mt-10 lg:mt-24 "
+            hover="hover-bgCircle-fill"
           />
         </div>
       </div>

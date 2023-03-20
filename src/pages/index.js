@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-      <div className=" fixed right-2 top-[50%] -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
+      <div className=" fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div
             className="flex justify-center"
             style={{
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
         <HomeBannerSection />
         <PromiseSection/>
-        <HomePromisesSection />
+        {/* <HomePromisesSection /> */}
         <TalentSection />
         <CarouselSection />
         <PricingSection/>

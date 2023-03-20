@@ -19,6 +19,7 @@ import Polygon from "@/assets/icons/landing-page/polygon";
 import TextMark from "@/assets/icons/landing-page/text-mark";
 import { MaterialUISwitch } from "@/element/landing-page/button/home-switch-element";
 import PlayVideoIcon from "@/assets/icons/landing-page/play_video";
+import HomeListComponent from "./home-list-items-component/home-list-items-component";
 
 const HomeBannerSection = () => {
 
@@ -68,18 +69,7 @@ const HomeBannerSection = () => {
               I Need <HeroAwitchButton className="scale-[0.8] md:scale-[1]" /> in <HeroAutocompleteButton className="scale-[0.8] md:scale-[1]" />{" "}
               <HeroSubmitButton className="scale-[0.8] md:scale-[1]" />
             </div>
-            <div className="sm:flex gap-10 items-center">
-              <div>
-                <HeroList>AI powered Hyring app</HeroList>
-                <HeroList>Top 5% vetted candidates</HeroList>
-                <HeroList>Robust Payroll</HeroList>
-              </div>
-              <div>
-                <HeroList>Transparent salary info - No Hanky-Panky</HeroList>
-                <HeroList>Cool Indian office space</HeroList>
-                <HeroList>Indian Taxation & Compliances</HeroList>
-              </div>
-            </div>
+              <HomeListComponent className="hidden lg:block"/>
           </div>
           <div className="relative flex basis-2/5  lg:scale-[1.3] ">
             <Lottie options={lottieOptions}   />
@@ -92,7 +82,10 @@ const HomeBannerSection = () => {
                 </div>
               </div>
             </div>
+            
+
           </div>
+          <HomeListComponent className=" lg:hidden"/>
         </div>
       </div>
 

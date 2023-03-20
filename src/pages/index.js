@@ -9,7 +9,7 @@ import Footer from "@/common/landing-page/footer/footer";
 import { useScroll, useTransform ,motion } from "framer-motion";
 import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
 import PromiseSection from "@/components/landing-page/promises-section/promises-section";
-
+import HomePromisesSection from "@/components/landing-page/our-promises-section/home-promises-section";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -38,6 +38,7 @@ export default function Home() {
         </div>
         <HomeBannerSection />
         <PromiseSection/>
+        <HomePromisesSection />
         <TalentSection />
         <CarouselSection />
         <PricingSection/>

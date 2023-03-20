@@ -1,12 +1,5 @@
 // Photos from https://citizenofnowhe.re/lines-of-the-city
-import { useEffect, useRef, useState } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
-} from "framer-motion";
+import { useEffect, useState } from "react";
 import PromiseNumber from "./promise-number";
 import { useInView } from "react-intersection-observer";
 import PersonGroup from "@/assets/icons/landing-page/person-group";
@@ -16,21 +9,16 @@ import PromiseMoney from "@/assets/icons/landing-page/promise-money";
 import Star1 from "@/assets/icons/landing-page/star1";
 import Star2 from "@/assets/icons/landing-page/star2";
 
-function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [-distance, distance]);
-}
-
 function Cards({ item, setData }) {
   const { ref, inView, entry } = useInView({
     trackVisibility: true,
     delay: 100,
   });
-
   useEffect(() => {
-    if (entry?.isVisible) {
+    if (entry?.isIntersecting) {
       setData(item.id);
     }
-  }, [entry?.isVisible]);
+  }, [entry?.isIntersecting]);
 
   return (
     <section className="promise_card_section">

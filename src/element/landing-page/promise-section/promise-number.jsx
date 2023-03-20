@@ -1,17 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import SideBadge from "@/assets/icons/landing-page/number-badge";
 import { motion } from "framer-motion";
 const PromiseNumber = ({ id }) => {
-  const ref = useRef(null);
-  useEffect(() => {}, [id]);
-  const data = [
-    { color: "#B8C8FF", number: "01" },
-    { color: "#B6ECCC", number: "02" },
-    { color: "#FFF5B7", number: "03" },
-    { color: "#FDB2B2", number: "04" },
-  ];
 
-  console.log(id, "all new");
   return (
     <>
       {id == 1 && (

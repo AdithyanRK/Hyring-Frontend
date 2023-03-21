@@ -13,7 +13,7 @@
   advance-override: 10;
 } */
 
-@font-face {
+/* @font-face {
   font-family: 'Whyte Inktrap';
   src: url('../../public/fonts/whyte/WhyteInktrap-Regular.eot');
   src: local('Whyte Inktrap Regular'), local('WhyteInktrap-Regular'),
@@ -29,8 +29,21 @@
   descent-override: 20%;
   line-gap-override: normal;
   advance-override: 10;
-}
+} */
 
+/* @font-face {
+  font-family: 'Whyte Inktrap';
+  src: url('../../public/fonts/whyte/WhyteInktrap-Regular.eot');
+  src: local('Whyte Inktrap Regular'), local('WhyteInktrap-Regular'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.woff2') format('woff2'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.woff') format('woff'),
+      url('../../public/fonts/whyte/WhyteInktrap-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
+  ascent-override: 100%;
+} */
 
 
 @tailwind base;
@@ -46,7 +59,7 @@ html{
   margin: 0;
   padding: 0;
   /* color: #462b34; */
-  font-family: 'Whyte Inktrap'!important ;
+  /* font-family: 'Whyte Inktrap'!important ; */
 
 }
 

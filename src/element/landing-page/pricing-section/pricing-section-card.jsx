@@ -1,5 +1,6 @@
 import MeshSvg from "@/assets/icons/landing-page/mesh";
 import Star4 from "@/assets/icons/landing-page/star4";
+import { useScroll, useTransform } from "framer-motion";
 import React, { useState } from "react";
 import BoxTheme from "../box-theme/box-theme";
 import GetStartedButton from "../button/get-started-button";
@@ -24,7 +25,9 @@ export default function PricingSectionCard({
     >
       <div className="w-full h-full px-4 lg:px-8 py-4 lg:py-12">
         <div>{svg}</div>
-        <div className="text-lg md:text-2xl lg:text-[26px] text-medium">{title}</div>
+        <div className="text-lg md:text-2xl lg:text-[26px] text-medium">
+          {title}
+        </div>
         <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium">
           ${price} <span className="text-base font-normal">{subText}</span>
         </div>
@@ -32,7 +35,6 @@ export default function PricingSectionCard({
           onMouseEnter={() => setHover(!hover)}
           onMouseLeave={() => setHover(!hover)}
           className="w-fit "
-
         >
           <GetStartedButton
             className=" mt-14 md:mt-10 lg:mt-24 "
@@ -45,11 +47,12 @@ export default function PricingSectionCard({
           hover ? "block" : "hidden"
         } fill-${starColor} animate-spin`}
       />
-      <div className={`overflow-hidden absolute top-0 rounded-[20px] w-full h-full  -z-1   ${
+      <div
+        className={`overflow-hidden absolute top-0 rounded-[20px] w-full h-full  -z-1   ${
           hover ? "card-ani" : "hidden"
-        }`}>
-      <MeshSvg className={`scale-[1.9] ${`bg-${boxColor}`}  opacity-50 `}/>
-
+        }`}
+      >
+        <MeshSvg className={`scale-[1.9] ${`bg-${boxColor}`}  opacity-50 `} />
       </div>
     </BoxTheme>
   );

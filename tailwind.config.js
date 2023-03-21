@@ -9,7 +9,7 @@ module.exports = {
       fontFamily: {
         primary: ["var(--font-whyte-regular)"],
         primaryMedium: ["var(--font-whyte-medium)"],
-        primaryLight: ["var(--font-whyte-medium)"],
+        primaryLight: ["var(--font-whyte-light)"],
       },
       colors: {
         "primary-brown": "#462B34",
@@ -18,38 +18,40 @@ module.exports = {
         "custom-green": "#B6ECCC",
         "custom-bg": "#FFF9F3",
         "custom-bg-secondary": "#FFF7EF",
-        "custom-red":"#FCB2B2",
-        "custom-yellow":"#FFF5B7",
-        "custom-blue":"#B9C8FF",
-        "custom-violet":"#D4B6EC",
-        "custom-grey":"#727272",
-        "custom-sandal":"#FFC682",
-        "custom-dark-green":"#61E396",
+        "custom-red": "#FCB2B2",
+        "custom-yellow": "#FFF5B7",
+        "custom-blue": "#B9C8FF",
+        "custom-violet": "#D4B6EC",
+        "custom-grey": "#727272",
+        "custom-sandal": "#FFC682",
+        "custom-dark-green": "#61E396",
       },
       keyframes: {
         scaleIn: {
-          '0%': { transform: 'scale(1)' ,opacity: 1},
-          '50%': { transform: 'scale(0)',opacity: 0 },
-          '100%': { transform: 'scale(1)',opacity: 1 },
+          "0%": { transform: "scale(1)", opacity: 1 },
+          "50%": { transform: "scale(0)", opacity: 0 },
+          "100%": { transform: "scale(1)", opacity: 1 },
         },
         scaleOut: {
-          '100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(0)' },
-          '0%': { transform: 'scale(1)' },
-        }
-       
+          "100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(0)" },
+          "0%": { transform: "scale(1)" },
+        },
       },
       animation: {
-        scaleIn: 'scaleIn 3s ease-in-out infinite',
-        scaleOut: 'scaleOut 3s ease-in-out infinite',
-        spin: "spin 5s linear infinite"
+        scaleIn: "scaleIn 3s ease-in-out infinite",
+        scaleOut: "scaleOut 3s ease-in-out infinite",
+        spin: "spin 5s linear infinite",
       },
       zIndex: {
-        '1': '1',
-        '2': '2',
-        '3': '3',
-        '4': '4',
-      }
+        1: "1",
+        2: "2",
+        3: "3",
+        4: "4",
+      },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit, minmax(15rem, 1fr))",
+      },
     },
   },
   plugins: [],

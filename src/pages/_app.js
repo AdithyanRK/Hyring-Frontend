@@ -13,6 +13,7 @@ import "../styles/globals.css";
 const clientSideEmotionCache = createEmotionCache();
 // Font
 import localFont from "next/font/local";
+import Footer from "@/common/landing-page/footer/footer";
 
 // Font declaration
 const whyte = localFont({
@@ -66,6 +67,7 @@ export default function MyApp(props) {
           <NavbarComponent />
           <CssBaseline />
           <Component {...pageProps} />
+          <Footer/>
         </ThemeProvider>
       </main>
     </CacheProvider>

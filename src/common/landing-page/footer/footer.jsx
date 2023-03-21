@@ -15,8 +15,9 @@ import Star4 from "@/assets/icons/landing-page/star4";
 
 export default function Footer({className}) {
   const currentYear = new Date().getFullYear();
+  const constraintsRef = React.useRef(null);
   const x = useMotionValue(0);
-  const [dragDirection, setDragDirection] = React.useState("");
+  const [dragDirection, setDragDirection] = React.useState("0");
 
   const handleDrag = (event, info) => {
     if (info.offset.x > 0) {
@@ -26,15 +27,15 @@ export default function Footer({className}) {
     }
   };
   return (
-    <div className='w-[95vw] mx-auto border-2 relative border-primary-brown h-[488px] rounded-[30px] pt-10 mt-96'>
-      <div className='flex justify-center -mt-96 mb-[350px]'>
+    <div className='footer w-[95vw] mx-auto border-2 relative border-primary-brown h-[488px] rounded-[30px] pt-10 mt-80'>
+      <div className='flex justify-center -mt-[280px] mb-[250px]'>
       <BoxTheme
     className={`h-[60px] ${className} w-fit  text-2xl font-medium`}
     boxStyle={
-      "w-[1100px] h-[400px] flex flex-col border bg-[#b6eccc] rounded-[8px] border-primary-brown"
+      "w-[900px] h-[300px] flex flex-col border bg-[#b6eccc] rounded-[8px] border-primary-brown"
     }
     bgBoxStyle={
-      "w-[1100px] h-[400px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
+      "w-[900px] h-[300px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
     }
   >
     <Star4 className={`absolute -top-8 -left-8 scale-[0.] ${
@@ -44,44 +45,44 @@ export default function Footer({className}) {
           dragDirection === "right" ? "block" : "hidden"
         } fill-custom-blue animate-spin`}/>
     <div className='flex w-full justify-between'>
-      <div className="flex flex-col w-[30%] gap-y-3 items-start ml-10">
+      <div className={`${dragDirection === "right" ? " opacity-25" : ""} flex flex-col w-[30%] gap-y-3 items-start ml-10`}>
       <AvatarGroup max={4}>
-      <Avatar className={`${dragDirection === "left" ? "animate-bounce" : ""}`} alt="Remy" src="/static/images/avatar/1.jpg"/>
-      <Avatar className={`${dragDirection === "left" ? "animate-bounce" : ""}`} alt="Travis" src="/static/images/avatar/2.jpg" />
-      <Avatar className={`${dragDirection === "left" ? "animate-bounce" : ""}`} alt="Cindy" src="/static/images/avatar/3.jpg" />
+      <Avatar className={`${dragDirection === "left" ? "avatar" : ""}`} alt="Remy" src="/static/images/avatar/1.jpg"/>
+      <Avatar className={`${dragDirection === "left" ? "avatar" : ""}`} alt="Travis" src="/static/images/avatar/2.jpg" />
+      <Avatar className={`${dragDirection === "left" ? "avatar" : ""}`} alt="Cindy" src="/static/images/avatar/3.jpg" />
     </AvatarGroup>
       <h2>Job Seekers</h2>
       <p className='text-lg'>Lorem ipsum dolor sit alam, consectetur adipiscing</p>
       </div>
-      <div className="flex flex-col w-[30%] gap-y-3 items-end mr-10">
+      <div className={`${dragDirection === "left" ? " opacity-25" : ""} flex flex-col w-[30%] gap-y-3 items-end mr-10`}>
       <AvatarGroup max={4}>
-      <Avatar className={`${dragDirection === "right" ? "animate-bounce" : ""}`} alt="Remy" src="/static/images/avatar/1.jpg" />
-      <Avatar className={`${dragDirection === "right" ? "animate-bounce" : ""}`} alt="Travis" src="/static/images/avatar/2.jpg" />
-      <Avatar className={`${dragDirection === "right" ? "animate-bounce" : ""}`} alt="Cindy" src="/static/images/avatar/3.jpg" />
+      <Avatar className={`${dragDirection === "right" ? "avatar" : ""}`} alt="Remy" src="/static/images/avatar/1.jpg" />
+      <Avatar className={`${dragDirection === "right" ? "avatar" : ""}`} alt="Travis" src="/static/images/avatar/2.jpg" />
+      <Avatar className={`${dragDirection === "right" ? "avatar" : ""}`} alt="Cindy" src="/static/images/avatar/3.jpg" />
     </AvatarGroup>
       <h2>Employers</h2>
       <p className='text-lg text-right'>Lorem ipsum dolor sit alam, consectetur adipiscing</p>
       </div>
     </div>
-    <div className='flex w-[93%] justify-center bg-white rounded-[50px] mt-28 border-2 border-primary-brown'>
-      <Arrow className="rotate-180 self-center"/>
-      <h2 className='text-lg text-gray-400 self-center mt-2 ml-5'>I Need Job</h2>
-      <motion.div onDrag={handleDrag} className="box" style={{x}} drag="x" dragConstraints={{left:0, right:0}}>
+    <motion.div ref={constraintsRef} className='drag-area flex w-[93%] justify-center bg-white rounded-[50px] mt-7 mb-5 border-2 border-primary-brown'>
+      <Arrow className="arrow-left self-center ml-10"/>
+      <h2 className='text-lg text-gray-400 self-center ml-5'>I Need Job</h2>
+      <motion.div onDrag={handleDrag} className="box" style={{x}} drag="x" dragConstraints={constraintsRef}>
       <Button className='bg-secondary-orange hover:bg-secondary-orange capitalize h-10 w-24 border-2 border-solid border-t-[1px] border-b-[1px] rounded-[50px] border-primary-brown ml-5 mr-5'>
         Sign up
       </Button>
       </motion.div>
-      <h2 className='text-lg self-center text-gray-400 mt-2 mr-5'>I Need Candidates</h2>
-      <Arrow className="self-center"/>
-    </div>
+      <h2 className='text-lg self-center text-gray-400 mr-5'>I Need Candidates</h2>
+      <Arrow className=" arrow-right self-center"/>
+    </motion.div>
       </BoxTheme>
       </div>
-       <div className="overflow-hidden flex gap-x-[166px] absolute top-0 w-full h-full -z-1 bg-white ">
+       {/* <div className="overflow-hidden flex gap-x-[166px] absolute top-0 w-full h-full -z-1 bg-white">
         <Mesh2 className={`scale-[1.2] opacity-[0.1]`}/>
         <Mesh2 className={`scale-[1.2] opacity-[0.1]`}/>
-      </div>
+      </div> */}
 
-      <div className='flex items-center gap-52 justify-center'>
+      <div className='flex items-center gap-24 justify-center max-w-fit m-auto'>
             <div className='basis-[300px]' >
                 <Logo2/>
                 <p className='text-2xl mt-5 mb-10'>Meet the new gold standard in remote Hyring</p>
@@ -100,8 +101,8 @@ export default function Footer({className}) {
                 <p className='text-lg'>Terms & Conditions</p>
                 <p className='text-lg'>Cancellation Policy</p>
             </div>
-            <div className='flex flex-col gap-y-16 mt-7'>
-            <div className='flex flex-col gap-y-5'>
+            <div className='flex flex-col gap-y-12 mt-7'>
+            <div className='flex flex-col gap-y-7'>
             <h2 className='text-[22px] font-medium'>Social</h2>
             <div className='flex items-center gap-5'>
               <a href='https://in.linkedin.com/company/hyring-com' target='_blank'>
@@ -115,7 +116,7 @@ export default function Footer({className}) {
             </div>
 
             </div>
-            <div className='flex flex-col gap-y-5'>
+            <div className='flex flex-col gap-y-7'>
             <h2 className='text-[22px] font-medium'>Subscribe Newsletter</h2>
             <div className='flex items-center gap-5'>
             <BoxTheme
@@ -142,7 +143,7 @@ export default function Footer({className}) {
             </div>
             </div>
       </div>
-      <div className='border-t-[1px] border-[#593a25] justify-center flex pt-5 border-solid mt-16 ml-24 mr-24'>
+      <div className='border-t-[1px] border-[#593a25] justify-center flex pt-3 border-solid mt-16 ml-24 mr-24'>
       Copyright © {currentYear} Hyring. All rights reserved.
       </div>
     </div>

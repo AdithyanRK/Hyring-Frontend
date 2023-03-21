@@ -2,6 +2,7 @@ import EmployerPriceSvg from "@/assets/icons/landing-page/emploer-pice-svg";
 import JobPriceSvg from "@/assets/icons/landing-page/job-price-svg";
 import PricingSectionCard from "@/element/landing-page/pricing-section/pricing-section-card";
 import React from "react";
+import CustomizedAccordions from "./acordian";
 import PricingAccordian from "./pricing-section-accordian-wrapper";
 
 export default function PricingSection() {
@@ -10,12 +11,12 @@ export default function PricingSection() {
       <div className="text-center my-5 md:my-10 w-full text-3xl md:text-4xl lg:text-[58px] font-bold pb-3">Pricing</div>
 
       <div className="flex gap-5 flex-col w-full  md:flex-row">
-        <div className="flex gap-3 basis-1/4 items-center flex-col xs:justify-around xs:flex-row md:flex-col">
+        <div className="flex gap-7 md:gap-3 basis-1/4 items-center flex-col xs:justify-around md:justify-between xs:flex-row md:flex-col">
           <PricingSectionCard
             title={"Job Seekers"}
             svg={<JobPriceSvg />}
             price={0}
-            subText={<span className="invisible text-base font-normal"> Dummy text dummy text</span>}
+            subText={<div className="invisible text-base font-normal pt-3 md:hidden">  text dummy text</div>}
             starColor={"custom-yellow"}
             boxColor={"custom-blue"}
           />

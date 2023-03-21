@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -11,15 +11,20 @@ import CarouselSectionTabs from "@/element/landing-page/carousel-section/carouse
 
 
 export default function CarouselSection() {
-  const [slide, setSlide] = useState(0);
   const [dataIndex, setDataIndex] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      let slide = document.querySelector(".slick-active");
-      setDataIndex(slide.getAttribute("data-index"));
-    }, 0);
-  }, [slide]);
+
+
+
+  let getDataIndex =()=>{
+    setTimeout(()=>{
+      let slide = document.querySelector("#main-slider .slick-active .slide-item ");
+      setDataIndex(slide.getAttribute("data"));
+    },0)
+   
+  }
+  
+ 
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -29,7 +34,7 @@ export default function CarouselSection() {
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
-        <div onClick={() => setSlide(!slide)}>
+        <div onClick={() =>{  getDataIndex()}}>
           <SliderButton className="scale-[0.5] xs:scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1]" />
         </div>
       </div>
@@ -44,7 +49,7 @@ export default function CarouselSection() {
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
-        <div onClick={() => setSlide(!slide)}>
+        <div onClick={() => {getDataIndex()}}>
           <SliderButton IconRotate={"rotate-180"} className="scale-[0.5] xs:scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1]" />
         </div>
       </div>
@@ -98,11 +103,11 @@ export default function CarouselSection() {
       </div>
       <div className=" border sm:border-2 border-primary-brown mt-[22px] lg:mt-[44px] mb-6"></div>
 
-      <div className="px-[30px] xs:px-[45px] sm:px-[65px]">
+      <div className="px-[30px] xs:px-[45px] sm:px-[65px]"  id={"main-slider"}>
         <Slider {...settings}>
-            <CarouselSectionCard1 />
-            <CarouselSectionCard2 />
-            <CarouselSectionCard3 />
+            <div className="slide-item" data={0}><CarouselSectionCard1/></div>
+            <div className="slide-item" data={1}><CarouselSectionCard2 /></div>
+            <div className="slide-item" data={2}><CarouselSectionCard3 /></div>
         </Slider>
       </div>
 

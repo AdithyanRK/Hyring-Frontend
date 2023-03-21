@@ -5,12 +5,12 @@ import PricingSectionAccordian from './pricing-section-accordian'
 export default function PricingAccordian({className}) {
   return (
     <BoxTheme
-        className={`${className} h-fit   w-full cursor-pointer `}
+        className={`${className} h-fit lg:h-[856px]  w-full cursor-pointer `}
         boxStyle={
-          "h-[660px] lg:h-[795px] w-full border-2 bg-white rounded-[23px] border-primary-brown"
+          "h-fit lg:h-[845px] w-full border-2 bg-white rounded-[23px] border-primary-brown"
         }
         bgBoxStyle={
-          "h-[660px] w-full lg:h-[795px] rounded-[23px]  bg-primary-brown top-[11px] left-[9px]"
+          " w-full h-full  lg:h-[845px]  rounded-[23px]  bg-primary-brown top-[11px] left-[9px]"
         }
       >
          <div className='w-full h-full p-3 md:p-12'>

@@ -17,42 +17,39 @@ export default function PricingSectionCard({
   const [hover, setHover] = useState(false);
   return (
     <BoxTheme
-      className={`${className} h-[313px]   lg:h-[398px] w-fit cursor-pointer  `}
-      boxStyle={`w-[240px]  lg:w-[344px] h-[300px] lg:h-[379px] border-2 bg-white rounded-[20px] border-primary-brown    `}
-      bgBoxStyle={`w-full h-[300px] lg:h-[379px]  rounded-[20px] ${
-        hover ? "bg-primary-brown card-ani" : ""
+      className={`${className} h-fit w-fit cursor-pointer  `}
+      boxStyle={`w-[240px]  lg:w-[344px] h-fit  border-2 bg-white rounded-[20px] border-primary-brown    `}
+      bgBoxStyle={`w-full h-full rounded-[20px] ${
+        hover ? "bg-primary-brown animate-circleFill" : ""
       }   top-[13px] left-[9px] `}
     >
-      <div className="w-full h-full px-4 lg:px-8 py-4 lg:py-12">
+      <div className="w-full h-full px-4 lg:px-8 py-7 lg:py-11 flex flex-col gap-4 justify-center items-center md:items-start"   onMouseEnter={() => setHover(!hover)}
+          onMouseLeave={() => setHover(!hover)}
+         >
         <div>{svg}</div>
-        <div className="text-lg md:text-2xl lg:text-[26px] text-medium">
-          {title}
-        </div>
-        <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium">
+        <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">{title}</div>
+        <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium text-center md:text-left">
           ${price} <span className="text-base font-normal">{subText}</span>
         </div>
-        <div
-          onMouseEnter={() => setHover(!hover)}
-          onMouseLeave={() => setHover(!hover)}
-          className="w-fit "
-        >
+       
           <GetStartedButton
-            className=" mt-14 md:mt-10 lg:mt-24 "
-            hover="hover-bgCircle-fill"
+            className="md:mt-5 lg:mt-[70px] "
+            hover={hover}
+            boxColor="bg-primary-orange"
           />
-        </div>
       </div>
-      <Star4
-        className={`absolute -top-8 -left-8 scale-[0.] ${
+     <div className="scale-[.7] lg:scale-[1] absolute -top-8 -left-8 ">
+     <Star4
+        className={` ${
           hover ? "block" : "hidden"
         } fill-${starColor} animate-spin`}
       />
-      <div
-        className={`overflow-hidden absolute top-0 rounded-[20px] w-full h-full  -z-1   ${
-          hover ? "card-ani" : "hidden"
-        }`}
-      >
-        <MeshSvg className={`scale-[1.9] ${`bg-${boxColor}`}  opacity-50 `} />
+     </div>
+      <div className={`overflow-hidden absolute top-0 rounded-[20px] w-full h-full   -z-1   ${
+          hover ? "animate-circleFill" : "hidden"
+        }`}>
+      <MeshSvg className={`scale-[1.9] ${`bg-${boxColor}`} mt-8 opacity-50 `}/>
+
       </div>
     </BoxTheme>
   );

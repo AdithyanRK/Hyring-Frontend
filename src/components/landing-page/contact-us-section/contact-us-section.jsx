@@ -9,12 +9,13 @@ import React from "react";
 
 export default function ContactUsSection() {
   return (
-    <div className=" lg:w-[90vw] mx-auto mb-20">
+    <div className=" lg:w-[90vw] mx-auto mb-20 mt-3 md:mt-20">
       <h1 className="font-bold justify-center text-[36px] md:text-[48px] lg:text-[58px] flex mx-auto  items-center flex-wrap w-[350px]  xs:w-[105%]  lg:w-full">
         <span className="whitespace-nowrap">Feel Free to</span>
-        <span className="relative mr-[12px] xs:mx-[12px] md:mx-[20px]  lg:mx-[24px]">
+        <span className="relative mr-[12px
+        ] xs:mx-[12px] md:mx-[20px]  lg:mx-[24px]">
           <span className="absolute -left-[72px]  sm:-left-[100x] -top-[28px] md:-left-[46px] md:-top-[20px] lg:-left-[26px] lg:-top-[14px] scale-[0.58] md:scale-[0.74] lg:scale-[0.9]  ">
-            <TextMark2 id={"text-mark"} />
+            <TextMark2  />
           </span>
           Contact
         </span>
@@ -23,7 +24,7 @@ export default function ContactUsSection() {
           <Smile  />
         </span>
         <span className="scale-[0.7] lg:scale-[1] -ml-[34px] sm:-ml-[30px] md:-ml-[24px] lg:ml-0 -mt-[48px] lg:-mt-[64px]">
-            <SmileExpression id={"smile-expression"}/>
+            <SmileExpression />
         </span>
       </h1>
       <ContactTabCommon icon={<Mail className="fill-custom-blue"/>} text1={"Drop Hello"} text2={"hello@hyring.com"} color={1}/>

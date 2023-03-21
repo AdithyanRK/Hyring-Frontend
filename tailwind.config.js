@@ -33,15 +33,21 @@ module.exports = {
           "100%": { transform: "scale(1)", opacity: 1 },
         },
         scaleOut: {
-          "100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(0)" },
-          "0%": { transform: "scale(1)" },
+          '100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0)' },
+          '0%': { transform: 'scale(1)' },
         },
+        circleFill: {
+          "0% ":{clipPath: 'circle(10%)'},
+          "100% ":{clipPath: 'circle(75%)'}
+        }
+       
       },
       animation: {
-        scaleIn: "scaleIn 3s ease-in-out infinite",
-        scaleOut: "scaleOut 3s ease-in-out infinite",
+        scaleIn: 'scaleIn 3s ease-in-out infinite',
+        scaleOut: 'scaleOut 3s ease-in-out infinite',
         spin: "spin 5s linear infinite",
+        circleFill :"circleFill 0.3s linear  "
       },
       zIndex: {
         1: "1",

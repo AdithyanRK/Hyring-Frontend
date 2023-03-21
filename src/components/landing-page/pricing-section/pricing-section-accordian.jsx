@@ -8,6 +8,49 @@ import Plus from "@/assets/icons/landing-page/plus";
 import Minus from "@/assets/icons/landing-page/minus";
 import AccordianList from "@/element/landing-page/pricing-section/accordian-list";
 
+const Accordion = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  // border: `1px solid ${theme.palette.divider}`,
+  // "&:not(:last-child)": {
+  //   borderBottom: 0,
+  // },
+  // "&:before": {
+  //   display: "none",
+  // },
+  "& .MuiAccordionSummary-root":{
+      // borderBottom:"2px solid #462B34"
+  }
+  
+}));
+
+const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary
+    
+    {...props}
+  />
+))(({ theme }) => ({
+  // backgroundColor:
+  //   theme.palette.mode === "dark"
+  //     ? "rgba(255, 255, 255, .05)"
+  //     : "rgba(0, 0, 0, .03)",
+//   flexDirection: "row-reverse",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "none",
+  },
+  "& .MuiAccordionSummary-content": {
+    marginLeft: theme.spacing(1),
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  // padding: theme.spacing(2),
+  borderBottom: "2px solid #462B34",
+  paddingTop: "0px",
+  paddingBottom: "0px"
+}));
+
+
 
 export default function PricingSectionAccordian() {
   const [expanded, setExpanded] = React.useState("panel1");
@@ -25,46 +68,7 @@ export default function PricingSectionAccordian() {
     }, 0);
   }, [expanded]);
 
-  const Accordion = styled((props) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-  ))(({ theme }) => ({
-    // border: `1px solid ${theme.palette.divider}`,
-    // "&:not(:last-child)": {
-    //   borderBottom: 0,
-    // },
-    // "&:before": {
-    //   display: "none",
-    // },
-    "& .MuiAccordionSummary-root":{
-        // borderBottom:"2px solid #462B34"
-    }
-    
-  }));
-  
-  const AccordionSummary = styled((props) => (
-    <MuiAccordionSummary
-      
-      {...props}
-    />
-  ))(({ theme }) => ({
-    // backgroundColor:
-    //   theme.palette.mode === "dark"
-    //     ? "rgba(255, 255, 255, .05)"
-    //     : "rgba(0, 0, 0, .03)",
-  //   flexDirection: "row-reverse",
-    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    //   transform: "rotate(90deg)",
-    },
-    "& .MuiAccordionSummary-content": {
-      marginLeft: theme.spacing(1),
-    },
-  }));
-  
-  const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderBottom: "2px solid #462B34",
-   
-  }));
+ 
   
   return (
     <div>
@@ -72,9 +76,10 @@ export default function PricingSectionAccordian() {
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
         sx={{ "& .MuiAccordionSummary-root":{borderBottom:"2px solid #462B34"}}}
+        
       >
         <AccordionSummary  aria-controls="panel1d-content" id="panel1d-header" expandIcon={isExpanded.A1 === "true"?<Minus/> :<Plus/>}>
-          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primary">Benefits</Typography>
+          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primary py-3">Benefits</Typography>
         </AccordionSummary>
         <AccordionDetails>
            <AccordianList>New Mackbook</AccordianList>
@@ -94,7 +99,7 @@ export default function PricingSectionAccordian() {
 
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header" expandIcon={isExpanded.A2  === "true"?<Minus/> :<Plus/>}>
-          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primary">Web portal</Typography>
+          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primary  py-3">Web portal</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <AccordianList>New Mackbook</AccordianList>
@@ -112,7 +117,7 @@ export default function PricingSectionAccordian() {
         onChange={handleChange("panel3")}
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header" expandIcon={isExpanded.A3  === "true"?<Minus/> :<Plus/>}>
-          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primary">Compliance</Typography>
+          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primary  py-3">Compliance</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <AccordianList>New Mackbook</AccordianList>

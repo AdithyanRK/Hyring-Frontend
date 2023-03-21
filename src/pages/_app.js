@@ -15,42 +15,42 @@ const clientSideEmotionCache = createEmotionCache();
 import localFont from "next/font/local";
 
 // Font declaration
-// const whyte = localFont({
-//   src: [
-//     {
-//       path: "../../public/fonts/whyte/WhyteInktrap-Regular.woff",
-//       variable: "--font-whyte-regular",
-//       declarations: [{ prop: "ascent-override", value: "100%" }],
-//     },
-//     {
-//       path: "../../public/fonts/whyte/WhyteInktrap-Light.woff",
-//       variable: "--font-whyte-light",
-//       declarations: [{ prop: "ascent-override", value: "100%" }],
-//     },
-//     {
-//       path: "../../public/fonts/whyte/WhyteInktrap-Medium.woff",
-//       variable: "--font-whyte-medium",
-//       declarations: [{ prop: "ascent-override", value: "100%" }],
-//     },
-//   ],
-// });
+const whyte = localFont({
+  src: [
+    {
+      path: "../../public/fonts/whyte/WhyteInktrap-Regular.woff",
+      variable: "--font-whyte-regular",
+      declarations: [{ prop: "ascent-override", value: "100%" }],
+    },
+    {
+      path: "../../public/fonts/whyte/WhyteInktrap-Light.woff",
+      variable: "--font-whyte-light",
+      declarations: [{ prop: "ascent-override", value: "100%" }],
+    },
+    {
+      path: "../../public/fonts/whyte/WhyteInktrap-Medium.woff",
+      variable: "--font-whyte-medium",
+      declarations: [{ prop: "ascent-override", value: "100%" }],
+    },
+  ],
+});
 
-const whyteRegular = localFont({
-  src: "../../public/fonts/whyte/WhyteInktrap-Regular.woff",
-  variable: "--font-whyte-regular",
-  declarations: [{ prop: "ascent-override", value: "100%" }],
-});
-const whyteLight = localFont({
-  src: "../../public/fonts/whyte/WhyteInktrap-Light.woff",
-  variable: "--font-whyte-light",
-  declarations: [{ prop: "ascent-override", value: "100%" }],
-});
-console.log("🚀 ~ file: _app.js:48 ~ whyteLight:", whyteLight);
-const whyteMedium = localFont({
-  src: "../../public/fonts/whyte/WhyteInktrap-Medium.woff",
-  variable: "--font-whyte-medium",
-  declarations: [{ prop: "ascent-override", value: "100%" }],
-});
+// const whyteRegular = localFont({
+//   src: "../../public/fonts/whyte/WhyteInktrap-Regular.woff",
+//   variable: "--font-whyte-regular",
+//   declarations: [{ prop: "ascent-override", value: "100%" }],
+// });
+// const whyteLight = localFont({
+//   src: "../../public/fonts/whyte/WhyteInktrap-Light.woff",
+//   variable: "--font-whyte-light",
+//   declarations: [{ prop: "ascent-override", value: "100%" }],
+// });
+// console.log("🚀 ~ file: _app.js:48 ~ whyteLight:", whyteLight);
+// const whyteMedium = localFont({
+//   src: "../../public/fonts/whyte/WhyteInktrap-Medium.woff",
+//   variable: "--font-whyte-medium",
+//   declarations: [{ prop: "ascent-override", value: "100%" }],
+// });
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
@@ -60,7 +60,7 @@ export default function MyApp(props) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <main
-        className={`${whyteLight.className} ${whyteMedium.className} ${whyteLight.className} `}
+        className={`${whyte.className}`}
       >
         <ThemeProvider theme={theme}>
           <NavbarComponent />

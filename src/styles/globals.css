@@ -12,7 +12,7 @@
   advance-override: 10;
 } */
 
-/* @font-face {
+@font-face {
   font-family: 'Whyte Inktrap';
   src: url('../../public/fonts/whyte/WhyteInktrap-Regular.eot');
   src: local('Whyte Inktrap Regular'), local('WhyteInktrap-Regular'),
@@ -28,7 +28,7 @@
   descent-override: 20%;
   line-gap-override: normal;
   advance-override: 10;
-} */
+}
 
 /* @font-face {
   font-family: 'Whyte Inktrap';
@@ -56,12 +56,12 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* color: #462b34; */
+  
   /* font-family: 'Whyte Inktrap'!important ; */
 }
 
 body {
-  color: #462b34;
+  color: #462b34 !important;
   background-image: url("../../public/Rectangle.svg");
 }
 
@@ -95,56 +95,8 @@ body {
   }
 }
 
-.card-ani {
-  animation: circle 0.5s;
-}
 
-@keyframes circle {
-  0% {
-    clip-path: circle(10%);
-  }
-  100% {
-    clip-path: circle(75%);
-  }
-}
 
-#text-mark {
-  overflow: visible;
-}
-
-#text-mark path {
-  animation: draw 1s linear forwards;
-}
-
-@keyframes draw {
-  from {
-    stroke-dashoffset: 535;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-#smile-expression path:first-child {
-  animation: draw1 0.5s linear forwards;
-}
-#smile-expression path:nth-child(2) {
-  animation: draw1 0.5s linear forwards;
-  animation-delay: 1s;
-}
-
-#smile-expression path:last-child {
-  animation: draw1 0.5s linear forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes draw1 {
-  from {
-    stroke-dashoffset: 23;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 
 /* contact page hover effect  */
 
@@ -213,26 +165,9 @@ body {
   }
 }
 
-.hover-bgCircle-fill {
-  position: relative;
-  overflow: hidden;
-  background-color: white;
-}
-.hover-bgCircle-fill::before {
-  content: "";
-  width: 344px;
-  height: 379px;
-  border-radius: 20px;
-  position: absolute;
-  top: -242px;
-  left: -35px;
-  z-index: -1;
-  background-color: white;
-}
-.hover-bgCircle-fill:hover:before {
-  animation: circle 0.5s;
-  background-color: #ffb65e;
-}
+
+
+
 
 .animate-glow {
   overflow: hidden;

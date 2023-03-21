@@ -2,13 +2,17 @@ import Logo from "@/assets/icons/landing-page/logo";
 import BoxTheme from "@/element/landing-page/box-theme/box-theme";
 import SignUpButton from "@/element/landing-page/button/sign-up-button";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, {  useState } from "react";
+import ResponsiveNavbar from "./responsive-nav-component";
 
 const NavbarComponent = ({ className }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+ 
   return (
+   <>
     <BoxTheme
-      className={`${className} h-[102px] w-fit mt-[14px] mx-auto mb-3 md:mb-20`}
+      className={`${className} h-[67px] md:h-[102px] w-fit mt-[14px] mx-auto `}
       boxStyle={`w-[95vw] h-[63px] md:h-[93px] border-2 bg-custom-bg rounded-[10px] border-primary-brown`}
       bgBoxStyle={
         "w-full h-[63px] md:h-[93px] rounded-[10px] bg-primary-brown top-[5px] left-[6px]  md:top-[9px] md:left-[10px]"
@@ -51,17 +55,17 @@ const NavbarComponent = ({ className }) => {
             }`}
           >
             <span
-              className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out mt-1 block ${
+              className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out block ${
                 isNavOpen ? "delay-300 translate-y-[6px]" : ""
               }`}
             ></span>
             <span
-              className={`h-[2px] bg-primary-brown duration-300 ease-in-out mt-1 block ${
+              className={` h-[2px] bg-primary-brown duration-300 ease-in-out my-1 block origin-center ${
                 isNavOpen ? "w-[0px]" : "w-[17px]"
               }`}
             ></span>
             <span
-              className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out mt-1 block ${
+              className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out  block ${
                 isNavOpen ? " delay-300  -translate-y-[6px] rotate-90" : ""
               }`}
             ></span>
@@ -69,6 +73,11 @@ const NavbarComponent = ({ className }) => {
         </div>
       </div>
     </BoxTheme>
+    <div className="overflow-hidden">
+    <ResponsiveNavbar isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen}/>
+
+    </div>
+   </>
   );
 };
 

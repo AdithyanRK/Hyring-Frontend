@@ -8,6 +8,9 @@ import PromiseBulb from "@/assets/icons/landing-page/promise-bulb";
 import PromiseMoney from "@/assets/icons/landing-page/promise-money";
 import Star1 from "@/assets/icons/landing-page/star1";
 import Star2 from "@/assets/icons/landing-page/star2";
+import HeartRed from "@/assets/icons/landing-page/heart-red";
+import HeartBrown from "@/assets/icons/landing-page/heart-brown";
+import BoxTheme from "@/element/landing-page/box-theme/box-theme";
 
 function Cards({ item, setData }) {
   const { ref, inView, entry } = useInView({
@@ -21,21 +24,31 @@ function Cards({ item, setData }) {
   }, [entry?.isIntersecting]);
 
   return (
-    <section className="promise_card_section">
+    <section className="promise_card_section mr-5">
       <div ref={ref}>
         <main className="relative w-full flex gap-10 flex-col">
-          <div className="h-600px] w-full flex justify-center items-center">
-            <div
-              className={`w-[600px] h-[350px] relative border-[1px] border-primary-brown rounded-3xl bg-[${item.bgColor}]`}
+          <div className="h-full md:h-600px w-full flex justify-center items-center">
+            <BoxTheme
+              boxStyle={` w-full md:w-[600px] h-full md:h-[350px] relative border-2 border-primary-brown rounded-3xl bg-[${item.bgColor}] promise_animate-glow`}
+              bgBoxStyle={
+                " w-full lg:w-[600px] h-full md:h-[350px] border-2 border-primary-brown top-3 -z-1 left-3  rounded-3xl bg-[#E0E0E0]"
+              }
             >
-              <div className="p-10">
+              {/* <div
+                className={`w-[600px] h-full md:h-[350px] relative border-[1px] border-primary-brown rounded-3xl bg-[${item.bgColor}]`}
+              > */}
+              <div className="p-3 md:p-10 ">
                 <p>{item.icon}</p>
                 <p className="text-[40px] font-primaryMedium leading-10 mt-10">
+                  {item.header}
+                </p>
+                <p className="text-[25px] font-primaryLight mt-3">
                   {item.message}
                 </p>
+                {/* </div> */}
+                {/* <div className="w-full lg:w-[600px] h-full md:h-[350px] border-[1px] border-primary-brown absolute top-3 -z-1 left-4 rounded-3xl bg-[#E0E0E0]"></div> */}
               </div>
-              <div className="w-[600px] h-[350px] border-[1px] border-primary-brown absolute top-3 -z-1 left-4 rounded-3xl bg-[#E0E0E0]"></div>
-            </div>
+            </BoxTheme>
           </div>
         </main>
       </div>
@@ -97,7 +110,7 @@ export default function PromiseFramer() {
     },
     {
       id: 2,
-      header: "Explore Indian Talents",
+      header: "Fill your open positions within 15 days timeline",
       message:
         "Lorem ipsum dolor sit am, consectetur adipiscineli nsectetur adipiscing",
       icon: <PromiseClock />,
@@ -105,14 +118,14 @@ export default function PromiseFramer() {
     },
     {
       id: 3,
-      header: "Explore Indian Talents",
-      message: "Save upto 50% on satffing costs without talent compromise",
+      header: "Save upto 50% on satffing costs without talent compromise",
+      // message: "Save upto 50% on satffing costs without talent compromise",
       icon: <PromiseMoney />,
       bgColor: "#FFF5B7",
     },
     {
       id: 4,
-      header: "Explore Indian Talents",
+      header: "Top 5% of Indian IT Talent",
       message:
         "Lorem ipsum dolor sit am, consectetur adipiscineli nsectetur adipiscing",
       icon: <PromiseBulb />,
@@ -249,7 +262,17 @@ export default function PromiseFramer() {
           )}
         </div>
       </div>
-      <div className="w-full flex-1 relative -right-20 md:-right-36 lg:-right-60">
+      {/* <div className="w-full flex-1 relative -right-20 md:-right-36 lg:-right-60"> */}
+      <div className="w-full flex-1 relative lg:-right-60">
+        <div className="flex justify-center items-center md:absolute left-[27%] -top-20 gap-1 flex-nowrap">
+          <div className="flex items-center font-primaryMedium text-primary-brown text-[50px]">
+            Our Promises
+          </div>
+          <div className="relative top-2">
+            <HeartRed className="z-1" />
+            <HeartBrown className="absolute left-1 top-[3px] -z-1" />
+          </div>
+        </div>
         <div className="w-full max-h-[700px] overflow-scroll promises_progresses">
           {values.map((item, i) => (
             <Cards item={item} key={i} setData={setData} />

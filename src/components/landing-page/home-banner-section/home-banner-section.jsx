@@ -72,7 +72,7 @@ const HomeBannerSection = () => {
               in <HeroAutocompleteButton className="scale-[0.8] md:scale-[1]" />{" "}
               <HeroSubmitButton className="scale-[0.8] md:scale-[1]" />
             </div>
-              <HomeListComponent className="hidden lg:block"/>
+            <HomeListComponent className="hidden lg:block" />
           </div>
           <div className="relative flex basis-2/5  lg:scale-[1.3] ">
             <Lottie options={lottieOptions} />
@@ -81,17 +81,12 @@ const HomeBannerSection = () => {
               <div className="relative bg-transparent">
                 <PlayVideoIcon />
                 <div className="absolute bottom-[39%] left-[43%] z-90  ">
-                  <FaPlay
-                    color={"#FFB65E"}
-                    size={22}
-                  />
+                  <FaPlay color={"#FFB65E"} size={22} />
                 </div>
               </div>
             </div>
-            
-
           </div>
-          <HomeListComponent className=" lg:hidden"/>
+          <HomeListComponent className=" lg:hidden" />
         </div>
       </div>
 

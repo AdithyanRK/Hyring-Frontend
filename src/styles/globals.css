@@ -1,4 +1,3 @@
-
 /* @font-face {
   font-family: "Helvetica Neue TH Pro2";
   src: url("../fonts/HelveticaNeueLTPro-Th.woff2") format("woff2"),
@@ -45,13 +44,12 @@
   ascent-override: 100%;
 } */
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html{
-  scroll-behavior:smooth
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -60,7 +58,6 @@ html{
   padding: 0;
   /* color: #462b34; */
   /* font-family: 'Whyte Inktrap'!important ; */
-
 }
 
 body {
@@ -180,14 +177,13 @@ body {
   background-color: #462b34;
   opacity: 1;
 }
-.contact-tab:hover > div > div >  svg:first-child {
+.contact-tab:hover > div > div > svg:first-child {
   fill: white;
 }
 
-
 /* contact page arrow bounce animation  */
 
-.contact-tab:hover > div > div > div >.arrow-bounce{
+.contact-tab:hover > div > div > div > .arrow-bounce {
   animation: arrowBounce 0.7s linear forwards;
 }
 @keyframes arrowBounce {
@@ -195,40 +191,34 @@ body {
     left: 0%;
   }
   40% {
-    left:79%;
-    
-  }
-   60% {
-    left: 55%;
-
-  }
-  80%{
     left: 79%;
   }
-  90%{
+  60% {
+    left: 55%;
+  }
+  80% {
+    left: 79%;
+  }
+  90% {
     left: 70%;
   }
   100% {
     left: 79%;
-
   }
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width: 768px) {
   .contact-tab:hover > div > div {
     display: block;
   }
-  
 }
 
-
-.hover-bgCircle-fill{
+.hover-bgCircle-fill {
   position: relative;
   overflow: hidden;
   background-color: white;
-
 }
-.hover-bgCircle-fill::before{
+.hover-bgCircle-fill::before {
   content: "";
   width: 344px;
   height: 379px;
@@ -238,21 +228,18 @@ body {
   left: -35px;
   z-index: -1;
   background-color: white;
-
 }
-.hover-bgCircle-fill:hover:before{
+.hover-bgCircle-fill:hover:before {
   animation: circle 0.5s;
-  background-color: #FFB65E;
+  background-color: #ffb65e;
 }
-
-
 
 .animate-glow {
   overflow: hidden;
 }
 
 .animate-glow:after {
-  content: '';
+  content: "";
   top: 0;
   left: 10;
   width: 120%;
@@ -262,7 +249,14 @@ body {
   z-index: 5;
   animation: slide 2s infinite;
   animation-direction: reverse;
-  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.579) 25%, rgba(255, 255, 255, 0.20) 50%, rgba(255, 255, 255, 0.579) 75%, rgba(255, 255, 255, 0.20) 100%);
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.579) 25%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.579) 75%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
   transform: translate(100%, -50%) rotate(45deg);
 }
 
@@ -274,8 +268,6 @@ body {
     transform: translate(100%) rotate(45deg);
   }
 }
-
-
 
 /* Promise  section */
 .promises_progresses {
@@ -319,4 +311,38 @@ body {
 
 .promise_bg_image {
   background-image: url("../../public/Rectangle.svg");
+}
+
+.promise_animate-glow {
+  overflow: hidden;
+}
+
+.promise_animate-glow:after {
+  content: "";
+  top: 150px;
+  left: 0;
+  width: 140%;
+  height: 30%;
+  transform: translateX(90%);
+  position: absolute;
+  z-index: 5;
+  animation: bgSlide 3s infinite;
+  animation-direction: reverse;
+  box-shadow: 40px #eee;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.681) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transform: translate(100%, -50%) rotate(45deg);
+}
+
+@keyframes bgSlide {
+  0% {
+    transform: translate(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translate(100%) rotate(45deg);
+  }
 }

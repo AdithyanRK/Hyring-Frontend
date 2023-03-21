@@ -273,7 +273,7 @@ export default function PromiseFramer() {
             <HeartBrown className="absolute left-1 top-[3px] -z-1" />
           </div>
         </div>
-        <div className="w-full max-h-[700px] overflow-scroll promises_progresses">
+        <div className="w-full max-h-[700px] overflow-auto promises_progresses">
           {values.map((item, i) => (
             <Cards item={item} key={i} setData={setData} />
           ))}

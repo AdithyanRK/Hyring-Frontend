@@ -19,7 +19,7 @@ export default function TalentSection() {
         Why Hire Indian Talents
       </div>
 
-      <div className=" flex lg:scale-[0.9] xl:scale-[0.8] 2xl:scale-[0.65] ">
+      <div className=" select-none flex lg:scale-[0.9] xl:scale-[0.8] 2xl:scale-[0.65] ">
         <Lottie options={lottieOptions} />
       </div>
       <div className="flex justify-center scale-[0.7] sm:scale-[0.8] md:scale-[0.9] xl:scale-[1]

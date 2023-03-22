@@ -12,6 +12,7 @@ import "../styles/globals.css";
 const clientSideEmotionCache = createEmotionCache();
 // Font
 import localFont from "next/font/local";
+import Image from "next/image";
 // Font declaration
 // const whyte = localFont({
 //   src: [
@@ -60,7 +61,7 @@ export default function MyApp(props) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <main
-        className={`${whyteRegular.variable} ${whyteMedium.variable} ${whyteLight.variable}`}
+        className={`${whyteRegular.variable} ${whyteMedium.variable} ${whyteLight.variable} `}
       >
         <ThemeProvider theme={theme}>
           <CssBaseline />

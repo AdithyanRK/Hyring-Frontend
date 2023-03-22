@@ -8,6 +8,7 @@ import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
 import PromiseSection from "@/components/landing-page/promises-section/promises-section";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Footer from "@/common/landing-page/footer/footer";
+import Image from "next/image";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -21,7 +22,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text-primary-brown bg-[url('../../public/Rectangle.svg')] w-[100vw] h-fit ">
+      <div className="relative">
+        <Image
+          src="/Rectangle.svg"
+          fill
+          style={{ objectFit: "cover", zIndex: -10 }}
+          alt="Background-Image"
+          quality={100}
+          priority
+        />
+
         <NavbarComponent />
         <div className=" fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div

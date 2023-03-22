@@ -134,7 +134,7 @@ export default function PromiseFramer() {
   ];
 
   return (
-    <div className="flex px-5 flex-wrap">
+    <div className="flex px-5 flex-wrap overflow-hidden">
       <div className="flex-1 absolute hidden md:-left-72 lg:flex">
         <div className="w-[700px] h-[700px]  border-[20px] border-primary-brown rounded-full -z-1 absolute left-5 top-0"></div>
         <div className="w-[700px] h-[700px] border-[1px] border-primary-brown rounded-full bg-[#FDFDFD] shrink-0 flex justify-center items-center relative">

@@ -8,8 +8,8 @@ export default function ResponsiveNavbar({ isNavOpen,setIsNavOpen }) {
   return (
     <div 
     
-    className={`bg-custom-bg   w-[95vw] rounded-[10px] mx-auto font-medium border-primary-brown px-6  mt-4 ${!isNavOpen ? " py-0 border-0 opacity-0" : " py-8  border-2 opacity-100"} duration-700 delay-3300  md:hidden`}>
-      <div className={`${isNavOpen ? "flex flex-col gap-4 " :"hidden"} duration-700`}>
+    className={`bg-custom-bg   w-[95vw] rounded-[10px] mx-auto  border-primary-brown px-6  mt-4 ${!isNavOpen ? " py-0 border-0 opacity-0" : " py-8  border-2 opacity-100"} duration-700 delay-3300  md:hidden`}>
+      <div className={`${isNavOpen ? "flex flex-col gap-4 " :"hidden"} duration-700 font-primaryMedium font-medium text-lg` } >
       <Link href={"/#whyIndia"} scroll={false} onClick={()=>{setIsNavOpen(false)}}>
         Why India
       </Link>
@@ -19,7 +19,7 @@ export default function ResponsiveNavbar({ isNavOpen,setIsNavOpen }) {
       <Link href={"/contact-us"} scroll={false} onClick={()=>{setIsNavOpen(false)}}>
         Contact Us
       </Link>
-      <Link href={""} className="text-base md:text-xl" onClick={()=>{setIsNavOpen(false)}}>
+      <Link href={""} className=" text-lg" onClick={()=>{setIsNavOpen(false)}}>
         Login
       </Link>
       <Link href={""} onClick={()=>{setIsNavOpen(false)}}>

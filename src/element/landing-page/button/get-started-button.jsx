@@ -15,7 +15,7 @@ export default function GetStartedButton({ className, boxColor, hover }) {
       }
     >
       <div className="flex items-center gap-1  ">
-        <div className="font-medium text-base lg:text-xl">Get Started</div>
+        <div className="font-medium font-primaryMedium text-base lg:text-xl">Get Started</div>
         <Arrow1 />
       </div>
     </BoxTheme>

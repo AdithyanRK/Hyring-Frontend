@@ -14,7 +14,7 @@ export default function SignUpButton() {
         }
       >
         <div className="flex items-center gap-1  ">
-          <div className="font-medium text-xl">Sign Up</div>
+          <div className="font-medium font-primaryMedium text-lg  md:text-xl">Sign Up</div>
           <Arrow />
         </div>
       </BoxTheme>

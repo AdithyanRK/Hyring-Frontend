@@ -23,26 +23,14 @@ export default function HeroAutocompleteButton({ className }) {
         "w-[250px] h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
       }
     >
-      {/* <div className='text-custom-orange pl-[21px] pr-4'>Designing</div> */}
-      {/* <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={options}
-      sx={{ width: 300 }}
-      endAdornment={<InputAdornment position="start">
-      <DropDownArrow/>
-    </InputAdornment>}
-      renderInput={(params) => <TextField   endAdornment={<InputAdornment position="start">
-      <DropDownArrow/>
-    </InputAdornment>} sx={{"& .MuiOutlinedInput-notchedOutline":{display:"none"} }} {...params}  />}
-    /> */}
+     
       <Autocomplete
+      className="font-primaryMedium font-medium "
       defaultValue="Product Designer"
         sx={{
           display: "inline-block",
           "& input": {
             width: "90%",
-            // bgcolor: 'background.paper',
             fontSize:"24px",
             fontWeight:"500",
             color: "#FFB65E",
@@ -50,7 +38,6 @@ export default function HeroAutocompleteButton({ className }) {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
-
           },
          
         }}

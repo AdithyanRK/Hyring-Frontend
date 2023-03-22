@@ -26,7 +26,7 @@ export default function CarouselSectionTabs({className,color,text,index}) {
           }`
         }
       >
-        <p className='px-[25px] text-base' >{text}</p>
+        <p className='px-[25px] text-base font-primary' >{text}</p>
         <div className='absolute -top-[20px] -left-[20px]'>
                 <div className='relative'>
                 <Star3 className={` 
@@ -42,7 +42,7 @@ export default function CarouselSectionTabs({className,color,text,index}) {
                     : color === 5
                     ? "fill-custom-yellow" :""
                 } animate-spin  `}/>
-                <div className='absolute top-1/4 left-[16px] text-medium'>{index }</div>
+                <div className='absolute top-1/4 left-[16px] text-medium font-primaryMedium font-medium'>{index }</div>
                 </div>
         </div>
       </BoxTheme>

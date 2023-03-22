@@ -18,7 +18,7 @@ const NavbarComponent = ({ className }) => {
         "w-full h-[63px] md:h-[93px] rounded-[10px] bg-primary-brown top-[5px] left-[6px]  md:top-[9px] md:left-[10px]"
       }
     >
-      <div className="flex justify-between  px-5 lg:px-10 items-center w-full md:text-lg lg:text-xl font-medium   ">
+      <div className="flex justify-between  px-5 lg:px-10 items-center font-primaryMedium w-full text-lg lg:text-xl font-medium   ">
         <div className="scale-[0.6] md:scale-[0.8] lg:scale-[1] -ml-7 lg:-ml-0">
           <Link href={"/"} scroll={false}>
             <Logo />
@@ -36,7 +36,7 @@ const NavbarComponent = ({ className }) => {
           </Link>
         </div>
         <div className="md:flex gap-1 md:gap-6 items-center hidden">
-          <Link href={""} className="text-base md:text-xl">
+          <Link href={""} className="text-lg lg:text-xl">
             Login
           </Link>
           <Link href={""}>

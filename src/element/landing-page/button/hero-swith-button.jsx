@@ -11,7 +11,7 @@ export default function HeroAwitchButton({className}) {
 
   return (
     <BoxTheme
-    className={`h-[60px] ${className} w-fit cursor-pointer text-2xl font-medium`}
+    className={`h-[60px] ${className} w-fit cursor-pointer text-2xl font-primaryMedium font-medium `}
     boxStyle={
       "w-fit h-[57px] border bg-white rounded-[8px] border-primary-brown"
     }

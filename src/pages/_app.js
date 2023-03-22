@@ -52,6 +52,12 @@ const whyteMedium = localFont({
   declarations: [{ prop: "ascent-override", value: "100%" }],
   display: "swap",
 });
+const whyteBold = localFont({
+  src: "../../public/fonts/whyte/WhyteInktrap-Bold.woff",
+  variable: "--font-whyte-bold",
+  declarations: [{ prop: "ascent-override", value: "100%" }],
+  display: "swap",
+});
 
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
@@ -61,7 +67,7 @@ export default function MyApp(props) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <main
-        className={`${whyteRegular.variable} ${whyteMedium.variable} ${whyteLight.variable} `}
+        className={`${whyteRegular.variable} ${whyteMedium.variable} ${whyteLight.variable} ${whyteBold.variable}`}
       >
         <ThemeProvider theme={theme}>
           <CssBaseline />

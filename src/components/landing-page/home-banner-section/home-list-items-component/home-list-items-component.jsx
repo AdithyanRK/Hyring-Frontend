@@ -4,7 +4,7 @@ import React from "react";
 export default function HomeListComponent({className}) {
   return (
    <div className={`${className}`}>
-     <div className={`xs:flex gap-5 justify-around xl:justify-start xl:gap-20  items-center !text-xl `}>
+     <div className={`xs:flex gap-5 justify-around xl:justify-start xl:gap-20  items-center  `}>
       <div className="">
         <HeroList>AI powered Hyring app</HeroList>
         <HeroList>Top 5% vetted candidates</HeroList>

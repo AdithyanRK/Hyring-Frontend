@@ -29,7 +29,7 @@ export default function CarouselSectionCard({
               className={`ml-6 -mt-6 md:ml-9 md:-mt-4 scale-[0.45] md:scale-[0.8] lg:scale-[1]  ${starColor2}`}
             />
           </div>
-          <div className="text-[16px] sm:text-[24px] md:text-[32px] lg:text-[46px] mt-3">{text}</div>
+          <div className="text-[16px] sm:text-[24px] md:text-[32px] lg:text-[46px] font-primary mt-3">{text}</div>
         </div>
         <div className="basis-2/5">
           <div className="relative flex items-center  justify-center scale-[0.35] md:scale-[0.6] lg:scale-[1] ">

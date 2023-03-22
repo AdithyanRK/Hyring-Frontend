@@ -42,8 +42,7 @@ const HomeBannerSection = () => {
 
   const RunnerList = ({ text, icon }) => {
     return (
-      <div className=" flex w-fit items-center text-white gap-2 ">
-        {" "}
+      <div className=" flex w-fit items-center text-white gap-2 font-primary font-lg font-normal ">
         {icon} {text}
       </div>
     );
@@ -54,18 +53,18 @@ const HomeBannerSection = () => {
       <div className="mx-auto w-[92vw] mb-20">
         <div className="flex flex-col lg:flex-row">
           <div className="basis-3/5 ">
-            <h1 className="font-primary text-4xl lg:text-6xl font-bold text-center lg:text-start">
+            <h1 className="font-primaryBold  text-4xl font-bold lg:text-6xl text-center lg:text-start">
               Meet The New Gold Standard In{" "}
               <span className="text-secondary-orange">Remote Hyring</span>
             </h1>
-            <p className=" text-xl xl:text-3xl mt-5 xl:mt-[40px] mb-8 xl:mb-[60px] text-center lg:text-start">
+            <p className="font-normal font-primary text-xl lg:text-3xl mt-5 lg:mt-[40px] mb-8 lg:mb-[60px] text-center lg:text-start">
               Hire from a pool of 
-              <span className="relative mx-2 xl:mx-3" >
-              <span className="absolute -left-[18px] -top-4 xl:-left-1 xl:-top-3 scale-[0.75] xl:scale-[1.1]  "><TextMark/></span>
+              <span className="relative mx-2 lg:mx-3" >
+              <span className="absolute -left-[22px] -top-4 lg:-left-1 lg:-top-3 scale-[0.7] lg:scale-[1]  "><TextMark/></span>
                 vetted 
               </span>candidates.
             </p>
-            <div className="text-lg xl:text-2xl font-medium flex flex-wrap gap-0 md:gap-2 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
+            <div className="text-lg xl:text-2xl font-primaryMedium font-medium flex flex-wrap gap-0 md:gap-2 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
               I Need <HeroAwitchButton className="scale-[0.8] md:scale-[1]" />{" "}
               in <HeroAutocompleteButton className="scale-[0.8] md:scale-[1]" />{" "}
               <HeroSubmitButton className="scale-[0.8] md:scale-[1]" />

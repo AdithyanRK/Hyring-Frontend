@@ -9,7 +9,7 @@ export default function ResponsiveNavbar({ isNavOpen,setIsNavOpen }) {
     <div 
     
     className={`bg-custom-bg   w-[95vw] rounded-[10px] mx-auto  border-primary-brown px-6  mt-4 ${!isNavOpen ? " py-0 border-0 opacity-0" : " py-8  border-2 opacity-100"} duration-700 delay-3300  md:hidden`}>
-      <div className={`${isNavOpen ? "flex flex-col gap-4 " :"hidden"} duration-700 font-primaryMedium font-medium text-lg` } >
+      <div className={`${isNavOpen ? "flex flex-col gap-4 " :"hidden"} duration-700 font-primaryMedium   text-lg` } >
       <Link href={"/#whyIndia"} scroll={false} onClick={()=>{setIsNavOpen(false)}}>
         Why India
       </Link>

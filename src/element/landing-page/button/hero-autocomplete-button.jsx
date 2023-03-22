@@ -25,7 +25,7 @@ export default function HeroAutocompleteButton({ className }) {
     >
      
       <Autocomplete
-      className="font-primaryMedium font-medium "
+      className="font-primaryMedium   "
       defaultValue="Product Designer"
         sx={{
           display: "inline-block",
@@ -38,6 +38,8 @@ export default function HeroAutocompleteButton({ className }) {
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
+            fontWeight:"500",
+            fontFamily:"inherit"
           },
          
         }}
@@ -51,6 +53,7 @@ export default function HeroAutocompleteButton({ className }) {
               }, "&.MuiOutlinedInput-root":{
                 paddingRight:"10px !important",
                 paddingLeft:"10px !important",
+                fontFamily:"inherit"
               },"& .MuiOutlinedInput-notchedOutline":{display:"none"},"&.MuiInputBase-input":{width:"150px"} }}
               endAdornment={<InputAdornment position="start">
               <DropDownArrow/>

@@ -79,7 +79,7 @@ export default function PricingSectionAccordian() {
         
       >
         <AccordionSummary  aria-controls="panel1d-content" id="panel1d-header" expandIcon={isExpanded.A1 === "true"?<Minus/> :<Plus/>}>
-          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primaryMedium py-3">Benefits</Typography>
+          <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium py-3">Benefits</Typography>
         </AccordionSummary>
         <AccordionDetails>
            <AccordianList>New Mackbook</AccordianList>
@@ -99,7 +99,7 @@ export default function PricingSectionAccordian() {
 
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header" expandIcon={isExpanded.A2  === "true"?<Minus/> :<Plus/>}>
-          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primaryMedium  py-3">Web portal</Typography>
+          <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-3">Web portal</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <AccordianList>New Mackbook</AccordianList>
@@ -117,7 +117,7 @@ export default function PricingSectionAccordian() {
         onChange={handleChange("panel3")}
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header" expandIcon={isExpanded.A3  === "true"?<Minus/> :<Plus/>}>
-          <Typography className="uppercase text-xl lg:text-[28px] font-medium font-primaryMedium  py-3">Compliance</Typography>
+          <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-3">Compliance</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <AccordianList>New Mackbook</AccordianList>

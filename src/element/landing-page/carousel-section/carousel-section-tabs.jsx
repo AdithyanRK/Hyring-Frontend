@@ -42,7 +42,7 @@ export default function CarouselSectionTabs({className,color,text,index}) {
                     : color === 5
                     ? "fill-custom-yellow" :""
                 } animate-spin  `}/>
-                <div className='absolute top-1/4 left-[16px] text-medium font-primaryMedium font-medium'>{index }</div>
+                <div className='absolute top-1/4 left-[16px] text-medium font-primaryMedium  '>{index }</div>
                 </div>
         </div>
       </BoxTheme>

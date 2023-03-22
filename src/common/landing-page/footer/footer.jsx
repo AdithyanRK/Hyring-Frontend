@@ -30,7 +30,7 @@ export default function Footer({className}) {
     <div className='footer w-[95vw] mx-auto border-2 relative border-primary-brown h-[488px] rounded-[30px] pt-10 mt-80'>
       <div className='flex justify-center -mt-[280px] mb-[250px]'>
       <BoxTheme
-    className={`h-[60px] ${className} w-fit  text-2xl font-medium`}
+    className={`h-[60px] ${className} w-fit  text-2xl  `}
     boxStyle={
       "w-[900px] h-[300px] flex flex-col border bg-[#b6eccc] rounded-[8px] border-primary-brown"
     }
@@ -90,20 +90,20 @@ export default function Footer({className}) {
                 boxColor={"bg-primary-orange"}/>
             </div>
             <div className='flex flex-col gap-y-5 mb-16'>
-                <h2 className='text-[22px] font-medium'>Company</h2>
+                <h2 className='text-[22px]  '>Company</h2>
                 <p className='text-lg'>Why India</p>
                 <p className='text-lg'>Pricing</p>
                 <p className='text-lg'>Contact Us</p>
             </div>
             <div className='flex flex-col gap-y-5 mb-16'>
-            <h2 className='text-[22px] font-medium'>Legal</h2>
+            <h2 className='text-[22px]  '>Legal</h2>
                 <p className='text-lg'>Privacy Policy</p>
                 <p className='text-lg'>Terms & Conditions</p>
                 <p className='text-lg'>Cancellation Policy</p>
             </div>
             <div className='flex flex-col gap-y-12 mt-7'>
             <div className='flex flex-col gap-y-7'>
-            <h2 className='text-[22px] font-medium'>Social</h2>
+            <h2 className='text-[22px]  '>Social</h2>
             <div className='flex items-center gap-5'>
               <a href='https://in.linkedin.com/company/hyring-com' target='_blank'>
                 <Instagram/>
@@ -117,10 +117,10 @@ export default function Footer({className}) {
 
             </div>
             <div className='flex flex-col gap-y-7'>
-            <h2 className='text-[22px] font-medium'>Subscribe Newsletter</h2>
+            <h2 className='text-[22px]  '>Subscribe Newsletter</h2>
             <div className='flex items-center gap-5'>
             <BoxTheme
-    className={`h-[60px] ${className} w-fit cursor-pointer  text-2xl font-medium`}
+    className={`h-[60px] ${className} w-fit cursor-pointer  text-2xl  `}
     boxStyle={
       "w-[270px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
     }

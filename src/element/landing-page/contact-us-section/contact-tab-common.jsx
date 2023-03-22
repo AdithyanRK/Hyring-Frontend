@@ -27,8 +27,8 @@ export default function ContactTabCommon({
     >
       <div className="flex gap-3 xl:gap-6 flex-wrap justify-center md:justify-start items-center text-xl md:text-3xl lg:text-4xl w-full h-full px-8">
         <div className=" md:delay-200 scale-[0.75]">{icon}</div>
-        <div className=" font-primaryLight font-light  ">{text1}</div>
-        <div className="font-primaryMedium font-medium ">{text2}</div>
+        <div className=" font-primaryLight    ">{text1}</div>
+        <div className="font-primaryMedium   ">{text2}</div>
         <div className=" grow hidden">
           <div className="relative w-full h-full">
           <div className="absolute -top-[8px] lg:-top-[10px]   arrow-bounce scale-[0.8] lg:scale-[1]">

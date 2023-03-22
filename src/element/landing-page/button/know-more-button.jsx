@@ -15,7 +15,7 @@ export default function KnowMoreButton() {
       }
     >
       <div className="flex items-center gap-1  ">
-        <div className="font-medium font-primaryMedium text-xl text-custom-sandal">Know More</div>
+        <div className="  font-primaryMedium text-xl text-custom-sandal">Know More</div>
         <Arrow1 className="fill-custom-sandal" />
       </div>
     </BoxTheme>

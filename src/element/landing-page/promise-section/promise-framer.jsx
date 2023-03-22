@@ -39,7 +39,7 @@ function Cards({ item, setData }) {
               > */}
               <div className="p-3 md:p-10 ">
                 <p>{item.icon}</p>
-                <p className="text-[40px] font-primaryMedium font-medium leading-10 mt-10">
+                <p className="text-[40px] font-primaryMedium   leading-10 mt-10">
                   {item.header}
                 </p>
                 <p className="text-[25px] font-primaryLight mt-3">
@@ -265,7 +265,7 @@ export default function PromiseFramer() {
       {/* <div className="w-full flex-1 relative -right-20 md:-right-36 lg:-right-60"> */}
       <div className="w-full flex-1 relative lg:-right-60">
         <div className="flex justify-center items-center md:absolute left-[27%] -top-20 gap-1 flex-nowrap">
-          <div className="flex items-center font-bold font-primaryBold text-primary-brown text-[50px]">
+          <div className="flex items-center  font-primaryBold text-primary-brown text-[50px]">
             Our Promises
           </div>
           <div className="relative top-2">

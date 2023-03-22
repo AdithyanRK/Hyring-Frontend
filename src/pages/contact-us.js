@@ -3,6 +3,7 @@ import Head from "next/head";
 import ContactUsSection from "@/components/landing-page/contact-us-section/contact-us-section";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Footer from "@/common/landing-page/footer/footer";
+import Image from "next/image";
 
 export default function Index() {
   return (
@@ -13,7 +14,15 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="text-primary-brown bg-body-background w-[100vw] h-fit ">
+      <div className="relative text-primary-brown ">
+        <Image
+          src="/Rectangle.svg"
+          fill
+          style={{ objectFit: "cover", zIndex: -10 }}
+          alt="Background-Image"
+          quality={100}
+          priority
+        />
         <NavbarComponent />
         <ContactUsSection />
         <Footer />

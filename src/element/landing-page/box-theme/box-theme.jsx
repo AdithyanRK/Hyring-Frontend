@@ -20,9 +20,9 @@ export default function BoxTheme({
         opacity: 1,
         y: 0,
         transition: {
-          duration: 1,
-          ease: "easeInOut",
-          delay: 1,
+          // duration: 1,
+          // ease: "easeOut",
+          delay: 0.3,
           direction: "forwards",
         },
       });

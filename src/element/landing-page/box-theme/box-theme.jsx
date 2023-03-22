@@ -39,12 +39,12 @@ export default function BoxTheme({
         ref={ref}
         initial={{ opacity: 0 }}
         animate={controls}
-        // transition={{
-        //   duration: 1,
-        //   ease: "easeInOut",
-        //   delay: 1,
-        //   direction: "forwards",
-        // }}
+        transition={{
+          // duration: 1,
+          // ease: "easeInOut",
+          delay: 0.3,
+          direction: "linear",
+        }}
         className={`${bgBoxStyle}   absolute  `}
       ></motion.div>
     </div>

@@ -9,11 +9,10 @@ import React from "react";
 
 export default function ContactUsSection() {
   return (
-    <div className=" lg:w-[90vw] mx-auto mb-20">
-      <h1 className="font-bold justify-center text-[36px0] md:text-[48px] lg:text-[58px] flex mx-auto  items-center flex-wrap w-[350px]  xs:w-[105%]  lg:w-full">
+    <div className=" lg:w-[90vw] mx-auto mb-20 mt-3 md:mt-20">
+      <h1 className="font-bold justify-center text-[36px] md:text-[48px] lg:text-[58px] flex mx-auto  items-center flex-wrap w-[350px]  xs:w-[105%]  lg:w-full">
         <span className="whitespace-nowrap">Feel Free to</span>
-        <span className="relative mr-[12px
-        ] xs:mx-[12px] md:mx-[20px]  lg:mx-[24px]">
+        <span className="relative mr-[12px] xs:mx-[12px] md:mx-[20px]  lg:mx-[24px]">
           <span className="absolute -left-[72px]  sm:-left-[100x] -top-[28px] md:-left-[46px] md:-top-[20px] lg:-left-[26px] lg:-top-[14px] scale-[0.58] md:scale-[0.74] lg:scale-[0.9]  ">
             <TextMark2  />
           </span>

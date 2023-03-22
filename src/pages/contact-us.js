@@ -1,7 +1,8 @@
 import Head from "next/head";
 
 import ContactUsSection from "@/components/landing-page/contact-us-section/contact-us-section";
-
+import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
+import Footer from "@/common/landing-page/footer/footer";
 
 export default function Index() {
   return (
@@ -12,9 +13,11 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ContactUsSection/>
-        
-     
+      <div className="text-primary-brown bg-body-background w-[100vw] h-fit ">
+        <NavbarComponent />
+        <ContactUsSection />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -12,10 +12,7 @@ html {
   padding: 0;
 }
 
-body {
-  color: #462b34 !important;
-  background-image: url("../../public/Rectangle.svg");
-}
+
 
 .slick-prev::before {
   content: "" !important;
@@ -72,14 +69,12 @@ body {
   left: 0;
 }
 
-.contact-tab:hover + div {
-  background-color: #462b34;
-  opacity: 1;
-}
 .contact-tab:hover > div > div > svg:first-child {
   fill: white;
 }
-
+.contact-tab:hover > div > div > svg:first-child #whatsapp-call {
+  fill: #61E396;
+}
 /* contact page arrow bounce animation  */
 
 .contact-tab:hover > div > div > div > .arrow-bounce {
@@ -110,6 +105,15 @@ body {
   .contact-tab:hover > div > div {
     display: block;
   }
+}
+
+.contact-tab + div {
+  top:0px;
+  left: 0px;
+}
+.contact-tab:hover + div {
+  top:8px;
+  left: 8px;
 }
 
 

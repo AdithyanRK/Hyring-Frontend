@@ -12,7 +12,7 @@ export default function ContactTabCommon({
   return (
     <BoxTheme
       className={`h-fit ${className} w-[95%] lg:w-[100%] mx-auto cursor-pointer mt-10   `}
-      boxStyle={`w-full h-fit border  border-primary-brown bg-white rounded-[10px] ${
+      boxStyle={`w-full h-fit border-2 border-primary-brown bg-white rounded-[10px] ${
         color === 1
           ? "hover:before:bg-custom-blue"
           : color === 2
@@ -22,7 +22,7 @@ export default function ContactTabCommon({
           : ""
       }   contact-tab py-5 `}
       bgBoxStyle={
-        "w-full h-full  rounded-[10px] duration-150 opacity-0 ease-in-out delay-200 top-[7px] left-[7px]  "
+        "w-full h-full  rounded-[10px]  duration-300 delay-100 bg-primary-brown"
       }
     >
       <div className="flex gap-3 xl:gap-6 flex-wrap justify-center md:justify-start items-center text-xl md:text-3xl lg:text-4xl w-full h-full px-8">

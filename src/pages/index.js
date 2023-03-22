@@ -6,6 +6,8 @@ import TalentSection from "@/components/landing-page/talents-section/talents-sec
 import { useScroll, useTransform, motion } from "framer-motion";
 import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
 import PromiseSection from "@/components/landing-page/promises-section/promises-section";
+import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
+import Footer from "@/common/landing-page/footer/footer";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -19,8 +21,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <>
-      <div className=" fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
+      <div className="text-primary-brown bg-[url('../../public/Rectangle.svg')] w-[100vw] h-fit ">
+        <NavbarComponent />
+        <div className=" fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div
             className="flex justify-center"
             style={{
@@ -33,11 +36,12 @@ export default function Home() {
           </motion.div>
         </div>
         <HomeBannerSection />
-        <PromiseSection/>
+        <PromiseSection />
         <TalentSection />
         <CarouselSection />
         <PricingSection />
-      </>
+        <Footer />
+      </div>
     </>
   );
 }

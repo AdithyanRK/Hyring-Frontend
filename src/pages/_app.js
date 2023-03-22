@@ -6,14 +6,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider } from "@emotion/react";
 import theme from "../config/theme";
 import createEmotionCache from "../config/createEmotionCache";
-import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 //Global CSS
 import "../styles/globals.css";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 // Font
 import localFont from "next/font/local";
-import Footer from "@/common/landing-page/footer/footer";
 // Font declaration
 // const whyte = localFont({
 //   src: [
@@ -65,10 +63,8 @@ export default function MyApp(props) {
         className={`${whyteRegular.variable} ${whyteMedium.variable} ${whyteLight.variable}`}
       >
         <ThemeProvider theme={theme}>
-          <NavbarComponent />
           <CssBaseline />
           <Component {...pageProps} />
-          <Footer />
         </ThemeProvider>
       </main>
     </CacheProvider>

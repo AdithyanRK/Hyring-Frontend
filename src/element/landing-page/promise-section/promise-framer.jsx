@@ -39,10 +39,10 @@ function Cards({ item, setData }) {
               > */}
               <div className="p-3 md:p-10 ">
                 <p>{item.icon}</p>
-                <p className="text-[40px] font-primaryMedium   leading-10 mt-10">
+                <p className="text-4xl font-primaryMedium leading-10 mt-4 md:mt-10">
                   {item.header}
                 </p>
-                <p className="text-[25px] font-primaryLight mt-3">
+                <p className="text-2xl font-primaryLight mt-3">
                   {item.message}
                 </p>
                 {/* </div> */}
@@ -134,7 +134,7 @@ export default function PromiseFramer() {
   ];
 
   return (
-    <div className="flex px-5 flex-wrap overflow-hidden  ">
+    <div className="flex md:px-5 flex-wrap mt-[70px]">
       <div className="flex-1 absolute hidden md:-left-72 lg:flex">
         <div className="w-[700px] h-[700px]  border-[20px] border-primary-brown rounded-full -z-1 absolute left-5 top-0"></div>
         <div className="w-[700px] h-[700px] border-[1px] border-primary-brown rounded-full bg-[#FDFDFD] shrink-0 flex justify-center items-center relative">
@@ -152,10 +152,10 @@ export default function PromiseFramer() {
             className={`absolute top-[30%] right-[65px] scale-[0.45] animate-scaleIn`}
           />
           <Star2
-            className={`absolute z-[30] top-7  fill-custom-red animate-scaleIn`}
+            className={`absolute z-[30] top-7  fill-custom-red animate-scaleOut`}
           />
           <Star2
-            className={`absolute z-[30] bottom-32 right-24 fill-custom-blue animate-scaleIn`}
+            className={`absolute z-[30] bottom-32 right-24 fill-custom-blue animate-scaleOut`}
           />
           <div className="w-[400px] h-[400px] border-l-[70px]  border-primary-brown rounded-full promise_bg_image absolute"></div>
           <div className="w-[400px] h-[400px] border-2  border-primary-brown rounded-full absolute"></div>
@@ -265,7 +265,7 @@ export default function PromiseFramer() {
       {/* <div className="w-full flex-1 relative -right-20 md:-right-36 lg:-right-60"> */}
       <div className="w-full flex-1 relative lg:-right-60">
         <div className="flex justify-center items-center md:absolute left-[27%] -top-20 gap-1 flex-nowrap">
-          <div className="flex items-center  font-primaryBold text-primary-brown text-[50px]">
+          <div className="flex items-center  font-primaryBold text-primary-brown text-5xl">
             Our Promises
           </div>
           <div className="relative top-2">

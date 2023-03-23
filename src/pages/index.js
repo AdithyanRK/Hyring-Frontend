@@ -10,6 +10,8 @@ import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Footer from "@/common/landing-page/footer/footer";
 import Image from "next/image";
 import { useRef } from "react";
+import CarouselSection1 from "@/components/landing-page/carousel-section/carousel-section copy1";
+import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section copy2";
 
 export default function Home() {
   let ref = useRef(null);
@@ -38,6 +40,16 @@ export default function Home() {
         <div className="invisible lg:visible fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div
             className="flex justify-center"
+            animate={{
+              rotate: [0, 360],
+              borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+            }}
+            transition={{
+              duration: 0,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatDelay: 0,
+            }}
             style={{
               rotate,
               y,
@@ -79,12 +91,31 @@ export default function Home() {
           >
             <TalentSection />
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-easing="linear"
-          >
-            <CarouselSection />
+          <div>
+            <div
+              // data-aos="fade-up"
+              // data-aos-duration="100"
+              // data-aos-easing="linear"
+              className="sticky top-0 "
+            >
+              <CarouselSection />
+            </div>
+            <div
+              // data-aos="fade-up"
+              // data-aos-duration="600"
+              // data-aos-easing="linear"
+              className="sticky top-4 px-2"
+            >
+              <CarouselSection1 />
+            </div>
+            <div
+              // data-aos="fade-up"
+              // data-aos-duration="600"
+              // data-aos-easing="linear"
+              className="sticky top-8 px-4"
+            >
+              <CarouselSection2 />
+            </div>
           </div>
           <PricingSection />
           <Footer />

@@ -9,7 +9,7 @@ import CarouselSectionCard2 from "./carousel-section-card2";
 import CarouselSectionCard3 from "./carousel-section-card3";
 import CarouselSectionTabs from "@/element/landing-page/carousel-section/carousel-section-tabs";
 
-export default function CarouselSection() {
+export default function CarouselSection2() {
   const [dataIndex, setDataIndex] = useState(0);
 
   let getDataIndex = () => {
@@ -86,7 +86,7 @@ export default function CarouselSection() {
   };
 
   return (
-    <div className=" bg-white relative border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] lg:px-[80px] pt-[50px] lg:pt-[75px] xl:pt-[100px] pb-[36px] ">
+    <div className=" bg-white border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] lg:px-[80px] pt-[50px] lg:pt-[75px] xl:pt-[100px] pb-[36px] ">
       <div className="flex justify-between text-[20px] sm:text-[28px] lg:text-[54px] font-primaryMedium  ">
         {dataIndex == 0 ? (
           <>

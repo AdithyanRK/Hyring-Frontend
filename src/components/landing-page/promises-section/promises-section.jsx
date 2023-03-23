@@ -30,7 +30,7 @@ const PromiseSection = () => {
   //   },
   // };
   return (
-    <div className="my-10 lg:my-32">
+    <div className="mb-10 lg:my-32 overflow-hidden">
       <PromiseFramer />
     </div>
   );

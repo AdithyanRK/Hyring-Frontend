@@ -4,11 +4,6 @@ import { MaterialUISwitch } from "@/element/landing-page/button/home-switch-elem
 
 export default function HeroAwitchButton({ className }) {
   const [switchValue, SetSwitchValue] = useState(true);
-  console.log(
-    "🚀 ~ file: hero-swith-button.jsx:9 ~ HeroAwitchButton ~ switchValue:",
-    switchValue
-  );
-
   return (
     <BoxTheme
       className={`h-[60px] ${className} w-fit cursor-pointer text-2xl font-primaryMedium   `}

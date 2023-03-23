@@ -2,8 +2,13 @@ import Head from "next/head";
 
 import ContactUsSection from "@/components/landing-page/contact-us-section/contact-us-section";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
-import Footer from "@/common/landing-page/footer/footer";
 import Image from "next/image";
+
+import dynamic from "next/dynamic.js";
+
+const FooterComponent = dynamic(() =>
+  import("../common/landing-page/footer/footer.jsx")
+);
 
 export default function Index() {
   return (
@@ -25,14 +30,13 @@ export default function Index() {
         />
         <NavbarComponent />
         <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-easing="linear"
-          >
-                   <ContactUsSection />
-
-          </div>
-        <Footer />
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <ContactUsSection />
+        </div>
+        <FooterComponent />
       </div>
     </>
   );

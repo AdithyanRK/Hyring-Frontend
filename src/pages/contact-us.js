@@ -24,7 +24,14 @@ export default function Index() {
           priority
         />
         <NavbarComponent />
-        <ContactUsSection />
+        <div
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-easing="linear"
+          >
+                   <ContactUsSection />
+
+          </div>
         <Footer />
       </div>
     </>

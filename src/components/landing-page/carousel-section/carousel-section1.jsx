@@ -11,15 +11,15 @@ import AiSvg from "@/assets/icons/landing-page/AiSvg";
 import PercentageSvg from "@/assets/icons/landing-page/percentageSvg";
 
 export default function CarouselSection1() {
-  const [dataIndex, setDataIndex] = useState(0);
+  // const [dataIndex, setDataIndex] = useState(0);
 
-  let getDataIndex =()=>{
-    setTimeout(()=>{
-      let slide = document.querySelector("#main-slider .slick-active .slide-item ");
-      setDataIndex(slide.getAttribute("data"));
-    },0)
+  // let getDataIndex =()=>{
+  //   setTimeout(()=>{
+  //     let slide = document.querySelector("#main-slider .slick-active .slide-item ");
+  //     setDataIndex(slide.getAttribute("data"));
+  //   },0)
 
-  }
+  // }
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;

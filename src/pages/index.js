@@ -31,11 +31,20 @@ export default function Home() {
           quality={100}
           priority
         />
-
         <NavbarComponent />
         <div className="invisible lg:visible fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div
             className="flex justify-center"
+            animate={{
+              rotate: [0,360],
+              borderRadius: ["0%", "0%", "50%", "50%", "0%"],
+            }}
+            transition={{
+              duration: 0,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatDelay: 0,
+            }}
             style={{
               rotate,
               y,
@@ -45,10 +54,35 @@ export default function Home() {
             <ScrollIcon />
           </motion.div>
         </div>
-        <HomeBannerSection />
-        <PromiseSection />
-        <TalentSection />
-        <CarouselSection />
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-easing="linear"
+        >
+          <HomeBannerSection />
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <PromiseSection />
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <TalentSection />
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <CarouselSection />
+        </div>
         <PricingSection />
         <Footer />
       </div>

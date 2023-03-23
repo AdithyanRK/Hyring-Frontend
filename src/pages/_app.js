@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 // Mui
 import { ThemeProvider } from "@mui/material/styles";
@@ -12,28 +12,12 @@ import "../styles/globals.css";
 const clientSideEmotionCache = createEmotionCache();
 // Font
 import localFont from "next/font/local";
-import Image from "next/image";
-// Font declaration
-// const whyte = localFont({
-//   src: [
-//     {
-//       path: "../../public/fonts/whyte/WhyteInktrap-Regular.woff",
-//       variable: "--font-whyte-regular",
-//       declarations: [{ prop: "ascent-override", value: "100%" }],
-//     },
-//     {
-//       path: "../../public/fonts/whyte/WhyteInktrap-Light.woff",
-//       variable: "--font-whyte-light",
-//       declarations: [{ prop: "ascent-override", value: "100%" }],
-//     },
-//     {
-//       path: "../../public/fonts/whyte/WhyteInktrap-Medium.woff",
-//       variable: "--font-whyte-medium",
-//       declarations: [{ prop: "ascent-override", value: "100%" }],
-//     },
-//   ],
-// });
 
+// scroll animation declaration
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// font declaration
 const whyteRegular = localFont({
   src: "../../public/fonts/whyte/WhyteInktrap-Regular.woff",
   variable: "--font-whyte-regular",
@@ -59,8 +43,15 @@ const whyteBold = localFont({
   display: "swap",
 });
 
-export default function MyApp(props) {
+const App = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+  
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -76,4 +67,6 @@ export default function MyApp(props) {
       </main>
     </CacheProvider>
   );
-}
+};
+
+export default App;

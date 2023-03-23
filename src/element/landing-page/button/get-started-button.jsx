@@ -13,6 +13,7 @@ export default function GetStartedButton({ className, boxColor, hover }) {
       bgBoxStyle={
         "w-full lg:h-[62px] h-[52px] rounded-[5px] bg-primary-brown  top-1 left-[5px] "
       }
+      isButton={true}
     >
       <div className="flex items-center gap-1  ">
         <div className="  font-primaryMedium text-base lg:text-xl">Get Started</div>

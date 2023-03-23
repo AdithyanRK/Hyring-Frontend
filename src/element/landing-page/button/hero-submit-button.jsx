@@ -12,6 +12,9 @@ export default function HeroSubmitButton({className}) {
     bgBoxStyle={
       "w-[56px] h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
     }
+    isButton={true}
+    
+
   >
         <RocketIcon/>
   </BoxTheme>

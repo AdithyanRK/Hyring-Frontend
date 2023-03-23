@@ -9,11 +9,56 @@ import PromiseSection from "@/components/landing-page/promises-section/promises-
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Footer from "@/common/landing-page/footer/footer";
 import Image from "next/image";
+import { useRef, useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  let ref = useRef(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 4800], [0, 154]);
   const rotate = useTransform(scrollY, [0, 4800], [-1080, 0]);
+  let { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  // Show button when page is scrolled upto given distance
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 800) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+    // make scrolling smooth
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+  }, []);
+
+  let yAxis = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  let scale = useTransform(scrollYProgress, [0, 1], ["99.9%", "100%"]);
+  let opacity = useTransform(scrollYProgress, [0.98, 1], [1, 0.98]);
+
+  const scrollVariants = {
+    initial: { y: ".5rem", opacity: 0 },
+    animate: {
+      y: "0rem",
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <>
       <Head>
@@ -22,21 +67,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative text-primary-brown">
-        <Image
-          src="/Rectangle.svg"
-          fill
-          style={{ objectFit: "cover", zIndex: -10 }}
-          alt="Background-Image"
-          quality={100}
-          priority
-        />
-        <NavbarComponent />
+
+      <div className="relative text-primary-brown" ref={ref}>
+        <AnimatePresence>
+          {isVisible && (
+            <motion.button
+              className="fixed bottom-1"
+              onClick={scrollToTop}
+              variants={scrollVariants}
+              initial="initial"
+              animate="animate"
+              exit="initial"
+            >
+              <p>LOREM LOREM LOREM</p>
+            </motion.button>
+          )}
+        </AnimatePresence>
         <div className="invisible lg:visible fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div
             className="flex justify-center"
             animate={{
-              rotate: [0,360],
+              rotate: [0, 360],
               borderRadius: ["0%", "0%", "50%", "50%", "0%"],
             }}
             transition={{
@@ -54,37 +105,48 @@ export default function Home() {
             <ScrollIcon />
           </motion.div>
         </div>
+        <motion.div style={{ yAxis, scale, opacity }}>
+          <Image
+            src="/Rectangle.svg"
+            fill
+            style={{ objectFit: "cover", zIndex: -10 }}
+            alt="Background-Image"
+            quality={100}
+            priority
+          />
+          <NavbarComponent />
 
-        <div
-          data-aos="fade-up"
-          data-aos-duration="500"
-          data-aos-easing="linear"
-        >
-          <HomeBannerSection />
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
-        >
-          <PromiseSection />
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
-        >
-          <TalentSection />
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
-        >
-          <CarouselSection />
-        </div>
-        <PricingSection />
-        <Footer />
+          <div
+            data-aos="fade-up"
+            data-aos-duration="500"
+            data-aos-easing="linear"
+          >
+            <HomeBannerSection />
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-easing="linear"
+          >
+            <PromiseSection />
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-easing="linear"
+          >
+            <TalentSection />
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="600"
+            data-aos-easing="linear"
+          >
+            <CarouselSection />
+          </div>
+          <PricingSection />
+          <Footer />
+        </motion.div>
       </div>
     </>
   );

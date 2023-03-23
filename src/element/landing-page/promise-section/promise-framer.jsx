@@ -29,7 +29,7 @@ function Cards({ item, setData }) {
         <main className="relative w-full flex gap-10 flex-col">
           <div className="h-full md:h-600px w-full flex justify-center items-center">
             <BoxTheme
-              boxStyle={` w-full md:w-[600px] h-full md:h-[350px] relative border-2 border-primary-brown rounded-3xl bg-[${item.bgColor}] promise_animate-glow`}
+              boxStyle={` w-full md:w-[600px] h-full md:h-[350px] relative border-2 border-primary-brown rounded-3xl bg-[${item.bgColor}]  promise_animate-glow`}
               bgBoxStyle={
                 " w-full lg:w-[600px] h-full md:h-[350px] border-2 border-primary-brown top-3 -z-1 left-3  rounded-3xl bg-[#E0E0E0]"
               }
@@ -134,7 +134,7 @@ export default function PromiseFramer() {
   ];
 
   return (
-    <div className="flex px-5 flex-wrap overflow-hidden">
+    <div className="flex px-5 flex-wrap overflow-hidden  ">
       <div className="flex-1 absolute hidden md:-left-72 lg:flex">
         <div className="w-[700px] h-[700px]  border-[20px] border-primary-brown rounded-full -z-1 absolute left-5 top-0"></div>
         <div className="w-[700px] h-[700px] border-[1px] border-primary-brown rounded-full bg-[#FDFDFD] shrink-0 flex justify-center items-center relative">
@@ -273,7 +273,7 @@ export default function PromiseFramer() {
             <HeartBrown className="absolute left-1 top-[3px] -z-1" />
           </div>
         </div>
-        <div className="w-full max-h-[700px] overflow-auto promises_progresses">
+        <div className="w-full max-h-[700px] overflow-auto promises_progresses no-scrollbar">
           {values.map((item, i) => (
             <Cards item={item} key={i} setData={setData} />
           ))}

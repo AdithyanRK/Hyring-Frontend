@@ -1,6 +1,7 @@
 import Arrow1 from "@/assets/icons/landing-page/arrow1";
 import React from "react";
 import BoxTheme from "../box-theme/box-theme";
+import { motion } from "framer-motion";
 
 export default function GetStartedButton({ className, boxColor, hover }) {
   return (
@@ -17,7 +18,12 @@ export default function GetStartedButton({ className, boxColor, hover }) {
     >
       <div className="flex items-center gap-1  ">
         <div className="  font-primaryMedium text-base lg:text-xl">Get Started</div>
-        <Arrow1 />
+        <motion.div
+           animate={{
+            translateX:[0,9,0]
+            
+           }}
+          transition={{duration:1.5,delay:0.3 ,repeat: Infinity ,repeatDelay:0.5 }}><Arrow1 /></motion.div>
       </div>
     </BoxTheme>
   );

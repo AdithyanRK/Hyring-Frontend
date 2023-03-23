@@ -1,6 +1,7 @@
 import Arrow from "@/assets/icons/landing-page/arrow";
 import React from "react";
 import BoxTheme from "../box-theme/box-theme";
+import { motion } from "framer-motion";
 
 export default function SignUpButton() {
   return (
@@ -17,7 +18,12 @@ export default function SignUpButton() {
       >
         <div className="flex items-center gap-1  ">
           <div className="  font-primaryMedium text-lg  md:text-xl">Sign Up</div>
-          <Arrow />
+          <motion.div
+           animate={{
+            translateX:[0,9,0]
+            
+           }}
+          transition={{duration:1.5,delay:0.3 ,repeat: Infinity ,repeatDelay:0.5 }}><Arrow /></motion.div>
         </div>
       </BoxTheme>
   );

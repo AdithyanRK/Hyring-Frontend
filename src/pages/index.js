@@ -1,6 +1,5 @@
 import Head from "next/head";
 import HomeBannerSection from "@/components/landing-page/home-banner-section/home-banner-section";
-import CarouselSection from "@/components/landing-page/carousel-section/carousel-section";
 import PricingSection from "@/components/landing-page/pricing-section/pricing-section";
 import TalentSection from "@/components/landing-page/talents-section/talents-section";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -10,8 +9,9 @@ import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Footer from "@/common/landing-page/footer/footer";
 import Image from "next/image";
 import { useRef } from "react";
-import CarouselSection1 from "@/components/landing-page/carousel-section/carousel-section copy1";
-import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section copy2";
+import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
+import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section2";
+import CarouselSection1 from "@/components/landing-page/carousel-section/carousel-section1";
 
 export default function Home() {
   let ref = useRef(null);
@@ -98,7 +98,7 @@ export default function Home() {
               // data-aos-easing="linear"
               className="sticky top-0 "
             >
-              <CarouselSection />
+              <CarouselSection1 />
             </div>
             <div
               // data-aos="fade-up"
@@ -106,7 +106,7 @@ export default function Home() {
               // data-aos-easing="linear"
               className="sticky top-4 px-2"
             >
-              <CarouselSection1 />
+              <CarouselSection2 />
             </div>
             <div
               // data-aos="fade-up"
@@ -114,7 +114,7 @@ export default function Home() {
               // data-aos-easing="linear"
               className="sticky top-8 px-4"
             >
-              <CarouselSection2 />
+              <CarouselSection3 />
             </div>
           </div>
           <PricingSection />

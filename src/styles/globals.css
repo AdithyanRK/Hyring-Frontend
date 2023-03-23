@@ -308,3 +308,68 @@ html {
   background-size: cover; */
   background-color: #fff;
 }
+
+.drag-button{
+  margin-left: 0;
+  margin-right: 0;
+}
+.desk-logo{
+  display: block;
+}
+.mob-logo{
+  display: none;
+}
+.desk-soc{
+  display: flex;
+  }
+  .mob-soc{
+    display: none;
+  }
+
+@media screen and (max-width: 1024px) {
+.desk-logo{
+  display: none;
+}
+.mob-logo{
+  display: block;
+}
+}
+@media screen and (max-width: 600px) {
+.desk-soc{
+display: none;
+}
+.mob-soc{
+  display: flex;
+}
+.footer{
+  height: 1000px;
+}
+.green-sec{
+  width: 350px;
+  padding: 0px;
+  height: 400px;
+}
+.job-title{
+  display: none;
+}
+.green-mar-sec{
+  margin-top: -300px;
+  margin-bottom: 350px;
+}
+.arrow-right{
+  margin-right: 25px;
+  margin-left: 10px;
+}
+.arrow-left{
+  margin-right: 10px;
+}
+.copy-sec{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.company-sec{
+ margin-bottom: 20px;
+ margin-top: 20px;
+}
+}
+

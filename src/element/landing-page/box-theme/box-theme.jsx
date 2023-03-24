@@ -6,6 +6,7 @@ export default function BoxTheme({
   bgBoxStyle,
   className,
   isButton,
+  width
 }) {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -43,7 +44,7 @@ export default function BoxTheme({
           ></motion.div>
         </div>
       ) : (
-        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.8 }}>
+        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.8 }} className={width}>
           <div className={`${className}  relative  `}>
             <div
               className={`${boxStyle} flex justify-center items-center relative z-1 `}

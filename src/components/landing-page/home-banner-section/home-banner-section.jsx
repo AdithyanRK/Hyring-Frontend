@@ -17,7 +17,6 @@ import Triangle from "@/assets/icons/landing-page/triangle";
 import Star6 from "@/assets/icons/landing-page/star6";
 import Polygon from "@/assets/icons/landing-page/polygon";
 import TextMark from "@/assets/icons/landing-page/text-mark";
-import { MaterialUISwitch } from "@/element/landing-page/button/home-switch-element";
 import PlayVideoIcon from "@/assets/icons/landing-page/play_video";
 import HomeListComponent from "./home-list-items-component/home-list-items-component";
 

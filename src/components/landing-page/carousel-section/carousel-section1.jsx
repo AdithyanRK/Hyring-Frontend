@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, {useRef } from "react";
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderButton from "@/element/landing-page/button/slider-button";
@@ -11,15 +10,8 @@ import AiSvg from "@/assets/icons/landing-page/AiSvg";
 import PercentageSvg from "@/assets/icons/landing-page/percentageSvg";
 
 export default function CarouselSection1() {
-  // const [dataIndex, setDataIndex] = useState(0);
-
-  // let getDataIndex =()=>{
-  //   setTimeout(()=>{
-  //     let slide = document.querySelector("#main-slider .slick-active .slide-item ");
-  //     setDataIndex(slide.getAttribute("data"));
-  //   },0)
-
-  // }
+  
+  const sliderRef = useRef(null);
 
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -80,9 +72,8 @@ export default function CarouselSection1() {
       </div>
       <div className=" border sm:border-2 border-primary-brown mt-[22px] lg:mt-[34px] mb-6"></div>
 
-      <div className="px-[30px] xs:px-[45px] sm:px-[65px]" id={"main-slider"}>
-        <Slider {...settings}>
-          <div className="slide-item" data={0}>
+      <div className="px-[30px] xs:px-[45px] sm:px-[65px]" >
+        <Slider {...settings} ref={sliderRef}>
             <CarouselSectionCard
               text={"Health Insurance for Family Members"}
               Svg={<AwardWithCheckSvg />}
@@ -91,8 +82,6 @@ export default function CarouselSection1() {
               starColor2={"fill-custom-yellow"}
               starColor3={"fill-custom-yellow"}
             />
-          </div>
-          <div className="slide-item" data={1}>
             <CarouselSectionCard
               text={"AI Powered Sourcing"}
               Svg={<AiSvg />}
@@ -101,8 +90,6 @@ export default function CarouselSection1() {
               starColor2={"fill-custom-green"}
               starColor3={"fill-custom-blue"}
             />
-          </div>
-          <div className="slide-item" data={2}>
             <CarouselSectionCard
               text={"Indian Taxations"}
               Svg={<PercentageSvg />}
@@ -111,8 +98,6 @@ export default function CarouselSection1() {
               starColor2={"fill-custom-yellow"}
               starColor3={"fill-custom-yellow"}
             />
-          </div>
-          <div className="slide-item" data={3}>
             <CarouselSectionCard
               text={"Lorem lorem 1"}
               Svg={<PercentageSvg />}
@@ -121,47 +106,28 @@ export default function CarouselSection1() {
               starColor2={"fill-custom-green"}
               starColor3={"fill-custom-yellow"}
             />
-          </div>
-          <div className="slide-item" data={4}>
             <CarouselSectionCard
               text={"Lorem2 lorem2"}
               Svg={<PercentageSvg />}
               boxStyleColor={"bg-custom-blue"}
-              starColor1={"fill-custom-blue"}
+              starColor1={"fill-custom-blue"} 
               starColor2={"fill-custom-green"}
               starColor3={"fill-custom-blue"}
             />
-          </div>
         </Slider>
       </div>
 
       <Slider {...settings1} className="py-2 md:py-8 ">
-        <CarouselSectionTabs text={"New Mackbook"} index={1} color={1} />
-        <CarouselSectionTabs
-          text={"Annual International Retreat"}
-          index={2}
-          color={2}
-        />
-        <CarouselSectionTabs text={"Big Diwali Gifts"} index={3} color={3} />
-        <CarouselSectionTabs text={"Monthly Awards"} index={4} color={4} />
-        <CarouselSectionTabs
-          text={"Health Insurance for Family Members"}
-          index={5}
-          color={5}
-        />
-        <CarouselSectionTabs text={"New Mackbook"} index={1} color={1} />
-        <CarouselSectionTabs
-          text={"Annual International Retreat"}
-          index={2}
-          color={2}
-        />
-        <CarouselSectionTabs text={"Big Diwali Gifts"} index={3} color={3} />
-        <CarouselSectionTabs text={"Monthly Awards"} index={4} color={4} />
-        <CarouselSectionTabs
-          text={"Health Insurance for Family Members"}
-          index={5}
-          color={5}
-        />
+        <div onClick={()=>{sliderRef.current.slickGoTo(0);}}><CarouselSectionTabs text={"New Mackbook"} index={1} color={1} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(1);}}><CarouselSectionTabs text={"Annual International Retreat"} index={2} color={2}/></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(2);}}><CarouselSectionTabs text={"Big Diwali Gifts"} index={3} color={3} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(3);}}><CarouselSectionTabs text={"Monthly Awards"} index={4} color={4} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(4);}}><CarouselSectionTabs text={"Health Insurance for Family Members"} index={5} color={5}/></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(0);}}><CarouselSectionTabs text={"New Mackbook"} index={1} color={1} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(1);}}><CarouselSectionTabs text={"Annual International Retreat"} index={2} color={2}/></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(2);}}><CarouselSectionTabs text={"Big Diwali Gifts"} index={3} color={3} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(3);}}><CarouselSectionTabs text={"Monthly Awards"} index={4} color={4} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(4);}}><CarouselSectionTabs text={"Health Insurance for Family Members"} index={5} color={5}/></div>
       </Slider>
     </div>
   );

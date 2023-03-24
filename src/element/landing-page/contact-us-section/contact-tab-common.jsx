@@ -22,7 +22,7 @@ export default function ContactTabCommon({
           : ""
       }   contact-tab py-5 `}
       bgBoxStyle={
-        "w-full h-full  rounded-[10px]  duration-300 delay-100 bg-primary-brown"
+        "w-full h-full  rounded-[10px]  duration-500 delay-100 bg-primary-brown"
       }
     >
       <div className="flex gap-3 xl:gap-6 flex-wrap justify-center md:justify-start items-center text-xl md:text-3xl lg:text-4xl w-full h-full px-8">

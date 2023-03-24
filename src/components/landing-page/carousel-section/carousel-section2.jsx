@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -12,6 +12,7 @@ import PercentageSvg from "@/assets/icons/landing-page/percentageSvg";
 
 
 export default function CarouselSection2() {
+  const sliderRef = useRef(null);
  
 
   function SampleNextArrow(props) {
@@ -75,17 +76,16 @@ export default function CarouselSection2() {
       </div>
       <div className=" border sm:border-2 border-primary-brown mt-[22px] lg:mt-[34px] mb-6"></div>
 
-      <div className="px-[30px] xs:px-[45px] sm:px-[65px]"  id={"main-slider"}>
-        <Slider {...settings}>
-            <div className="slide-item" data={0}> <CarouselSectionCard
+      <div className="px-[30px] xs:px-[45px] sm:px-[65px]"  >
+        <Slider {...settings} ref={sliderRef}>
+             <CarouselSectionCard
               text={"lorem1 lorem 1"}
               Svg={<AwardWithCheckSvg />}
               boxStyleColor={"bg-custom-green"}
               starColor1={"fill-custom-blue"}
               starColor2={"fill-custom-yellow"}
               starColor3={"fill-custom-yellow"}
-            /></div>
-             <div className="slide-item" data={1}>
+            />
             <CarouselSectionCard
               text={"Lorem 2 lorem 2"}
               Svg={<AiSvg />}
@@ -94,8 +94,6 @@ export default function CarouselSection2() {
               starColor2={"fill-custom-green"}
               starColor3={"fill-custom-blue"}
             />
-          </div>
-          <div className="slide-item" data={2}>
             <CarouselSectionCard
               text={"Lorem3 lorem 3"}
               Svg={<PercentageSvg />}
@@ -104,8 +102,6 @@ export default function CarouselSection2() {
               starColor2={"fill-custom-yellow"}
               starColor3={"fill-custom-yellow"}
             />
-          </div>
-          <div className="slide-item" data={3}>
             <CarouselSectionCard
               text={"Lorem4 lorem 4"}
               Svg={<AwardWithCheckSvg/>}
@@ -114,8 +110,6 @@ export default function CarouselSection2() {
               starColor2={"fill-custom-green"}
               starColor3={"fill-custom-yellow"}
             />
-          </div>
-          <div className="slide-item" data={4}>
             <CarouselSectionCard
               text={"Lorem5 lorem5"}
               Svg={<AiSvg />}
@@ -124,21 +118,21 @@ export default function CarouselSection2() {
               starColor2={"fill-custom-green"}
               starColor3={"fill-custom-blue"}
             />
-          </div>
         </Slider>
       </div>
 
         <Slider {...settings1} className="py-2 md:py-8 ">
-         <CarouselSectionTabs text={"lorem 1 "} index={1} color={1} />
-         <CarouselSectionTabs text={"lorem 2 lorem2"} index={2} color={2} />
-         <CarouselSectionTabs text={"lorem3 "} index={3} color={3} />
-         <CarouselSectionTabs text={"lorem 4 lorem 4"} index={4} color={4} />
-         <CarouselSectionTabs text={"lorem 5 lorem 5"} index={5} color={5} />
-         <CarouselSectionTabs text={"lorem 1 "} index={1} color={1} />
-         <CarouselSectionTabs text={"lorem 2 lorem2"} index={2} color={2} />
-         <CarouselSectionTabs text={"lorem3"} index={3} color={3} />
-         <CarouselSectionTabs text={"lorem 4 lorem 4"} index={4} color={4} />
-         <CarouselSectionTabs text={"lorem 5 lorem 5"} index={5} color={5} />
+        <div onClick={()=>{sliderRef.current.slickGoTo(0);}}><CarouselSectionTabs text={"lorem 1        "}  index={1} color={1} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(1);}}><CarouselSectionTabs text={"lorem 2 lorem2 "}  index={2} color={2}/></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(2);}}><CarouselSectionTabs text={"lorem3         "}  index={3} color={3} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(3);}}><CarouselSectionTabs text={"lorem 4 lorem 4"}  index={4} color={4} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(4);}}><CarouselSectionTabs text={"lorem 5 lorem 5"}  index={5} color={5}/></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(0);}}><CarouselSectionTabs text={"lorem 1        "}  index={1} color={1} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(1);}}><CarouselSectionTabs text={"lorem 2 lorem2 "}  index={2} color={2}/></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(2);}}><CarouselSectionTabs text={"lorem3         "}  index={3} color={3} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(3);}}><CarouselSectionTabs text={"lorem 4 lorem 4"}  index={4} color={4} /></div>
+        <div onClick={()=>{sliderRef.current.slickGoTo(4);}}><CarouselSectionTabs text={"lorem 5 lorem 5"}  index={5} color={5}/></div>
+      
         </Slider>
       
     </div>

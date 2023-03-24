@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function SignUpButton() {
   return (
       <BoxTheme
-        className={"lg:h-[57px] lg:w-[160px] cursor-pointer"}
+        className={"lg:h-[57px] w-full lg:w-[160px] cursor-pointer"}
         boxStyle={
           "w-full md:w-[140px]  lg:w-[155px] h-[42px] lg:h-[52px] border bg-custom-green rounded-[4px] border-primary-brown animate-glow"
         }
@@ -14,9 +14,9 @@ export default function SignUpButton() {
           "w-full md:w-[140px] lg:w-[155px] h-[42px] lg:h-[52px] border-2 rounded-[4px] bg-  custom-bg border-primary-brown top-1 left-[5px]"
         }
       isButton={true}
-
+        width={"w-full"}
       >
-        <div className="flex items-center gap-1  ">
+        <div className="flex items-center gap-1   ">
           <div className="  font-primaryMedium text-lg  md:text-xl">Sign Up</div>
           <motion.div
            animate={{

@@ -1,9 +1,16 @@
 import BoxTheme from "../box-theme/box-theme";
 import Autocomplete from "@mui/material/Autocomplete";
-import { InputAdornment, OutlinedInput, TextField } from "@mui/material";
+import { InputAdornment, OutlinedInput, Popper, TextField } from "@mui/material";
 import DropDownArrow from "@/assets/icons/landing-page/drop-doen-arrow";
 
+
+
+
+
+
 export default function HeroAutocompleteButton({ className }) {
+
+
   const options = [
     "UI UX Designer",
     "Frontend Developer",
@@ -14,6 +21,39 @@ export default function HeroAutocompleteButton({ className }) {
     "System Architect",
   ];
 
+  const CustomPopper = function (props) {
+    return <Popper {...props} sx={{
+      border:"2px solid #462B34",
+      borderRadius:"4px",
+      margin:"11px 0 !important",
+      "& .MuiAutocomplete-listbox":{
+        fontFamily: "Whyte Inktrap" ,
+        fontWeight:"500",
+        fontSize:"18px",
+        color:"#462B34",
+        padding:"0",
+
+        "& li":{
+          padding: "28px 12px ",
+          borderBottom:"1px solid #462B34"
+        },
+        "& .MuiAutocomplete-option.Mui-focused": {
+          backgroundColor:"#fef8f2",
+
+        },
+        "& .MuiAutocomplete-option[aria-selected='true']": {
+          backgroundColor:"#FFB65E"
+
+        },
+        "& .MuiAutocomplete-option[aria-selected='true'].Mui-focused": {
+          backgroundColor:"#FFB65E"
+
+        }
+      },
+     
+    }} placement="bottom" />;
+  };
+  
   return (
     <BoxTheme
       className={`h-[60px] ${className} w-fit cursor-pointer   `}
@@ -26,10 +66,9 @@ export default function HeroAutocompleteButton({ className }) {
 
     >
       <Autocomplete
-        className="font-primaryMedium"
+        PopperComponent={CustomPopper}
         defaultValue="Product Designer"
         sx={{
-          display: "inline-block",
           "& input": {
             width: "90%",
             fontSize: "24px",
@@ -42,10 +81,11 @@ export default function HeroAutocompleteButton({ className }) {
             fontWeight: "500",
             fontFamily: "inherit",
           },
+         
         }}
         options={options}
         renderInput={(params) => (
-          <div ref={params.InputProps.ref}>
+          <div ref={params.InputProps.ref}  >
             <OutlinedInput
               sx={{
                 "&.MuiInputBase-root": {

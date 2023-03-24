@@ -14,22 +14,12 @@ palette: {
    },
   },
   typography: {
-    fontFamily:" Whyte Inktrap" ,
+    // fontFamily: ,
   },
   components: {
     // Name of the component
     MuiCssBaseline: {
-      styleOverrides: `
-      @font-face {
-        font-family: 'Whyte Inktrap';
-        src: url('../../public/fonts/whyte/WhyteInktrap-Medium.woff');
-        font-display: swap;
-        ascent-override: 100%;
-        descent-override: 20%;
-        line-gap-override: normal;
-        advance-override: 10;
-      }
-      `,
+      // styleOverrides: ,
     },
    
     MuiAutocomplete: {

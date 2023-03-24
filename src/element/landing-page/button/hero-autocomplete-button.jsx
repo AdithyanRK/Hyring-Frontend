@@ -9,6 +9,7 @@ import {
 import DropDownArrow from "@/assets/icons/landing-page/drop-doen-arrow";
 
 export default function HeroAutocompleteButton({ className }) {
+
   const options = [
     "UI UX Designer",
     "Frontend Developer",
@@ -28,8 +29,6 @@ export default function HeroAutocompleteButton({ className }) {
           borderRadius: "4px",
           margin: "11px 0 !important",
           "& .MuiAutocomplete-listbox": {
-            fontFamily: "Whyte Inktrap",
-            fontWeight: "500",
             fontSize: "18px",
             color: "#462B34",
             padding: "0",
@@ -37,6 +36,8 @@ export default function HeroAutocompleteButton({ className }) {
             "& li": {
               padding: "28px 12px ",
               borderBottom: "1px solid #462B34",
+              fontFamily: '__whyteMedium_2bf28c',
+
             },
             "& .MuiAutocomplete-option.Mui-focused": {
               backgroundColor: "#fef8f2",
@@ -65,6 +66,7 @@ export default function HeroAutocompleteButton({ className }) {
       }
     >
       <Autocomplete
+        className="font-whyte-medium"
         PopperComponent={CustomPopper}
         defaultValue="Product Designer"
         sx={{

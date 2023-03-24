@@ -224,7 +224,7 @@ export default function Footer({ className }) {
                 }
               >
                 <TextField
-                  className="w-[270px]"
+                  className="w-[270px] footer_input_placeholder"
                   hiddenLabel
                   id="filled-hidden-label-normal"
                   placeholder="Your Email Address"
@@ -287,7 +287,7 @@ export default function Footer({ className }) {
               }
             >
               <TextField
-                className="w-[270px]"
+                className="w-[270px] footer_input_placeholder"
                 hiddenLabel
                 id="filled-hidden-label-normal"
                 placeholder="Your Email Address"

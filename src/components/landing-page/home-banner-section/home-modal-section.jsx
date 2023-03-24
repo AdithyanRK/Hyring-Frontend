@@ -9,12 +9,12 @@ export default function HomeBannerModal(props) {
     <div>
       <Modal open={open} onClose={handleOpen}>
         <>
-          <div className="mt-[3%]">
+          <div className="mt-[1%] md:mt-[3%]">
             <motion.div
               animate={{ y: 100 }}
               transition={{ type: "spring", stiffness: 100 }}
             >
-              <div className="w-[74%] flex flex-row items-end justify-end mx-auto my-0" onClick={()=>handleOpen()}>
+              <div className="w-[85%] flex flex-row items-end justify-end mx-auto my-0 md:w-[74%]" onClick={()=>handleOpen()}>
                 <motion.button
                   whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.8 }}

@@ -23,8 +23,8 @@ export default function PricingSectionCard({
         hover ? "bg-primary-brown animate-circleFill" : ""
       }   top-[13px] left-[9px] `}
     >
-      <div className="w-full h-full px-4 lg:px-8 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"   onMouseEnter={() => setHover(!hover)}
-          onMouseLeave={() => setHover(!hover)}
+      <div className="w-full h-full px-4 lg:px-8 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"   onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
          >
         <div>{svg}</div>
         <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">{title}</div>

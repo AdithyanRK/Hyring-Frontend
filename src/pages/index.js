@@ -109,10 +109,10 @@ export default function Home() {
             <div className="sticky h-[98vh]  top-0 ">
               <CarouselSection1 />
             </div>
-            <div className="sticky top-4 h-[95vh] px-2">
+            <div className="sticky top-8 h-[95vh]">
               <CarouselSection2 />
             </div>
-            <div className="sticky top-5 h-[92vh] px-4 ">
+            <div className="sticky top-16 h-[92vh]">
               <CarouselSection3 />
             </div>
           </div>

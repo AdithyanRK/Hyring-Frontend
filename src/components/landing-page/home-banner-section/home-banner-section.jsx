@@ -1,8 +1,8 @@
+import React,{useState} from 'react';
 import HeroAutocompleteButton from "@/element/landing-page/button/hero-autocomplete-button";
 import HeroSubmitButton from "@/element/landing-page/button/hero-submit-button";
 import HeroAwitchButton from "@/element/landing-page/button/hero-swith-button";
 import HeroList from "@/element/landing-page/home-banner-section/home-banner-section-list";
-import React, { useState } from "react";
 import Lottie from "react-lottie";
 import HomeBannerAnimation from "/public/home_banner.json";
 import Slider from "react-slick";
@@ -19,8 +19,10 @@ import Polygon from "@/assets/icons/landing-page/polygon";
 import TextMark from "@/assets/icons/landing-page/text-mark";
 import PlayVideoIcon from "@/assets/icons/landing-page/play_video";
 import HomeListComponent from "./home-list-items-component/home-list-items-component";
+import HomeBannerModal from "./home-modal-section";
 
 const HomeBannerSection = () => {
+  const [open,setOpen]=useState(false)
   const lottieOptions = {
     animationData: HomeBannerAnimation,
     loop: true,
@@ -47,6 +49,9 @@ const HomeBannerSection = () => {
     );
   };
 
+const handleOpen=()=>{
+  setOpen(!open)
+}
   return (
     <div className="w-[100vw] overflow-hidden mt-3 md:mt-20">
       <div className="mx-auto w-[92vw] mb-20">
@@ -71,8 +76,8 @@ const HomeBannerSection = () => {
             <HomeListComponent className="hidden lg:block" />
           </div>
           <div className="relative flex basis-2/5  lg:scale-[1.3] ">
-            <Lottie options={lottieOptions} />
-            <div className="absolute bottom-[1%] left-[10%] xl:bottom-[13%] xl:left-[17%] lg:bottom-[20%] lg:left-[15%] md:bottom-[14%] md:left-[18%] sm:bottom-[10%] sm:left-[16%]">
+            <Lottie options={lottieOptions}  isClickToPauseDisabled={true} />
+            <div onClick={()=>handleOpen()}className="absolute bottom-[1%] left-[10%] xl:bottom-[13%] xl:left-[17%] lg:bottom-[20%] lg:left-[15%] md:bottom-[14%] md:left-[18%] sm:bottom-[10%] sm:left-[16%] cursor-pointer">
               {/* <div className="absolute bottom-[13%] left-[17%] "> */}
               <div className="relative bg-transparent">
                 <PlayVideoIcon />
@@ -103,6 +108,7 @@ const HomeBannerSection = () => {
           </Slider>
         </div>
       </div>
+      <HomeBannerModal open={open} handleOpen={handleOpen}/>
     </div>
   );
 };

@@ -11,12 +11,34 @@ import Star2 from "@/assets/icons/landing-page/star2";
 import HeartRed from "@/assets/icons/landing-page/heart-red";
 import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 import BoxTheme from "@/element/landing-page/box-theme/box-theme";
+import { useRouter } from "next/router";
+import { useMotionValueEvent, useScroll } from "framer-motion";
 
 function Cards({ item, setData }) {
   const { ref, inView, entry } = useInView({
     trackVisibility: true,
     delay: 100,
   });
+  const router = useRouter();
+  const { scrollY } = useScroll();
+  const [isScrolled, setScrolled] = useState(true);
+
+  useMotionValueEvent(scrollY, "change", (y) => {
+   
+    if (y >= 1600 && y <= 1620 && isScrolled) {
+      window.scrollTo({
+        top: 2100,
+        behavior: 'smooth',
+      })
+    }
+    if (y >= 1700) {
+      setScrolled(false);
+    }
+    if (y < 1600) {
+      setScrolled(true);
+    }
+  });
+
   useEffect(() => {
     if (entry?.isIntersecting) {
       setData(item.id);

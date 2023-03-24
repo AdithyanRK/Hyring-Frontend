@@ -8,15 +8,24 @@ import PromiseSection from "@/components/landing-page/promises-section/promises-
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Image from "next/image";
 import { useRef } from "react";
-import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
-import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section2";
-import CarouselSection1 from "@/components/landing-page/carousel-section/carousel-section1";
+
 import dynamic from "next/dynamic.js";
 
 const FooterComponent = dynamic(() =>
   import("../common/landing-page/footer/footer.jsx")
 );
 
+const CarouselSection1 = dynamic(() =>
+  import("../components/landing-page/carousel-section/carousel-section1")
+);
+
+const CarouselSection2 = dynamic(() =>
+  import("../components/landing-page/carousel-section/carousel-section2")
+);
+
+const CarouselSection3 = dynamic(() =>
+  import("../components/landing-page/carousel-section/carousel-section3")
+);
 
 export default function Home() {
   let ref = useRef(null);
@@ -38,12 +47,12 @@ export default function Home() {
         <title>TIRED OF HR CONSULTANTS ?</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta name="title" content="TIRED OF HR CONSULTANTS?" />
+        <meta name="title" content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal" />
         <meta name="description" content="" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hyring.com/" />
-        <meta property="og:title" content="TIRED OF HR CONSULTANTS?" />
+        <meta property="og:title" content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal" />
         <meta property="og:description" content="" />
         <meta
           property="og:image"
@@ -51,7 +60,7 @@ export default function Home() {
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://hyring.com/" />
-        <meta property="twitter:title" content="TIRED OF HR CONSULTANTS?" />
+        <meta property="twitter:title" content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal" />
         <meta property="twitter:description" content="" />
         <meta
           property="twitter:image"
@@ -98,24 +107,21 @@ export default function Home() {
           >
             <PromiseSection />
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-easing="linear"
-          >
+          <div>
             <TalentSection />
           </div>
-          <div>
-            <div className="sticky top-0 ">
+          <div className=" min-h-[100vh]">
+            <div className="sticky h-[98vh]  top-0 ">
               <CarouselSection1 />
             </div>
-            <div className="sticky top-4 px-2">
+            <div className="sticky top-4 h-[95vh] px-2">
               <CarouselSection2 />
             </div>
-            <div className="sticky top-8 px-4">
+            <div className="sticky top-5 h-[92vh] px-4 ">
               <CarouselSection3 />
             </div>
           </div>
+
           <PricingSection />
           <FooterComponent />
         </motion.div>

@@ -58,17 +58,20 @@ export default function Footer({ className }) {
                 <Avatar
                   className={`${dragDirection === "left" ? "avatar" : ""}`}
                   alt="Remy"
-                  src="/static/images/avatar/1.jpg"
+                  src="https://hyring.com/wp-content/uploads/2023/03/emp1-ava.png"
+                  style={{border:"none"}}
                 />
                 <Avatar
                   className={`${dragDirection === "left" ? "avatar" : ""}`}
                   alt="Travis"
-                  src="/static/images/avatar/2.jpg"
+                  src="https://hyring.com/wp-content/uploads/2023/03/emp2-ava.png"
+                  style={{border:"none"}}
                 />
                 <Avatar
                   className={`${dragDirection === "left" ? "avatar" : ""}`}
                   alt="Cindy"
-                  src="/static/images/avatar/3.jpg"
+                  src="https://hyring.com/wp-content/uploads/2023/03/emp3-ava.png"
+                  style={{border:"none"}}
                 />
               </AvatarGroup>
               <h2>Job Seekers</h2>
@@ -85,17 +88,20 @@ export default function Footer({ className }) {
                 <Avatar
                   className={`${dragDirection === "right" ? "avatar" : ""}`}
                   alt="Remy"
-                  src="/static/images/avatar/1.jpg"
+                  src="https://hyring.com/wp-content/uploads/2023/03/comp1-ava.png"
+                  style={{border:"none"}}
                 />
                 <Avatar
                   className={`${dragDirection === "right" ? "avatar" : ""}`}
                   alt="Travis"
-                  src="/static/images/avatar/2.jpg"
+                  src="https://hyring.com/wp-content/uploads/2023/03/comp3-ava.png"
+                  style={{border:"none"}}
                 />
                 <Avatar
                   className={`${dragDirection === "right" ? "avatar" : ""}`}
                   alt="Cindy"
-                  src="/static/images/avatar/3.jpg"
+                  src="https://hyring.com/wp-content/uploads/2023/03/comp2-ava.png"
+                  style={{border:"none"}}
                 />
               </AvatarGroup>
               <h2>Employers</h2>
@@ -120,14 +126,14 @@ export default function Footer({ className }) {
               style={{ x }}
               dragConstraints={constraintsRef}
             >
-              <Button className="bg-secondary-orange font-primaryBold hover:bg-secondary-orange drag-button m-0 capitalize h-10 w-24 border-2 border-solid border-t-[1px] border-b-[1px] rounded-[50px] border-primary-brown ml-5 mr-5">
+              <Button className="bg-secondary-orange fill-white font-primaryBold hover:bg-secondary-orange drag-button m-0 capitalize h-10 w-24 border-2 border-solid border-t-[1px] border-b-[1px] rounded-[50px] border-primary-brown ml-5 mr-5">
                 Sign up
               </Button>
             </motion.div>
             <h2 className="job-title text-lg self-center text-gray-400 mr-5 ml-5 font-primary">
               I Need Candidates
             </h2>
-            <Arrow className=" arrow-right self-center" />
+            <Arrow className=" z-5 arrow-right self-center" />
           </motion.div>
         </BoxTheme>
       </div>

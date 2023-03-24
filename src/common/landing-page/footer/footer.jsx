@@ -112,7 +112,7 @@ export default function Footer({ className }) {
           </div>
           <motion.div
             ref={constraintsRef}
-            className="drag-area flex w-[93%] justify-center bg-white rounded-[50px] mt-7 mb-5 border-2 border-primary-brown"
+            className="drag-area h-[43px] flex w-[93%] justify-center bg-white rounded-[50px] mt-7 mb-5 border-2 border-primary-brown"
           >
             <Arrow className="arrow-left self-center ml-10" />
             <h2 className="job-title text-lg text-gray-400 self-center ml-5 mr-5 font-primary">
@@ -122,11 +122,11 @@ export default function Footer({ className }) {
               drag="x"
               dragElastic={0}
               onDrag={handleDrag}
-              className="box"
+              className="box -mt-[2px]"
               style={{ x }}
               dragConstraints={constraintsRef}
             >
-              <Button className="bg-secondary-orange fill-white font-primaryBold hover:bg-secondary-orange drag-button m-0 capitalize h-10 w-24 border-2 border-solid border-t-[1px] border-b-[1px] rounded-[50px] border-primary-brown ml-5 mr-5">
+              <Button className="bg-secondary-orange fill-white font-primaryBold hover:bg-secondary-orange drag-button m-0 capitalize h-[44px] w-24 border-2 border-solid rounded-[50px] border-primary-brown ml-5 mr-5">
                 Sign up
               </Button>
             </motion.div>

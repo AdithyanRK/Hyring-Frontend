@@ -17,7 +17,7 @@ export default function GetStartedButton({ className, boxColor, hover }) {
       isButton={true}
     >
       <div className="flex items-center gap-1  ">
-        <div className="  font-primaryMedium text-base lg:text-xl">Get Started</div>
+        <div className="  font-primaryMedium text-base sm:text-lg  lg:text-xl">Get Started</div>
         <motion.div
            animate={{
             translateX:[0,9,0]

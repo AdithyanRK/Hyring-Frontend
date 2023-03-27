@@ -5,12 +5,12 @@ import BoxTheme from '../box-theme/box-theme'
 export default function HeroSubmitButton({className}) {
   return (
     <BoxTheme
-    className={`h-[60px] ${className} w-[60px] cursor-pointer`}
+    className={`h-fit ${className} w-fit cursor-pointer`}
     boxStyle={
-      "w-[56px] h-[57px] border bg-primary-orange rounded-[8px] border-primary-brown"
+      "w-[46px] md:w-[56px] h-[47px] md:h-[57px] border bg-primary-orange rounded-[8px] border-primary-brown"
     }
     bgBoxStyle={
-      "w-[56px] h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
+      "w-full h-[47px] md:h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
     }
     isButton={true}
     

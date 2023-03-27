@@ -50,23 +50,23 @@ const NavbarComponent = ({ className }) => {
           <div
             className={`${
               isNavOpen
-                ? "rotate-45 delay-[600ms] ease-in-out duration-300"
+                ? "rotate-45 delay-[200ms] ease-in-out duration-300"
                 : ""
             }`}
           >
             <span
-              className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out block ${
-                isNavOpen ? "delay-300 translate-y-[6px]" : ""
+              className={`w-[17px] h-[2px] bg-primary-brown duration-200 ease-in-out block ${
+                isNavOpen ? "delay-100 translate-y-[6px]" : ""
               }`}
             ></span>
             <span
-              className={` h-[2px] bg-primary-brown duration-300 ease-in-out my-1 block origin-center ${
+              className={` h-[2px] bg-primary-brown duration-200 ease-in-out my-1 block origin-center ${
                 isNavOpen ? "w-[0px]" : "w-[17px]"
               }`}
             ></span>
             <span
-              className={`w-[17px] h-[2px] bg-primary-brown duration-300 ease-in-out  block ${
-                isNavOpen ? " delay-300  -translate-y-[6px] rotate-90" : ""
+              className={`w-[17px] h-[2px] bg-primary-brown duration-200 ease-in-out  block ${
+                isNavOpen ? " delay-100  -translate-y-[6px] rotate-90" : ""
               }`}
             ></span>
           </div>

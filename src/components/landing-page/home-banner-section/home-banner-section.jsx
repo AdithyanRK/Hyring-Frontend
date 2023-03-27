@@ -68,10 +68,10 @@ const handleOpen=()=>{
                 vetted 
               </p>candidates.
             </div>
-            <div className="text-lg xl:text-2xl font-primaryMedium   flex flex-wrap gap-0 md:gap-2 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
-              I Need <HeroAwitchButton className="scale-[0.8] md:scale-[1]" />{" "}
-              in <HeroAutocompleteButton className="scale-[0.8] md:scale-[1]" />{" "}
-              <HeroSubmitButton className="scale-[0.8] md:scale-[1]" />
+            <div className="text-lg xl:text-2xl font-primaryMedium   flex flex-wrap gap-4 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
+              I Need <HeroAwitchButton />
+              in <HeroAutocompleteButton  />
+              <HeroSubmitButton  />
             </div>
             <HomeListComponent className="hidden lg:block" />
           </div>

@@ -70,7 +70,7 @@ export default function CarouselSection1() {
       <div className="flex justify-between text-[20px] sm:text-[28px] lg:text-[54px] font-primaryMedium  ">
         <h1>Employee Retention</h1> <p>01</p>
       </div>
-      <div className=" border sm:border-2 border-primary-brown mt-[22px] lg:mt-[34px] mb-6"></div>
+      <div className=" border sm:border-2 border-primary-brown mt-[22px] mb-[45px] lg:mt-[34px]"></div>
 
       <div className="px-[30px] xs:px-[45px] sm:px-[65px]" >
         <Slider {...settings} ref={sliderRef}>

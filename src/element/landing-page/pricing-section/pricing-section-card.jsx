@@ -23,7 +23,7 @@ export default function PricingSectionCard({
         hover ? "bg-primary-brown animate-circleFill" : ""
       }   top-[13px] left-[9px] `}
     >
-      <div className="w-full h-full px-4 lg:px-8 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"   onMouseEnter={() => setHover(true)}
+      <div className="w-full h-full px-7 lg:pl-11 lg:pr-6 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"   onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
          >
         <div>{svg}</div>
@@ -38,7 +38,7 @@ export default function PricingSectionCard({
             boxColor="bg-primary-orange"
           />
       </div>
-     <div className="scale-[.7] lg:scale-[1] absolute -top-8 -left-8 ">
+     <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -left-8 ">
      <Star4
         className={` ${
           hover ? "block" : "hidden"

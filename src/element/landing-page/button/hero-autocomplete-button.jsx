@@ -7,9 +7,11 @@ import {
   TextField,
 } from "@mui/material";
 import DropDownArrow from "@/assets/icons/landing-page/drop-doen-arrow";
+import { useState } from "react";
 
 export default function HeroAutocompleteButton({ className }) {
-
+  const [isInputFoused,setIsInputFocused] =useState(false) 
+  console.log("🚀 ~ file: hero-autocomplete-button.jsx:14 ~ HeroAutocompleteButton ~ isInputFoused:", isInputFoused)
   const options = [
     "UI UX Designer",
     "Frontend Developer",
@@ -27,23 +29,26 @@ export default function HeroAutocompleteButton({ className }) {
         sx={{
           border: "2px solid #462B34",
           borderRadius: "4px",
+            
           margin: "11px 0 !important",
           "& .MuiAutocomplete-listbox": {
             fontSize: "18px",
             color: "#462B34",
             padding: "0",
-
+            
             "& li": {
-              padding: "28px 12px ",
+              padding: "18px 12px ",
               borderBottom: "1px solid #462B34",
               fontFamily: '__whyteMedium_2bf28c',
-
+              overflow: "hidden",
+              textOverflow: "ellipsis",
             },
             "& .MuiAutocomplete-option.Mui-focused": {
               backgroundColor: "#fef8f2",
             },
             "& .MuiAutocomplete-option[aria-selected='true']": {
               backgroundColor: "#FFF9F3",
+              
             },
             "& .MuiAutocomplete-option[aria-selected='true'].Mui-focused": {
               backgroundColor: "#FFF9F3",
@@ -57,22 +62,24 @@ export default function HeroAutocompleteButton({ className }) {
 
   return (
     <BoxTheme
-      className={`h-[60px] ${className} w-fit cursor-pointer   `}
+      className={`h-fit ${className} w-fit cursor-pointer   `}
       boxStyle={
-        "w-[250px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
+        "w-fit  h-[47px] md:h-[57px] border bg-white rounded-[8px] border-primary-brown"
       }
       bgBoxStyle={
-        "w-[250px] h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
+        "w-full  h-[47px] md:h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
       }
     >
       <Autocomplete
-        className="font-whyte-medium"
+        className="text-xl md:text-2xl"
         PopperComponent={CustomPopper}
         defaultValue="Product Designer"
+       
+        selectOnFocus
         sx={{
           "& input": {
             width: "90%",
-            fontSize: "24px",
+            fontSize: "inherit",
             fontWeight: "500",
             color: "#FFB65E",
             padding: "0px",
@@ -85,26 +92,26 @@ export default function HeroAutocompleteButton({ className }) {
         }}
         options={options}
         renderInput={(params) => (
-          <div ref={params.InputProps.ref}>
+          <div ref={params.InputProps.ref} >
             <OutlinedInput
+              className={` w-[200px] `}
               sx={{
-                "&.MuiInputBase-root": {
-                  width: "250px",
-                  height: "57px",
-                },
+               
                 "&.MuiOutlinedInput-root": {
                   paddingRight: "10px !important",
                   paddingLeft: "10px !important",
                   fontFamily: "inherit",
+                  fontSize:"inherit"
                 },
                 "& .MuiOutlinedInput-notchedOutline": { display: "none" },
-                "&.MuiInputBase-input": { width: "150px" },
+                // "&.MuiInputBase-input": { width: "150px" },
               }}
               endAdornment={
                 <InputAdornment position="start">
                   <DropDownArrow />
                 </InputAdornment>
               }
+              
               type="text"
               inputProps={{ ...params.inputProps }}
             />

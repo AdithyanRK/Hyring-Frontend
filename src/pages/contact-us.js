@@ -12,14 +12,17 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>TIRED OF HR CONSULTANTS ?</title>
+        <title>Contact Hyring | India’s leading Contract-to-hire portal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta
           name="title"
           content="Contact Hyring | India’s leading Contract-to-hire portal"
         />
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="Contact Hyring | India’s leading Contract-to-hire portal"
+        />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hyring.com/" />
@@ -27,7 +30,10 @@ export default function Index() {
           property="og:title"
           content="Contact Hyring | India’s leading Contract-to-hire portal"
         />
-        <meta property="og:description" content="" />
+        <meta
+          property="og:description"
+          content="Contact Hyring | India’s leading Contract-to-hire portal"
+        />
         <meta
           property="og:image"
           content="https://hyring.com/wp-content/uploads/2022/01/about-us-home.png"

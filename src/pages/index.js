@@ -30,14 +30,17 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>TIRED OF HR CONSULTANTS ?</title>
+        <title>Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta
           name="title"
           content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
         />
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
+        />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hyring.com/" />
@@ -45,7 +48,10 @@ export default function Home() {
           property="og:title"
           content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
         />
-        <meta property="og:description" content="" />
+        <meta
+          property="og:description"
+          content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
+        />
         <meta
           property="og:image"
           content="https://hyring.com/wp-content/uploads/2022/01/about-us-home.png"

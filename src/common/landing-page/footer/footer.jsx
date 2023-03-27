@@ -12,6 +12,7 @@ import { TextField, Avatar, AvatarGroup, Button } from "@mui/material";
 import SubscribeSubmitButton from "@/element/landing-page/button/subscribe-submit-button";
 import Arrow from "@/assets/icons/landing-page/arrow";
 import Star4 from "@/assets/icons/landing-page/star4";
+import Link from "next/link";
 
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
@@ -160,9 +161,9 @@ export default function Footer({ className }) {
           <h2 className="text-[22px]">Company</h2>
           <p className="text-lg font-primary">Why India</p>
           <p className="text-lg font-primary">Pricing</p>
-          <a href="/contact-us">
+          <Link href="/contact-us">
             <p className="text-lg font-primary">Contact Us</p>
-          </a>
+          </Link>
         </div>
         <div className="company-sec flex flex-col gap-y-5 mb-16">
           <h2 className="text-[22px]  ">Legal</h2>

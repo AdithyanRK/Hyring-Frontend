@@ -370,6 +370,7 @@ display: none;
 .arrow-right{
   margin-right: 25px;
   margin-left: 10px;
+  z-index: 0;
 }
 .arrow-left{
   margin-right: 10px;

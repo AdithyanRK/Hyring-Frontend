@@ -12,7 +12,7 @@ import { TextField, Avatar, AvatarGroup, Button } from "@mui/material";
 import SubscribeSubmitButton from "@/element/landing-page/button/subscribe-submit-button";
 import Arrow from "@/assets/icons/landing-page/arrow";
 import Star4 from "@/assets/icons/landing-page/star4";
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
@@ -23,8 +23,10 @@ export default function Footer({ className }) {
   const handleDrag = (event, info) => {
     if (info.offset.x > 0) {
       setDragDirection("right");
+      window.location.href = "https://hyring.com/employers/";
     } else if (info.offset.x < 0) {
       setDragDirection("left");
+      window.location.href = "https://hyring.com/job-seekers/";
     }
   };
   return (
@@ -121,11 +123,16 @@ export default function Footer({ className }) {
             </h2>
             <motion.div
               drag="x"
+              //dragSnapToOrigin
+              dragTransition={{bounceStiffness: 600, bounceDamping: 10}}
               dragElastic={0}
               onDrag={handleDrag}
-              className="box -mt-[2px]"
+              onDragEnd={handleDrag}
+              className="box -mt-[2px] z-10"
               style={{ x }}
               dragConstraints={constraintsRef}
+              //dragTransition={{ power: 0.5, timeConstant: 100 }}
+              //transition={{ type: "spring", stiffness: 300, damping: 50 }}
             >
               <Button className="bg-secondary-orange fill-white font-primaryBold hover:bg-secondary-orange drag-button m-0 capitalize h-[44px] w-24 border-2 border-solid rounded-[50px] border-primary-brown ml-5 mr-5">
                 Sign up
@@ -134,7 +141,7 @@ export default function Footer({ className }) {
             <h2 className="job-title text-lg self-center text-gray-400 mr-5 ml-5 font-primary">
               I Need Candidates
             </h2>
-            <Arrow className=" z-5 arrow-right self-center" />
+            <Arrow className=" arrow-right self-center" />
           </motion.div>
         </BoxTheme>
       </div>
@@ -161,9 +168,9 @@ export default function Footer({ className }) {
           <h2 className="text-[22px]">Company</h2>
           <p className="text-lg font-primary">Why India</p>
           <p className="text-lg font-primary">Pricing</p>
-          <Link href="/contact-us">
+            <Link href="/contact-us">
             <p className="text-lg font-primary">Contact Us</p>
-          </Link>
+            </Link>
         </div>
         <div className="company-sec flex flex-col gap-y-5 mb-16">
           <h2 className="text-[22px]  ">Legal</h2>

@@ -331,7 +331,7 @@ html {
   display: none;
 }
 .green-mar-sec {
-  margin-top: -300px;
+  margin-top: -280px;
   /* margin-bottom: 350px; */
 }
 .arrow-right {
@@ -342,14 +342,14 @@ html {
 .arrow-left {
   margin-right: 10px;
 }
-.copy-sec {
+/* .copy-sec {
   margin-left: 5px;
   margin-right: 5px;
-}
-.company-sec {
+} */
+/* .company-sec {
   margin-bottom: 20px;
   margin-top: 20px;
-}
+} */
 @media screen and (max-width: 1024px) {
   .desk-logo {
     display: none;

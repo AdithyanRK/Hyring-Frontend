@@ -3,6 +3,7 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import FacebookIcon from "@/assets/icons/landing-page/facebook";
 import Instagram from "@/assets/icons/landing-page/instagram";
 import Logo from "@/assets/icons/landing-page/logo";
+import { useRouter } from "next/router";
 import Mesh2 from "@/assets/icons/landing-page/mesh2";
 import Twitter from "@/assets/icons/landing-page/twitter";
 import YoutubeIcon from "@/assets/icons/landing-page/youtube";
@@ -19,14 +20,19 @@ export default function Footer({ className }) {
   const constraintsRef = React.useRef(null);
   const x = useMotionValue(0);
   const [dragDirection, setDragDirection] = React.useState("0");
+  const router = useRouter();
 
   const handleDrag = (event, info) => {
     if (info.offset.x > 0) {
       setDragDirection("right");
-      window.location.href = "https://hyring.com/employers/";
+      setTimeout(() => {
+        router.push("https://hyring.com/employers/")
+      }, 2000);
     } else if (info.offset.x < 0) {
       setDragDirection("left");
-      window.location.href = "https://hyring.com/job-seekers/";
+      setTimeout(() => {
+        router.push("https://hyring.com/job-seekers/")
+      }, 2000);
     }
   };
   return (

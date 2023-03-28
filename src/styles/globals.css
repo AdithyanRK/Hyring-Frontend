@@ -332,7 +332,7 @@ html {
 }
 .green-mar-sec {
   margin-top: -300px;
-  margin-bottom: 350px;
+  /* margin-bottom: 350px; */
 }
 .arrow-right {
   margin-right: 25px;

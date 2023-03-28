@@ -23,21 +23,20 @@ function Cards({ item, setData }) {
   const { scrollY } = useScroll();
   const [isScrolled, setScrolled] = useState(true);
 
-  useMotionValueEvent(scrollY, "change", (y) => {
-   
-    if (y >= 1600 && y <= 1620 && isScrolled) {
-      window.scrollTo({
-        top: 2100,
-        behavior: 'smooth',
-      })
-    }
-    if (y >= 1700) {
-      setScrolled(false);
-    }
-    if (y < 1600) {
-      setScrolled(true);
-    }
-  });
+  // useMotionValueEvent(scrollY, "change", (y) => {
+  //   if (y >= 1600 && y <= 1620 && isScrolled) {
+  //     window.scrollTo({
+  //       top: 2100,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  //   if (y >= 1700) {
+  //     setScrolled(false);
+  //   }
+  //   if (y < 1600) {
+  //     setScrolled(true);
+  //   }
+  // });
 
   useEffect(() => {
     if (entry?.isIntersecting) {

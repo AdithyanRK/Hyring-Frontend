@@ -30,7 +30,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal</title>
+        <title>
+          Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire
+          portal
+        </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta
@@ -105,22 +108,26 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-duration="600"
             data-aos-easing="linear"
+            className="sticky"
           >
-            <PromiseSection />
+            <div className="sticky  top-1 h-full">
+              <PromiseSection />
+            </div>
           </div>
           <div>
             <TalentSection />
           </div>
-          <div className=" min-h-[100vh]">
-            <div className="sticky h-[98vh]  top-0 ">
+          <div className="relative min-h-[90vh]">
+            <div className="sticky  top-0 h-full">
               <CarouselSection1 />
             </div>
-            <div className="sticky top-8 h-[95vh]">
+            <div className="sticky top-8 h-full">
               <CarouselSection2 />
             </div>
-            <div className="sticky top-16 h-[92vh]">
+            <div className="sticky top-16 z-20 h-full">
               <CarouselSection3 />
             </div>
+            <div className="sticky top-2 h-[20vh]"></div>
           </div>
           <PricingSection />
           <Footer />

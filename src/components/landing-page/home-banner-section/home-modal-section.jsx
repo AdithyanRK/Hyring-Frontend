@@ -2,12 +2,15 @@ import * as React from "react";
 import Modal from "@mui/material/Modal";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
+import ModalVideo from "react-modal-video";
+import 'node_modules/react-modal-video/scss/modal-video.scss';
 export default function HomeBannerModal(props) {
   const { handleOpen, open } = props;
 
   return (
     <div>
-      <Modal open={open} onClose={handleOpen}>
+      			<ModalVideo channel='vimeo' autoplay={true} isOpen={open} videoId="253989945"  onClose={() => handleOpen()} className="modalVideo" />
+      {/* <Modal open={open} onClose={handleOpen}>
         <>
           <div className="mt-[1%] md:mt-[3%]">
             <motion.div
@@ -37,7 +40,7 @@ export default function HomeBannerModal(props) {
             </motion.div>
           </div>
         </>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

@@ -400,3 +400,13 @@ html {
 .footer_input_placeholder input {
   font-family: var(--font-whyte-light);
 }
+
+/* modal */
+
+.modal-video{
+  background-color: rgba(0, 0, 0, 0.8)!important;
+}
+
+.modal-video-close-btn{
+top:-33px !important;
+}

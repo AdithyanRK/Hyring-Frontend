@@ -395,6 +395,12 @@ html {
     margin-bottom: 20px;
     margin-top: 20px;
   }
+  .job-seek-sec{
+    margin-left: 15px;
+  }
+  .emp-sec{
+    margin-right: 15px;
+  }
 }
 
 .footer_input_placeholder input {

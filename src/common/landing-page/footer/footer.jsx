@@ -61,7 +61,7 @@ export default function Footer({ className }) {
             <div
               className={`${
                 dragDirection === "right" ? " opacity-25" : ""
-              } flex flex-col w-[30%] gap-y-3 items-start ml-10`}
+              } flex flex-col w-[30%] gap-y-3 items-start ml-10 job-seek-sec`}
             >
               <AvatarGroup max={4}>
                 <Avatar
@@ -91,7 +91,7 @@ export default function Footer({ className }) {
             <div
               className={`${
                 dragDirection === "left" ? " opacity-25" : ""
-              } flex flex-col w-[30%] gap-y-3 items-end mr-10`}
+              } flex flex-col w-[30%] gap-y-3 items-end mr-10 emp-sec`}
             >
               <AvatarGroup max={4}>
                 <Avatar
@@ -172,8 +172,12 @@ export default function Footer({ className }) {
         </div>
         <div className="company-sec flex flex-col gap-y-5 mb-16">
           <h2 className="text-[22px]">Company</h2>
+          <Link href={"/#whyIndia"} scroll={false}>
           <p className="text-lg font-primary">Why India</p>
+          </Link>
+          <Link href={"/#pricing"} scroll={false}>
           <p className="text-lg font-primary">Pricing</p>
+          </Link>
             <Link href="/contact-us">
             <p className="text-lg font-primary">Contact Us</p>
             </Link>

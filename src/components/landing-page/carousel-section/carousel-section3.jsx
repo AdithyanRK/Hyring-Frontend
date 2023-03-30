@@ -66,7 +66,7 @@ export default function CarouselSection3() {
   };
 
   return (
-    <div className=" bg-white h-[100vh] border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] lg:px-[80px] pt-[50px] lg:pt-[60px]  pb-[36px] ">
+    <div className=" bg-white h-[80vh] border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] lg:px-[80px] pt-[50px] lg:pt-[60px]  pb-[36px] ">
       <div className="flex justify-between text-[20px] sm:text-[28px] lg:text-[54px] font-primaryMedium  ">
         <h1>Compliance</h1> <p>03</p>
       </div>

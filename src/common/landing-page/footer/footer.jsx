@@ -124,7 +124,7 @@ export default function Footer({ className }) {
             className="drag-area h-[43px] flex w-[93%] justify-center bg-white rounded-[50px] mt-7 mb-5 border-2 border-primary-brown"
           >
             <Arrow className="arrow-left self-center ml-10" />
-            <h2 className="job-title text-lg text-gray-400 self-center ml-5 mr-5 font-primary">
+            <h2 className="job-title text-lg text-gray-400 self-center ml-5 mr-5 mb-1 font-primary">
               I Need Job
             </h2>
             <motion.div
@@ -140,11 +140,11 @@ export default function Footer({ className }) {
               //dragTransition={{ power: 0.5, timeConstant: 100 }}
               //transition={{ type: "spring", stiffness: 300, damping: 50 }}
             >
-              <Button className="bg-secondary-orange fill-white font-primaryBold hover:bg-secondary-orange drag-button m-0 capitalize h-[44px] w-24 border-2 border-solid rounded-[50px] border-primary-brown ml-5 mr-5">
+              <Button className="bg-secondary-orange pb-2 fill-white font-primaryBold hover:bg-secondary-orange drag-button m-0 capitalize h-[44px] w-24 border-2 border-solid rounded-[50px] border-primary-brown ml-5 mr-5">
                 Sign up
               </Button>
             </motion.div>
-            <h2 className="job-title text-lg self-center text-gray-400 mr-5 ml-5 font-primary">
+            <h2 className="job-title text-lg self-center text-gray-400 mb-1 mr-5 ml-5 font-primary">
               I Need Candidates
             </h2>
             <Arrow className=" arrow-right self-center" />

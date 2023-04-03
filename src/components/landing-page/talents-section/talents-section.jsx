@@ -28,7 +28,7 @@ export default function TalentSection() {
   return (
     <div
       ref={ref}
-      className={`w-screen py-[5vh] md:py-[8vh] flex flex-col gap-8 sm:gap-0 justify-center items-center  h-screen bg-[url('../../public/bgtheme.svg')] overflow-hidden`}
+      className={`w-screen py-[5vh] md:py-[8vh] flex flex-col gap-8 sm:gap-0 justify-center items-center min-h-[520px]  max-h-screen bg-[url('../../public/bgtheme.svg')] overflow-hidden`}
       id="whyIndia"
     >
       <div
@@ -38,7 +38,7 @@ export default function TalentSection() {
         Why Hire Indian Talents
       </div>
 
-      <div className=" select-none  md:h-[70vh]">
+      <div className=" select-none h-[60vh]  md:h-[70vh]">
         <Lottie options={lottieOptions} isClickToPauseDisabled={true} />
       </div>
       <div

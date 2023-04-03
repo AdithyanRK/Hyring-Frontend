@@ -2,7 +2,7 @@ import Head from "next/head";
 import HomeBannerSection from "@/components/landing-page/home-banner-section/home-banner-section";
 import PricingSection from "@/components/landing-page/pricing-section/pricing-section";
 import TalentSection from "@/components/landing-page/talents-section/talents-section";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion, useMotionValueEvent } from "framer-motion";
 import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
 import PromiseSection from "@/components/landing-page/promises-section/promises-section";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
@@ -12,9 +12,12 @@ import CarouselSection1 from "@/components/landing-page/carousel-section/carouse
 import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section2";
 import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
 import Footer from "@/common/landing-page/footer/footer.jsx";
+import PromiseSectionComponent from "@/components/landing-page/promises-section/promise-section-component";
 
 export default function Home() {
   let ref = useRef(null);
+  let talentSection =useRef(null);
+  let homeBanner =useRef(null);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 6700], [0, 154]);
   const rotate = useTransform(scrollY, [0, 6700], [-1080, 0]);
@@ -26,7 +29,31 @@ export default function Home() {
   let yAxis = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   let scale = useTransform(scrollYProgress, [0, 1], ["99.9%", "100%"]);
   let opacity = useTransform(scrollYProgress, [0.98, 1], [1, 0.98]);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log("Page scroll: ", latest)
+    if(latest > 3162 && latest <4000){
+      // window.scrollTo({top:4000,behavior:"smooth"})
+    console.log("hell")
 
+    }
+  })
+  let { scrollYProgress:talentSectionScrollYProgress } = useScroll({
+    target: talentSection,
+    offset: ["start end", "end end"],
+
+  });
+  let { scrollYProgress:homeBannerScrollYProgress } = useScroll({
+    target: homeBanner,
+    offset: ["start end", "end end"],
+
+  });
+  const t1 = useTransform(talentSectionScrollYProgress, (pos) => {
+    console.log("🚀 ~ file: index2.js:25 ~ Home ~ pos1:", pos);
+    if (pos < 0.2) {
+      return "4000";
+    } 
+  });
+  console.log("🚀 ~ file: index.js:50 ~ t1 ~ t1:", t1)
   return (
     <>
       <Head>
@@ -86,7 +113,6 @@ export default function Home() {
             <ScrollIcon />
           </motion.div>
         </div>
-        <motion.div style={{ yAxis, scale, opacity }} className="relative">
           <Image
             src="/Rectangle.svg"
             fill
@@ -101,22 +127,22 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-duration="500"
             data-aos-easing="linear"
+            ref={homeBanner}
           >
             <HomeBannerSection />
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-easing="linear"
-            className="sticky"
+            
+            <motion.div>
+            <PromiseSectionComponent />
+            </motion.div>
+            
+          <motion.div
+          // style={{position:t1}}
+          className="relative"
+          ref={talentSection}
           >
-            <div className="sticky  top-1 h-full">
-              <PromiseSection />
-            </div>
-          </div>
-          <div>
             <TalentSection />
-          </div>
+          </motion.div>
           <div className="relative min-h-[90vh]">
             <div className="sticky  top-0 h-full">
               <CarouselSection1 />
@@ -131,7 +157,6 @@ export default function Home() {
           </div>
           <PricingSection />
           <Footer />
-        </motion.div>
       </div>
     </>
   );

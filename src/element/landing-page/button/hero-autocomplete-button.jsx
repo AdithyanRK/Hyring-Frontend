@@ -10,8 +10,6 @@ import DropDownArrow from "@/assets/icons/landing-page/drop-doen-arrow";
 import { useState } from "react";
 
 export default function HeroAutocompleteButton({ className }) {
-  const [isInputFoused,setIsInputFocused] =useState(false) 
-  console.log("🚀 ~ file: hero-autocomplete-button.jsx:14 ~ HeroAutocompleteButton ~ isInputFoused:", isInputFoused)
   const options = [
     "UI UX Designer",
     "Frontend Developer",

@@ -6,12 +6,14 @@ export default function CarouselSectionTabs({className,color,text,index}) {
   return (
    <div className={"py-8 w-fit"}>
      <BoxTheme
+        top="7px"
+        left="7px"
         className={`${className} h-[71px] w-fit cursor-pointer relative -ml-10 md:ml-10 scale-[0.7] sm:scale-[0.8] md:scale-[0.9] lg:scale-[1] `}
         boxStyle={
           " h-[64px] border-2 bg-white rounded-[12px] border-primary-brown"
         }
         bgBoxStyle={
-          `w-full h-[64px]  rounded-[12px] border-2 border-primary-brown  top-[7px] left-[7px] 
+          `w-full h-[64px]  rounded-[12px] border-2 border-primary-brown  
           ${
               color === 1
               ? "bg-custom-blue"

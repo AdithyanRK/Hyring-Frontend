@@ -98,6 +98,7 @@ html {
 .contact-tab:hover > div > div > svg:first-child #whatsapp-call {
   fill: #61e396;
 }
+
 /* contact page arrow bounce animation  */
 
 .contact-tab:hover > div > div > div > .arrow-bounce {
@@ -418,19 +419,3 @@ top:-33px !important;
 }
 
 
-.scrolling-section {
-  height: 100vh;
-  margin: 0;
-}
-
-.container{
-    background-color: black;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-}
-
-.section{
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}

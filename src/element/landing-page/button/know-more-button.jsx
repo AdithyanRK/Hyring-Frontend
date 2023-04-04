@@ -6,10 +6,12 @@ export default function KnowMoreButton() {
   return (
   
       <BoxTheme
+      top="8px"
+      left="7px"
         className={`h-[57px] lg:h-[65px] w-fit cursor-pointer`}
         boxStyle={`w-[180px] lg:w-[200px] h-[52px] lg:h-[62px] border-[3px] bg-primary-brown   rounded-[5px] border-custom-sandal`}
         bgBoxStyle={
-          "w-full h-[52px] lg:h-[62px]  rounded-[5px] bg-primary-brown border-2 top-[8px]   lg:top-[8px] left-[7px] border-custom-sandal"
+          "w-full h-[52px] lg:h-[62px]  rounded-[5px] bg-primary-brown border-2 border-custom-sandal"
         }
       isButton={true}
 

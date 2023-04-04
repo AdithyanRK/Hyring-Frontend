@@ -51,7 +51,7 @@ export default function Index() {
         ></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative text-primary-brown ">
+      <div className="relative text-primary-brown  w-screen overflow-hidden h-screen">
         <Image
           src="/Rectangle.svg"
           fill

@@ -6,7 +6,10 @@ export default function BoxTheme({
   bgBoxStyle,
   className,
   isButton,
-  width
+  width,
+  top,
+  left,
+  disableAnimate,
 }) {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -14,11 +17,11 @@ export default function BoxTheme({
   useEffect(() => {
     if (inView) {
       controls.start({
-        opacity: 1,
-        y: 0,
+        top: top,
+        left:left,
         transition: {
-          delay: 0.3,
-          direction: "easeInOut",
+          delay: 0.3, 
+          duration:0.8
         },
       });
     }
@@ -35,11 +38,15 @@ export default function BoxTheme({
           <motion.div
             transition={{
               delay: 0.3,
-              direction: "linear",
             }}
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={controls}
+            {
+              ...(disableAnimate ? {} : { initial: { left: "0px", top: "0px" } })
+            }
+            {
+              ...(disableAnimate ? null : { animate: controls })
+            }
+            
             className={`${bgBoxStyle}   absolute  `}
           ></motion.div>
         </div>
@@ -53,12 +60,8 @@ export default function BoxTheme({
             </div>
             <motion.div
               ref={ref}
-              initial={{ opacity: 0 }}
               animate={controls}
-              transition={{
-                delay: 0.3,
-                direction: "linear",
-              }}
+              initial={{ left:"0px" ,top:"0px"}}
               className={`${bgBoxStyle}   absolute  `}
             ></motion.div>
           </div>

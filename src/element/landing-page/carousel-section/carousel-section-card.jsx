@@ -14,12 +14,14 @@ export default function CarouselSectionCard({
 }) {
   return (
     <BoxTheme
+      top="8px"
+      left="7px"
       className={"h-[156px] sm:h-[191px] md:h-[261px] lg:h-[323px] w-fit  cursor-pointer m-auto"}
       boxStyle={` h-[145px] sm:h-[180px] md:h-[250px] lg:h-[312px]
                   w-[260px]  xs:w-[360px] sm:w-[460px] md:w-[560px] lg:w-[700px] xl:w-[950px]  
                    border-2 ${boxStyleColor} rounded-[16px] border-primary-brown`}
       bgBoxStyle={`w-full h-[145px] sm:h-[180px] md:h-[250px] lg:h-[312px]  
-                    rounded-[16px]  bg-primary-brown top-[6px] left-[5px] md:top-[11px] md:left-[9px]`}
+                    rounded-[16px]  bg-primary-brown  `}
     >
       <div className="flex  items-center justify-between w-full gap-1 md:gap-4 p-2 md:p-5">
         <div className="basis-3/5 ">

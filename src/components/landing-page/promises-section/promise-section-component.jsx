@@ -116,8 +116,8 @@ export default function PromiseSectionComponent() {
   });
   const rt4 = useTransform(
     scrollYProgress,
-    [0.25, 0.4, 0.65, 0.9, 1],
-    [0, -180, -240, -300, -360]
+    [ 0.4, 0.6, 0.8, 1],
+    [0, -180, -240, -300,]
   );
   const mt = useTransform(scrollYProgress, (pos) => {
     if (pos > 1) {

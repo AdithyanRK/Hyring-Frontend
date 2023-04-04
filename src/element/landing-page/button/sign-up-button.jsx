@@ -6,12 +6,14 @@ import { motion } from "framer-motion";
 export default function SignUpButton() {
   return (
       <BoxTheme
+      top="4px"
+      left="5px"
         className={"lg:h-[57px] w-full lg:w-[160px] cursor-pointer"}
         boxStyle={
           "w-full md:w-[140px]  lg:w-[155px] h-[42px] lg:h-[52px] border bg-custom-green rounded-[4px] border-primary-brown animate-glow"
         }
         bgBoxStyle={
-          "w-full md:w-[140px] lg:w-[155px] h-[42px] lg:h-[52px] border-2 rounded-[4px] bg-  custom-bg border-primary-brown top-1 left-[5px]"
+          "w-full md:w-[140px] lg:w-[155px] h-[42px] lg:h-[52px] border-2 rounded-[4px] bg-  custom-bg border-primary-brown "
         }
       isButton={true}
         width={"w-full"}

@@ -6,12 +6,14 @@ export default function HeroAwitchButton({ className }) {
   const [switchValue, SetSwitchValue] = useState(true);
   return (
     <BoxTheme
+    top="5px"
+      left="4px"
       className={`h-fit ${className} w-fit cursor-pointer text-xl  md:text-2xl font-primaryMedium   `}
       boxStyle={
         "w-fit h-[47px] md:h-[57px] border bg-white rounded-[8px] border-primary-brown"
       }
       bgBoxStyle={
-        "w-full h-[47px] md:h-[57px] rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
+        "w-full h-[47px] md:h-[57px] rounded-[8px]  bg-primary-brown "
       }
     >
       <div className=" pl-[21px] pr-4 flex justify-between items-center gap-2">

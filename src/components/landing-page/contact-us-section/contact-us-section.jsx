@@ -5,6 +5,7 @@ import SmileExpression from "@/assets/icons/landing-page/smile-expression";
 import TextMark2 from "@/assets/icons/landing-page/text-mark2";
 import Whatsapp from "@/assets/icons/landing-page/whatsapp";
 import ContactTabCommon from "@/element/landing-page/contact-us-section/contact-tab-common";
+import Link from "next/link";
 import React from "react";
 
 export default function ContactUsSection() {
@@ -27,15 +28,15 @@ export default function ContactUsSection() {
             <SmileExpression />
         </span>
       </h1>
-      <a href="mailto:hello@hyring.com">
+      <Link href="mailto:hello@hyring.com">
       <ContactTabCommon icon={<Mail className="fill-custom-blue"/>} text1={"Drop Hello"} text2={"hello@hyring.com"} color={1}/>
-      </a>
-      <a href="https://wa.me/+917070701947?text=Hi%20Hyring" target="_blank">
+      </Link>
+      <Link href="https://wa.me/+917070701947?text=Hi%20Hyring" target="_blank">
       <ContactTabCommon icon={<Whatsapp/>}  text1={"Ping Hi"} text2={"+91 707070 1947"} color={2}/>
-      </a>
-      <a href="tel:+917070701947">
+      </Link>
+      <Link href="tel:+917070701947">
       <ContactTabCommon icon={<Call/>} text1={"Say Hello"} text2={"+91 707070 1947"} color={3} />
-      </a>
+      </Link>
 
     </div>
   );

@@ -17,6 +17,7 @@ export default function PricingSectionCard({
   const [hover, setHover] = useState(false);
   return (
     <BoxTheme
+    disableAnimate={true}
       className={`${className} h-fit w-fit cursor-pointer  `}
       boxStyle={`w-[240px]  lg:w-[344px] h-fit  border-2 bg-white rounded-[20px] border-primary-brown    `}
       bgBoxStyle={`w-full h-full rounded-[20px] ${

@@ -12,10 +12,12 @@ const NavbarComponent = ({ className }) => {
   return (
    <div className="pt-[14px]">
     <BoxTheme
+      top="6px"
+      left="7px"
       className={`${className} h-[67px] md:h-[102px] w-fit mx-auto `}
       boxStyle={`w-[95vw] h-[63px] md:h-[93px] border-2 bg-custom-bg rounded-[10px] border-primary-brown`}
       bgBoxStyle={
-        "w-full h-[63px] md:h-[93px] rounded-[10px] bg-primary-brown top-[5px] left-[6px]  md:top-[9px] md:left-[10px]"
+        "w-full h-[63px] md:h-[93px] rounded-[10px] bg-primary-brown "
       }
     >
       <div className="flex justify-between  px-5 lg:px-10 items-center font-primaryMedium w-full text-lg lg:text-xl     ">

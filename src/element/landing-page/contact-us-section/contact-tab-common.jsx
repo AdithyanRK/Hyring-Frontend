@@ -11,6 +11,7 @@ export default function ContactTabCommon({
 }) {
   return (
     <BoxTheme
+    disableAnimate= {true}
       className={`h-fit ${className} w-[95%] lg:w-[100%] mx-auto cursor-pointer mt-10   `}
       boxStyle={`w-full h-fit border-2 border-primary-brown bg-white rounded-[10px] ${
         color === 1

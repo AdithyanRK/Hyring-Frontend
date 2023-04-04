@@ -39,6 +39,8 @@ export default function Footer({ className }) {
     <div className="footer font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 mt-80">
       <div className="green-mar-sec flex justify-center -mt-[280px] mb-[250px]">
         <BoxTheme
+          top="5px"
+          left="4px"
           className={`h-[60px] ${className} w-fit  text-2xl  `}
           boxStyle={
             "xl:w-[900px] w-[600px] green-sec h-[300px] flex flex-col border bg-[#b6eccc] rounded-[8px] border-primary-brown"
@@ -233,12 +235,14 @@ export default function Footer({ className }) {
             <h2 className="text-[22px]  ">Subscribe Newsletter</h2>
             <div className="flex items-center gap-5">
               <BoxTheme
+                top="5px"
+                left="4px"
                 className={`h-[60px] ${className} w-fit cursor-pointer  text-2xl  `}
                 boxStyle={
                   "w-[270px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
                 }
                 bgBoxStyle={
-                  "w-[270px] h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
+                  "w-[270px] h-[57px]  rounded-[8px]  bg-primary-brown "
                 }
               >
                 <TextField
@@ -296,12 +300,14 @@ export default function Footer({ className }) {
           <h2 className="text-[22px]  ">Subscribe Newsletter</h2>
           <div className="flex items-center gap-5 m-auto">
             <BoxTheme
+              top="5px"
+              left="4px"
               className={`h-[60px] ${className} w-fit cursor-pointer  text-2xl  `}
               boxStyle={
                 "w-[270px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
               }
               bgBoxStyle={
-                "w-[270px] h-[57px]  rounded-[8px]  bg-primary-brown top-[5px] left-[4px]"
+                "w-[270px] h-[57px]  rounded-[8px]  bg-primary-brown "
               }
             >
               <TextField

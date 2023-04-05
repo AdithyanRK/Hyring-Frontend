@@ -4,16 +4,16 @@ import FacebookIcon from "@/assets/icons/landing-page/facebook";
 import Instagram from "@/assets/icons/landing-page/instagram";
 import Logo from "@/assets/icons/landing-page/logo";
 import { useRouter } from "next/router";
-import Mesh2 from "@/assets/icons/landing-page/mesh2";
 import Twitter from "@/assets/icons/landing-page/twitter";
 import YoutubeIcon from "@/assets/icons/landing-page/youtube";
 import GetStartedButton from "@/element/landing-page/button/get-started-button";
 import BoxTheme from "@/element/landing-page/box-theme/box-theme";
 import { TextField, Avatar, AvatarGroup, Button } from "@mui/material";
 import SubscribeSubmitButton from "@/element/landing-page/button/subscribe-submit-button";
-import Arrow from "@/assets/icons/landing-page/arrow";
 import Star4 from "@/assets/icons/landing-page/star4";
 import Link from "next/link";
+import LongArrowRight from "@/assets/icons/landing-page/long_arrow_icon";
+import GetStartedCircleIcon from "@/assets/icons/landing-page/get_started_circle_icon";
 
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
@@ -21,8 +21,8 @@ export default function Footer({ className }) {
   const x = useMotionValue(0);
   const [dragDirection, setDragDirection] = React.useState("0");
   const router = useRouter();
-  const [hover, setHover] = React.useState(true);
-
+  const [hoverFirst, setHoverFirst] = React.useState(false);
+  const [hoverSecond, setHoverSecond] = React.useState(false);
   const handleDrag = (event, info) => {
     if (info.offset.x > 0) {
       setDragDirection("right");
@@ -37,86 +37,128 @@ export default function Footer({ className }) {
     }
   };
   return (
-    <div className=" flex justify-center footer font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 mt-80 max-w-[2000px]  my-0 ">
-      <div className="flex flex-row w-full absolute -top-36 justify-between px-16 max-w-[1400px] mx-auto my-0">
+    <div className="footer  font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 mt-80 max-w-[2000px]  my-0 ">
+      <div className="flex  lg:flex-row flex-col items-center -top-40  absolute z-10 lg:-top-40 left-0 right-0 justify-center gap-5 lg:gap-20 px-2   ">
         <BoxTheme
           disableAnimate={true}
-          className={`${className} h-fit w-fit cursor-pointer`}
-          boxStyle={`!flex !items-start w-[550px] h-[200px]  border-2  rounded-[20px] border-primary-brown !bg-custom-green`}
-          bgBoxStyle={`w-full h-full rounded-[20px] bg-primary-brown${
-            hover ? " animate-circleFill" : ""
-          }   top-[6px] left-[6px] `}
+          className={`${className} xl:w-[40%]  cursor-pointer  `}
+          boxStyle={`!item-start !justify-start  border-2 bg-white  border-primary-brown !bg-custom-green  rounded-lg relative w-full `}
+          bgBoxStyle={`rounded-lg bg-primary-brown top-[5px] left-[5px]`}
+          // bgBoxStyle={`w-full h-full rounded-lg ${
+          //   hoverFirst ? "bg-primary-brown   " : ""
+          // }   top-[5px] left-[5px] animate-circleFill `}
+          setHoverFirst={setHoverFirst}
         >
-          <div className="relative p-4">
-            <div className="flex items-start">
+          <div className="flex flex-col gap-2  items-start py-10 px-5 ">
             <AvatarGroup max={4}>
               <Avatar
-                // className={`${dragDirection === "right" ? "avatar" : ""}`}
+                className={`${hoverFirst ? "avatar" : ""}`}
+                alt="Remy"
+                src="https://hyring.com/wp-content/uploads/2023/03/emp1-ava.png"
+                style={{ border: "none" }}
+              />
+              <Avatar
+                className={`${hoverFirst ? "avatar" : ""}`}
+                alt="Travis"
+                src="https://hyring.com/wp-content/uploads/2023/03/emp2-ava.png"
+                style={{ border: "none" }}
+              />
+              <Avatar
+                className={`${hoverFirst ? "avatar" : ""}`}
+                alt="Cindy"
+                src="https://hyring.com/wp-content/uploads/2023/03/emp3-ava.png"
+                style={{ border: "none" }}
+              />
+            </AvatarGroup>
+            <div>
+              <div className="text-lg  md:text-2xl lg:text-[26px] text-medium ">
+                I'm a Job Seeker, I want to work!
+              </div>
+              <p className="font-primaryLight mt-1  ">
+                Lorem ipsum dolor sit alam, consectetur adipiscing
+              </p>
+            </div>
+            <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -left-8 ">
+              <Star4
+                className={` ${
+                  hoverFirst ? "block" : "hidden"
+                } fill-custom-yellow animate-spin`}
+              />
+            </div>
+          </div>
+          <div className="absolute -right-8">
+            <div className="h-fit w-fit">
+              <GetStartedCircleIcon color={"#FFF5B7"} hover={hoverFirst} />
+              <div className="absolute bottom-[1.36rem] left-[1.15rem]">
+                <LongArrowRight />
+              </div>
+            </div>
+          </div>
+        </BoxTheme>
+        <BoxTheme
+          disableAnimate={true}
+          className={`${className}  xl:w-[40%]  cursor-pointer  `}
+          boxStyle={` border-2 bg-white !item-start !justify-start rounded-lg border-primary-brown !bg-custom-blue w-full  `}
+          bgBoxStyle={` rounded-lg bg-primary-brown top-[5px] left-[5px]`}
+          // bgBoxStyle={`w-full h-full rounded-lg ${
+          //   hoverSecond ? "bg-primary-brown animate-circleFill" : ""
+          // }   top-[5px] left-[5px] `}
+          setHoverSecond={setHoverSecond}
+        >
+          <div className="flex flex-col gap-2 items-start py-10 px-5">
+            <AvatarGroup max={4}>
+              <Avatar
+                className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Remy"
                 src="https://hyring.com/wp-content/uploads/2023/03/comp1-ava.png"
                 style={{ border: "none" }}
               />
               <Avatar
-                // className={`${dragDirection === "right" ? "avatar" : ""}`}
+                className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Travis"
                 src="https://hyring.com/wp-content/uploads/2023/03/comp3-ava.png"
                 style={{ border: "none" }}
               />
               <Avatar
-                // className={`${dragDirection === "right" ? "avatar" : ""}`}
+                className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Cindy"
                 src="https://hyring.com/wp-content/uploads/2023/03/comp2-ava.png"
                 style={{ border: "none" }}
               />
             </AvatarGroup>
-            </div>
-
-            <div className="my-2">
-              <h2 className="my-2">I am a Job seeker</h2>
-              <p className="text-lg font-primary">
+            <div>
+              <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">
+                I’m Employer, I want to hire!
+              </div>
+              <p className="font-primaryLight mt-1  ">
                 Lorem ipsum dolor sit alam, consectetur adipiscing
               </p>
             </div>
-
-            <div className="absolute z-2 top-[50%] w-full flex flex-row items-center justify-end">
-              <div className="-mr-10">
-
-              <Avatar
-                // className={`${dragDirection === "right" ? "avatar" : ""}`}
-                alt="Cindy"
-                src="https://hyring.com/wp-content/uploads/2023/03/comp2-ava.png"
-                style={{ border: "none" }}
+            <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -left-8 ">
+              <Star4
+                className={` ${
+                  hoverSecond ? "block" : "hidden"
+                } fill-custom-yellow animate-spin`}
               />
+            </div>
+          </div>
+          <div className="absolute -right-8">
+            <div className="h-fit w-fit">
+              <GetStartedCircleIcon color={"#B6ECCC"} hover={hoverSecond} />
+              <div className="absolute bottom-[1.36rem] left-[1.15rem]">
+                <LongArrowRight />
               </div>
-
-
             </div>
           </div>
         </BoxTheme>
-
-        <BoxTheme
-          disableAnimate={true}
-          className={`${className} h-fit w-fit cursor-pointer w- `}
-          boxStyle={` w-[550px] h-[200px]  border-2  border-primary-brown rounded-[20px] !bg-custom-blue `}
-          bgBoxStyle={`w-full h-full rounded-[20px] bg-primary-brown${
-            hover ? " animate-circleFill" : ""
-          }   top-[6px] left-[6px] `}
-        >
-          <div>
-            <p>Enter</p>
-          </div>
-        </BoxTheme>
       </div>
-      <div className="basis-[300px] text-center mob-logo pt-5">
+      <div className="basis-[300px] text-center mob-logo pt-72 lg:pt-5">
         <Logo className="m-auto" />
         <p className="text-2xl mt-5 mb-10">
           Meet the new gold standard in remote Hyring
         </p>
         <GetStartedButton boxColor={"bg-primary-orange"} className="mb-5" />
       </div>
-
-      {/* //lore */}
-      <div className="flex flex-col">
       <div className="flex xl:gap-24 items-center gap-12 justify-center max-w-fit m-auto">
         <div className="basis-[300px] desk-logo">
           <Logo />
@@ -277,9 +319,6 @@ export default function Footer({ className }) {
       <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-3 border-solid xl:mt-16 mt-10 ml-24 mr-24">
         Copyright © {currentYear} Hyring. All rights reserved.
       </div>
-
-      </div>
-    
     </div>
   );
 }

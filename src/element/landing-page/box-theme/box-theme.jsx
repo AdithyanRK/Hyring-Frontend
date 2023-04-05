@@ -10,6 +10,8 @@ export default function BoxTheme({
   top,
   left,
   disableAnimate,
+  setHoverFirst,
+  setHoverSecond,
 }) {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -18,10 +20,10 @@ export default function BoxTheme({
     if (inView) {
       controls.start({
         top: top,
-        left:left,
+        left: left,
         transition: {
-          delay: 0.3, 
-          duration:0.8
+          delay: 0.3,
+          duration: 0.8,
         },
       });
     }
@@ -29,7 +31,17 @@ export default function BoxTheme({
   return (
     <>
       {!isButton ? (
-        <div className={`${className}  relative  `}>
+        <div
+          className={`${className}  relative  `}
+          onMouseEnter={() => {
+            setHoverSecond && setHoverSecond(true);
+            setHoverFirst && setHoverFirst(true);
+          }}
+          onMouseLeave={() => {
+            setHoverSecond && setHoverSecond(false);
+            setHoverFirst && setHoverFirst(false);
+          }}
+        >
           <div
             className={`${boxStyle} flex justify-center items-center relative z-1 `}
           >
@@ -40,18 +52,19 @@ export default function BoxTheme({
               delay: 0.3,
             }}
             ref={ref}
-            {
-              ...(disableAnimate ? {} : { initial: { left: "0px", top: "0px" } })
-            }
-            {
-              ...(disableAnimate ? null : { animate: controls })
-            }
-            
+            {...(disableAnimate
+              ? {}
+              : { initial: { left: "0px", top: "0px" } })}
+            {...(disableAnimate ? null : { animate: controls })}
             className={`${bgBoxStyle}   absolute  `}
           ></motion.div>
         </div>
       ) : (
-        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.8 }} className={width}>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.8 }}
+          className={width}
+        >
           <div className={`${className}  relative  `}>
             <div
               className={`${boxStyle} flex justify-center items-center relative z-1 `}
@@ -61,7 +74,7 @@ export default function BoxTheme({
             <motion.div
               ref={ref}
               animate={controls}
-              initial={{ left:"0px" ,top:"0px"}}
+              initial={{ left: "0px", top: "0px" }}
               className={`${bgBoxStyle}   absolute  `}
             ></motion.div>
           </div>

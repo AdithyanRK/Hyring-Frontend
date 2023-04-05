@@ -18,6 +18,7 @@ import CarouselSection2 from "@/components/landing-page/carousel-section/carouse
 import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
 import Footer from "@/common/landing-page/footer/footer.jsx";
 import PromiseSectionComponent from "@/components/landing-page/promises-section/promise-section-component";
+import NewPromiseSection from "@/components/landing-page/new-promise-section/new-promise-section.card";
 
 export default function Home() {
   let ref = useRef(null);
@@ -112,9 +113,9 @@ export default function Home() {
         >
           <HomeBannerSection />
         </div>
-        {/* <motion.div>
-          <PromiseSectionComponent />
-        </motion.div> */}
+        <motion.div>
+        <NewPromiseSection/>
+        </motion.div>
         <motion.div className="relative overflow-hidden">
           <TalentSection />
         </motion.div>

@@ -7,10 +7,7 @@ import PromiseNumberBox from "@/element/landing-page/promise-section/promise-num
 import { useScroll, useTransform, motion } from "framer-motion";
 import React from "react";
 import { useRef } from "react";
-import PersonGroup from "@/assets/icons/landing-page/person-group";
-import PromiseClock from "@/assets/icons/landing-page/promise-clock";
-import PromiseBulb from "@/assets/icons/landing-page/promise-bulb";
-import PromiseMoney from "@/assets/icons/landing-page/promise-money";
+
 import Image from "next/image";
 
 export default function PromiseSectionComponent() {

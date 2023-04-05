@@ -72,7 +72,7 @@ export default function CarouselSection2() {
       </div>
       <div className=" border sm:border-2 border-primary-brown mt-[22px] lg:mt-[34px] mb-[45px]"></div>
 
-      <div className="px-[30px] xs:px-[45px] sm:px-[65px]">
+      <div className="px-[30px] xs:px-[45px] sm:px-[65px] xxxl:pt-28">
         <Slider {...settings} ref={sliderRef}>
           <CarouselSectionCard
             text={"lorem1 lorem 1"}
@@ -117,7 +117,7 @@ export default function CarouselSection2() {
         </Slider>
       </div>
 
-      <Slider {...settings1} className="py-2 md:py-8 ">
+      <Slider {...settings1} className="py-2 md:py-8 xxxl:pt-28">
         <div
           onClick={() => {
             sliderRef.current.slickGoTo(0);

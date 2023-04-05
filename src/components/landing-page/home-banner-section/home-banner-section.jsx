@@ -55,7 +55,7 @@ const HomeBannerSection = () => {
   return (
     <div className="w-[100vw] overflow-hidden mt-3 md:mt-20">
       <div className="mx-auto w-[92vw] mb-20">
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row max-w-[1800px] mx-auto my-0">
           <div className="basis-3/5 ">
             <h1 className="font-primaryBold  text-4xl  lg:text-6xl text-center lg:text-start">
               Meet The New Gold Standard In{" "}
@@ -97,7 +97,7 @@ const HomeBannerSection = () => {
         </div>
       </div>
 
-      <div className="w-[102vw] mt-10  -rotate-3 border border-primary-brown flex items-center -ml-2 mb-20">
+      <div className="w-[102vw] mt-10  -rotate-3 border border-primary-brown flex items-center -ml-2 mb-20 2xl:mb-[130px]">
         <div className="h-[71px] bg-primary-brown w-full">
           <Slider {...settings1} className="py-5 ">
             {[

@@ -15,7 +15,7 @@ const NavbarComponent = ({ className }) => {
       top="6px"
       left="7px"
       className={`${className} h-[67px] md:h-[102px] w-fit mx-auto `}
-      boxStyle={`w-[95vw] h-[63px] md:h-[93px] border-2 bg-custom-bg rounded-[10px] border-primary-brown`}
+      boxStyle={`w-[95vw] h-[63px] md:h-[93px] border-2 bg-custom-bg rounded-[10px] border-primary-brown 2xl:max-w-[1800px] 2xl:mx-auto 2xl:my-0`}
       bgBoxStyle={
         "w-full h-[63px] md:h-[93px] rounded-[10px] bg-primary-brown "
       }

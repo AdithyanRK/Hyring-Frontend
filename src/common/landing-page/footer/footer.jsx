@@ -36,7 +36,7 @@ export default function Footer({ className }) {
     }
   };
   return (
-    <div className="footer font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 mt-80">
+    <div className="footer font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 mt-80 max-w-[2000px]  my-0 ">
       <div className="green-mar-sec flex justify-center -mt-[280px] mb-[250px]">
         <BoxTheme
           top="5px"

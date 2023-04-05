@@ -69,9 +69,9 @@ export default function CarouselSection1() {
       <div className="flex justify-between text-[20px] sm:text-[28px] lg:text-[54px] font-primaryMedium  ">
         <h1>Employee Retention</h1> <p>01</p>
       </div>
-      <div className=" border sm:border-2 border-primary-brown mt-[22px] mb-[45px] lg:mt-[34px]"></div>
+      <div className=" border sm:border-2 border-primary-brown mt-[22px] mb-[45px] lg:mt-[34px] xxxl:mt-[45px] xxxl:mb-[55px]"></div>
 
-      <div className="px-[30px] xs:px-[45px] sm:px-[65px]">
+      <div className="px-[30px] xs:px-[45px] sm:px-[65px] xxxl:pt-28">
         <Slider {...settings} ref={sliderRef}>
           <CarouselSectionCard
             text={"Health Insurance for Family Members"}
@@ -116,7 +116,7 @@ export default function CarouselSection1() {
         </Slider>
       </div>
 
-      <Slider {...settings1} className="py-2 md:py-8 ">
+      <Slider {...settings1} className="py-2 md:py-8 xxxl:pt-28">
         <div
           onClick={() => {
             sliderRef.current.slickGoTo(0);

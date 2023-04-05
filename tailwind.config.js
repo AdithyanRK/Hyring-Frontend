@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       screens: {
         xs: "540px",
+        xxxl:"2400px"
       },
       fontFamily: {
         primary: ["var(--font-whyte-regular)"],

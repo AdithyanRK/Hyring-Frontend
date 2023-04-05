@@ -28,7 +28,7 @@ export default function CarouselSectionTabs({className,color,text,index}) {
           }`
         }
       >
-        <p className='px-[25px] text-base font-primary' >{text}</p>
+        <p className='px-[25px] text-base font-primary xxxl:text-2xl' >{text}</p>
         <div className='absolute -top-[20px] -left-[20px]'>
                 <div className='relative'>
                 <Star3 className={` 

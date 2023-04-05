@@ -2,7 +2,12 @@ import Head from "next/head";
 import HomeBannerSection from "@/components/landing-page/home-banner-section/home-banner-section";
 import PricingSection from "@/components/landing-page/pricing-section/pricing-section";
 import TalentSection from "@/components/landing-page/talents-section/talents-section";
-import { useScroll, useTransform, motion, useMotionValueEvent } from "framer-motion";
+import {
+  useScroll,
+  useTransform,
+  motion,
+  useMotionValueEvent,
+} from "framer-motion";
 import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
 import PromiseSection from "@/components/landing-page/promises-section/promises-section";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
@@ -15,56 +20,49 @@ import Footer from "@/common/landing-page/footer/footer.jsx";
 import PromiseSectionComponent from "@/components/landing-page/promises-section/promise-section-component";
 
 export default function Home() {
-
-
   let ref = useRef(null);
-  
+
   const { scrollY } = useScroll();
-  
+
   let { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
- 
 
   const y = useTransform(scrollYProgress, [0, 1], [5, 160]);
   const rotate = useTransform(scrollYProgress, [0, 1], [-1080, 0]);
-  
 
   let yAxis = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   let scale = useTransform(scrollYProgress, [0, 1], ["99.9%", "100%"]);
   let opacity = useTransform(scrollYProgress, [0.98, 1], [1, 0.98]);
 
-  
-
-
   return (
     <>
       <Head>
         <title>
-          Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire
+          Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire
           portal
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta
           name="title"
-          content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
+          content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
         <meta
           name="description"
-          content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
+          content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hyring.com/" />
         <meta
           property="og:title"
-          content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
+          content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
         <meta
           property="og:description"
-          content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
+          content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
         <meta
           property="og:image"
@@ -74,7 +72,7 @@ export default function Home() {
         <meta property="twitter:url" content="https://hyring.com/" />
         <meta
           property="twitter:title"
-          content="Hire Top 5% of Indian Remote Talent | India’s leading Contract-to-Hire portal"
+          content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
         <meta property="twitter:description" content="" />
         <meta
@@ -97,50 +95,47 @@ export default function Home() {
             <ScrollIcon />
           </motion.div>
         </div>
-          <Image
-            src="/Rectangle.svg"
-            fill
-            style={{ objectFit: "cover", zIndex: -10 }}
-            alt="Background-Image"
-            quality={100}
-            priority
-          />
-          <NavbarComponent />
-
-          <div
-            data-aos="fade-up"
-            data-aos-duration="500"
-            data-aos-easing="linear"
-            
-          >
-            <HomeBannerSection />
+        <Image
+          src="/Rectangle.svg"
+          fill
+          style={{ objectFit: "cover", zIndex: -10 }}
+          alt="Background-Image"
+          quality={100}
+          priority
+        />
+        <NavbarComponent />
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-easing="linear"
+          className="overflow-hidden"
+        >
+          <HomeBannerSection />
+        </div>
+        {/* <motion.div>
+          <PromiseSectionComponent />
+        </motion.div> */}
+        <motion.div className="relative overflow-hidden">
+          <TalentSection />
+        </motion.div>
+        <div className="relative min-h-[90vh] mt-20 max-w-[1800px] mx-auto my-0">
+          <div className="sticky  top-0 h-full">
+            <CarouselSection1 />
           </div>
-            
-            <motion.div>
-            <PromiseSectionComponent />
-            </motion.div>
-            
-          <motion.div
-          // style={{position:t1}}
-          className="relative"
-        
-          >
-            <TalentSection />
-          </motion.div>
-          <div className="relative min-h-[90vh]">
-            <div className="sticky  top-0 h-full">
-              <CarouselSection1 />
-            </div>
-            <div className="sticky top-8 h-full">
-              <CarouselSection2 />
-            </div>
-            <div className="sticky top-16 z-20 h-full">
-              <CarouselSection3 />
-            </div>
-            <div className="sticky top-2 h-[20vh]"></div>
+          <div className="sticky top-8 h-full">
+            <CarouselSection2 />
           </div>
+          <div className="sticky top-16 z-20 h-full">
+            <CarouselSection3 />
+          </div>
+          <div className="sticky top-2 h-[20vh]"></div>
+        </div>
+        <div className="overflow-hidden">
           <PricingSection />
+        </div>
+        <div className="overflow-hidden">
           <Footer />
+        </div>
       </div>
     </>
   );

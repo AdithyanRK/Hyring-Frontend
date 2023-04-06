@@ -58,7 +58,7 @@ export default function NewPromiseStepper({ index }) {
                 : item.id === 4 && index === 3
                 ? "!font-primaryBold"
                 : ""
-            } flex justify-center items-center font-primary text-lg`}
+            } flex justify-center items-center font-primary text-[24px]`}
           >
             {item.header}
           </div>

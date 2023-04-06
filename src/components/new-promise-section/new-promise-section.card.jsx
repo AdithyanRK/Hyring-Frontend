@@ -68,8 +68,8 @@ const NewPromiseSection = () => {
 
   return (
     <>
-      <div className="hidden md:flex gap-5 lg:gap-10 mb-16 w-full max-w-[1800px]">
-        <div className="flex-1 pl-10">
+      <div className="hidden md:flex gap-5 lg:gap-10 mb-16 w-full max-w-[1800px] mx-auto my-0 pt-24 pb-24">
+        <div className="flex-1 pl-14 ml-3">
           <BoxTheme
             top={5}
             left={5}
@@ -93,7 +93,7 @@ const NewPromiseSection = () => {
             </div>
           </BoxTheme>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 pl-24 -mt-6">
           <NewPromiseStepper index={index} />
         </div>
       </div>

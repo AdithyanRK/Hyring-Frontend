@@ -17,7 +17,7 @@ export default function CarouselSection3() {
     const { className, style, onClick } = props;
     return (
       <div
-        className={className}
+      className={`${className} !-right-[10px] !-mt-5 sm:!-right-[40px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -30,7 +30,7 @@ export default function CarouselSection3() {
     const { className, style, onClick } = props;
     return (
       <div
-        className={className}
+      className={`${className} !-left-[45px] !-mt-5 sm:!-left-[65px]`}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >

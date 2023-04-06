@@ -14,9 +14,12 @@ const NewPromiseMobileSection = () => {
 
   var settings = {
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
@@ -25,11 +28,11 @@ const NewPromiseMobileSection = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={className}
-        style={{ ...style, display: "block" }}
+      className={`${className} !top-[195px] !right-[140px] xxs:!top-2/4 xxs:!-right-[10px] xxs:!-mt-5 `}
+        style={{ ...style, display: "block", }}
         onClick={onClick}
       >
-        <SliderButton className="scale-[0.5] xs:scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] -mr-18" />
+        <SliderButton className="scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] -mr-18" />
       </div>
     );
   }
@@ -38,20 +41,20 @@ const NewPromiseMobileSection = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={className}
+        className={`${className} !top-[195px] !left-[120px] xxs:!top-2/4 xxs: xxs:!-left-[45px] xxs:!-mt-5 `}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
         <SliderButton
           IconRotate={"rotate-180"}
-          className="scale-[0.5] xs:scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1]"
+          className=" scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1]"
         />
       </div>
     );
   }
   return (
     <>
-      <div className="m-3 max-w-[258px] mx-auto my-0 xxs:max-w-[320px]">
+      <div className="m-3 max-w-[360px] mx-auto my-0 xs:max-w-[400px] sm:max-w-[500px]">
         <Slider {...settings} ref={sliderRef}>
           <CarouselSectionMobileCard
             text={"Explore Indian Talents"}
@@ -81,6 +84,7 @@ const NewPromiseMobileSection = () => {
             boxStyleColor={"bg-custom-yellow"}
             content="LOREM IPSUM LOREM IPSUM"
           />
+          
         </Slider>
       </div>
     </>

@@ -20,6 +20,7 @@ import Footer from "@/common/landing-page/footer/footer.jsx";
 import NewPromiseSection from "@/components/new-promise-section/new-promise-section.card";
 import HeartRed from "@/assets/icons/landing-page/heart-red";
 import HeartBrown from "@/assets/icons/landing-page/heart-brown";
+import NewPromiseMobileSection from "@/components/new-promise-section/new-promise-mobile-section.card";
 
 export default function Home() {
   let ref = useRef(null);
@@ -124,7 +125,12 @@ export default function Home() {
               <HeartBrown className="absolute left-1 top-[3px] -z-1" />
             </div>
           </div>
-          <NewPromiseSection />
+          <div className="hidden md:block">
+              <NewPromiseSection />
+          </div>
+          <div className="block md:hidden mb-32 md:mb-0">
+            <NewPromiseMobileSection />
+          </div>
         </div>
         <motion.div className="relative overflow-hidden">
           <TalentSection />

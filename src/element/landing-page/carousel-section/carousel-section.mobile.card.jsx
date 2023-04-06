@@ -14,11 +14,11 @@ export default function CarouselSectionMobileCard({
     <BoxTheme
       top="8px"
       left="7px"
-      className={"h-[156px]  w-fit  cursor-pointer m-auto"}
-      boxStyle={` h-[145px]
-                  w-[240px] xxs:w-[280px] xs-h-[160px] !justify-start
+      className={"h-[172px]  w-fit  cursor-pointer m-auto"}
+      boxStyle={` h-[160px]
+                  w-[290px] xs:w-[340px] sm:w-[400px] !justify-start
                    border-2 ${boxStyleColor} rounded-[16px] border-primary-brown`}
-      bgBoxStyle={`w-[240px] xxs:w-[280px] h-[145px] xs-h-[160px]
+      bgBoxStyle={`w-[290px] xs:w-[340px] sm:w-[400px]  h-[160px] 
                     rounded-[16px]  bg-primary-brown  `}
     >
       {/* <div className="flex  items-center justify-between w-full gap-1 md:gap-4 p-2 md:p-5">

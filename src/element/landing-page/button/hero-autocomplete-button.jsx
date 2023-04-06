@@ -30,7 +30,7 @@ export default function HeroAutocompleteButton({ className }) {
             
           margin: "11px 0 !important",
           "& .MuiAutocomplete-listbox": {
-            fontSize: "18px",
+            fontSize: "14px",
             color: "#462B34",
             padding: "0",
             
@@ -88,6 +88,7 @@ export default function HeroAutocompleteButton({ className }) {
             textOverflow: "ellipsis",
             fontWeight: "500",
             fontFamily: "inherit",
+            fontSize:"16px",
           },
         }}
         options={options}

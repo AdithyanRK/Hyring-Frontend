@@ -365,7 +365,7 @@ html {
     display: flex;
   }
   .footer {
-    height: 1000px;
+    height: 1200px;
   }
   .green-sec {
     width: 350px;
@@ -394,10 +394,10 @@ html {
     margin-bottom: 20px;
     margin-top: 20px;
   }
-  .job-seek-sec{
+  .job-seek-sec {
     margin-left: 15px;
   }
-  .emp-sec{
+  .emp-sec {
     margin-right: 15px;
   }
 }
@@ -408,12 +408,10 @@ html {
 
 /* modal */
 
-.modal-video{
-  background-color: rgba(0, 0, 0, 0.8)!important;
+.modal-video {
+  background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
-.modal-video-close-btn{
-top:-33px !important;
+.modal-video-close-btn {
+  top: -33px !important;
 }
-
-

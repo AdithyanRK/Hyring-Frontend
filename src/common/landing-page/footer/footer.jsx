@@ -14,42 +14,34 @@ import Star4 from "@/assets/icons/landing-page/star4";
 import Link from "next/link";
 import LongArrowRight from "@/assets/icons/landing-page/long_arrow_icon";
 import GetStartedCircleIcon from "@/assets/icons/landing-page/get_started_circle_icon";
-
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
-  const constraintsRef = React.useRef(null);
   const x = useMotionValue(0);
-  const [dragDirection, setDragDirection] = React.useState("0");
   const router = useRouter();
   const [hoverFirst, setHoverFirst] = React.useState(false);
   const [hoverSecond, setHoverSecond] = React.useState(false);
-  const handleDrag = (event, info) => {
-    if (info.offset.x > 0) {
-      setDragDirection("right");
-      setTimeout(() => {
-        router.push("https://hyring.com/employers/");
-      }, 2000);
-    } else if (info.offset.x < 0) {
-      setDragDirection("left");
-      setTimeout(() => {
-        router.push("https://hyring.com/job-seekers/");
-      }, 2000);
-    }
+
+  const handleSeeker = () => {
+    router.push("https://hyring.com/job-seekers/");
+  };
+
+  const handleEmployers = () => {
+    router.push("https://hyring.com/employers/");
   };
   return (
-    <div className="footer  font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 mt-80 max-w-[2000px]  my-0 ">
+    <div className="footer  font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 mt-60 max-w-[2000px]  my-0 md:mt-80">
       <div className="flex  lg:flex-row flex-col items-center -top-40  absolute z-10 lg:-top-40 left-0 right-0 justify-center gap-5 lg:gap-20 px-2   ">
         <BoxTheme
           disableAnimate={true}
           className={`${className} xl:w-[40%]  cursor-pointer  `}
           boxStyle={`!item-start !justify-start  border-2 bg-white  border-primary-brown !bg-custom-green  rounded-lg relative w-full `}
           bgBoxStyle={`rounded-lg bg-primary-brown top-[5px] left-[5px]`}
-          // bgBoxStyle={`w-full h-full rounded-lg ${
-          //   hoverFirst ? "bg-primary-brown   " : ""
-          // }   top-[5px] left-[5px] animate-circleFill `}
           setHoverFirst={setHoverFirst}
         >
-          <div className="flex flex-col gap-2  items-start py-10 px-5 ">
+          <div
+            className="flex flex-col gap-2  items-start py-8 px-2 md:py-12 md:px-5"
+            onClick={() => handleSeeker()}
+          >
             <AvatarGroup max={4}>
               <Avatar
                 className={`${hoverFirst ? "avatar" : ""}`}
@@ -86,7 +78,7 @@ export default function Footer({ className }) {
               />
             </div>
           </div>
-          <div className="absolute -right-8">
+          <div className="absolute -right-4 scale-[1] md:scale-[1.5] md:-right-8">
             <div className="h-fit w-fit">
               <GetStartedCircleIcon color={"#FFF5B7"} hover={hoverFirst} />
               <div className="absolute bottom-[1.36rem] left-[1.15rem]">
@@ -100,12 +92,12 @@ export default function Footer({ className }) {
           className={`${className}  xl:w-[40%]  cursor-pointer  `}
           boxStyle={` border-2 bg-white !item-start !justify-start rounded-lg border-primary-brown !bg-custom-blue w-full  `}
           bgBoxStyle={` rounded-lg bg-primary-brown top-[5px] left-[5px]`}
-          // bgBoxStyle={`w-full h-full rounded-lg ${
-          //   hoverSecond ? "bg-primary-brown animate-circleFill" : ""
-          // }   top-[5px] left-[5px] `}
           setHoverSecond={setHoverSecond}
         >
-          <div className="flex flex-col gap-2 items-start py-10 px-5">
+          <div
+            className="flex flex-col gap-2  items-start py-8 px-2 md:py-12 md:px-5"
+            onClick={() => handleEmployers()}
+          >
             <AvatarGroup max={4}>
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
@@ -142,7 +134,7 @@ export default function Footer({ className }) {
               />
             </div>
           </div>
-          <div className="absolute -right-8">
+          <div className="absolute -right-4 scale-[1] md:scale-[1.5] md:-right-8">
             <div className="h-fit w-fit">
               <GetStartedCircleIcon color={"#B6ECCC"} hover={hoverSecond} />
               <div className="absolute bottom-[1.36rem] left-[1.15rem]">
@@ -152,7 +144,7 @@ export default function Footer({ className }) {
           </div>
         </BoxTheme>
       </div>
-      <div className="basis-[300px] text-center mob-logo pt-72 lg:pt-5">
+      <div className="basis-[300px] text-center mob-logo pt-60 lg:pt-5">
         <Logo className="m-auto" />
         <p className="text-2xl mt-5 mb-10">
           Meet the new gold standard in remote Hyring
@@ -234,10 +226,10 @@ export default function Footer({ className }) {
                 left="4px"
                 className={`h-[60px] ${className} w-fit cursor-pointer  text-2xl  `}
                 boxStyle={
-                  "w-[270px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
+                  "w-[260px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
                 }
                 bgBoxStyle={
-                  "w-[270px] h-[57px]  rounded-[8px]  bg-primary-brown "
+                  "w-[260px] h-[57px]  rounded-[8px]  bg-primary-brown "
                 }
               >
                 <TextField
@@ -252,7 +244,7 @@ export default function Footer({ className }) {
           </div>
         </div>
       </div>
-      <div className="mob-soc flex-col gap-y-6 text-center">
+      <div className="mob-soc flex-col gap-y-6 text-center pb-12">
         <div className="flex flex-col gap-y-7">
           <h2 className="text-[22px]">Social</h2>
           <div className="flex items-center gap-5 m-auto">
@@ -293,16 +285,16 @@ export default function Footer({ className }) {
         </div>
         <div className="flex flex-col gap-y-7">
           <h2 className="text-[22px]  ">Subscribe Newsletter</h2>
-          <div className="flex items-center gap-5 m-auto">
+          <div className="flex items-center gap-2 m-auto pb-0 xxs:pb-10">
             <BoxTheme
               top="5px"
               left="4px"
               className={`h-[60px] ${className} w-fit cursor-pointer  text-2xl  `}
               boxStyle={
-                "w-[270px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
+                "w-[215px] xxs:w-[270px] h-[57px] border bg-white rounded-[8px] border-primary-brown"
               }
               bgBoxStyle={
-                "w-[270px] h-[57px]  rounded-[8px]  bg-primary-brown "
+                "w-[215px] xxs:w-[270px] h-[57px]  rounded-[8px]  bg-primary-brown "
               }
             >
               <TextField
@@ -316,7 +308,8 @@ export default function Footer({ className }) {
           </div>
         </div>
       </div>
-      <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-3 border-solid xl:mt-16 mt-10 ml-24 mr-24">
+
+      <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-3 border-solid xl:mt-16 mt-0 xxs:mt-10 ml-24 mr-24">
         Copyright © {currentYear} Hyring. All rights reserved.
       </div>
     </div>

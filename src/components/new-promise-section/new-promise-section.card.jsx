@@ -5,32 +5,36 @@ import PromiseClock from "@/assets/icons/landing-page/promise-clock";
 import PromiseBulb from "@/assets/icons/landing-page/promise-bulb";
 import PromiseMoney from "@/assets/icons/landing-page/promise-money";
 import NewPromiseStepper from "./new-promise-section.stepper";
+import NewPromiseMobileSection from "./new-promise-mobile-section.card";
+import Star4 from "@/assets/icons/landing-page/star4";
+import HeartRed from "@/assets/icons/landing-page/heart-red";
+import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 
 const NewPromiseSection = () => {
   const [index, setIndex] = useState(0);
 
   const data = [
     {
-      header: "ONE",
-      bg: "bg-[#EAA24B]",
+      header: "Explore Indian Talents",
+      bg: "bg-[#B8C8FF]",
       content: "IPSUM LOREM LOREM IPSUM ONE",
       icon: <PersonGroup />,
     },
     {
-      header: "TWO",
+      header: "Fill your open positions within 15 days timeline",
       bg: "bg-[#B6ECCC]",
       content: "IPSUM LOREM LOREM IPSUM TWO",
       icon: <PromiseClock />,
     },
     {
-      header: "THREE",
-      bg: "bg-[#B9C8FF]",
+      header: "Save upto 50% on satffing costs without talent compromise",
+      bg: "bg-[#FFF5B7]",
       content: "IPSUM LOREM LOREM IPSUM THREE",
       icon: <PromiseMoney />,
     },
     {
-      header: "FOUR",
-      bg: "bg-[#61E396]",
+      header: "Top 5% of Indian IT Talent",
+      bg: "bg-[#FDB2B2]",
       content: "IPSUM LOREM LOREM IPSUM FOUR",
       icon: <PromiseBulb />,
     },
@@ -64,30 +68,37 @@ const NewPromiseSection = () => {
 
   return (
     <>
-      <div className="grid grid-cols-2">
-        <BoxTheme
-          className={"h-fit w-fit "}
-          boxStyle={`w-[300px] sm:w-[500px] h-[350px] 2xl:h-[400px]  md:w-[600px] 2xl:w-[800px] relative border-2 border-primary-brown rounded-3xl ${data[index].bg}`}
-          bgBoxStyle={
-            "  w-full h-full border-2 border-primary-brown -z-1  rounded-3xl bg-primary-brown"
-          }
-        >
-          <div className="flex flex-col">
-            {data[index].icon}
-
-            <p className="text-2xl   md:text-3xl  lg:text-[40px] font-primaryMedium leading-10 mt-4 md:mt-10">
-              {data[index].header}
-            </p>
-            <p className="">{data[index].content}</p>
-          </div>
-        </BoxTheme>
-        <div>
-        <NewPromiseStepper index={index}/>
+      <div className="hidden md:flex gap-5 lg:gap-10 mb-16 w-full max-w-[1800px]">
+        <div className="flex-1 pl-10">
+          <BoxTheme
+            top={5}
+            left={5}
+            className={"h-full w-full"}
+            boxStyle={`w-full h-full px-5 lg:px-10 xl:px-20 relative flex !justify-start border-2 border-primary-brown rounded-3xl ${data[index].bg}`}
+            bgBoxStyle={
+              "  w-full h-full border-2 border-primary-brown rounded-3xl bg-primary-brown"
+            }
+          >
+            <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -right-8 ">
+              <Star4 className={`fill-[#FFF5B7] animate-spin`} />
+            </div>
+            <div className="p-3">
+              <p> {data[index].icon}</p>
+              <p className="text-4xl font-primaryMedium leading-10 mt-4 md:mt-10">
+                {data[index].header}
+              </p>
+              <p className="text-2xl font-primaryLight mt-3">
+                {data[index].content}
+              </p>
+            </div>
+          </BoxTheme>
         </div>
-        {/* <div className={` h-40 animate-circleFill`}>
-          <p>{data[index].header}</p>
-          <p>{data[index].content}</p>
-        </div> */}
+        <div className="flex-1">
+          <NewPromiseStepper index={index} />
+        </div>
+      </div>
+      <div className="flex md:hidden mb-32 md:mb-0">
+        <NewPromiseMobileSection />
       </div>
     </>
   );

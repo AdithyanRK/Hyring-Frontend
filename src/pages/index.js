@@ -18,6 +18,8 @@ import CarouselSection2 from "@/components/landing-page/carousel-section/carouse
 import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
 import Footer from "@/common/landing-page/footer/footer.jsx";
 import NewPromiseSection from "@/components/new-promise-section/new-promise-section.card";
+import HeartRed from "@/assets/icons/landing-page/heart-red";
+import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 
 export default function Home() {
   let ref = useRef(null);
@@ -112,9 +114,18 @@ export default function Home() {
         >
           <HomeBannerSection />
         </div>
-        <motion.div>
-        <NewPromiseSection/>
-        </motion.div>
+        <div className="flex flex-col gap-16 md:mb-20  justify-center w-full">
+          <div className="flex justify-center items-center">
+            <div className="flex items-center  font-primaryBold text-primary-brown text-3xl md:text-5xl">
+              Our Promises
+            </div>
+            <div className="relative top-0.5 md:top-2 scale-[0.5] md:scale-100">
+              <HeartRed className="z-1" />
+              <HeartBrown className="absolute left-1 top-[3px] -z-1" />
+            </div>
+          </div>
+          <NewPromiseSection />
+        </div>
         <motion.div className="relative overflow-hidden">
           <TalentSection />
         </motion.div>

@@ -63,6 +63,7 @@ export default function CarouselSection3() {
     adaptiveHeight: true,
     infinte: true,
     swipeToSlide: true,
+    arrows:false,
   };
 
   return (

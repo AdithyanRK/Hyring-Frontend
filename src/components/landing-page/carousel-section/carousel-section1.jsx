@@ -17,7 +17,7 @@ export default function CarouselSection1() {
     return (
       <div
         className={`${className} !-right-[10px] !-mt-5 sm:!-right-[40px]`}
-        style={{ ...style, display: "block" }}
+        // style={{ ...style, display: "block" }}
         onClick={onClick}
       >
         <SliderButton className="scale-[0.5] xs:scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1]" />
@@ -30,7 +30,7 @@ export default function CarouselSection1() {
     return (
       <div
         className={`${className} !-left-[45px] !-mt-5 sm:!-left-[65px]`}
-        style={{ ...style, display: "block" }}
+        // style={{ ...style, display: "block" }}
         onClick={onClick}
       >
         <SliderButton
@@ -62,6 +62,7 @@ export default function CarouselSection1() {
     adaptiveHeight: true,
     infinte: true,
     swipeToSlide: true,
+    arrows:false,
   };
 
   return (

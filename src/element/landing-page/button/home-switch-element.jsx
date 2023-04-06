@@ -52,7 +52,7 @@ export const MaterialUISwitch2 = styled(Switch)(({ theme }) => ({
   width: 54,
   height: 34,
   padding: 5,
-  marginTop: "10px",
+  marginTop: "5px",
   '& .MuiSwitch-switchBase': {
     padding: "2.5px",
     transform: 'translateX(0px)',

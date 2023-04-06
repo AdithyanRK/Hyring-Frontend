@@ -71,7 +71,7 @@ const HomeBannerSection = () => {
               </p>
               candidates.
             </div>
-            <div className="text-lg xl:text-2xl font-primaryMedium   flex flex-wrap gap-4 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
+            <div className="text-base xl:text-lg font-primaryMedium   flex flex-wrap gap-4 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
               I Need <HeroAwitchButton />
               in <HeroAutocompleteButton  />
               <HeroSubmitButton  />

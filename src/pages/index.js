@@ -85,7 +85,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative text-primary-brown" ref={ref}>
+      <div className="relative text-primary-brown  " ref={ref} >
         <div className="invisible lg:visible fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div
             className="flex justify-center"
@@ -115,7 +115,7 @@ export default function Home() {
         >
           <HomeBannerSection />
         </div>
-        <div className="flex flex-col gap-16 md:mb-20  justify-center w-full">
+        <div className="flex flex-col gap-16 md:mb-20  justify-center w-screen overflow-hidden">
           <div className="flex justify-center items-center">
             <div className="flex items-center  font-primaryBold text-primary-brown text-3xl md:text-5xl">
               Our Promises

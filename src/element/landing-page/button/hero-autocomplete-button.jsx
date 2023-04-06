@@ -64,14 +64,14 @@ export default function HeroAutocompleteButton({ className }) {
       left="4px"
       className={`h-fit ${className} w-fit cursor-pointer   `}
       boxStyle={
-        "w-fit  h-[47px] md:h-[57px] border bg-white rounded-[8px] border-primary-brown"
+        "w-fit  h-[45px] md:h-[57px] border bg-white rounded-[8px] border-primary-brown"
       }
       bgBoxStyle={
-        "w-full  h-[47px] md:h-[57px]  rounded-[8px]  bg-primary-brown "
+        "w-full  h-[45px] md:h-[57px]  rounded-[8px]  bg-primary-brown "
       }
     >
       <Autocomplete
-        className="text-xl md:text-2xl"
+        className="text-base xl:text-lg"
         PopperComponent={CustomPopper}
         defaultValue="Product Designer"
        
@@ -88,14 +88,13 @@ export default function HeroAutocompleteButton({ className }) {
             textOverflow: "ellipsis",
             fontWeight: "500",
             fontFamily: "inherit",
-            fontSize:"16px",
           },
         }}
         options={options}
         renderInput={(params) => (
           <div ref={params.InputProps.ref} >
             <OutlinedInput
-              className={` w-[200px] `}
+              className={` w-[180px] `}
               sx={{
                
                 "&.MuiOutlinedInput-root": {

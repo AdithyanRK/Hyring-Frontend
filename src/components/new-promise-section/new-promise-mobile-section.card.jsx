@@ -54,7 +54,7 @@ const NewPromiseMobileSection = () => {
   }
   return (
     <>
-      <div className="m-3 max-w-[360px] mx-auto my-0 xs:max-w-[400px] sm:max-w-[500px]">
+      <div className="m-3 max-w-[360px] mx-auto my-0 xs:max-w-[400px] sm:max-w-[500px] ">
         <Slider {...settings} ref={sliderRef}>
           <CarouselSectionMobileCard
             text={"Explore Indian Talents"}

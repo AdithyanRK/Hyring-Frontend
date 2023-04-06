@@ -8,12 +8,12 @@ export default function HeroAwitchButton({ className }) {
     <BoxTheme
     top="5px"
       left="4px"
-      className={`h-fit ${className} w-fit cursor-pointer text-xl  md:text-2xl font-primaryMedium   `}
+      className={`h-fit ${className} w-fit cursor-pointer text-base  xl:text-lg font-primaryMedium   `}
       boxStyle={
-        "w-fit h-[47px] md:h-[57px] border bg-white rounded-[8px] border-primary-brown"
+        "w-fit h-[45px] md:h-[57px] border bg-white rounded-[8px] border-primary-brown"
       }
       bgBoxStyle={
-        "w-full h-[47px] md:h-[57px] rounded-[8px]  bg-primary-brown "
+        "w-full h-[45px] md:h-[57px] rounded-[8px]  bg-primary-brown "
       }
     >
       <div className=" pl-[21px] pr-4 flex justify-between items-center gap-2">

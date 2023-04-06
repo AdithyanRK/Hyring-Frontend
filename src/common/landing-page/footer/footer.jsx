@@ -35,7 +35,7 @@ export default function Footer({ className }) {
           disableAnimate={true}
           className={`${className} xl:w-[40%]  cursor-pointer  `}
           boxStyle={`!item-start !justify-start  border-2 bg-white  border-primary-brown !bg-custom-green  rounded-lg relative w-full `}
-          bgBoxStyle={`rounded-lg bg-primary-brown top-[5px] left-[5px]`}
+          bgBoxStyle={`w-full h-full rounded-lg bg-primary-brown top-[5px] left-[5px]`}
           setHoverFirst={setHoverFirst}
         >
           <div
@@ -91,7 +91,7 @@ export default function Footer({ className }) {
           disableAnimate={true}
           className={`${className}  xl:w-[40%]  cursor-pointer  `}
           boxStyle={` border-2 bg-white !item-start !justify-start rounded-lg border-primary-brown !bg-custom-blue w-full  `}
-          bgBoxStyle={` rounded-lg bg-primary-brown top-[5px] left-[5px]`}
+          bgBoxStyle={` w-full h-full rounded-lg bg-primary-brown top-[5px] left-[5px]`}
           setHoverSecond={setHoverSecond}
         >
           <div

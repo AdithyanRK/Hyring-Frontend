@@ -64,7 +64,7 @@ export default function NewPromiseStepper({ index }) {
           </div>
         </div>
         {item.id != 4 && (
-          <div className="ml-[32px] h-10 border-dashed border-l-2 border-black"></div>
+          <div className="ml-[32px] h-10 border-dashed border-l-2 border-black lg:-mt-[14px] lg:ml-[26px] 2xl:ml-[32px] 2xl:-mt-[2px]"></div>
         )}
       </div>
     );

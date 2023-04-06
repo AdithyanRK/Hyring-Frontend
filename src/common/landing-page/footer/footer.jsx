@@ -14,6 +14,7 @@ import Star4 from "@/assets/icons/landing-page/star4";
 import Link from "next/link";
 import LongArrowRight from "@/assets/icons/landing-page/long_arrow_icon";
 import GetStartedCircleIcon from "@/assets/icons/landing-page/get_started_circle_icon";
+import TataCompanyIcon from "../../../../src/assets/icons/landing-page/company-one"
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
   const x = useMotionValue(0);
@@ -102,19 +103,19 @@ export default function Footer({ className }) {
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Remy"
-                src="https://hyring.com/wp-content/uploads/2023/03/comp1-ava.png"
+                src={"https://hyring.com/wp-content/uploads/2023/04/emp3.png"}
                 style={{ border: "none" }}
               />
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Travis"
-                src="https://hyring.com/wp-content/uploads/2023/03/comp3-ava.png"
+                src="https://hyring.com/wp-content/uploads/2023/04/emp2.png"
                 style={{ border: "none" }}
               />
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Cindy"
-                src="https://hyring.com/wp-content/uploads/2023/03/comp2-ava.png"
+                src="https://hyring.com/wp-content/uploads/2023/04/emp1.png"
                 style={{ border: "none" }}
               />
             </AvatarGroup>
@@ -151,7 +152,7 @@ export default function Footer({ className }) {
         </p>
         <GetStartedButton boxColor={"bg-primary-orange"} className="mb-5" />
       </div>
-      <div className="flex xl:gap-24 items-center gap-12 justify-center max-w-fit m-auto">
+      <div className="flex xl:gap-24 items-center gap-12 justify-center max-w-fit m-auto pt-6">
         <div className="basis-[300px] desk-logo">
           <Logo />
           <p className="text-2xl mt-5 mb-10">

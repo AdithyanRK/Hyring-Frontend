@@ -2,7 +2,7 @@ import BoxTheme from '@/element/landing-page/box-theme/box-theme'
 import React from 'react'
 import PricingSectionAccordian from './pricing-section-accordian'
 
-export default function PricingAccordian({className}) {
+export default function PricingAccordian({className,hoverChange}) {
   return (
     <BoxTheme
     top="11px"
@@ -15,8 +15,8 @@ export default function PricingAccordian({className}) {
           " w-full h-full  lg:h-[845px]  rounded-[23px]  bg-primary-brown "
         }
       >
-         <div className='w-full h-full p-3 md:p-12'>
-            <PricingSectionAccordian />
+         <div className='w-full h-full p-3 md:p-10'>
+            <PricingSectionAccordian hoverChange={hoverChange} />
          </div>
       </BoxTheme>
   )

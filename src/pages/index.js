@@ -147,7 +147,7 @@ export default function Home() {
           </div>
           <div className="sticky top-2 h-[20vh]"></div>
         </div>
-        <div className="overflow-hidden">
+        <div >
           <PricingSection />
         </div>
         <div className="overflow-hidden">

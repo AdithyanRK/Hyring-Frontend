@@ -14,7 +14,7 @@ import Star4 from "@/assets/icons/landing-page/star4";
 import Link from "next/link";
 import LongArrowRight from "@/assets/icons/landing-page/long_arrow_icon";
 import GetStartedCircleIcon from "@/assets/icons/landing-page/get_started_circle_icon";
-import TataCompanyIcon from "../../../../src/assets/icons/landing-page/company-one"
+import TataCompanyIcon from "../../../../src/assets/icons/landing-page/company-one";
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
   const x = useMotionValue(0);
@@ -31,7 +31,7 @@ export default function Footer({ className }) {
   };
   return (
     <div className="footer  font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 md:pt-20 mt-60 max-w-[2000px]  my-0 md:mt-80">
-      <div className="flex  lg:flex-row flex-col items-center -top-40  absolute z-10 lg:-top-40 left-0 right-0 justify-center gap-5 lg:gap-20 px-2   ">
+      <div className="flex  lg:flex-row flex-col items-center -top-40  absolute z-10 lg:-top-40 left-0 right-0 justify-center gap-5 lg:gap-20   ">
         <BoxTheme
           disableAnimate={true}
           className={`${className} xl:w-[40%]  cursor-pointer  `}
@@ -65,10 +65,10 @@ export default function Footer({ className }) {
             </AvatarGroup>
             <div>
               <div className="text-lg  md:text-2xl lg:text-[26px] text-medium ">
-                I'm a Job Seeker, I want to work!
+                I'm a Job Seeker, Let's work together!
               </div>
               <p className="font-primaryLight mt-1  ">
-                Lorem ipsum dolor sit alam, consectetur adipiscing
+                Invitation-only exclusive access
               </p>
             </div>
             <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -left-8 ">
@@ -121,10 +121,10 @@ export default function Footer({ className }) {
             </AvatarGroup>
             <div>
               <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">
-                I’m Employer, I want to hire!
+              I'm an Employer, Let's talk business!
               </div>
               <p className="font-primaryLight mt-1  ">
-                Lorem ipsum dolor sit alam, consectetur adipiscing
+                Open access for overseas companies
               </p>
             </div>
             <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -left-8 ">
@@ -148,17 +148,17 @@ export default function Footer({ className }) {
       <div className="basis-[300px] text-center mob-logo pt-60 lg:pt-5">
         <Logo className="m-auto" />
         <p className="text-2xl mt-5 mb-10">
-          Meet the new gold standard in remote Hyring
+          Meet the new gold standard in contract Hyring
         </p>
-        <GetStartedButton boxColor={"bg-primary-orange"} className="mb-5" />
+        {/* <GetStartedButton boxColor={"bg-primary-orange"} className="mb-5" /> */}
       </div>
       <div className="flex xl:gap-24 items-center gap-12 justify-center max-w-fit m-auto pt-6">
         <div className="basis-[300px] desk-logo">
           <Logo />
           <p className="text-2xl mt-5 mb-10">
-            Meet the new gold standard in remote Hyring
+            Meet the new gold standard in contract Hyring
           </p>
-          <GetStartedButton boxColor={"bg-primary-orange"} />
+          {/* <GetStartedButton boxColor={"bg-primary-orange"} /> */}
         </div>
         <div className="company-sec flex flex-col gap-y-5 mb-16">
           <h2 className="text-[22px]">Company</h2>
@@ -171,12 +171,15 @@ export default function Footer({ className }) {
           <Link href="/contact-us">
             <p className="text-lg font-primary">Contact Us</p>
           </Link>
+          <Link href="/about-hyring">
+            <p className="text-lg font-primary">About Hyring</p>
+          </Link>
         </div>
         <div className="company-sec flex flex-col gap-y-5 mb-16">
           <h2 className="text-[22px]  ">Legal</h2>
           <p className="text-lg font-primary">Privacy Policy</p>
           <p className="text-lg font-primary">Terms & Conditions</p>
-          <p className="text-lg font-primary">Cancellation Policy</p>
+          {/* <p className="text-lg font-primary">Cancellation Policy</p> */}
         </div>
         <div className="desk-soc flex-col gap-y-12 mt-7">
           <div className="flex flex-col gap-y-7">
@@ -310,7 +313,7 @@ export default function Footer({ className }) {
         </div>
       </div>
 
-      <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-3 border-solid xl:mt-16 mt-0 xxs:mt-10 ml-24 mr-24">
+      <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-3 border-solid xl:mt-8 mt-0 xxs:mt-10 ml-24 mr-24">
         Copyright © {currentYear} Hyring. All rights reserved.
       </div>
     </div>

@@ -11,13 +11,19 @@ import { useState } from "react";
 
 export default function HeroAutocompleteButton({ className }) {
   const options = [
-    "UI UX Designer",
-    "Frontend Developer",
-    "Data Analyst",
-    "Azure Cloud Engineer",
-    "Graphics Designer",
-    "Product Designer",
-    "System Architect",
+    "System Designer",
+    "Full-Stack Engineer",
+    "Front-End Engineer",
+    "Back-End Engineer",
+    "Data Engineers",
+    "DevOps",
+    "Mobile Engineer",
+    "QA Engineer",
+    "UX/UI Designer",
+    "Project Manager",
+    "Business Analyst",
+    "Digital Marketing Specialist",
+    "Social Media Marketer",
   ];
 
   const CustomPopper = function (props) {
@@ -25,9 +31,18 @@ export default function HeroAutocompleteButton({ className }) {
       <Popper
         {...props}
         sx={{
-          border: "2px solid #462B34",
+          
           borderRadius: "4px",
-            
+          "& .MuiPaper-root":{
+
+            "&:empty":{
+              border:"none"
+            },
+            "&:not(:empty)":{
+              border: "2px solid #462B34",
+            }
+          },
+           
           margin: "11px 0 !important",
           "& .MuiAutocomplete-listbox": {
             fontSize: "14px",
@@ -35,7 +50,7 @@ export default function HeroAutocompleteButton({ className }) {
             padding: "0",
             
             "& li": {
-              padding: "18px 12px ",
+              padding: "9px 6px ",
               borderBottom: "1px solid #462B34",
               fontFamily: '__whyteMedium_2bf28c',
               overflow: "hidden",
@@ -71,10 +86,10 @@ export default function HeroAutocompleteButton({ className }) {
       }
     >
       <Autocomplete
-        className="text-base xl:text-lg"
+        freeSolo
+        className="text-base xl:text-lg w-fit"
         PopperComponent={CustomPopper}
-        defaultValue="Product Designer"
-       
+        defaultValue="Full-Stack Engineer"
         selectOnFocus
         sx={{
           "& input": {
@@ -94,7 +109,7 @@ export default function HeroAutocompleteButton({ className }) {
         renderInput={(params) => (
           <div ref={params.InputProps.ref} >
             <OutlinedInput
-              className={` w-[180px] `}
+              className={` w-[230px] `}
               sx={{
                
                 "&.MuiOutlinedInput-root": {
@@ -102,6 +117,7 @@ export default function HeroAutocompleteButton({ className }) {
                   paddingLeft: "10px !important",
                   fontFamily: "inherit",
                   fontSize:"inherit"
+
                 },
                 "& .MuiOutlinedInput-notchedOutline": { display: "none" },
                 // "&.MuiInputBase-input": { width: "150px" },

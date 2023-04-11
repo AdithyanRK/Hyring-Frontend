@@ -3,17 +3,17 @@ import React from "react";
 
 export default function HomeListComponent({className}) {
   return (
-   <div className={`${className}`}>
-     <div className={`xs:flex gap-5 justify-around xl:justify-start xl:gap-20  items-center  `}>
+   <div className={`${className} flex justify-center my-4 lg:max-w-[640px] xl:max-w-[710px] xl3:max-w-[860px]`}>
+     <div className={`sm:grid  sm:grid-cols-2 items-start  `}>
       <div className="">
-        <HeroList>AI powered Hyring app</HeroList>
-        <HeroList>Top 5% vetted candidates</HeroList>
-        <HeroList>Robust Payroll</HeroList>
+        <HeroList>AI-Powered Hyring App </HeroList>
+        <HeroList>Salaries up to ₹1 Crore</HeroList>
+        <HeroList>Health Insurance for the Entire Family</HeroList>
       </div>
       <div className="">
-        <HeroList>Transparent salary info - No Hanky-Panky</HeroList>
-        <HeroList>Cool Indian office space</HeroList>
-        <HeroList>Indian Taxation & Compliances</HeroList>
+        <HeroList>Transparent Salary Info. - No Hanky-Panky</HeroList>
+        <HeroList>Indian Taxation & Compliance Covered</HeroList>
+        <HeroList>Cool Office Spaces Located Across India</HeroList>
       </div>
     </div>
    </div>

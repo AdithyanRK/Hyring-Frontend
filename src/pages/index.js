@@ -9,7 +9,6 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
-import PromiseSection from "@/components/landing-page/promises-section/promises-section";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -17,10 +16,7 @@ import CarouselSection1 from "@/components/landing-page/carousel-section/carouse
 import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section2";
 import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
 import Footer from "@/common/landing-page/footer/footer.jsx";
-import NewPromiseSection from "@/components/new-promise-section/new-promise-section.card";
-import HeartRed from "@/assets/icons/landing-page/heart-red";
-import HeartBrown from "@/assets/icons/landing-page/heart-brown";
-import NewPromiseMobileSection from "@/components/new-promise-section/new-promise-mobile-section.card";
+import NewPromiseSection from "@/components/new-promise-section/new-promise-section";
 
 export default function Home() {
   let ref = useRef(null);
@@ -115,23 +111,16 @@ export default function Home() {
         >
           <HomeBannerSection />
         </div>
-        <div className="flex flex-col gap-16 md:mb-20  justify-center w-screen overflow-hidden">
-          <div className="flex justify-center items-center">
-            <div className="flex items-center  font-primaryBold text-primary-brown text-3xl md:text-5xl">
-              Our Promises
-            </div>
-            <div className="relative top-0.5 md:top-2 scale-[0.5] md:scale-100">
-              <HeartRed className="z-1" />
-              <HeartBrown className="absolute left-1 top-[3px] -z-1" />
-            </div>
-          </div>
-          <div className="hidden md:block">
-              <NewPromiseSection />
-          </div>
-          <div className="block md:hidden mb-32 md:mb-0">
-            <NewPromiseMobileSection />
-          </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-easing="linear"
+          className="overflow-hidden"
+        >
+         <NewPromiseSection/>
         </div>
+            
+            
         <motion.div className="relative overflow-hidden">
           <TalentSection />
         </motion.div>

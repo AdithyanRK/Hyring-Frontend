@@ -28,7 +28,7 @@ const NewPromiseMobileSection = () => {
     const { className, style, onClick } = props;
     return (
       <div
-      className={`${className} !top-[195px] !right-[140px] xxs:!top-2/4 xxs:!-right-[10px] xxs:!-mt-5 `}
+      className={`${className} !top-[310px] !right-[140px] xxs:!top-2/4 xxs:!-right-[10px] xxs:!-mt-5 `}
         style={{ ...style, display: "block", }}
         onClick={onClick}
       >
@@ -41,7 +41,7 @@ const NewPromiseMobileSection = () => {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} !top-[195px] !left-[120px] xxs:!top-2/4 xxs: xxs:!-left-[45px] xxs:!-mt-5 `}
+        className={`${className} !top-[310px] !left-[120px] xxs:!top-2/4 xxs: xxs:!-left-[45px] xxs:!-mt-5 `}
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -54,35 +54,35 @@ const NewPromiseMobileSection = () => {
   }
   return (
     <>
-      <div className="m-3 max-w-[360px] mx-auto my-0 xs:max-w-[400px] sm:max-w-[500px] ">
+      <div className="m-3 max-w-[360px] mx-auto my-0 xs:max-w-[400px] sm:max-w-[500px]  ">
         <Slider {...settings} ref={sliderRef}>
           <CarouselSectionMobileCard
             text={"Explore Indian Talents"}
-            content="LOREM IPSUM LOREM IPSUM"
+            content="Uncover top-notch skilled professionals from India."
             Svg={<PersonGroup />}
             boxStyleColor={"bg-custom-green"}
             starColor={"fill-custom-yellow"}
           />
           <CarouselSectionMobileCard
-            text={"Fill your open positions within 15 days timeline"}
+            text={"Fill Open Positions Within 15 Days"}
             Svg={<PromiseClock />}
-            content="LOREM IPSUM LOREM IPSUM"
+            content="Ensure minimal disruption to your projects with our swift staffing solutions."
             boxStyleColor={"bg-custom-yellow"}
             starColor={"fill-custom-blue"}
           />
           <CarouselSectionMobileCard
-            text={"Save upto 50% on satffing costs without talent compromise"}
+            text={"Save Up to 50% on Staffing Costs"}
             Svg={<PromiseBulb />}
             boxStyleColor={"bg-custom-green"}
             starColor={"fill-custom-yellow"}
-            content="LOREM IPSUM LOREM IPSUM"
+            content="Reduce expenses without compromising on resource quality."
           />
           <CarouselSectionMobileCard
-            text={"Top 5% of Indian IT Talent"}
+            text={"Access the Top 5% of Indian Resources"}
             Svg={<PromiseMoney />}
             starColor={"fill-custom-yellow"}
             boxStyleColor={"bg-custom-yellow"}
-            content="LOREM IPSUM LOREM IPSUM"
+            content="Rest assured that your projects are in capable hands with our elite professionals."
           />
           
         </Slider>

@@ -57,11 +57,11 @@ const HomeBannerSection = () => {
       <div className="mx-auto w-[92vw] mb-20">
         <div className="flex flex-col lg:flex-row max-w-[1800px] mx-auto my-0">
           <div className="basis-3/5 ">
-            <h1 className="font-primaryBold  text-4xl  lg:text-6xl text-center lg:text-start">
-              Meet The New Gold Standard In{" "}
-              <span className="text-secondary-orange">Remote Hyring</span>
+            <h1 className="font-primaryBold   text-4xl lg:whitespace-nowrap lg:text-[44px] xl:text-5xl  xl3:text-6xl text-center lg:text-start">
+              Meet The New Gold Standard <br className="hidden lg:block"/> In 
+              <span className="text-secondary-orange"> Contract Hyring</span>
             </h1>
-            <div className="font-normal font-primary text-xl lg:text-3xl mt-5 lg:mt-[40px] mb-8 lg:mb-[60px] text-center lg:text-start">
+            <div className="font-normal  font-primary text-xl lg:text-3xl mt-5  lg:mt-[40px] mb-8 lg:mb-[60px] text-center lg:text-start">
               Hire from a pool of
               <p className="relative inline-block mx-2 lg:mx-3">
                 <span className="absolute -left-[22px] -top-4 lg:-left-1 lg:-top-3 scale-[0.7] lg:scale-[1]  ">
@@ -71,10 +71,12 @@ const HomeBannerSection = () => {
               </p>
               candidates.
             </div>
-            <div className="text-base xl:text-lg font-primaryMedium   flex flex-wrap gap-4 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
+            <div className="text-base xl:text-lg font-primaryMedium lg:w-[700px]  flex flex-wrap lg:flex-nowrap gap-4 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
               I Need <HeroAwitchButton />
-              in <HeroAutocompleteButton  />
+              in <div className="whitespace-nowrap flex gap-4 items-center">
+              <HeroAutocompleteButton  />
               <HeroSubmitButton  />
+              </div>
             </div>
             <HomeListComponent className="hidden lg:block" />
           </div>
@@ -97,17 +99,36 @@ const HomeBannerSection = () => {
         </div>
       </div>
 
-      <div className="w-[102vw] mt-10  -rotate-3 border border-primary-brown flex items-center -ml-2 mb-20 2xl:mb-[130px]">
+      <div className="w-[102vw] -mt-12  -rotate-3 border border-primary-brown flex items-center -ml-2 mb-20 2xl:mb-[130px]">
         <div className="h-[71px] bg-primary-brown w-full">
           <Slider {...settings1} className="py-5 ">
             {[
-              { text: "UI UX Designer", icon: <Union /> },
-              { text: "Frontend Developer", icon: <Diamond /> },
-              { text: "Data Analyst", icon: <Circle /> },
-              { text: "Azure Cloud Engineer", icon: <Rectangle /> },
-              { text: "Graphics Designer", icon: <Triangle /> },
-              { text: "Product Designer", icon: <Star6 /> },
-              { text: "System Architect", icon: <Polygon /> },
+              { text: "System Designer", icon: <Union /> },
+              { text: "Full-Stack Engineer", icon: <Diamond /> },
+              { text: "Front-End Engineer", icon: <Circle /> },
+              { text: "Back-End Engineer", icon: <Rectangle /> },
+              { text: "Data Engineers", icon: <Triangle /> },
+              { text: "DevOps", icon: <Star6 /> },
+              { text: "Mobile Engineer", icon: <Polygon /> },
+              { text: "QA Engineer", icon: <Union /> },
+              { text: "UX/UI Designer", icon:  <Diamond /> },
+              { text: "Project Manager", icon: <Circle />  },
+              { text: "Business Analyst", icon: <Rectangle /> },
+              { text: "Digital Marketing Specialist", icon: <Triangle /> },
+              { text: "Social Media Marketer", icon: <Star6 /> },
+              { text: "System Designer", icon: <Union /> },
+              { text: "Full-Stack Engineer", icon: <Diamond /> },
+              { text: "Front-End Engineer", icon: <Circle /> },
+              { text: "Back-End Engineer", icon: <Rectangle /> },
+              { text: "Data Engineers", icon: <Triangle /> },
+              { text: "DevOps", icon: <Star6 /> },
+              { text: "Mobile Engineer", icon: <Polygon /> },
+              { text: "QA Engineer", icon: <Union /> },
+              { text: "UX/UI Designer", icon:  <Diamond /> },
+              { text: "Project Manager", icon: <Circle />  },
+              { text: "Business Analyst", icon: <Rectangle /> },
+              { text: "Digital Marketing Specialist", icon: <Triangle /> },
+              { text: "Social Media Marketer", icon: <Star6 /> },
             ].map((data, index) => (
               <RunnerList text={data.text} icon={data.icon} key={index} />
             ))}

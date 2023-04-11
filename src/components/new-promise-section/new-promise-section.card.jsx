@@ -5,12 +5,11 @@ import PromiseClock from "@/assets/icons/landing-page/promise-clock";
 import PromiseBulb from "@/assets/icons/landing-page/promise-bulb";
 import PromiseMoney from "@/assets/icons/landing-page/promise-money";
 import NewPromiseStepper from "./new-promise-section.stepper";
-import NewPromiseMobileSection from "./new-promise-mobile-section.card";
 import Star4 from "@/assets/icons/landing-page/star4";
 import HeartRed from "@/assets/icons/landing-page/heart-red";
 import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 
-const NewPromiseSection = () => {
+const NewPromiseSectionold = () => {
   const [index, setIndex] = useState(0);
 
   const data = [
@@ -102,4 +101,4 @@ const NewPromiseSection = () => {
   );
 };
 
-export default NewPromiseSection;
+export default NewPromiseSectionold;

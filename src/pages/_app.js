@@ -17,6 +17,10 @@ import localFont from "next/font/local";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+//GTM
+
+import TagManager from 'react-gtm-module';
+
 // font declaration
 const whyteRegular = localFont({
   src: "../../public/fonts/whyte/WhyteInktrap-Regular.woff",
@@ -46,9 +50,14 @@ const whyteBold = localFont({
 const App = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
+  const tagManagerArgs = {
+    gtmId: 'GTM-PBRH79L'
+  }
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    TagManager.initialize(tagManagerArgs)
   }, []);
   
 

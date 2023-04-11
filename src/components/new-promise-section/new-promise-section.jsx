@@ -6,7 +6,7 @@ import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 
 export default function NewPromiseSection() {
   return (
-    <div className="flex flex-col gap:12 md:gap-16  justify-center w-screen min-h-[300px] md:min-h-[400px] md:h-screen  overflow-hidden">
+    <div className="flex flex-col gap:12 md:gap-16  justify-center w-screen min-h-[300px] md:min-h-[400px] md:h-screen  overflow-hidden lg:-mt-[80px] lg:mb-20">
       <div className="flex justify-center items-center">
         <div className=" font-primaryBold text-primary-brown text-[2rem] sm:text-[2.25rem] md:text-[2.5rem]  lg:text-5xl">
           Our Promises

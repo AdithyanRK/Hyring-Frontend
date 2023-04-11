@@ -5,10 +5,10 @@ import WhyHyringComponentMobile from "./why-hyring.mobile.section.component";
 const WhyHyringMainComponent = () => {
   return (
     <>
-      <div className="hidden md:flex">
+      <div className="hidden md:flex mt-28">
         <WhyHyringComponent />
       </div>
-      <div className="flex md:hidden">
+      <div className="flex md:hidden mt-20">
         <WhyHyringComponentMobile />
       </div>
     </>

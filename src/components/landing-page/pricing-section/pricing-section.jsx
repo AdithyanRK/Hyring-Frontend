@@ -36,7 +36,7 @@ export default function PricingSection() {
           <PricingSectionCard
             title={"Employers"}
             svg={<EmployerPriceSvg />}
-            price={750}
+            // price={750}
             subText={"As low as 20% per candidate/month"}
             starColor={"custom-green"}
             boxColor={"custom-yellow"}

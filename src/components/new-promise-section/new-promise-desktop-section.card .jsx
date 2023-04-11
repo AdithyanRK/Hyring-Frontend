@@ -21,15 +21,15 @@ const NewPromiseDesktopSection = () => {
     },
     {
       id: 2,
-      header: "Fill your open positions within 15 days timeline",
+      header: "Fill Open Positions Within 15 Days",
     },
     {
       id: 3,
-      header: "Save upto 50% on satffing costs without talent compromise",
+      header: "Save Up to 50% on Staffing Costs",
     },
     {
       id: 4,
-      header: "Top 5% of Indian IT Talent",
+      header: "Access the Top 5% of Indian Resources",
     },
   ];
   
@@ -39,7 +39,7 @@ const NewPromiseDesktopSection = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 500,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
     arrows:false,
     centerMode: true,

@@ -121,14 +121,7 @@ export default function Home() {
         >
           <NewPromiseSection />
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="500"
-          data-aos-easing="linear"
-          className="overflow-hidden"
-        >
-          <WhyHyringMainComponent />
-        </div>
+       
 
         <motion.div className="relative overflow-hidden">
           <TalentSection />
@@ -147,6 +140,10 @@ export default function Home() {
         </div>
         <div>
           <PricingSection />
+        </div>
+        <div>
+        <WhyHyringMainComponent />
+
         </div>
         <div className="overflow-hidden">
           <Footer />

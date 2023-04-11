@@ -8,7 +8,7 @@ import "@typeform/embed/build/css/popup.css";
 
 export default function GetStartedButton({ className, boxColor, hover, role }) {
   const openPopup = (event) => {
-    if (role === 1) {
+    if (role == 1) {
       createPopup("FDcDS1yK").open();
     } else {
       createPopup("LIowQUFE").open();

@@ -38,7 +38,7 @@ const WhyHyringComponentMobile = () => {
 
   return (
     <>
-      <div className="flex flex-wrap flex-col mx-5 mb-14">
+      <div className="flex flex-wrap flex-col mx-5">
         <div className="bg-[#FAFAFA] rounded-xl p-4 mb-4">
           <div className="flex flex-row ">
             <h1 className="text-[20px] text-primary-brown font-bold font-primaryBold pb-4">

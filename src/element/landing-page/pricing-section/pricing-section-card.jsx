@@ -100,7 +100,7 @@ export default function PricingSectionCard({
         </div>
 
         <GetStartedButton
-        role="1"
+        role="2"
           className="md:mt-5 lg:mt-[70px] "
           hover={employerHover}
           boxColor="bg-primary-orange"

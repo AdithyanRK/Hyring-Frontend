@@ -284,8 +284,7 @@ const values = [
     },
     {
       id: 3,
-      header: "Save upto 50% on satffing costs without talent compromise",
-      // message: "Save upto 50% on satffing costs without talent compromise",
+      header: "Save upto 50% on satffing costs ",
       icon: <PromiseMoney />,
       bgColor: "#FFF5B7",
     },

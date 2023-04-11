@@ -63,7 +63,7 @@ const WhyHyringComponent = () => {
   return (
     <>
       <div className="max-w-[1400px] mx-auto my-0">
-        <div className="h-[730px] relative mx-5 mb-48 md:mb-48">
+        <div className="h-[730px] relative mx-5">
           <div className="bg-primary-brown h-[93vh] md:h-[700px] flex flex-col pt-8 rounded-t-2xl rounded-b-xl  border-[1px] border-primary-brown pb-6">
             <div className="px-2 lg:px-20 lg:py-4 pt-4 lg:pt-4">
               <div className="flex flex-row ">
@@ -128,7 +128,7 @@ const WhyHyringComponent = () => {
                 setIsDragging(true);
               }}
             >
-              <div className="flex flex-row items-center w-full justify-center -mt-[48px] scale-[0.6] animate-bounce">
+              <div className="flex flex-row items-center w-full justify-center -mt-[48px] scale-[0.6] animate-bounce cursor-grab">
                 <WhyHyringDragger />
               </div>
             </motion.div>

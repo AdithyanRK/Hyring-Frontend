@@ -16,10 +16,8 @@ import CarouselSection1 from "@/components/landing-page/carousel-section/carouse
 import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section2";
 import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
 import Footer from "@/common/landing-page/footer/footer.jsx";
-import NewPromiseSection from "@/components/new-promise-section/new-promise-section.card";
-import HeartRed from "@/assets/icons/landing-page/heart-red";
-import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 import WhyHyringMainComponent from "@/components/landing-page/why-hyring/why-hyring.main.component";
+import NewPromiseSection from "@/components/new-promise-section/new-promise-section";
 
 export default function Home() {
   let ref = useRef(null);
@@ -84,7 +82,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="relative text-primary-brown  " ref={ref} >
+      <div className="relative text-primary-brown  " ref={ref}>
         <div className="invisible lg:visible fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
           <motion.div
             className="flex justify-center"
@@ -120,10 +118,17 @@ export default function Home() {
           data-aos-easing="linear"
           className="overflow-hidden"
         >
-         <NewPromiseSection/>
+          <NewPromiseSection />
         </div>
-        {/* <WhyHyringComponent/> */}
-        <WhyHyringMainComponent/>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-easing="linear"
+          className="overflow-hidden"
+        >
+               <WhyHyringMainComponent />
+
+        </div>
 
         <motion.div className="relative overflow-hidden">
           <TalentSection />
@@ -140,7 +145,7 @@ export default function Home() {
           </div>
           <div className="sticky top-2 h-[20vh]"></div>
         </div>
-        <div >
+        <div>
           <PricingSection />
         </div>
         <div className="overflow-hidden">

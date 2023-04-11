@@ -16,6 +16,7 @@ import LongArrowRight from "@/assets/icons/landing-page/long_arrow_icon";
 import GetStartedCircleIcon from "@/assets/icons/landing-page/get_started_circle_icon";
 import TataCompanyIcon from "../../../../src/assets/icons/landing-page/company-one";
 import Toaster from "@/element/landing-page/toaster/toaster";
+import InviteOnlyCircleIcon from "@/assets/icons/landing-page/invite_only_circle_icon";
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
   const x = useMotionValue(0);
@@ -53,12 +54,12 @@ export default function Footer({ className }) {
     router.push("https://hyring.com/employers/");
   };
   return (
-    <div className="footer  font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 md:pt-20 mt-60 max-w-[2000px]  my-0 md:mt-80">
+    <div className="footer   font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 md:pt-20 mt-60 max-w-[2000px]  my-0 md:mt-80">
       <div className="flex  lg:flex-row flex-col items-center -top-40  absolute z-10 lg:-top-40 left-0 right-0 justify-center gap-5 lg:gap-20   ">
         <BoxTheme
           disableAnimate={true}
           className={`${className} xl:w-[40%]  cursor-pointer  `}
-          boxStyle={`!item-start !justify-start  border-2 bg-white  border-primary-brown !bg-custom-green  rounded-lg relative w-full `}
+          boxStyle={`!item-start !justify-start  border-2 bg-white  border-primary-brown !bg-custom-green  rounded-lg relative w-full`}
           bgBoxStyle={`w-full h-full rounded-lg bg-primary-brown top-[5px] left-[5px]`}
           setHoverFirst={setHoverFirst}
         >
@@ -102,10 +103,10 @@ export default function Footer({ className }) {
               />
             </div>
           </div>
-          <div className="absolute -right-4 scale-[1] md:scale-[1.5] md:-right-8">
+          <div className="absolute -right-10 scale-[0.7] md:scale-[1] md:-right-10">
             <div className="h-fit w-fit">
-              <GetStartedCircleIcon color={"#FFF5B7"} hover={hoverFirst} />
-              <div className="absolute bottom-[1.36rem] left-[1.15rem]">
+              <InviteOnlyCircleIcon color={"#FFF5B7"} hover={hoverFirst} />
+              <div className="absolute bottom-[2.47rem] left-[2rem]">
                 <LongArrowRight />
               </div>
             </div>
@@ -158,10 +159,10 @@ export default function Footer({ className }) {
               />
             </div>
           </div>
-          <div className="absolute -right-4 scale-[1] md:scale-[1.5] md:-right-8">
+          <div className="absolute -right-10 scale-[0.7] md:scale-[1] md:-right-10">
             <div className="h-fit w-fit">
-              <GetStartedCircleIcon color={"#B6ECCC"} hover={hoverSecond} />
-              <div className="absolute bottom-[1.36rem] left-[1.15rem]">
+              <InviteOnlyCircleIcon color={"#B6ECCC"} hover={hoverSecond} />
+              <div className="absolute bottom-[2.47rem] left-[2rem]">
                 <LongArrowRight />
               </div>
             </div>

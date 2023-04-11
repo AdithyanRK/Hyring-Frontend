@@ -16,7 +16,10 @@ import CarouselSection1 from "@/components/landing-page/carousel-section/carouse
 import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section2";
 import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
 import Footer from "@/common/landing-page/footer/footer.jsx";
-import NewPromiseSection from "@/components/new-promise-section/new-promise-section";
+import NewPromiseSection from "@/components/new-promise-section/new-promise-section.card";
+import HeartRed from "@/assets/icons/landing-page/heart-red";
+import HeartBrown from "@/assets/icons/landing-page/heart-brown";
+import WhyHyringMainComponent from "@/components/landing-page/why-hyring/why-hyring.main.component";
 
 export default function Home() {
   let ref = useRef(null);
@@ -119,8 +122,9 @@ export default function Home() {
         >
          <NewPromiseSection/>
         </div>
-            
-            
+        {/* <WhyHyringComponent/> */}
+        <WhyHyringMainComponent/>
+
         <motion.div className="relative overflow-hidden">
           <TalentSection />
         </motion.div>

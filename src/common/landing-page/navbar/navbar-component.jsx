@@ -27,9 +27,9 @@ const NavbarComponent = ({ className }) => {
           </Link>
         </div>
         <div className="md:flex gap-10 items-center hidden">
-          <Link href={"/#whyIndia"} scroll={false}>
+          {/* <Link href={"/#whyIndia"} scroll={false}>
             Why India
-          </Link>
+          </Link> */}
           <Link href={"/#pricing"} scroll={false}>
             Pricing
           </Link>
@@ -38,9 +38,9 @@ const NavbarComponent = ({ className }) => {
           </Link>
         </div>
         <div className="md:flex gap-1 md:gap-6 items-center hidden">
-          <Link href={""} className="text-lg lg:text-xl">
+          {/* <Link href={""} className="text-lg lg:text-xl">
             Login
-          </Link>
+          </Link> */}
           <Link href={"/#pricing"} scroll={false}>
             <SignUpButton />
           </Link>

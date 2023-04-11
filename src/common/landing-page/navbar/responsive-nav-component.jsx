@@ -19,9 +19,9 @@ export default function ResponsiveNavbar({ isNavOpen,setIsNavOpen }) {
       <Link href={"/contact-us"} scroll={false} onClick={()=>{setIsNavOpen(false)}}>
         Contact Us
       </Link>
-      <Link href={""} className=" text-lg" onClick={()=>{setIsNavOpen(false)}}>
+      {/* <Link href={""} className=" text-lg" onClick={()=>{setIsNavOpen(false)}}>
         Login
-      </Link>
+      </Link> */}
       <Link href={""} onClick={()=>{setIsNavOpen(false)}}>
         <SignUpButton />
       </Link>

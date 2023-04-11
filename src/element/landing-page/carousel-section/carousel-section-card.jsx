@@ -16,22 +16,28 @@ export default function CarouselSectionCard({
     <BoxTheme
       top="8px"
       left="7px"
-      className={"h-[156px] sm:h-[191px] md:h-[261px] lg:h-[323px] xxxl:h-[450px] w-fit  cursor-pointer m-auto"}
-      boxStyle={` h-[145px] sm:h-[180px] md:h-[250px] lg:h-[312px] xxxl:h-[426px]
-                  w-[260px]  xs:w-[360px] sm:w-[460px] md:w-[560px] lg:w-[700px] xl:w-[950px]  
+      className={
+        "h-[196px] sm:h-[251px] md:h-[310px] lg:h-[323px] xxxl:h-[450px] w-fit  cursor-pointer m-auto"
+      }
+      boxStyle={` h-[185px] sm:h-[240px] md:h-[300px] lg:h-[312px] xxxl:h-[426px]
+                  w-[260px] xxs:w-[300px]  xs:w-[360px] sm:w-[460px] md:w-[580px] lg:w-[700px] xl:w-[950px]  
                    border-2 ${boxStyleColor} rounded-[16px] border-primary-brown`}
-      bgBoxStyle={`w-full h-[145px] sm:h-[180px] md:h-[250px] lg:h-[312px]  xxxl:h-[426px]
+      bgBoxStyle={`w-full h-[185px] sm:h-[240px] md:h-[300px] lg:h-[312px]  xxxl:h-[426px]
                     rounded-[16px]  bg-primary-brown  `}
     >
       <div className="flex  items-center justify-between w-full gap-1 md:gap-4 p-2 md:p-5">
         <div className="basis-3/5 ">
           <div className="relative">
-            <Star2 className={`scale-[0.45] xs:scale-[0.5] md:scale-[0.8] lg:scale-[1] ${starColor1}`} />
+            <Star2
+              className={`scale-[0.45] xs:scale-[0.5] md:scale-[0.8] lg:scale-[1] ${starColor1}`}
+            />
             <Star1
               className={`ml-6 -mt-6 md:ml-9 md:-mt-4 scale-[0.45] md:scale-[0.8] lg:scale-[1]  ${starColor2}`}
             />
           </div>
-          <div className="text-[16px] sm:text-[24px] md:text-[32px] lg:text-[46px] font-primary mt-3">{text}</div>
+          <div className="text-base xxs:text-xl xs:text-2xl sm:text-3xl md:text-[40px] lg:leading-[50px] lg:text-[46px] font-primary mt-3">
+            {text}
+          </div>
         </div>
         <div className="basis-2/5">
           <div className="relative flex items-center  justify-center scale-[0.35] md:scale-[0.6] lg:scale-[1] ">

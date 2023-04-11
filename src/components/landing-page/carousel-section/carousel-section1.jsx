@@ -6,8 +6,14 @@ import SliderButton from "@/element/landing-page/button/slider-button";
 import CarouselSectionTabs from "@/element/landing-page/carousel-section/carousel-section-tabs";
 import CarouselSectionCard from "@/element/landing-page/carousel-section/carousel-section-card";
 import AwardWithCheckSvg from "@/assets/icons/landing-page/AwardWithCheckSvg";
-import AiSvg from "@/assets/icons/landing-page/AiSvg";
-import PercentageSvg from "@/assets/icons/landing-page/percentageSvg";
+import MackBookSvg from "@/assets/icons/landing-page/macbookSvg";
+import RetreatSvg from "@/assets/icons/landing-page/retreatSvg";
+import RewardSvg from "@/assets/icons/landing-page/rewardSvg";
+import BonusSvg from "@/assets/icons/landing-page/bonusSvg";
+import FlexibleSvg from "@/assets/icons/landing-page/flexibleDaysSvg";
+import GiftSvg from "@/assets/icons/landing-page/giftSvg";
+import OfficeSvg from "@/assets/icons/landing-page/officeSvg";
+import MerchandiseSvg from "@/assets/icons/landing-page/merchandiseSvg";
 
 export default function CarouselSection1() {
   const sliderRef = useRef(null);
@@ -16,7 +22,7 @@ export default function CarouselSection1() {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} !-right-[10px] !-mt-5 sm:!-right-[40px]`}
+        className={`${className} !top-[215px] !right-[40%] xxs:!top-2/4 xxs:!-right-[10px] xxs:!-mt-5`}
         // style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -29,7 +35,7 @@ export default function CarouselSection1() {
     const { className, style, onClick } = props;
     return (
       <div
-        className={`${className} !-left-[45px] !-mt-5 sm:!-left-[65px]`}
+        className={`${className} !top-[215px] !left-[30%] xxs:!top-2/4 xxs: xxs:!-left-[45px] xxs:!-mt-5`}
         // style={{ ...style, display: "block" }}
         onClick={onClick}
       >
@@ -62,68 +68,104 @@ export default function CarouselSection1() {
     adaptiveHeight: true,
     infinte: true,
     swipeToSlide: true,
-    arrows:false,
+    arrows: false,
   };
 
   return (
-    <div className="w-full h-[80vh] md:h-[100vh] bg-white border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] lg:px-[80px]  pt-[50px] lg:pt-[60px] pb-[36px] ">
-      <div className="flex justify-between text-[20px] sm:text-[28px] lg:text-[54px] font-primaryMedium  ">
+    <div className="w-full h-[100vh] bg-white border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] md:px-10 lg:px-[80px]  pt-[50px] lg:pt-[60px] pb-[36px] ">
+      <div className="flex justify-between text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-primaryMedium  ">
         <h1>Employee Retention</h1> <p>01</p>
       </div>
       <div className=" border sm:border-2 border-primary-brown mt-[22px] mb-[45px] lg:mt-[34px] xxxl:mt-[45px] xxxl:mb-[55px]"></div>
 
-      <div className="px-[30px] xs:px-[45px] sm:px-[65px] xxxl:pt-28">
+      <div className="px-0 xxs:px-[40px] md:px-[30px] xs:px-[45px] sm:px-[65px] xxxl:pt-28 py-10 md:py-14">
         <Slider {...settings} ref={sliderRef}>
           <CarouselSectionCard
-            text={"Health Insurance for Family Members"}
-            Svg={<AwardWithCheckSvg />}
-            boxStyleColor={"bg-custom-green"}
-            starColor1={"fill-custom-blue"}
-            starColor2={"fill-custom-yellow"}
-            starColor3={"fill-custom-yellow"}
-          />
-          <CarouselSectionCard
-            text={"AI Powered Sourcing"}
-            Svg={<AiSvg />}
-            boxStyleColor={"bg-custom-yellow"}
-            starColor1={"fill-custom-blue"}
+            text={"Apple Laptop Benefits"}
+            Svg={<MackBookSvg />}
+            boxStyleColor={"bg-custom-blue"}
+            starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
-            starColor3={"fill-custom-blue"}
+            starColor3={"fill-custom-yellow"}
           />
           <CarouselSectionCard
-            text={"Indian Taxations"}
-            Svg={<PercentageSvg />}
+            text={"Luxurious Retreat Parties"}
+            Svg={<RetreatSvg />}
+            boxStyleColor={"bg-custom-red"}
+            starColor1={"fill-custom-red"}
+            starColor2={"fill-custom-yellow"}
+            starColor3={"fill-custom-red"}
+          />
+          <CarouselSectionCard
+            text={"Monthly Gold Coin Awards"}
+            Svg={<RewardSvg />}
+            boxStyleColor={"bg-custom-violet"}
+            starColor1={"fill-custom-yellow"}
+            starColor2={"fill-custom-green"}
+            starColor3={"fill-custom-red"}
+          />
+          <CarouselSectionCard
+            text={"Substantial Annual Bonuses"}
+            Svg={<BonusSvg />}
             boxStyleColor={"bg-custom-green"}
             starColor1={"fill-custom-blue"}
             starColor2={"fill-custom-yellow"}
             starColor3={"fill-custom-yellow"}
           />
           <CarouselSectionCard
-            text={"Lorem lorem 1"}
-            Svg={<PercentageSvg />}
+            text={"Health Insurance Covering Self, Spouse, Children & Parents"}
+            Svg={<AwardWithCheckSvg />}
             boxStyleColor={"bg-custom-yellow"}
             starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-yellow"}
           />
           <CarouselSectionCard
-            text={"Lorem2 lorem2"}
-            Svg={<PercentageSvg />}
+            text={"Grand Diwali Presents"}
+            Svg={<GiftSvg />}
             boxStyleColor={"bg-custom-blue"}
+            starColor1={"fill-custom-yellow"}
+            starColor2={"fill-custom-green"}
+            starColor3={"fill-custom-yellow"}
+          />
+          <CarouselSectionCard
+            text={"Flexible 4/5-Day Work Week"}
+            Svg={<FlexibleSvg />}
+            boxStyleColor={"bg-custom-red"}
             starColor1={"fill-custom-blue"}
+            starColor2={"fill-custom-green"}
+            starColor3={"fill-custom-blue"}
+          />
+          <CarouselSectionCard
+            text={"Trendy Offices Located Across India"}
+            Svg={<OfficeSvg />}
+            boxStyleColor={"bg-custom-violet"}
+            starColor1={"fill-custom-blue"}
+            starColor2={"fill-custom-green"}
+            starColor3={"fill-custom-blue"}
+          />
+          <CarouselSectionCard
+            text={"Exclusive Co-Branded Merchandise"}
+            Svg={<MerchandiseSvg />}
+            boxStyleColor={"bg-custom-green"}
+            starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-blue"}
           />
         </Slider>
       </div>
 
-      <Slider {...settings1} className="py-2 md:py-8 xxxl:pt-28">
+      <Slider {...settings1} className="py-8 md:py-8 xxxl:pt-20">
         <div
           onClick={() => {
             sliderRef.current.slickGoTo(0);
           }}
         >
-          <CarouselSectionTabs text={"New Mackbook"} index={1} color={1} />
+          <CarouselSectionTabs
+            text={"Apple Laptop Benefits"}
+            index={1}
+            color={1}
+          />
         </div>
         <div
           onClick={() => {
@@ -131,7 +173,7 @@ export default function CarouselSection1() {
           }}
         >
           <CarouselSectionTabs
-            text={"Annual International Retreat"}
+            text={"Luxurious Retreat Parties"}
             index={2}
             color={2}
           />
@@ -141,14 +183,23 @@ export default function CarouselSection1() {
             sliderRef.current.slickGoTo(2);
           }}
         >
-          <CarouselSectionTabs text={"Big Diwali Gifts"} index={3} color={3} />
+          <CarouselSectionTabs
+            text={"Monthly Gold Coin Awards"}
+            index={3}
+            color={3}
+          />
         </div>
+
         <div
           onClick={() => {
             sliderRef.current.slickGoTo(3);
           }}
         >
-          <CarouselSectionTabs text={"Monthly Awards"} index={4} color={4} />
+          <CarouselSectionTabs
+            text={"Substantial Annual Bonuses"}
+            index={4}
+            color={4}
+          />
         </div>
         <div
           onClick={() => {
@@ -156,52 +207,53 @@ export default function CarouselSection1() {
           }}
         >
           <CarouselSectionTabs
-            text={"Health Insurance for Family Members"}
+            text={"Health insurance for family members"}
             index={5}
             color={5}
           />
         </div>
         <div
           onClick={() => {
-            sliderRef.current.slickGoTo(0);
-          }}
-        >
-          <CarouselSectionTabs text={"New Mackbook"} index={1} color={1} />
-        </div>
-        <div
-          onClick={() => {
-            sliderRef.current.slickGoTo(1);
+            sliderRef.current.slickGoTo(5);
           }}
         >
           <CarouselSectionTabs
-            text={"Annual International Retreat"}
-            index={2}
+            text={"Grand Diwali Presents"}
+            index={6}
+            color={1}
+          />
+        </div>
+        <div
+          onClick={() => {
+            sliderRef.current.slickGoTo(6);
+          }}
+        >
+          <CarouselSectionTabs
+            text={"Flexible 4/5-Day Work Week"}
+            index={7}
             color={2}
           />
         </div>
         <div
           onClick={() => {
-            sliderRef.current.slickGoTo(2);
-          }}
-        >
-          <CarouselSectionTabs text={"Big Diwali Gifts"} index={3} color={3} />
-        </div>
-        <div
-          onClick={() => {
-            sliderRef.current.slickGoTo(3);
-          }}
-        >
-          <CarouselSectionTabs text={"Monthly Awards"} index={4} color={4} />
-        </div>
-        <div
-          onClick={() => {
-            sliderRef.current.slickGoTo(4);
+            sliderRef.current.slickGoTo(7);
           }}
         >
           <CarouselSectionTabs
-            text={"Health Insurance for Family Members"}
-            index={5}
-            color={5}
+            text={"Trendy Offices Located Across India"}
+            index={8}
+            color={3}
+          />
+        </div>
+        <div
+          onClick={() => {
+            sliderRef.current.slickGoTo(8);
+          }}
+        >
+          <CarouselSectionTabs
+            text={"Exclusive Co-Branded Merchandise"}
+            index={9}
+            color={4}
           />
         </div>
       </Slider>

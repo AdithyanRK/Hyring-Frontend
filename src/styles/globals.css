@@ -44,71 +44,70 @@ html {
   content: "" !important;
 }
 
-
 .slick-slide > div {
   padding: 0 10px !important;
 }
 
-.slick-dots{
-  top:-50px !important;
+.slick-dots {
+  top: -50px !important;
   left: -20px !important;
   z-index: 10 !important;
   position: relative !important;
-} 
-.slick-dots li{
+}
+.slick-dots li {
   display: inline-block !important;
   width: 20px !important;
   margin-top: 55px !important;
   margin-left: 30px !important;
 }
 @media screen and (min-width: 768px) {
-  .slick-dots{
-    top:-325px !important;
+  .slick-dots {
+    top: -325px !important;
     left: 48vw !important;
     z-index: 10 !important;
     position: relative !important;
-  } 
-  .slick-dots li{
+  }
+  .slick-dots li {
     display: block !important;
     width: 350px !important;
     margin-top: 55px !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .slick-dots{
-    top:-400px !important;
+  .slick-dots {
+    top: -400px !important;
     left: 75vw !important;
-  } 
-  .slick-dots li{
+  }
+  .slick-dots li {
     width: 380px !important;
     margin-top: 70px !important;
   }
 }
 @media screen and (min-width: 1150px) {
-  .slick-dots{
+  .slick-dots {
     left: 95% !important;
-  } 
+  }
 }
 @media screen and (min-width: 1280px) {
-  .slick-dots li{
+  .slick-dots li {
     width: 400px !important;
   }
 }
 @media screen and (min-width: 1465px) {
-  .slick-dots{
-    top:-470px !important;
-  } 
-  .slick-dots li{
+  .slick-dots {
+    top: -470px !important;
+  }
+  .slick-dots li {
     width: 500px !important;
     margin-top: 85px !important;
   }
 }
 @media screen and (min-width: 1610px) {
-  .slick-dots{
-    top:-540px !important;
+  .slick-dots {
+    top: -540px !important;
     left: 100% !important;
-  } 
-  .slick-dots li{
+  }
+  .slick-dots li {
     width: 600px !important;
     margin-top: 100px !important;
   }
@@ -468,3 +467,14 @@ html {
   color: #0f0 !important;
   outline: solid #f00 1px !important;
 } */
+
+/* Zig-Zag bottom */
+.carousel_zigzag {
+  border: 0px;
+  background-image: url('data:image/svg+xml;utf8, <svg viewBox="0 0 200 98" xmlns="http://www.w3.org/2000/svg"><path d="M -15 110 L100 10 L215 110" fill="white" stroke="black" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>');
+  background-position: bottom right;
+  background-size: 5% auto;
+  background-repeat: repeat-x;
+  background-color: transparent;
+  rotate: 180deg;
+}

@@ -11,58 +11,86 @@ import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 
 const NewPromiseSectionold = () => {
   const [index, setIndex] = useState(0);
+  const [changePromise, setChangePromise] = useState(false);
 
   const data = [
     {
       header: "Explore Indian Talents",
       bg: "bg-[#B8C8FF]",
-      content: "IPSUM LOREM LOREM IPSUM ONE",
+      content: "Uncover top-notch skilled professionals from India.",
       icon: <PersonGroup />,
     },
     {
-      header: "Fill your open positions within 15 days timeline",
+      header: "Fill Open Positions Within 15 Days",
       bg: "bg-[#B6ECCC]",
-      content: "IPSUM LOREM LOREM IPSUM TWO",
+      content:
+        "Ensure minimal disruption to your projects with our swift staffing solutions.",
       icon: <PromiseClock />,
     },
     {
-      header: "Save upto 50% on satffing costs without talent compromise",
+      header: "Save Up to 50% on Staffing Costs",
       bg: "bg-[#FFF5B7]",
-      content: "IPSUM LOREM LOREM IPSUM THREE",
+      content: "Reduce expenses without compromising on resource quality.",
       icon: <PromiseMoney />,
     },
     {
-      header: "Top 5% of Indian IT Talent",
+      header: "Access the Top 5% of Indian Resources",
       bg: "bg-[#FDB2B2]",
-      content: "IPSUM LOREM LOREM IPSUM FOUR",
+      content:
+        "Rest assured that your projects are in capable hands with our elite professionals.",
       icon: <PromiseBulb />,
     },
   ];
 
   useEffect(() => {
     ChangeTimerFunction();
-  }, []);
+  }, [changePromise]);
 
   const ChangeTimerFunction = () => {
-    setTimeout(() => {
-      setIndex(0);
-    }, 0);
+    console.log(changePromise, "chage");
+    if (changePromise) {
+      setTimeout(() => {
+        setIndex(0);
+      }, 0);
 
-    setTimeout(() => {
-      setIndex(1);
-    }, 5000);
+      setTimeout(() => {
+        setIndex(1);
+      }, 5000);
 
-    setTimeout(() => {
-      setIndex(2);
-    }, 9000);
+      setTimeout(() => {
+        setIndex(2);
+      }, 9000);
 
-    setTimeout(() => {
-      setIndex(3);
-    }, 13000);
+      setTimeout(() => {
+        setIndex(3);
+      }, 13000);
 
-    setTimeout(() => {
-      ChangeTimerFunction();
-    }, 15000);
+      setTimeout(() => {
+        ChangeTimerFunction();
+      }, 15000);
+    } else {
+      // const time = [5000, 9000, 13000, 15000, 18000];
+      // let temp = index;
+      // let timeTemp = 0;
+      // if (temp > 3) {
+      //   setChangePromise(false);
+      // }
+      // while (temp >= 0 && temp <= 3) {
+      //   temp++;
+      //   if (index >= 0 && index <= 3) {
+      //     setTimeout(() => {
+      //       if (index == 3) {
+      //         ++temp;
+      //       }
+      //       setIndex(index + 1);
+      //       timeTemp++;
+      //       console.log(time[timeTemp], "time");
+      //     }, time[timeTemp]);
+      //   } else {
+      //     setChangePromise(false);
+      //   }
+      // }
+    }
   };
 
   return (
@@ -83,20 +111,24 @@ const NewPromiseSectionold = () => {
             </div>
             <div className="p-3">
               <p> {data[index].icon}</p>
-              <p className="text-4xl font-primaryMedium leading-10 mt-4 md:mt-10">
+              {/* <p className="text-4xl font-primaryMedium leading-10 mt-4 md:mt-10">
                 {data[index].header}
-              </p>
-              <p className="text-2xl font-primaryLight mt-3">
+              </p> */}
+              <p className="text-2xl font-primary mt-3">
                 {data[index].content}
               </p>
             </div>
           </BoxTheme>
         </div>
         <div className="flex-1 pl-24 -mt-6">
-          <NewPromiseStepper index={index} />
+          <NewPromiseStepper
+            index={index}
+            setIndex={setIndex}
+            setChangePromise={setChangePromise}
+            changePromise={changePromise}
+          />
         </div>
       </div>
-     
     </>
   );
 };

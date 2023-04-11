@@ -12,7 +12,7 @@ export default function BoxTheme({
   disableAnimate,
   setHoverFirst,
   setHoverSecond,
-  onClick
+  onClick,
 }) {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -42,6 +42,7 @@ export default function BoxTheme({
             setHoverSecond && setHoverSecond(false);
             setHoverFirst && setHoverFirst(false);
           }}
+          onClick={onClick}
         >
           <div
             className={`${boxStyle} flex justify-center items-center relative z-1 `}

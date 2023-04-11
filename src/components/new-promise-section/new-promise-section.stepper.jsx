@@ -20,7 +20,12 @@ const values = [
   },
 ];
 
-export default function NewPromiseStepper({ index }) {
+export default function NewPromiseStepper({
+  index,
+  setIndex,
+  changePromise,
+  setChangePromise,
+}) {
   return values.map((item) => {
     return (
       <div className={"max-w-[500px] flex flex-col"}>
@@ -28,7 +33,11 @@ export default function NewPromiseStepper({ index }) {
           <BoxTheme
             top="2px"
             left="3px"
-            className={` h-[54px] w-[55px] xxxl:h-[64px] xxxl:w-[64px] font-primary`}
+            onClick={() => {
+              setChangePromise(true);
+              setIndex(item.id - 1);
+            }}
+            className={` h-[54px] w-[55px] xxxl:h-[64px] xxxl:w-[64px] cursor-pointer font-primary`}
             boxStyle={`${
               index === 0 && item.id === 1
                 ? "bg-[#B8C8FF]"

@@ -76,7 +76,7 @@ export default function Footer({ className }) {
     createPopup("LIowQUFE").open();
   };
   return (
-    <div className="footer   font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 md:pt-20 mt-60 max-w-[2000px]  my-0 md:mt-80">
+    <div className="footer font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 md:pt-20 mt-60 max-w-[2000px]  my-0 md:mt-80">
       <div className="flex  lg:flex-row flex-col items-center -top-40  absolute z-10 lg:-top-40 left-0 right-0 justify-center gap-5 lg:gap-20   ">
         <BoxTheme
           disableAnimate={true}
@@ -262,7 +262,7 @@ export default function Footer({ className }) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.8 }}
               >
-                <a href="https://www.facebook.com/HyringHQ/" target="_blank">
+                <a href="https://twitter.com/hyringhq" target="_blank">
                   <Twitter />
                 </a>
               </motion.button>
@@ -324,7 +324,7 @@ export default function Footer({ className }) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.8 }}
             >
-              <a href="https://www.facebook.com/HyringHQ/" target="_blank">
+              <a href="https://twitter.com/hyringhq" target="_blank">
                 <Twitter />
               </a>
             </motion.button>

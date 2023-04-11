@@ -41,7 +41,7 @@ const NavbarComponent = ({ className }) => {
           <Link href={""} className="text-lg lg:text-xl">
             Login
           </Link>
-          <Link href={""}>
+          <Link href={"/#pricing"} scroll={false}>
             <SignUpButton />
           </Link>
         </div>

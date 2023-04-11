@@ -32,10 +32,11 @@ export default function PricingSectionCard({
       <div
         className="w-full h-full px-7 lg:pl-11 lg:pr-6 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"
         onMouseEnter={() => {
+          setEmployerHover(false);
           setJobSeekerHover(true);
           setHoverChange(true);
         }}
-        onMouseLeave={() => setJobSeekerHover(false)}
+        // onMouseLeave={() => setJobSeekerHover(false)}
       >
         <div>{svg}</div>
         <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">
@@ -80,17 +81,21 @@ export default function PricingSectionCard({
       <div
         className="w-full h-full px-7 lg:pl-11 lg:pr-6 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"
         onMouseEnter={() => {
+          setJobSeekerHover(false);
           setEmployerHover(true);
           setHoverChange(false);
         }}
-        onMouseLeave={() => setEmployerHover(false)}
+        // onMouseLeave={() => setEmployerHover(false)}
       >
         <div>{svg}</div>
         <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">
           {title}
         </div>
-        <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium text-center md:text-left">
-          ${price} <span className="text-base ">{subText}</span>
+        <div className="flex gap-3 items-center ">
+          <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium text-center md:text-left">
+            ${price}
+          </div>
+          <div className="text-base ">{subText}</div>
         </div>
 
         <GetStartedButton

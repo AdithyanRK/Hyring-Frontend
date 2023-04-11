@@ -8,19 +8,42 @@ import Twitter from "@/assets/icons/landing-page/twitter";
 import YoutubeIcon from "@/assets/icons/landing-page/youtube";
 import GetStartedButton from "@/element/landing-page/button/get-started-button";
 import BoxTheme from "@/element/landing-page/box-theme/box-theme";
-import { TextField, Avatar, AvatarGroup, Button } from "@mui/material";
+import { TextField, Avatar, AvatarGroup } from "@mui/material";
 import SubscribeSubmitButton from "@/element/landing-page/button/subscribe-submit-button";
 import Star4 from "@/assets/icons/landing-page/star4";
 import Link from "next/link";
 import LongArrowRight from "@/assets/icons/landing-page/long_arrow_icon";
 import GetStartedCircleIcon from "@/assets/icons/landing-page/get_started_circle_icon";
 import TataCompanyIcon from "../../../../src/assets/icons/landing-page/company-one";
+import Toaster from "@/element/landing-page/toaster/toaster";
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
   const x = useMotionValue(0);
   const router = useRouter();
   const [hoverFirst, setHoverFirst] = React.useState(false);
   const [hoverSecond, setHoverSecond] = React.useState(false);
+  const [openSuccess, setOpenSuccess] = React.useState(false);
+  const [openError, setOpenError] = React.useState(false);
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    if (event === "success") {
+      setOpenSuccess(false);
+    } else {
+      setOpenError(false);
+    }
+  };
+
+  const handleSubscribe = async () => {
+    let response = true;
+    if (response) {
+      setOpenSuccess(true);
+    } else {
+      setOpenError(true);
+    }
+  };
 
   const handleSeeker = () => {
     router.push("https://hyring.com/job-seekers/");
@@ -121,7 +144,7 @@ export default function Footer({ className }) {
             </AvatarGroup>
             <div>
               <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">
-              I'm an Employer, Let's talk business!
+                I'm an Employer, Let's talk business!
               </div>
               <p className="font-primaryLight mt-1  ">
                 Open access for overseas companies
@@ -162,18 +185,18 @@ export default function Footer({ className }) {
         </div>
         <div className="company-sec flex flex-col gap-y-5 mb-16">
           <h2 className="text-[22px]">Company</h2>
-          <Link href={"/#whyIndia"} scroll={false}>
+          {/* <Link href={"/#whyIndia"} scroll={false}>
             <p className="text-lg font-primary">Why India</p>
-          </Link>
+          </Link> */}
           <Link href={"/#pricing"} scroll={false}>
             <p className="text-lg font-primary">Pricing</p>
           </Link>
           <Link href="/contact-us">
             <p className="text-lg font-primary">Contact Us</p>
           </Link>
-          <Link href="/about-hyring">
+          {/* <Link href="/about-hyring">
             <p className="text-lg font-primary">About Hyring</p>
-          </Link>
+          </Link> */}
         </div>
         <div className="company-sec flex flex-col gap-y-5 mb-16">
           <h2 className="text-[22px]  ">Legal</h2>
@@ -196,12 +219,12 @@ export default function Footer({ className }) {
                   <Instagram />
                 </a>
               </motion.button>
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.8 }}
               >
                 <YoutubeIcon />
-              </motion.button>
+              </motion.button> */}
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -243,7 +266,7 @@ export default function Footer({ className }) {
                   placeholder="Your Email Address"
                 />
               </BoxTheme>
-              <SubscribeSubmitButton />
+              <SubscribeSubmitButton handleSubscribe={handleSubscribe} />
             </div>
           </div>
         </div>
@@ -263,12 +286,12 @@ export default function Footer({ className }) {
                 <Instagram />
               </a>
             </motion.button>
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.8 }}
             >
               <YoutubeIcon />
-            </motion.button>
+            </motion.button> */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.8 }}
@@ -308,11 +331,25 @@ export default function Footer({ className }) {
                 placeholder="Your Email Address"
               />
             </BoxTheme>
-            <SubscribeSubmitButton />
+            <SubscribeSubmitButton handleSubscribe={handleSubscribe} />
           </div>
         </div>
       </div>
-
+      <Toaster
+        open={openSuccess}
+        title="Thank for subscribing! 👍"
+        subtitle="You have successfully subscribed to Hyring’s Newsletter"
+        type="success"
+        handleClose={handleClose}
+      />
+      <Toaster
+        open={openError}
+        title="Something went Wrong! 😟"
+        subtitle="Please check your email and try again"
+        type="error"
+        handleClose={handleClose}
+      />
+      {/* <Toaster setOpenSuccess /> */}
       <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-3 border-solid xl:mt-8 mt-0 xxs:mt-10 ml-24 mr-24">
         Copyright © {currentYear} Hyring. All rights reserved.
       </div>

@@ -7,7 +7,7 @@ import PricingAccordian from "./pricing-section-accordian-wrapper";
 
 export default function PricingSection() {
   const [employerHover, setEmployerHover] = useState(false);
-  const [jobSeekerHover, setJobSeekerHover] = useState(false);
+  const [jobSeekerHover, setJobSeekerHover] = useState(true);
   const [hoverChange, setHoverChange] = useState(true);
   return (
     <div
@@ -24,16 +24,12 @@ export default function PricingSection() {
             title={"Job Seekers"}
             svg={<JobPriceSvg />}
             price={0}
-            subText={
-              <div className="invisible text-base font-normal pt-3 md:hidden">
-                {" "}
-                text dummy text
-              </div>
-            }
+            subText={"Always"}
             starColor={"custom-yellow"}
             boxColor={"custom-blue"}
             jobSeekerHover={jobSeekerHover}
             setJobSeekerHover={setJobSeekerHover}
+            setEmployerHover={setEmployerHover}
             hoverChange={hoverChange}
             setHoverChange={setHoverChange}
           />
@@ -41,19 +37,18 @@ export default function PricingSection() {
             title={"Employers"}
             svg={<EmployerPriceSvg />}
             price={750}
-            subText={"per candidate/month"}
+            subText={"As low as 20% per candidate/month"}
             starColor={"custom-green"}
             boxColor={"custom-yellow"}
             employerHover={employerHover}
             setEmployerHover={setEmployerHover}
+            setJobSeekerHover={setJobSeekerHover}
             hoverChange={hoverChange}
             setHoverChange={setHoverChange}
           />
         </div>
         <div className="basis-3/4 ">
-          <PricingAccordian
-            hoverChange={hoverChange}
-          />
+          <PricingAccordian hoverChange={hoverChange} />
         </div>
       </div>
     </div>

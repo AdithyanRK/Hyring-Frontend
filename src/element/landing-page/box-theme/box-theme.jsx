@@ -12,6 +12,7 @@ export default function BoxTheme({
   disableAnimate,
   setHoverFirst,
   setHoverSecond,
+  onClick
 }) {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -64,6 +65,7 @@ export default function BoxTheme({
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.8 }}
           className={width}
+          onClick={onClick}
         >
           <div className={`${className}  relative  `}>
             <div

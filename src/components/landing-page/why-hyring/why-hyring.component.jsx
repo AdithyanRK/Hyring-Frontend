@@ -4,6 +4,7 @@ import WhyHyringDragger from "../../../../src/assets/icons/landing-page/why-hyri
 import GreenStar from "../../../../src/assets/icons/landing-page/green-start";
 import Logo from "@/assets/icons/landing-page/logo";
 import GreryStar from "@/assets/icons/landing-page/grey-star";
+import LogoWhySection from "@/assets/icons/landing-page/logo-why-section";
 const WhyHyringComponent = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [hide, setHide] = useState(false);
@@ -66,7 +67,7 @@ const WhyHyringComponent = () => {
           <div className="bg-primary-brown h-[93vh] md:h-[700px] flex flex-col pt-8 rounded-t-2xl rounded-b-xl  border-[1px] border-primary-brown pb-6">
             <div className="px-2 lg:px-20 lg:py-4 pt-4 lg:pt-4">
               <div className="flex flex-row ">
-                <Logo />
+                <LogoWhySection />
                 <h1 className="text-[18px] xxs:text-[24px] md:text-[32px] text-[#FAFAFA] font-bold font-primaryBold pl-4 pb-1">
                   Hyring Approach 😎
                 </h1>

@@ -1,9 +1,20 @@
 import Arrow1 from "@/assets/icons/landing-page/arrow1";
-import React from "react";
+import React, { useRef } from "react";
 import BoxTheme from "../box-theme/box-theme";
 import { motion } from "framer-motion";
+import { PopupButton } from "@typeform/embed-react";
+import { createPopup } from "@typeform/embed";
+import "@typeform/embed/build/css/popup.css";
 
-export default function GetStartedButton({ className, boxColor, hover }) {
+export default function GetStartedButton({ className, boxColor, hover, role }) {
+  const openPopup = (event) => {
+    if (role === 1) {
+      createPopup("FDcDS1yK").open();
+    } else {
+      createPopup("LIowQUFE").open();
+    }
+  };
+
   return (
     <BoxTheme
       top="4px"
@@ -17,15 +28,25 @@ export default function GetStartedButton({ className, boxColor, hover }) {
         "w-full lg:h-[62px] h-[52px] rounded-[5px] bg-primary-brown   "
       }
       isButton={true}
+      onClick={() => openPopup()}
     >
       <div className="flex items-center gap-1  ">
-        <div className="  font-primaryMedium text-base sm:text-lg  lg:text-xl">Get Started</div>
+        <div className="  font-primaryMedium text-base sm:text-lg  lg:text-xl">
+          Get Started
+        </div>
         <motion.div
-           animate={{
-            translateX:[0,9,0]
-            
-           }}
-          transition={{duration:1.5,delay:0.3 ,repeat: Infinity ,repeatDelay:0.5 }}><Arrow1 /></motion.div>
+          animate={{
+            translateX: [0, 9, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            delay: 0.3,
+            repeat: Infinity,
+            repeatDelay: 0.5,
+          }}
+        >
+          <Arrow1 />
+        </motion.div>
       </div>
     </BoxTheme>
   );

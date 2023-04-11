@@ -23,6 +23,8 @@ import HomeBannerModal from "./home-modal-section";
 
 const HomeBannerSection = () => {
   const [open, setOpen] = useState(false);
+  const [switchValue, SetSwitchValue] = useState(true);
+
   const lottieOptions = {
     animationData: HomeBannerAnimation,
     loop: true,
@@ -72,10 +74,10 @@ const HomeBannerSection = () => {
               candidates.
             </div>
             <div className="text-base xl:text-lg font-primaryMedium lg:w-[700px]  flex flex-wrap lg:flex-nowrap gap-4 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
-              I Need <HeroAwitchButton />
+              I Need <HeroAwitchButton switchValue={switchValue} SetSwitchValue={SetSwitchValue}/>
               in <div className="whitespace-nowrap flex gap-4 items-center">
               <HeroAutocompleteButton  />
-              <HeroSubmitButton  />
+              <HeroSubmitButton  switchValue={switchValue} />
               </div>
             </div>
             <HomeListComponent className="hidden lg:block" />

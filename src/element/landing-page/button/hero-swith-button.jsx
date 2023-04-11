@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import BoxTheme from "../box-theme/box-theme";
 import { MaterialUISwitch1, MaterialUISwitch2 } from "@/element/landing-page/button/home-switch-element";
+import { createPopup } from "@typeform/embed";
+import "@typeform/embed/build/css/popup.css";
 
-export default function HeroAwitchButton({ className }) {
-  const [switchValue, SetSwitchValue] = useState(true);
+export default function HeroAwitchButton({ className,switchValue,SetSwitchValue }) {
+
   return (
     <BoxTheme
     top="5px"

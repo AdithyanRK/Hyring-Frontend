@@ -9,7 +9,7 @@ export default function HomeBannerModal(props) {
 
   return (
     <div>
-      			<ModalVideo channel='vimeo' autoplay={true} isOpen={open} videoId="253989945"  onClose={() => handleOpen()} className="modalVideo" />
+      			<ModalVideo channel='vimeo' autoplay={true} isOpen={open} videoId="816417893"  onClose={() => handleOpen()} className="modalVideo" />
       {/* <Modal open={open} onClose={handleOpen}>
         <>
           <div className="mt-[1%] md:mt-[3%]">
@@ -26,10 +26,16 @@ export default function HomeBannerModal(props) {
                 </motion.button>
               </div>
               <div className="w-[70%] mx-auto my-0">
+              <iframe  src="https://player.vimeo.com/video/816417893?h=4d02b597ba"
+               title="Hyring"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+               className="w-full mx-auto my-0"
+               width="1400"
+               height="480" frameborder="0" allowfullscreen></iframe>
                 <iframe
-                  src="https://www.youtube.com/embed/si4Ak78y6Kg?controls=0&autoplay=1"
+                 src="https://player.vimeo.com/video/816417893?h=4d02b597ba"
                   title="Hyring"
-                  width="854"
+                  width="1020"
                   height="480"
                   frameborder="0" 
                   allowfullscreen

@@ -17,6 +17,10 @@ import GetStartedCircleIcon from "@/assets/icons/landing-page/get_started_circle
 import TataCompanyIcon from "../../../../src/assets/icons/landing-page/company-one";
 import Toaster from "@/element/landing-page/toaster/toaster";
 import InviteOnlyCircleIcon from "@/assets/icons/landing-page/invite_only_circle_icon";
+import { createPopup } from "@typeform/embed";
+import "@typeform/embed/build/css/popup.css";
+import axios from "axios";
+import validator from "validator";
 export default function Footer({ className }) {
   const currentYear = new Date().getFullYear();
   const x = useMotionValue(0);
@@ -25,6 +29,33 @@ export default function Footer({ className }) {
   const [hoverSecond, setHoverSecond] = React.useState(false);
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
+  const [email, setEmail] = React.useState("");
+
+  // handle Submit form
+
+  const handleAddContact = async () => {
+    if (validator.isEmail(email)) {
+      try {
+        await axios.post(
+          "https://api.sendinblue.com/v3/contacts",
+          { updateEnabled: false, email: email },
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "api-key":
+                "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",
+            },
+          }
+        );
+        setOpenSuccess(true);
+        setEmail("");
+      } catch (e) {
+        setOpenError(true);
+      }
+    } else {
+      setOpenError(true);
+    }
+  };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
@@ -37,21 +68,12 @@ export default function Footer({ className }) {
     }
   };
 
-  const handleSubscribe = async () => {
-    let response = true;
-    if (response) {
-      setOpenSuccess(true);
-    } else {
-      setOpenError(true);
-    }
-  };
-
   const handleSeeker = () => {
-    router.push("https://hyring.com/job-seekers/");
+    createPopup("FDcDS1yK").open();
   };
 
   const handleEmployers = () => {
-    router.push("https://hyring.com/employers/");
+    createPopup("LIowQUFE").open();
   };
   return (
     <div className="footer   font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-[700px] rounded-[30px] pt-10 md:pt-20 mt-60 max-w-[2000px]  my-0 md:mt-80">
@@ -265,9 +287,12 @@ export default function Footer({ className }) {
                   hiddenLabel
                   id="filled-hidden-label-normal"
                   placeholder="Your Email Address"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </BoxTheme>
-              <SubscribeSubmitButton handleSubscribe={handleSubscribe} />
+              <SubscribeSubmitButton
+                handleSubscribe={() => handleAddContact()}
+              />
             </div>
           </div>
         </div>
@@ -287,12 +312,6 @@ export default function Footer({ className }) {
                 <Instagram />
               </a>
             </motion.button>
-            {/* <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.8 }}
-            >
-              <YoutubeIcon />
-            </motion.button> */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.8 }}
@@ -330,14 +349,17 @@ export default function Footer({ className }) {
                 hiddenLabel
                 id="filled-hidden-label-normal"
                 placeholder="Your Email Address"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </BoxTheme>
-            <SubscribeSubmitButton handleSubscribe={handleSubscribe} />
+            <SubscribeSubmitButton handleSubscribe={() => handleAddContact()} />
           </div>
         </div>
       </div>
       <Toaster
         open={openSuccess}
+        vertical="top"
+        horizontal="right"
         title="Thank for subscribing! 👍"
         subtitle="You have successfully subscribed to Hyring’s Newsletter"
         type="success"
@@ -345,6 +367,8 @@ export default function Footer({ className }) {
       />
       <Toaster
         open={openError}
+        vertical="top"
+        horizontal="right"
         title="Something went Wrong! 😟"
         subtitle="Please check your email and try again"
         type="error"

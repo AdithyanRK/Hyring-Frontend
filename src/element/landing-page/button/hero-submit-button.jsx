@@ -1,8 +1,20 @@
 import RocketIcon from '@/assets/icons/landing-page/rocket'
 import React from 'react'
 import BoxTheme from '../box-theme/box-theme'
+import { createPopup } from "@typeform/embed";
+import "@typeform/embed/build/css/popup.css";
 
-export default function HeroSubmitButton({className}) {
+
+export default function HeroSubmitButton({className,switchValue}) {
+
+  const openPopup = (event) => {
+    if (!switchValue) {
+      createPopup("FDcDS1yK").open();
+    } else {
+      createPopup("LIowQUFE").open();
+    }
+  };
+
   return (
     <BoxTheme
     top="5px"
@@ -15,7 +27,7 @@ export default function HeroSubmitButton({className}) {
       "w-full h-[45px] md:h-[57px]  rounded-[8px]  bg-primary-brown "
     }
     isButton={true}
-    
+    onClick={()=>openPopup()}
 
   >
         <RocketIcon/>

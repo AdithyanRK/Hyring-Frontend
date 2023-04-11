@@ -7,7 +7,7 @@ const SnackbarAlert = forwardRef(function SnackbarAlert(props, ref) {
   return <Alert elevation={6} ref={ref} {...props} />;
 });
 
-const Toaster = ({ open, title, subtitle, type, handleClose }) => {
+const Toaster = ({ open, title, subtitle, type, handleClose,vertical,horizontal }) => {
   return (
     <div>
       <Snackbar
@@ -15,15 +15,16 @@ const Toaster = ({ open, title, subtitle, type, handleClose }) => {
         autoHideDuration={5000}
         onClose={() => handleClose(type)}
         anchorOrigin={{
-          vertical: "bottom",
+          vertical: "top",
           horizontal: "right",
         }}
       >
         <SnackbarAlert
+                anchorOrigin={{ vertical, horizontal }}
           icon={type === "success" ? <SuccessMail /> : <ErrorMail />}
           onClose={() => handleClose(type)}
           severity="success"
-          className="font-primary "
+          className="font-primary"
           sx={{
             padding: "20px 70px 20px 30px",
             backgroundColor: type === "success" ? "#B6ECCC" : "#FCB2B2",
@@ -37,7 +38,7 @@ const Toaster = ({ open, title, subtitle, type, handleClose }) => {
             },
           }}
         >
-          <AlertTitle className="font-bold text-[22px] p-0 m-0 font-primary text-primary-brown">
+          <AlertTitle className="font-bold text-[18px] p-0 m-0 font-primary text-primary-brown">
             {title}
           </AlertTitle>
           <h3 className="font-primaryLight text-[12px] font-bold text-primary-brown ">

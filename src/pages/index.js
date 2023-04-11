@@ -43,43 +43,44 @@ export default function Home() {
           Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire
           portal
         </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <meta
           name="title"
           content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
         <meta
           name="description"
-          content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
+          content="Hyring is revolutionizing the IT staff augmentation industry by harnessing the power of AI to connect the top 5% of Indian talent with world-class companies around the globe."
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://hyring.com/" />
+        <meta property="og:url" content="https://metatags.io/" />
         <meta
           property="og:title"
           content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
         <meta
           property="og:description"
-          content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
+          content="Hyring is revolutionizing the IT staff augmentation industry by harnessing the power of AI to connect the top 5% of Indian talent with world-class companies around the globe."
         />
         <meta
           property="og:image"
-          content="https://hyring.com/wp-content/uploads/2022/01/about-us-home.png"
+          content="https://hyring.nyc3.digitaloceanspaces.com/static/meta.jpg"
         />
+
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://hyring.com/" />
+        <meta property="twitter:url" content="https://metatags.io/" />
         <meta
           property="twitter:title"
           content="Hire Top 5% of Indian Remote Talent | India's leading Contract-to-Hire portal"
         />
-        <meta property="twitter:description" content="" />
+        <meta
+          property="twitter:description"
+          content="Hyring is revolutionizing the IT staff augmentation industry by harnessing the power of AI to connect the top 5% of Indian talent with world-class companies around the globe."
+        />
         <meta
           property="twitter:image"
-          content="https://hyring.com/wp-content/uploads/2022/01/about-us-home.png"
-        ></meta>
-        <link rel="icon" href="/favicon.ico" />
+          content="https://hyring.nyc3.digitaloceanspaces.com/static/meta.jpg"
+        />
       </Head>
 
       <div className="relative text-primary-brown  " ref={ref}>
@@ -126,8 +127,7 @@ export default function Home() {
           data-aos-easing="linear"
           className="overflow-hidden"
         >
-               <WhyHyringMainComponent />
-
+          <WhyHyringMainComponent />
         </div>
 
         <motion.div className="relative overflow-hidden">

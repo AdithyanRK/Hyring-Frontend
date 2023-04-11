@@ -61,7 +61,7 @@ const NewPromiseMobileSection = () => {
             content="Uncover top-notch skilled professionals from India."
             Svg={<PersonGroup />}
             boxStyleColor={"bg-custom-green"}
-            starColor={"fill-custom-yellow"}
+            starColor={"fill-custom-red"}
           />
           <CarouselSectionMobileCard
             text={"Fill Open Positions Within 15 Days"}
@@ -73,15 +73,15 @@ const NewPromiseMobileSection = () => {
           <CarouselSectionMobileCard
             text={"Save Up to 50% on Staffing Costs"}
             Svg={<PromiseBulb />}
-            boxStyleColor={"bg-custom-green"}
+            boxStyleColor={"bg-custom-blue"}
             starColor={"fill-custom-yellow"}
             content="Reduce expenses without compromising on resource quality."
           />
           <CarouselSectionMobileCard
             text={"Access the Top 5% of Indian Resources"}
             Svg={<PromiseMoney />}
-            starColor={"fill-custom-yellow"}
-            boxStyleColor={"bg-custom-yellow"}
+            starColor={"fill-custom-green"}
+            boxStyleColor={"bg-custom-red"}
             content="Rest assured that your projects are in capable hands with our elite professionals."
           />
           

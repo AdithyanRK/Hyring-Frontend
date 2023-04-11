@@ -80,13 +80,16 @@ const HomeBannerSection = () => {
             </div>
             <HomeListComponent className="hidden lg:block" />
           </div>
-          <div className="relative flex basis-2/5  lg:scale-[1.3] ">
-            <Lottie options={lottieOptions} isClickToPauseDisabled={true} />
+          <div className=" flex basis-2/5 -mt-16 bg-green lg:-mt-20 xl4:-mt-40  justify-center items-center  w-full ">
+            <div className="relative h-[400px]  xs:h-[500px] lg:h-auto   xl:h-[500px] xl3:h-[550px] xl4:h-[620px] " >
+            <Lottie options={lottieOptions} isClickToPauseDisabled={true}  />
             <div
               onClick={() => handleOpen()}
-              className="absolute bottom-[1%] left-[10%] xl:bottom-[13%] xl:left-[17%] lg:bottom-[20%] lg:left-[15%] md:bottom-[14%] md:left-[18%] sm:bottom-[10%] sm:left-[16%] cursor-pointer"
+              className="absolute cursor-pointer -bottom-0 left-[20px]
+               xs:bottom-0 xs:left-[40px] lg:-bottom-[10px] lg:left-[3%] xl:bottom-0 xl:left-[40px] xl4:left-[60px] 
+                
+               scale-[0.7] xs:scale-[1] lg:scale-[0.8] xl:scale-[1] "
             >
-              {/* <div className="absolute bottom-[13%] left-[17%] "> */}
               <div className="relative bg-transparent">
                 <PlayVideoIcon />
                 <div className="absolute bottom-[39%] left-[43%] z-90  ">
@@ -94,12 +97,14 @@ const HomeBannerSection = () => {
                 </div>
               </div>
             </div>
+            </div>
+           
           </div>
           <HomeListComponent className=" lg:hidden" />
         </div>
       </div>
 
-      <div className="w-[102vw] -mt-12  -rotate-3 border border-primary-brown flex items-center -ml-2 mb-20 2xl:mb-[130px]">
+      <div className="w-[102vw]   -rotate-3 border border-primary-brown flex items-center -ml-2 mb-20 2xl:mb-[130px]">
         <div className="h-[71px] bg-primary-brown w-full">
           <Slider {...settings1} className="py-5 ">
             {[

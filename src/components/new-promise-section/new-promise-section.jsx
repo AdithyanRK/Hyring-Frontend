@@ -6,7 +6,7 @@ import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 export default function NewPromiseSection() {
 
   return (
-    <div className="flex  flex-col items-center mt-16 md:mt-0 xl4:my-28   justify-center w-screen min-h-[500px] lg:min-h-[700px] h-fit  ">
+    <div className="flex  flex-col items-center mt-16 lg:mt-0 xl4:my-28   justify-center w-screen min-h-[500px] lg:min-h-[700px] h-fit  ">
       <div className="flex justify-center items-center">
         <div className=" font-primaryBold text-primary-brown text-[2rem] sm:text-[2.25rem] md:text-[2.5rem]  lg:text-5xl">
           Our Promises

@@ -73,7 +73,7 @@ export default function CarouselSection1() {
   };
 
   return (
-    <div className="w-full h-[100vh] overflow-y-auto bg-white border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] md:px-10 lg:px-[80px]  pt-[50px] lg:pt-[60px] pb-[36px] ">
+    <div className="w-full h-[100vh]  bg-white border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] md:px-10 lg:px-[80px]  pt-[50px] lg:pt-[60px] pb-[36px] ">
       <div className="flex justify-between text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-primaryMedium  ">
         <h1>Employee Retention</h1> <p>01</p>
       </div>

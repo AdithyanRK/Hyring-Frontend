@@ -41,6 +41,7 @@ const HomeBannerSection = () => {
     adaptiveHeight: true,
     infinte: true,
     swipeToSlide: true,
+    arrows:false
   };
 
   const RunnerList = ({ text, icon }) => {
@@ -55,7 +56,7 @@ const HomeBannerSection = () => {
     setOpen(!open);
   };
   return (
-    <div className="w-[100vw] overflow-hidden mt-3 md:mt-20">
+    <div className="w-[100vw]  mt-3 md:mt-20">
       <div className="mx-auto w-[92vw] mb-20">
         <div className="flex flex-col lg:flex-row max-w-[1800px] mx-auto my-0">
           <div className="basis-3/5 ">
@@ -106,7 +107,7 @@ const HomeBannerSection = () => {
         </div>
       </div>
 
-      <div className="w-[102vw]   -rotate-3 border border-primary-brown flex items-center -ml-2 mb-20 2xl:mb-[130px]">
+     <div className="w-screen    -rotate-3 border border-primary-brown  " >
         <div className="h-[71px] bg-primary-brown w-full">
           <Slider {...settings1} className="py-5 ">
             {[

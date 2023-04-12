@@ -13,7 +13,6 @@ import BoxTheme from "@/element/landing-page/box-theme/box-theme";
 const NewPromiseDesktopSection = () => {
   const sliderRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
-  console.log("🚀 ~ file: new-promise-desktop-section.card .jsx:16 ~ NewPromiseDesktopSection ~ activeSlide:", activeSlide)
   const values = [
     {
       id: 1,
@@ -94,7 +93,7 @@ const NewPromiseDesktopSection = () => {
   
   return (
     <div className="w-screen  flex justify-center  md:-translate-x-[22%] xl:-translate-x-[18%]">
-      <div className=" md:max-w-[400px] lg:max-w-[900px] !h-[350px] ">
+      <div className=" md:max-w-[400px] lg:max-w-[900px] !h-[300px] ">
         <Slider {...settings} ref={sliderRef} className=" " >
           <CarouselSectionMobileCard
             text={"Explore Indian Talents"}

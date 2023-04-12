@@ -109,7 +109,6 @@ export default function Home() {
           data-aos="fade-up"
           data-aos-duration="500"
           data-aos-easing="linear"
-          className="overflow-hidden"
         >
           <HomeBannerSection />
         </div>

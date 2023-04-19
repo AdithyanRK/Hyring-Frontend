@@ -38,7 +38,7 @@ export default function TalentSection() {
         Why Hire Indian Talents
       </div>
 
-      <div className=" select-none h-[60vh]  md:h-[70vh]">
+      <div className=" select-none scale-[1.5] xs:scale-[1.4] sm:scale-[1.25] md:scale-[1.1]  h-[70vh]">
         <Lottie options={lottieOptions} isClickToPauseDisabled={true} />
       </div>
       <div

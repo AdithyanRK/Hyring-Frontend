@@ -1,6 +1,11 @@
 import Head from "next/head";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Image from "next/image";
+import WhyIndiaHeroSection from "@/components/why-india-page/why-india-hero-section";
+import WhyIndiaAccordianSection from "@/components/why-india-page/why-india-accordian-section/why-india-accordian-section";
+import WhyIndiaHubsSection from "@/components/why-india-page/why-india-hubs-section";
+import WhyIndiaSkillsSection from "@/components/why-india-page/why-india-skills-section";
+import PricingSection from "@/components/landing-page/pricing-section/pricing-section";
 
 
 export default function Index() {
@@ -61,9 +66,36 @@ export default function Index() {
           data-aos-duration="600"
           data-aos-easing="linear"
         >
-        why india
+       <WhyIndiaHeroSection/>
         </div>
-        
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <WhyIndiaAccordianSection/>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <WhyIndiaHubsSection/>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <WhyIndiaSkillsSection/>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <PricingSection/>
+        </div>
       </div>
     </>
   );

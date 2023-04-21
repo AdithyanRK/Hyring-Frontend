@@ -88,9 +88,10 @@ export default function PricingSectionAccordian({ hoverChange }) {
             <AccordionSummary
               aria-controls="panel1d-content"
               id="panel1d-header"
+              className=""
               expandIcon={isExpanded.A1 === "true" ? <Minus /> : <Plus />}
             >
-              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium py-1">
+              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium py-1 lg:py-4 xl:py-5 leading-[40px]">
                 Benefits
               </Typography>
             </AccordionSummary>
@@ -101,7 +102,7 @@ export default function PricingSectionAccordian({ hoverChange }) {
               <AccordianList>Commitment to a Single Client Focus</AccordianList>
               <AccordianList>Apple Laptop Included</AccordianList>
               <AccordianList>Substantial Annual Bonuses</AccordianList>
-              <AccordianList>
+              <AccordianList className="ml-2">
                 Extensive Health Insurance for Employee, Spouse, Children, and
                 Parents
               </AccordianList>
@@ -124,7 +125,7 @@ export default function PricingSectionAccordian({ hoverChange }) {
               id="panel2d-header"
               expandIcon={isExpanded.A2 === "true" ? <Minus /> : <Plus />}
             >
-              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-1">
+              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-1 lg:py-4 xl:py-5">
                 Seamless Portal
               </Typography>
             </AccordionSummary>
@@ -147,7 +148,7 @@ export default function PricingSectionAccordian({ hoverChange }) {
               id="panel3d-header"
               expandIcon={isExpanded.A3 === "true" ? <Minus /> : <Plus />}
             >
-              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-1">
+              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium lg:py-3 xl3 py-1:lg:py-4 xl:py-5 leading-[40px]">
                 Compliance Covered
               </Typography>
             </AccordionSummary>
@@ -180,7 +181,7 @@ export default function PricingSectionAccordian({ hoverChange }) {
               id="panel1d-header"
               expandIcon={isExpanded.A1 === "true" ? <Minus /> : <Plus />}
             >
-              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium py-1">
+              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium py-2">
                 Benefits
               </Typography>
             </AccordionSummary>
@@ -213,7 +214,7 @@ export default function PricingSectionAccordian({ hoverChange }) {
               id="panel2d-header"
               expandIcon={isExpanded.A2 === "true" ? <Minus /> : <Plus />}
             >
-              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-1">
+              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-1 lg:py-4 xl:py-5 leading-[40px]">
                 Seamless Portal
               </Typography>
             </AccordionSummary>
@@ -239,7 +240,7 @@ export default function PricingSectionAccordian({ hoverChange }) {
               id="panel3d-header"
               expandIcon={isExpanded.A3 === "true" ? <Minus /> : <Plus />}
             >
-              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-1">
+              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium  py-1 lg:py-4 xl:py-5 leading-[40px]">
                 Compliance Covered
               </Typography>
             </AccordionSummary>

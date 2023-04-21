@@ -4,6 +4,8 @@ import { useScroll, useTransform } from "framer-motion";
 import React, { useState } from "react";
 import BoxTheme from "../box-theme/box-theme";
 import GetStartedButton from "../button/get-started-button";
+import Flag1 from "@/assets/icons/landing-page/flag";
+import Flag2 from "@/assets/icons/landing-page/flag2";
 
 export default function PricingSectionCard({
   className,
@@ -27,7 +29,7 @@ export default function PricingSectionCard({
       boxStyle={`w-[240px]  lg:w-[344px] h-fit  border-2 bg-white rounded-[20px] border-primary-brown    `}
       bgBoxStyle={`w-full h-full rounded-[20px] ${
         jobSeekerHover ? "bg-primary-brown animate-circleFill" : ""
-      }   top-[13px] left-[9px] `}
+      }   top-[7px] left-[5px] `}
     >
       <div
         className="w-full h-full px-7 lg:pl-11 lg:pr-6 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"
@@ -42,18 +44,21 @@ export default function PricingSectionCard({
         <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">
           {title}
         </div>
+        <div className="relative -left-[74px] md:scale-[1.2] md:-left-[31px] lg:scale-[1.4] lg:-left-[37px]">
+          <Flag1/>
+          </div>
         <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium text-center md:text-left">
           ${price} <span className="text-base ">{subText}</span>
         </div>
 
         <GetStartedButton
         role="1"
-          className="md:mt-5 lg:mt-[70px] "
+          className="md:mt-5 lg:mt-[27px] "
           hover={jobSeekerHover}
           boxColor="bg-primary-orange"
         />
       </div>
-      <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -left-8 ">
+      <div className="scale-[.6] lg:scale-[0.9] absolute -top-8 -left-8 ">
         <Star4
           className={` ${
             jobSeekerHover ? "block" : "hidden"
@@ -77,7 +82,7 @@ export default function PricingSectionCard({
       boxStyle={`w-[240px]  lg:w-[344px] h-fit  border-2 bg-white rounded-[20px] border-primary-brown    `}
       bgBoxStyle={`w-full h-full rounded-[20px] ${
         employerHover ? "bg-primary-brown animate-circleFill" : ""
-      }   top-[13px] left-[9px] `}
+      }   top-[7px] left-[5px] `}
     >
       <div
         className="w-full h-full px-7 lg:pl-11 lg:pr-6 py-7 lg:py-11 flex flex-col font-primaryMedium   gap-4 justify-center items-center md:items-start"
@@ -92,21 +97,25 @@ export default function PricingSectionCard({
         <div className="text-lg md:text-2xl lg:text-[26px] text-medium ">
           {title}
         </div>
+        <div className="relative -left-[63px] md:scale-[1.2] md:-left-[30px] lg:scale-[1.4] lg:-left-[34px]">
+          <Flag2/>
+          </div>
         <div className="flex gap-3 items-center ">
+        
           <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium text-center md:text-left">
             ${price}
           </div>
-          <div className="text-base ">{subText}</div>
+          <div className=" text-[10px] lg:text-[14px] lg:mt-3  ">{subText}</div>
         </div>
 
         <GetStartedButton
         role="2"
-          className="md:mt-5 lg:mt-[70px] "
+          className="md:mt-5 lg:mt-[27px] "
           hover={employerHover}
           boxColor="bg-primary-orange"
         />
       </div>
-      <div className="scale-[.7] lg:scale-[0.9] absolute -top-8 -left-8 ">
+      <div className="scale-[.6] lg:scale-[0.9] absolute -top-8 -left-8 ">
         <Star4
           className={` ${
             employerHover ? "block" : "hidden"

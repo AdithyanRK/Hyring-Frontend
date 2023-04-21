@@ -18,13 +18,12 @@ export default function PricingSection() {
         Pricing
       </div>
 
-      <div className="flex gap-5 flex-col w-full  md:flex-row">
-        <div className="flex gap-7 md:gap-3 basis-1/4 items-center flex-col xs:justify-around md:justify-between xs:flex-row md:flex-col">
+      <div className="flex gap-5 flex-col w-full   md:flex-row">
+        <div className="flex gap-7 md:gap-3 basis-1/4 items-center flex-col xs:justify-around md:justify-around xs:flex-row md:flex-col">
           <PricingSectionCard
             title={"Job Seekers"}
             svg={<JobPriceSvg />}
             price={0}
-            subText={"Always"}
             starColor={"custom-yellow"}
             boxColor={"custom-blue"}
             jobSeekerHover={jobSeekerHover}
@@ -36,8 +35,8 @@ export default function PricingSection() {
           <PricingSectionCard
             title={"Employers"}
             svg={<EmployerPriceSvg />}
-            // price={750}
-            subText={"As low as 20% per candidate/month"}
+            price={"20%"}
+            subText={"per candidate/month"}
             starColor={"custom-green"}
             boxColor={"custom-yellow"}
             employerHover={employerHover}

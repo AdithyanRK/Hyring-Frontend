@@ -31,6 +31,7 @@ module.exports = {
         "custom-grey": "#727272",
         "custom-sandal": "#FFC682",
         "custom-dark-green": "#61E396",
+        "custom-rose":"#ECB6DA",
       },
       keyframes: {
         scaleIn: {

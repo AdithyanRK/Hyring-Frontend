@@ -2,6 +2,8 @@ import Head from "next/head";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Image from "next/image";
 import dynamic from "next/dynamic.js";
+import AboutUsIntroductionComponent from "@/components/about-us/about-us.introduction.jsx";
+import AboutUsChallengesComponent from "@/components/about-us/about-us-challenges.jsx";
 
 const FooterComponent = dynamic(() =>
   import("../common/landing-page/footer/footer.jsx")
@@ -50,7 +52,7 @@ export default function Index() {
         ></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative text-primary-brown ">
+      <div className="relative text-primary-brown  ">
         <Image
           src="/Rectangle.svg"
           fill
@@ -61,11 +63,18 @@ export default function Index() {
         />
         <NavbarComponent />
         <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
+          // data-aos="fade-up"
+          // data-aos-duration="600"
+          // data-aos-easing="linear"
         >
-       About us
+          <AboutUsIntroductionComponent />
+        </div>
+        <div
+          // data-aos="fade-up"
+          // data-aos-duration="600"
+          // data-aos-easing="linear"
+        >
+          <AboutUsChallengesComponent/>
         </div>
         {/* <FooterComponent /> */}
       </div>

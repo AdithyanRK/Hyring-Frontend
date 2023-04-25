@@ -81,7 +81,7 @@ const AboutUsChallengesComponent = () => {
             </div>
           </div>
         </BoxTheme>
-        <div className=" my-10 ">
+        <div className=" my-20 ">
           <BoxTheme
             top="8px"
             left="7px"

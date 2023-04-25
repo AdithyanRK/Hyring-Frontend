@@ -269,7 +269,7 @@ export default function Footer({ className }) {
             </div>
           </div>
           <div className="flex flex-col gap-y-7">
-            <h2 className="text-[22px]  ">Subscribe to our Newsletter</h2>
+            <h2 className="text-[22px]  ">Subscribe Newsletter</h2>
             <div className="flex items-center gap-5">
               <BoxTheme
                 top="5px"
@@ -331,7 +331,7 @@ export default function Footer({ className }) {
           </div>
         </div>
         <div className="flex flex-col gap-y-7">
-          <h2 className="text-[22px]  ">Subscribe to our Newsletter</h2>
+          <h2 className="text-[22px]  ">Subscribe Newsletter</h2>
           <div className="flex items-center gap-2 m-auto pb-0 xxs:pb-10">
             <BoxTheme
               top="5px"

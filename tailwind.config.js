@@ -4,12 +4,13 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xxxs:"376px",
+        xxxs: "376px",
         xxs: "440px",
         xs: "540px",
-        xl3:"1465px",
-        xl4:"1610px",
-        xxxl:"2400px"
+        mf: "900px",
+        xl3: "1465px",
+        xl4: "1610px",
+        xxxl: "2400px",
       },
       fontFamily: {
         primary: ["var(--font-whyte-regular)"],
@@ -45,16 +46,15 @@ module.exports = {
           "100%": { transform: "scale(0)", opacity: 0 },
         },
         circleFill: {
-          "0% ":{clipPath: 'circle(10%)'},
-          "100% ":{clipPath: 'circle(75%)'}
-        }
-       
+          "0% ": { clipPath: "circle(10%)" },
+          "100% ": { clipPath: "circle(75%)" },
+        },
       },
       animation: {
-        scaleIn: 'scaleIn 3s ease-in-out infinite',
-        scaleOut: 'scaleOut 3s ease-in-out infinite reverse',
+        scaleIn: "scaleIn 3s ease-in-out infinite",
+        scaleOut: "scaleOut 3s ease-in-out infinite reverse",
         spin: "spin 5s linear infinite",
-        circleFill :"circleFill 0.3s linear  "
+        circleFill: "circleFill 0.3s linear  ",
       },
       zIndex: {
         1: "1",
@@ -66,8 +66,8 @@ module.exports = {
         fluid: "repeat(auto-fit, minmax(15rem, 1fr))",
       },
       backgroundImage: {
-        'body-background': "url('../../public/Rectangle.svg')",
-      }
+        "body-background": "url('../../public/Rectangle.svg')",
+      },
     },
   },
   plugins: [],

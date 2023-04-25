@@ -4,6 +4,8 @@ import Image from "next/image";
 import dynamic from "next/dynamic.js";
 import AboutUsIntroductionComponent from "@/components/about-us/about-us.introduction.jsx";
 import AboutUsChallengesComponent from "@/components/about-us/about-us-challenges.jsx";
+import AboutUsNetwork from "@/components/about-us/about-us-network.jsx";
+import AboutUsHyringDifference from "@/components/about-us/about-us-hyring-difference.jsx";
 
 const FooterComponent = dynamic(() =>
   import("../common/landing-page/footer/footer.jsx")
@@ -63,20 +65,35 @@ export default function Index() {
         />
         <NavbarComponent />
         <div
-          // data-aos="fade-up"
-          // data-aos-duration="600"
-          // data-aos-easing="linear"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
         >
           <AboutUsIntroductionComponent />
         </div>
         <div
-          // data-aos="fade-up"
-          // data-aos-duration="600"
-          // data-aos-easing="linear"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
         >
-          <AboutUsChallengesComponent/>
+          <AboutUsChallengesComponent />
         </div>
-        {/* <FooterComponent /> */}
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <AboutUsHyringDifference />
+        </div>
+        <div
+          className="px-5 md:px-10 "
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <AboutUsNetwork />
+        </div>
+        <FooterComponent />
       </div>
     </>
   );

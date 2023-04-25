@@ -13,7 +13,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const AboutUsIntroductionComponent = () => {
   return (
-    <div className="h-screen">
+    <div>
       <div className="flex flex-col items-center gap-6 ">
         <div className="font-primaryBold text-[40px] lg:text-[58px] mt-5  lg:mt-[40px] text-center  ">
           Introducing

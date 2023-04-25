@@ -711,3 +711,7 @@ html {
     height: 330px;
   }
 }
+.recharts-tooltip-cursor{
+  fill: white !important;
+  /* display: block !important; */
+}

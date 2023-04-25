@@ -56,7 +56,7 @@ export default function WhyIndiaSkillsSection() {
       >
       Skills in Demand
       </div>
-     <div className="flex justify-center items-center gap-10 max-w-[1444px] mx-auto flex-wrap ">
+     <div className="flex justify-center items-center gap-10 max-w-[1444px] mx-auto flex-wrap pb-2 ">
      {
         tabsData.map((data,index)=>(
             <WhyIndiaSkillsCard key={index} svg={data.icon} color={data.color}>{data.text}</WhyIndiaSkillsCard>

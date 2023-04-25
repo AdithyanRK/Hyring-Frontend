@@ -103,7 +103,7 @@ export default function PricingSectionCard({
         <div className="flex gap-3 items-center ">
         
           <div className="text-2xl   md:text-3xl lg:text-[40px] text-medium text-center md:text-left">
-            ${price}
+            {price}
           </div>
           <div className=" text-[10px] lg:text-[14px] lg:mt-3  ">{subText}</div>
         </div>

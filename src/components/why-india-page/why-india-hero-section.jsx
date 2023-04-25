@@ -7,7 +7,7 @@ export default function WhyIndiaHeroSection() {
 
    
   return (
-    <div className=' lg:w-[90vw] mx-auto mt-3 md:mt-10 xl4:my-40 max-w-[1800px] my-0'>
+    <div className=' lg:w-[90vw] mx-auto mt-10 xl:mt-20 xl4:my-40 max-w-[1800px] my-0'>
       <h1 className="font-primaryMedium   justify-center text-[33px] md:text-[48px] lg:text-[58px] flex mx-auto  items-center flex-wrap ">
         <span className="whitespace-nowrap">Why</span>
         <span className="relative mx-[12px] xs:mx-[12px] md:mx-[20px]  lg:mx-[24px]">

@@ -148,7 +148,7 @@ export default function PricingSectionAccordian({ hoverChange }) {
               id="panel3d-header"
               expandIcon={isExpanded.A3 === "true" ? <Minus /> : <Plus />}
             >
-              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium lg:py-3 xl3 py-1:lg:py-4 xl:py-5 leading-[40px]">
+              <Typography className="uppercase text-xl lg:text-[28px]   font-primaryMedium lg:py-3 xl3 py-1:lg:py-4 xl:py-5 ">
                 Compliance Covered
               </Typography>
             </AccordionSummary>

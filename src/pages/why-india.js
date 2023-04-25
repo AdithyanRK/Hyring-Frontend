@@ -6,7 +6,8 @@ import WhyIndiaAccordianSection from "@/components/why-india-page/why-india-acco
 import WhyIndiaHubsSection from "@/components/why-india-page/why-india-hubs-section";
 import WhyIndiaSkillsSection from "@/components/why-india-page/why-india-skills-section";
 import PricingSection from "@/components/landing-page/pricing-section/pricing-section";
-
+import Footer from "@/common/landing-page/footer/footer";
+import WhyIndiaSalariesSection from "@/components/why-india-page/why-india-salaries-section/why-india-salaries-main-section";
 
 export default function Index() {
   return (
@@ -60,6 +61,7 @@ export default function Index() {
           quality={100}
           priority
         />
+        
         <NavbarComponent />
         <div
           data-aos="fade-up"
@@ -96,6 +98,15 @@ export default function Index() {
         >
           <PricingSection/>
         </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
+          <WhyIndiaSalariesSection/>
+        </div>
+       
+       <Footer/>
       </div>
     </>
   );

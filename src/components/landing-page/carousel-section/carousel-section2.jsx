@@ -55,8 +55,8 @@ export default function CarouselSection2() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
   };
 
   const settings1 = {
@@ -166,7 +166,7 @@ export default function CarouselSection2() {
         </Slider>
       </div>
 
-      <Slider {...settings1}className="py-4 md:py-2 xxxl:pt-20">
+      <Slider {...settings1} className="py-4 md:py-2 xxxl:pt-20">
         <div
           onClick={() => {
             sliderRef.current.slickGoTo(0);

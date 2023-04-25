@@ -10,18 +10,17 @@ const AboutUsHyringDifference = () => {
   };
 
   return (
-    <div className="flex flex-wrap md:flex-nowrap w-full min-h-[40vh]">
-      <div className="flex-1 bg-[#462B34] text-[#FAFAFA] p-5 md:p-14 flex justify-start items-center flex-col xl:justify-center">
+    <div className="flex flex-wrap flex-col md:flex-row md:flex-nowrap w-full min-h-[40vh] font-primary">
+      <div className="flex-1 bg-[#462B34] text-[#FAFAFA] p-5 md:p-14 flex justify-center md:justify-start items-center flex-col xl:justify-center min-h-[250px]">
         <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl mb-5 text-left">
           The Hyring Difference
         </p>
-        <p className="text-sm md:text-lg lg:text-lg xl:text-xl">
+        <p className="text-md md:text-lg lg:text-lg xl:text-xl">
           Hyring is here to transform the{" "}
-          <span className="font-semibold">staff augmentation</span>
-          landscape by providing access to the{" "}
-          <span className="font-semibold">top 5%</span> of rigorously vetted IT
-          professionals, ensuring a{" "}
-          <span className="font-semibold">fixed commission</span> with
+          <span className="font-semibold">staff augmentation</span> landscape by
+          providing access to the <span className="font-semibold">top 5%</span>{" "}
+          of rigorously vetted IT professionals, ensuring a{" "}
+          <span className="font-semibold">fixed commission</span> with{" "}
           <span className="font-semibold">complete transparency</span> on salary
           information for both parties, delivering clear and straightforward
           contracts, and offering state-of-the-art{" "}

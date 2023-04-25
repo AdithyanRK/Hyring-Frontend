@@ -410,9 +410,9 @@ html {
   .mob-soc {
     display: flex;
   }
-  .footer {
+  /* .footer {
     height: 1000px;
-  }
+  } */
   .green-sec {
     width: 350px;
     padding: 0px;
@@ -611,62 +611,28 @@ html {
   }
 }
 
+@media screen and (min-width: 320px) {
+  .tick_svg_dynamic_height {
+    height: 280px;
+  }
+}
 @media screen and (min-width: 334px) {
   .tick_text_dynamic_height {
     gap: 40px;
   }
 }
-@media screen and (min-width: 398px) {
-  .tick_text_dynamic_height {
-    gap: 50px;
-  }
-  .tick_svg_dynamic_height {
-    height: 340px;
-  }
-}
-@media screen and (min-width: 403px) {
-  .tick_svg_dynamic_height {
-    height: 310px;
-  }
-}
-@media screen and (min-width: 472px) {
-  .tick_text_dynamic_height {
-    gap: 13px;
-  }
-  .tick_svg_dynamic_height {
-    height: 300px;
-  }
-}
-@media screen and (min-width: 472px) {
-  .tick_text_dynamic_height {
-    gap: 26px;
-  }
-  .tick_svg_dynamic_height {
-    height: 310px;
-  }
-}
-@media screen and (min-width: 500px) {
-  .tick_text_dynamic_height {
-    gap: 30px;
-  }
-}
+
 @media screen and (min-width: 587px) {
   .tick_svg_dynamic_height {
     height: 280px;
   }
 }
 @media screen and (min-width: 688px) {
-  .tick_text_dynamic_height {
-    gap: 32px;
-  }
   .tick_svg_dynamic_height {
     height: 270px;
   }
 }
 @media screen and (min-width: 727px) {
-  .tick_text_dynamic_height {
-    gap: 40px;
-  }
   .tick_svg_dynamic_height {
     height: 270px;
   }
@@ -676,16 +642,16 @@ html {
     gap: 36px;
   }
   .tick_svg_dynamic_height {
-    height: 370px;
+    height: 320px;
   }
 }
 @media screen and (min-width: 787px) {
   .tick_text_dynamic_height {
     gap: 36px;
   }
-  .tick_svg_dynamic_height {
+  /* .tick_svg_dynamic_height {
     height: 340px;
-  }
+  } */
 }
 @media screen and (min-width: 900px) {
   .tick_text_dynamic_height {
@@ -711,7 +677,17 @@ html {
     height: 330px;
   }
 }
-.recharts-tooltip-cursor{
+.recharts-tooltip-cursor {
   fill: white !important;
   /* display: block !important; */
+}
+
+/* navbar */
+.nav_bar_text_hover {
+  padding-bottom: 2px;
+  background: linear-gradient(#ffb65e 0 0) bottom / var(--d, 0) 3px no-repeat;
+  transition: 0.5s;
+}
+.nav_bar_text_hover:hover {
+  --d: 100%;
 }

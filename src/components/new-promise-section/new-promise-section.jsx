@@ -4,7 +4,6 @@ import NewPromiseDesktopSection from "./new-promise-desktop-section.card ";
 import HeartRed from "@/assets/icons/landing-page/heart-red";
 import HeartBrown from "@/assets/icons/landing-page/heart-brown";
 export default function NewPromiseSection() {
-
   return (
     <div className="flex  flex-col items-center mt-16 lg:mt-0 xl4:my-28   justify-center w-screen min-h-[500px] lg:min-h-[700px] h-fit  ">
       <div className="flex justify-center items-center">
@@ -16,12 +15,12 @@ export default function NewPromiseSection() {
           <HeartBrown className="absolute left-1 top-[3px] -z-1" />
         </div>
       </div>
-      <div className="hidden md:flex  items-center w-screen max-w-[1800px] md:my-20 mt-0">
+      <div className="flex  items-center w-screen max-w-[1800px] md:my-20 mt-0">
         <NewPromiseDesktopSection />
       </div>
-      <div className="block md:hidden mb-20 md:mb-0">
+      {/* <div className="block md:hidden mb-20 md:mb-0">
         <NewPromiseMobileSection />
-      </div>
+      </div> */}
     </div>
   );
 }

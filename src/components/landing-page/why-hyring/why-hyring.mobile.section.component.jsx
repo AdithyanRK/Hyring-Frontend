@@ -16,12 +16,14 @@ const WhyHyringComponentMobile = () => {
     { text: "Limited or no health insurance coverage" },
     { text: "Basic or personal laptop provision" },
     { text: " 60-day delayed payment" },
+    { text: "Recognised as contractor in LinkedIn" },
   ];
 
   const Hyring = [
     { text: "Employees" },
     { text: "Transparent salary information for both parties" },
     { text: "Flat fixed commissions ranging from 20% to 40%" },
+    { text: "Monthly compensation" },
     { text: "Engagement with a single client only" },
     { text: "Sophisticated mobile and web app" },
     {
@@ -47,9 +49,9 @@ const WhyHyringComponentMobile = () => {
           </div>
           {traditional.map((each) => (
             <div className="flex flex-row items-center py-2 px-2 text-start">
-                <div className="scale-[0.6]">
+              <div className="scale-[0.6]">
                 <GreryStar />
-                </div>
+              </div>
               <p className="text-[#727272] text-[15px] font-primary pl-4 text-start">
                 {each.text}
               </p>
@@ -66,9 +68,9 @@ const WhyHyringComponentMobile = () => {
           </div>
           {Hyring.map((each) => (
             <div className="flex flex-row items-center py-2 px-2 text-start">
-                <div className="scale-[0.6]">
+              <div className="scale-[0.6]">
                 <GreryStar />
-                </div>
+              </div>
               <p className=" text-[#FAFAFA] text-[15px] font-primary pl-4 text-start">
                 {each.text}
               </p>

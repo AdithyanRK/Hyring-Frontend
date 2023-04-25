@@ -14,7 +14,7 @@ import FlexibleSvg from "@/assets/icons/landing-page/flexibleDaysSvg";
 import GiftSvg from "@/assets/icons/landing-page/giftSvg";
 import OfficeSvg from "@/assets/icons/landing-page/officeSvg";
 import MerchandiseSvg from "@/assets/icons/landing-page/merchandiseSvg";
-import { useWindowSize } from 'react-use';
+import { useWindowSize } from "react-use";
 
 export default function CarouselSection1() {
   const sliderRef = useRef(null);
@@ -53,8 +53,8 @@ export default function CarouselSection1() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
   };
 
   const settings1 = {

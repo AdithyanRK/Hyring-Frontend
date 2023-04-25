@@ -24,7 +24,7 @@ const AboutUsChallengesComponent = () => {
           }
           isButton={false}
         >
-          <div className="p-10 w-full">
+          <div className="p-5 md:p-10 w-full">
             <div className="flex flex-wrap-reverse gap-2 justify-between items-center ">
               <div className="flex flex-col gap-2">
                 <div className="text-3xl md:text-5xl flex flex-col   font-primaryBold">

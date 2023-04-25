@@ -8,7 +8,7 @@ import LogoWhySection from "@/assets/icons/landing-page/logo-why-section";
 const WhyHyringComponent = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [hide, setHide] = useState(false);
-  const mHeight = useMotionValue(650);
+  const mHeight = useMotionValue(730);
 
   const handleDrag = React.useCallback((event, info) => {
     let newHeight = mHeight.get() + info.delta.y;
@@ -16,7 +16,7 @@ const WhyHyringComponent = () => {
       "🚀 ~ file: why-hyring.component.jsx:11 ~ handleDrag ~ newHeight:",
       newHeight
     );
-    if (newHeight > 40 && newHeight < 650) {
+    if (newHeight > 30 && newHeight < 730) {
       if (newHeight < 50) {
         setHide(true);
       } else {
@@ -30,22 +30,24 @@ const WhyHyringComponent = () => {
     { text: "Contractors" },
     { text: "Concealed salary and commission information" },
     { text: "80% to 150% of fees per candidate per month" },
-    { text: " Compensation on an hourly basis" },
+    { text: "Compensation on an hourly basis" },
     { text: "Involvement in multiple clients and projects" },
     {
-      text: "Utilization of third-party applications and HRMS tools for employee management",
+      text: "Utilization of third-party applications",
     },
     { text: "Payroll partners" },
     { text: "Remote and on-site work" },
     { text: "Limited or no health insurance coverage" },
     { text: "Basic or personal laptop provision" },
-    { text: " 60-day delayed payment" },
+    { text: "60-day delayed payment" },
+    { text: "Recognised as contractor in LinkedIn" },
   ];
 
   const Hyring = [
     { text: "Employees" },
     { text: "Transparent salary information for both parties" },
     { text: "Flat fixed commissions ranging from 20% to 40%" },
+    { text: "Monthly compensation" },
     { text: "Engagement with a single client only" },
     { text: "Sophisticated mobile and web app" },
     {
@@ -63,12 +65,12 @@ const WhyHyringComponent = () => {
   return (
     <>
       <div className="max-w-[1400px] mx-auto my-0">
-        <div className="h-[730px] relative mx-5">
-          <div className="bg-primary-brown h-[93vh] md:h-[700px] flex flex-col pt-8 rounded-t-2xl rounded-b-xl  border-[1px] border-primary-brown pb-6">
-            <div className="px-2 lg:px-20 lg:py-4 pt-4 lg:pt-4">
+        <div className="h-[750px] relative mx-5">
+          <div className="bg-primary-brown h-[93vh] md:h-[780px] flex flex-col pt-8 rounded-t-2xl rounded-b-xl  border-[1px] border-primary-brown pb-6">
+            <div className="px-2 lg:px-20 lg:py-4 pt-4 lg:pt-1">
               <div className="flex flex-row ">
                 <LogoWhySection />
-                <h1 className="text-[18px] xxs:text-[24px] md:text-[32px] text-[#FAFAFA] font-bold font-primaryBold pl-4 pb-1">
+                <h1 className="text-[18px] xxs:text-[24px] md:text-[32px] text-[#FAFAFA] font-bold font-primaryBold pl-4 pt-1 pb-1">
                   Hyring Approach 😎
                 </h1>
               </div>
@@ -84,7 +86,7 @@ const WhyHyringComponent = () => {
               ))}
             </div>
           </div>
-          <div className="absolute z-1 top-0 w-full overflow-hidden">
+          <div className="absolute z-1 top-0 w-full ">
             <motion.div
               dragElastic={4}
               dragMomentum={true}
@@ -93,15 +95,15 @@ const WhyHyringComponent = () => {
                 cursor: isDragging ? "row-resize" : "",
               }}
             >
-              <div className="bg-[#FAFAFA] w-full h-[600px] xxxs:h-full flex flex-col items-start pt-2 xxxs:pt-8 md:pt-2 rounded-t-xl  border-[1px] border-primary-brown overflow-hidden">
+              <div className="bg-[#FAFAFA] w-full h-[780px] xxxs:h-full flex flex-col items-start pt-2 xxxs:pt-8 md:pt-6 lg:pt-4 rounded-t-xl  border-[1px] border-primary-brown overflow-hidden">
                 {!hide ? (
                   <>
-                    <div className="px-2 lg:px-20 lg:py-4">
+                    <div className="px-2 lg:px-20 md:pt-7 md:pb-4">
                       <h1 className="text-[18px] xxs:text-[24px] md:text-[32px] text-primary-brown font-bold font-primaryBold">
                         Traditional C2H approach 😐
                       </h1>
                       {traditional.map((each) => (
-                      <div className="flex flex-row items-center gap-5 pt-5">
+                        <div className="flex flex-row items-center gap-5 pt-6 ">
                           <GreryStar />
                           <p className=" text-[#727272] text-[14px] md:text-[18px] font-primary">
                             {each.text}

@@ -21,8 +21,7 @@ import PlayVideoIcon from "@/assets/icons/landing-page/play_video";
 import HomeListComponent from "./home-list-items-component/home-list-items-component";
 import HomeBannerModal from "./home-modal-section";
 
-const HomeBannerSection = () => {
-  const [open, setOpen] = useState(false);
+const HomeBannerSection = ({handleOpen}) => {
   const [switchValue, SetSwitchValue] = useState(true);
 
   const lottieOptions = {
@@ -52,9 +51,7 @@ const HomeBannerSection = () => {
     );
   };
 
-  const handleOpen = () => {
-    setOpen(!open);
-  };
+
   return (
     <div className="w-[100vw]  mt-3 md:mt-20">
       <div className="mx-auto w-[92vw] mb-20">
@@ -143,7 +140,6 @@ const HomeBannerSection = () => {
           </Slider>
         </div>
       </div>
-      <HomeBannerModal open={open} handleOpen={handleOpen} />
     </div>
   );
 };

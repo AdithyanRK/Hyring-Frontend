@@ -11,16 +11,32 @@ import {
 import ScrollIcon from "@/assets/icons/landing-page/scroll_icon";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import CarouselSection1 from "@/components/landing-page/carousel-section/carousel-section1";
 import CarouselSection2 from "@/components/landing-page/carousel-section/carousel-section2";
 import CarouselSection3 from "@/components/landing-page/carousel-section/carousel-section3";
 import Footer from "@/common/landing-page/footer/footer.jsx";
 import WhyHyringMainComponent from "@/components/landing-page/why-hyring/why-hyring.main.component";
 import NewPromiseSection from "@/components/new-promise-section/new-promise-section";
-
+import { useRouter } from "next/router";
+import Loader from "../../public/Loader.json";
+import Lottie from "react-lottie";
+import HomeBannerModal from "@/components/landing-page/home-banner-section/home-modal-section";
 export default function Home() {
+  const router = useRouter();
+  const [open, setOpen] = useState(false);
   let ref = useRef(null);
+  const [loading, setLoading] = useState(true);
+  const lottieOptions = {
+    animationData: Loader,
+    loop: true,
+    autoplay: true,
+  };
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+  }, []);
 
   const { scrollY } = useScroll();
 
@@ -35,7 +51,9 @@ export default function Home() {
   let yAxis = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   let scale = useTransform(scrollYProgress, [0, 1], ["99.9%", "100%"]);
   let opacity = useTransform(scrollYProgress, [0.98, 1], [1, 0.98]);
-
+  const handleOpen = () => {
+    setOpen(!open);
+  };
   return (
     <>
       <Head>
@@ -82,72 +100,78 @@ export default function Home() {
           content="https://hyring.nyc3.digitaloceanspaces.com/static/meta.jpg"
         />
       </Head>
-
-      <div className="relative text-primary-brown  " ref={ref}>
-        <div className="invisible lg:visible fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
-          <motion.div
-            className="flex justify-center"
-            style={{
-              rotate,
-              y,
-              transition: "transform 0.1s ease-out",
-            }}
-          >
-            <ScrollIcon />
-          </motion.div>
-        </div>
-        <Image
-          src="/Rectangle.svg"
-          fill
-          style={{ objectFit: "cover", zIndex: -10 }}
-          alt="Background-Image"
-          quality={100}
-          priority
-        />
-        <NavbarComponent />
-        <div
-          data-aos="fade-up"
-          data-aos-duration="500"
-          data-aos-easing="linear"
-        >
-          <HomeBannerSection />
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="500"
-          data-aos-easing="linear"
-          className="overflow-hidden"
-        >
-          <NewPromiseSection />
-        </div>
-       
-
-        <motion.div className="relative overflow-hidden">
-          <TalentSection />
-        </motion.div>
-        <div className="relative min-h-[90vh] mt-20 max-w-[1800px] mx-auto my-0">
-          <div className="sticky  top-0 h-full">
-            <CarouselSection1 />
+      <>
+        {loading ? (
+          <div className="h-screen w-[25vw] mx-auto ">
+            <Lottie options={lottieOptions} isClickToPauseDisabled={true} />
           </div>
-          <div className="sticky top-8 h-full">
-            <CarouselSection2 />
-          </div>
-          <div className="sticky top-16 z-20 h-full">
-            <CarouselSection3 />
-          </div>
-          <div className="sticky top-2 h-[20vh]"></div>
-        </div>
-        <div>
-          <PricingSection />
-        </div>
-        <div>
-        <WhyHyringMainComponent />
+        ) : (
+          <div className="relative text-primary-brown" ref={ref}>
+            <HomeBannerModal open={open} handleOpen={handleOpen} />
+            <div className="invisible lg:visible fixed right-2 top-[50%] scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1] translate-x-1 md:translate-x-0 -translate-y-1/2 bg-[#FFF7EF] h-44 w-7 rounded-xl border-primary-brown border z-30">
+              <motion.div
+                className="flex justify-center"
+                style={{
+                  rotate,
+                  y,
+                  transition: "transform 0.1s ease-out",
+                }}
+              >
+                <ScrollIcon />
+              </motion.div>
+            </div>
+            <Image
+              src="/Rectangle.svg"
+              fill
+              style={{ objectFit: "cover", zIndex: -10 }}
+              alt="Background-Image"
+              quality={100}
+              priority
+            />
+            <NavbarComponent />
+            <div
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-easing="linear"
+            >
+              <HomeBannerSection handleOpen={handleOpen} />
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-easing="linear"
+              className="overflow-hidden"
+            >
+              <NewPromiseSection />
+            </div>
 
-        </div>
-        <div className="overflow-hidden">
-          <Footer />
-        </div>
-      </div>
+            <motion.div className="relative overflow-hidden">
+              <TalentSection />
+            </motion.div>
+            <div className="relative min-h-[90vh] mt-20 max-w-[1800px] mx-auto my-0">
+              <div className="sticky  top-0 h-full">
+                <CarouselSection1 />
+              </div>
+              <div className="sticky top-8 h-full">
+                <CarouselSection2 />
+              </div>
+              <div className="sticky top-16 z-20 h-full">
+                <CarouselSection3 />
+              </div>
+              <div className="sticky top-2 h-[20vh]"></div>
+            </div>
+            <div>
+              <PricingSection />
+            </div>
+            <div>
+              <WhyHyringMainComponent />
+            </div>
+            <div className="overflow-hidden">
+              <Footer />
+            </div>
+          </div>
+        )}
+      </>
     </>
   );
 }

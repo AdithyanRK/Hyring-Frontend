@@ -3,13 +3,20 @@ import Modal from "@mui/material/Modal";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import ModalVideo from "react-modal-video";
-import 'node_modules/react-modal-video/scss/modal-video.scss';
+import "node_modules/react-modal-video/scss/modal-video.scss";
 export default function HomeBannerModal(props) {
   const { handleOpen, open } = props;
 
   return (
     <div>
-      			<ModalVideo channel='vimeo' autoplay={true} isOpen={open} videoId="816417893"  onClose={() => handleOpen()} className="modalVideo" />
+      <ModalVideo
+        channel="vimeo"
+        autoplay={true}
+        isOpen={open}
+        videoId="816417893"
+        onClose={() => handleOpen()}
+        className="modalVideo"
+      />
       {/* <Modal open={open} onClose={handleOpen}>
         <>
           <div className="mt-[1%] md:mt-[3%]">

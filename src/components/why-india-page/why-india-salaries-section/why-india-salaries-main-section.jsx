@@ -12,7 +12,7 @@ export default function WhyIndiaSalariesSection() {
   const [activeRole, setActiveRole] = useState(0);
   const [hyringData, setHyringData] = useState(true);
   const [competitorData, setCompetitorData] = useState(false);
-  const [currency,setCurrency]=useState(INR)
+  const [currency,setCurrency]=useState()
   return (
     <div
       className="mt-5 lg:mt-20 mx-auto flex w-[95vw] xl:w-[95vw] 2xl:w-[90vw] flex-col items-center  max-w-[1800px]  my-0"

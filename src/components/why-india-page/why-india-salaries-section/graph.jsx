@@ -18,6 +18,31 @@ import DropdownSalaries from "./dropdown";
 export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
   const [focusBar, setFocusBar] = useState(null);
   const data=Roles[activeRole].data
+
+  const CustomTooltip = ({ active, payload, label }) => {
+    console.log("🚀 ~ file: graph.jsx:17 ~ CustomTooltip ~ payload:", payload)
+    if (active) {
+      return (
+        <div className="border font-primary  border-primary-brown rounded-md bg-white pt-[10px] px-3 pb-[5px]">
+          
+            <p>
+              Salary : <span className="font-primaryMedium">{payload[0].payload.salaryRupees}</span>
+            </p>
+            <p>
+            Hyring Fees : <span className="font-primaryMedium">{payload[0].payload.hyringFees}</span>
+            </p>
+            <p>
+            Savings : <span className="font-primaryMedium">{payload[0].payload.savings}</span>
+            </p>
+           
+         
+        </div>
+      );
+    }
+  
+    return null;
+  };
+  
   return (
     <div className="w-full h-[76%]  ">
       <BoxTheme
@@ -30,7 +55,7 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
         <div className="p-4 md:px-8  mx-auto w-full ">
           <div className="flex justify-between">
             <h2 className="text-lg md:text-2xl basis-[60%] md:basis-[100%] font-primaryMedium">
-              Avg. Monthly Salary{" "}
+              Avg. Monthly Salary
               <span className="text-[#EAA24B]">
                 {Roles[activeRole].title}
               </span>
@@ -77,8 +102,9 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
                 position: "left",
               }}
             />
-            <Tooltip className={"bg-red-500"} />
-            {/* <Legend /> */}
+            <Tooltip content={<CustomTooltip />} />
+
+
             <Bar dataKey="salary" stackId="a">
               {data.map((entry, index) => (
                 <Cell
@@ -87,6 +113,8 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
                 />
               ))}
             </Bar>
+
+
             {
               hyringData ? 
              ( <Bar dataKey="hyring" stackId="a" >
@@ -98,8 +126,20 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
               ))}
             </Bar>) : null
             }
+            {
+               competitorData && hyringData == false ?
+               (<Bar dataKey="competitorFull" stackId="a">
+                  {data.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={focusBar === index ? "#EA6B6B" : "#FFD7A6"}
+                    />
+                  ))}
+                </Bar>) : null
+            }
+
            { 
-           competitorData ?
+           competitorData && hyringData ?
            (<Bar dataKey="competitor" stackId="a">
               {data.map((entry, index) => (
                 <Cell
@@ -110,6 +150,8 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
             </Bar>) : null
             
             }
+
+
           </BarChart>
           </ResponsiveContainer>
          </div>

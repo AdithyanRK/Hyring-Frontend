@@ -15,8 +15,8 @@ export default function FilterSalaries({setHyringData,setCompetitorData,hyringDa
         boxStyle={`w-full h-full !justify-start   border-2 bg-white rounded-[14px] border-primary-brown    `}
         bgBoxStyle={`w-full  rounded-[14px] h-full  bg-primary-brown   `}
       >
-        <div className="p-3 md:px-8  flex gap-2 md:gap-6 flex-col sm:flex-row">
-          <div className="flex  items-center gap-4 text-lg md:text-2xl font-primaryBold">
+        <div className="p-3 xl:px-8  flex gap-2 lg:gap-4 xl:gap-6 flex-col xs:flex-row">
+          <div className="flex  items-center gap-4 text-lg md:text-base xl:text-2xl font-primaryBold">
             <FilterIcon />
             Filter :
           </div>
@@ -27,7 +27,7 @@ export default function FilterSalaries({setHyringData,setCompetitorData,hyringDa
                 fontFamily: "__whyteMedium_2bf28c",
               },
             }}
-            className="pt-1 text-lg md:text-2xl"
+            className="pt-1 text-lg xl:text-2xl"
             control={
               <Checkbox
                 icon={<UncheckedIcon />}
@@ -45,7 +45,7 @@ export default function FilterSalaries({setHyringData,setCompetitorData,hyringDa
                 fontFamily: "__whyteMedium_2bf28c",
               },
             }}
-            className="pt-1 text-lg md:text-2xl "
+            className="pt-1 text-lg md:text-base xl:text-2xl "
             control={
               <Checkbox
                 icon={<UncheckedIcon />}

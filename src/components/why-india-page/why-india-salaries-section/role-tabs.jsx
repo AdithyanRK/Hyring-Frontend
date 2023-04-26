@@ -12,7 +12,7 @@ console.log("🚀 ~ file: role-tabs.jsx:5 ~ RolesTab ~ activeRole:", activeRole)
       boxStyle={`w-full h-full !justify-start !items-start  border-2 bg-white rounded-[14px] border-primary-brown    `}
       bgBoxStyle={`w-full rounded-[14px] h-full  bg-primary-brown   `}
     >
-      <div className=" p-4 md:px-8 md:py-16">
+      <div className=" p-4 xl:px-8 md:py-16">
         <h2 className="text-2xl md:text-[28px] font-primaryBold mb-3 md:mb-7">Role</h2>
 
         <div className="flex flex-wrap gap-[13px]">

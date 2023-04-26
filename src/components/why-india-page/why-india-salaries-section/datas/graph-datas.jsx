@@ -1,76 +1,98 @@
 
 const hyring =(val)=>{
     let amt   ;
-    amt =(val + (val * (20/100))).toFixed(1)
+    amt =((val/2)*0.2).toFixed(1)
     return amt;
 };
 const competitor =(val)=>{
     let amt   ;
-    amt =(val*2).toFixed(1)
+    amt =((val/2)*0.8).toFixed(1)
     return amt;
 };
-
+const salary =(val)=>{
+  let amt   ;
+  amt =(val/2).toFixed(1)
+  return amt;
+};
+const competitorFull =(val)=>{
+  let amt   ;
+  amt =(val/2).toFixed(1)
+  return amt;
+};
 export const FrontendDeveloperData = [
     {
-      name: "2.9 Lakhs",
-      salary: 2.9,
-      hyring: hyring(2.9),
-      competitor: competitor(2.9),
+      name: "lowest",
+      salary: salary(153),
+      hyring: hyring(153),
+      competitor: competitor(153),
+      competitorFull: competitorFull(153),
       reported:153,
+      salaryRupees:"2.9 Lakh",
+      hyringFees:"0.58 Lakh",
+      savings:"2.32 Lakh",
+      competitorFees:"5.8 Lakh",
+
     },
     {
       name: "",
-      salary: 4.4,
-      hyring: hyring(4.4),
-      competitor: competitor(4.4),
+      salary: salary(174),
+      hyring: hyring(174),
+      competitor: competitor(174),
+      competitorFull: competitorFull(174),
       reported:174,
 
     },
     {
-      name: "",
-      salary: 5.9,
-      hyring: hyring(5.9),
-      competitor: competitor(5.9),
+      name: "Average",
+      salary: salary(120),
+      hyring: hyring(120),
+      competitorFull: competitorFull(120),
+      competitor: competitor(120),
       reported:120,
 
     },
     {
-      name: "5.2 Lakhs",
-      salary: 7.4,
-      hyring: hyring(7.4),
-      competitor: competitor(7.4),
+      name: "",
+      salary: salary(62),
+      hyring: hyring(62),
+      competitorFull: competitorFull(62),
+      competitor: competitor(62),
       reported:62,
 
     },
     {
       name: "",
-      salary: 8.9,
-      hyring: hyring(8.9),
-      competitor: competitor(8.9),
+      salary: salary(62),
+      hyring: hyring(62),
+      competitor: competitor(62),
+      competitorFull: competitorFull(62),
       reported:62,
 
     },
     {
       name: "",
-      salary: 10.4,
-      hyring: hyring(10.4),
-      competitor: competitor(10.4),
+      salary: salary(31),
+      hyring: hyring(31),
+      competitor: competitor(31),
+      competitorFull: competitorFull(31),
       reported:31,
 
     },
     {
       name: "",
-      salary: 11.9,
-      hyring: hyring(11.9),
-      competitor: competitor(11.9),
+      salary: salary(36),
+      hyring: hyring(36),
+      competitor: competitor(36),
+      competitorFull: competitorFull(36),
       reported:36,
 
     },
     {
-      name: "7.8 Lakhs",
-      salary: 13.4,
-      hyring: hyring(13.4),
-      competitor: competitor(13.4),
+      name: "highest",
+      salary: salary(12),
+      hyring: hyring(12),
+      competitor: competitor(12),
+      competitorFull: competitorFull(12),
       reported:12,
 
     },

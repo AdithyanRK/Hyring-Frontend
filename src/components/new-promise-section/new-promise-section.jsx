@@ -15,7 +15,7 @@ export default function NewPromiseSection() {
           <HeartBrown className="absolute left-1 top-[3px] -z-1" />
         </div>
       </div>
-      <div className="flex  items-center w-screen max-w-[1800px] md:my-20 mt-0">
+      <div className=" flex  items-center w-screen max-w-[1800px] md:my-20 mt-0">
         <NewPromiseDesktopSection />
       </div>
       {/* <div className="block md:hidden mb-20 md:mb-0">

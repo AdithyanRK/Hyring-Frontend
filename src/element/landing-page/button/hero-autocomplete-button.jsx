@@ -11,7 +11,7 @@ import { useState } from "react";
 
 export default function HeroAutocompleteButton({ className }) {
   const [inputValue, setInputValue] = useState('');
-
+  const [focus,setFocus]= useState(false)
   const [options, setOptions] = useState([]);
   
   const [open, setOpen] = useState(false);
@@ -22,7 +22,10 @@ export default function HeroAutocompleteButton({ className }) {
       if (newInputValue.length >= 2) {
           // Fetch suggestions from API or set options 
           setOptions(object);
-          setOpen(true)
+          if(focus){
+            setOpen(true)
+          }
+          
       } else {
           setOptions([]);
           setOpen(false)
@@ -106,6 +109,8 @@ export default function HeroAutocompleteButton({ className }) {
       <Autocomplete
       inputValue={inputValue} 
       open={open}
+      onFocus={()=>setFocus(!focus)}
+      onBlur={()=>setFocus(!focus)}
       onInputChange={handleInputChange}     
       onClose={() => setOpen(false)} 
         freeSolo
@@ -113,7 +118,7 @@ export default function HeroAutocompleteButton({ className }) {
         className="text-base xl:text-lg w-fit"
         PopperComponent={CustomPopper}
         defaultValue="Full-Stack Engineer"
-        // selectOnFocus
+        selectOnFocus
         sx={{
           "& input": {
             width: "90%",

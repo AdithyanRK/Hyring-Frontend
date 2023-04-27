@@ -1,13 +1,16 @@
 
-export default function DropdownSalaries() {
+export default function DropdownSalaries({currency,setCurrency}) {
  
 
   return (
-    <select className='p-2 rounded-md font-primaryMedium'>
-    <option value="1">USD</option>
-    <option value="2">EUR</option>
-    <option value="3">AUSD</option>
-    <option value="4">IND</option>
+    <select 
+    value={currency}
+    onChange={(e)=>setCurrency(e.target.value)}
+    className='p-2 rounded-md font-primaryMedium'>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="AUSD">AUSD</option>
+    <option value="IND">IND</option>
 </select>
   );
-}
+} 

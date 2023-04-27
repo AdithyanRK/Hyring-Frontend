@@ -10,7 +10,25 @@ import DropDownArrow from "@/assets/icons/landing-page/drop-doen-arrow";
 import { useState } from "react";
 
 export default function HeroAutocompleteButton({ className }) {
-  const options = [
+  const [inputValue, setInputValue] = useState('');
+
+  const [options, setOptions] = useState([]);
+  
+  const [open, setOpen] = useState(false);
+  
+  const handleInputChange = (event, newInputValue) => {
+      setInputValue(newInputValue);
+  
+      if (newInputValue.length >= 2) {
+          // Fetch suggestions from API or set options 
+          setOptions(object);
+          setOpen(true)
+      } else {
+          setOptions([]);
+          setOpen(false)
+      }
+  };
+  const object = [
     "System Designer",
     "Full-Stack Engineer",
     "Front-End Engineer",
@@ -86,18 +104,23 @@ export default function HeroAutocompleteButton({ className }) {
       }
     >
       <Autocomplete
+      inputValue={inputValue} 
+      open={open}
+      onInputChange={handleInputChange}     
+      onClose={() => setOpen(false)} 
         freeSolo
+        openOnFocus={false}
         className="text-base xl:text-lg w-fit"
         PopperComponent={CustomPopper}
         defaultValue="Full-Stack Engineer"
-        selectOnFocus
+        // selectOnFocus
         sx={{
           "& input": {
             width: "90%",
             fontSize: "inherit",
             fontWeight: "500",
             color: "#FFB65E",
-            padding: "0px",
+            padding: "10px",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",
@@ -116,17 +139,14 @@ export default function HeroAutocompleteButton({ className }) {
                   paddingRight: "10px !important",
                   paddingLeft: "10px !important",
                   fontFamily: "inherit",
-                  fontSize:"inherit"
+                  fontSize:"inherit",
+                  lineHeight:"2rem",
 
                 },
                 "& .MuiOutlinedInput-notchedOutline": { display: "none" },
                 // "&.MuiInputBase-input": { width: "150px" },
               }}
-              endAdornment={
-                <InputAdornment position="start">
-                  <DropDownArrow />
-                </InputAdornment>
-              }
+              endAdornment={""}
               
               type="text"
               inputProps={{ ...params.inputProps }}

@@ -1,99 +1,320 @@
-
-const hyring =(val)=>{
-    let amt   ;
-    amt =((val/2)*0.2).toFixed(1)
-    return amt;
-};
-const competitor =(val)=>{
-    let amt   ;
-    amt =((val/2)*0.8).toFixed(1)
-    return amt;
-};
-const salary =(val)=>{
-  let amt   ;
-  amt =(val/2).toFixed(1)
+// calculation based on reported values
+const hyring = (val) => {
+  let amt;
+  amt = ((val / 2) * 0.2).toFixed(1);
   return amt;
 };
-const competitorFull =(val)=>{
-  let amt   ;
-  amt =(val/2).toFixed(1)
+const competitor = (val) => {
+  let amt;
+  amt = ((val / 2) * 0.8).toFixed(1);
   return amt;
 };
-export const FrontendDeveloperData = [
-    {
-      name: "lowest",
-      salary: salary(153),
-      hyring: hyring(153),
-      competitor: competitor(153),
-      competitorFull: competitorFull(153),
-      reported:153,
-      salaryRupees:"2.9 Lakh",
-      hyringFees:"0.58 Lakh",
-      savings:"2.32 Lakh",
-      competitorFees:"5.8 Lakh",
+const salary = (val) => {
+  let amt;
+  amt = (val / 2).toFixed(1);
+  return amt;
+};
+const competitorFull = (val) => {
+  let amt;
+  amt = (val / 2).toFixed(1);
+  return amt;
+};
 
-    },
-    {
+// calculation for rupees convertion
+
+const salaryRupees = (val) => {
+  let result = "";
+  result = val + "Lakh";
+  return result;
+};
+const hyringRupees = (val) => {
+  let result = "";
+
+  result = (val * 0.2).toFixed(2) + "Lakh";
+
+  return result;
+};
+const competitorRupees = (val) => {
+  let result = "";
+  result = (val * 0.8).toFixed(2) + "Lakh";
+  return result;
+};
+const savingsRupees = (val) => {
+  let result = "";
+  result = (val * 2 - val - val * 0.2).toFixed(2) + "Lakh";
+  return result;
+};
+
+// calculations for usd conversion
+const salaryUSD = (val) => {
+  let result = "";
+  result = "USD " + ((val * 100000) / 82).toFixed(0);
+  return result;
+};
+const hyringUSD = (val) => {
+  let result = "";
+
+  result = "USD " + ((val * 0.2 * 100000) / 82).toFixed(0);
+  return result;
+};
+const competitorUSD = (val) => {
+  let result = "";
+
+  result = "USD " + ((val * 0.8 * 100000) / 82).toFixed(0);
+  return result;
+};
+const savingsUSD = (val) => {
+  let result = "";
+
+  result = "USD " + (((val * 2 - val - val * 0.2) * 100000) / 82).toFixed(0);
+  return result;
+};
+
+// calculations for AUSD conversion
+const salaryAUSD = (val) => {
+  let result = "";
+  result = "AUSD " + ((val * 100000) / 54).toFixed(0);
+  return result;
+};
+const hyringAUSD = (val) => {
+  let result = "";
+  result = "AUSD " + ((val * 0.2 * 100000) / 54).toFixed(0);
+  return result;
+};
+const competitorAUSD = (val) => {
+  let result = "";
+  result = "AUSD " + ((val * 0.8 * 100000) / 54).toFixed(0);
+  return result;
+};
+const savingsAUSD = (val) => {
+  let result = "";
+  result = "AUSD " + (((val * 2 - val - val * 0.2) * 100000) / 54).toFixed(0);
+  return result;
+};
+
+// calculations for EUR conversion
+const salaryEUR = (val) => {
+  let result = "";
+  result = "EUR " + ((val * 100000) / 90).toFixed(0);
+  return result;
+};
+const hyringEUR = (val) => {
+  let result = "";
+  result = "EUR " + ((val * 0.2 * 100000) / 90).toFixed(0);
+  return result;
+};
+const competitorEUR = (val) => {
+  let result = "";
+  result = "EUR " + ((val * 0.8 * 100000) / 90).toFixed(0);
+  return result;
+};
+const savingsEUR = (val) => {
+  let result = "";
+  result = "EUR " + (((val * 2 - val - val * 0.2) * 100000) / 90).toFixed(0);
+  return result;
+};
+
+export let FinalFrontendDeveloperData = [];
+export let FinalBackendDeveloperData = [];
+export let FinalSystemDesignerData = [];
+export let FinalDataEngineerData = [];
+export let FinalFullstackDeveloperData = [];
+export let FinalDevopsEngineerData = [];
+export let FinalMobileApplicationDeveloperData = [];
+export let FinalQAEngineerData = [];
+export let FinalUIUXDesignerData = [];
+export let FinalProjectManagerData = [];
+export let FinalBusinessAnalystData = [];
+export let FinalDigitalMarketingManagerData = [];
+export let FinalSeniorSocialMediaExecutiveData = [];
+
+const FrontendDeveloperSalriesReported = [
+  { salary: 2.9, Reporters: 153 },
+  { salary: 4.4, Reporters: 174 },
+  { salary: 7.4, Reporters: 120 },
+  { salary: 8.9, Reporters: 62 },
+  { salary: 8.9, Reporters: 62 },
+  { salary: 10.4, Reporters: 31 },
+  { salary: 13.4, Reporters: 36 },
+  { salary: 14.9, Reporters: 12 },
+];
+
+const BackendDeveloperSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const SystemDesignerSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const DataEngineerSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const FullstackDeveloperSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const DevopsEngineerSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const MobileApplicationDeveloperSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const QAEngineerSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const UIUXDesignerSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const ProjectManagerSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const BusinessAnalystSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const DigitalMarketingManagerSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+
+const SeniorSocialMediaExecutiveSalriesReported = [
+  { salary: 3, Reporters: 40 },
+  { salary: 5.1, Reporters: 40 },
+  { salary: 7.2, Reporters: 39 },
+  { salary: 9.3, Reporters: 22 },
+  { salary: 11.5, Reporters: 12 },
+  { salary: 13.6, Reporters: 12 },
+  { salary: 15.7, Reporters: 10 },
+  { salary: 17.8, Reporters: 8 },
+];
+let data = [
+  { data: FrontendDeveloperSalriesReported, final: FinalFrontendDeveloperData },
+  { data: BackendDeveloperSalriesReported, final: FinalBackendDeveloperData },
+  { data: SystemDesignerSalriesReported, final: FinalSystemDesignerData },
+  { data: DataEngineerSalriesReported, final: FinalDataEngineerData },
+  { data: FullstackDeveloperSalriesReported, final: FinalFullstackDeveloperData },
+  { data: DevopsEngineerSalriesReported, final: FinalDevopsEngineerData },
+  { data: MobileApplicationDeveloperSalriesReported, final: FinalMobileApplicationDeveloperData },
+  { data: QAEngineerSalriesReported, final: FinalQAEngineerData },
+  { data: UIUXDesignerSalriesReported, final: FinalUIUXDesignerData },
+  { data: ProjectManagerSalriesReported, final: FinalProjectManagerData },
+  { data: BusinessAnalystSalriesReported, final: FinalBusinessAnalystData },
+  { data: DigitalMarketingManagerSalriesReported, final: FinalDigitalMarketingManagerData },
+  { data: SeniorSocialMediaExecutiveSalriesReported, final: FinalSeniorSocialMediaExecutiveData },
+];
+
+data.map((mainitem) => {
+  mainitem.data.forEach((item, index) => {
+    mainitem.final.push({
       name: "",
-      salary: salary(174),
-      hyring: hyring(174),
-      competitor: competitor(174),
-      competitorFull: competitorFull(174),
-      reported:174,
+      salary: salary(item.Reporters),
+      hyring: hyring(item.Reporters),
+      competitor: competitor(item.Reporters),
+      competitorFull: competitorFull(item.Reporters),
+      reported: item.Reporters,
 
-    },
-    {
-      name: "Average",
-      salary: salary(120),
-      hyring: hyring(120),
-      competitorFull: competitorFull(120),
-      competitor: competitor(120),
-      reported:120,
+      salaryRupees: salaryRupees(item.salary),
+      hyringRupees: hyringRupees(item.salary),
+      savingsRupees: savingsRupees(item.salary),
+      competitorRupees: competitorRupees(item.salary),
 
-    },
-    {
-      name: "",
-      salary: salary(62),
-      hyring: hyring(62),
-      competitorFull: competitorFull(62),
-      competitor: competitor(62),
-      reported:62,
+      salaryUSD: salaryUSD(item.salary),
+      hyringUSD: hyringUSD(item.salary),
+      savingsUSD: savingsUSD(item.salary),
+      competitorUSD: competitorUSD(item.salary),
 
-    },
-    {
-      name: "",
-      salary: salary(62),
-      hyring: hyring(62),
-      competitor: competitor(62),
-      competitorFull: competitorFull(62),
-      reported:62,
+      salaryAUSD: salaryAUSD(item.salary),
+      hyringAUSD: hyringAUSD(item.salary),
+      savingsAUSD: savingsAUSD(item.salary),
+      competitorAUSD: competitorAUSD(item.salary),
 
-    },
-    {
-      name: "",
-      salary: salary(31),
-      hyring: hyring(31),
-      competitor: competitor(31),
-      competitorFull: competitorFull(31),
-      reported:31,
-
-    },
-    {
-      name: "",
-      salary: salary(36),
-      hyring: hyring(36),
-      competitor: competitor(36),
-      competitorFull: competitorFull(36),
-      reported:36,
-
-    },
-    {
-      name: "highest",
-      salary: salary(12),
-      hyring: hyring(12),
-      competitor: competitor(12),
-      competitorFull: competitorFull(12),
-      reported:12,
-
-    },
-  ];
+      salaryEUR: salaryEUR(item.salary),
+      hyringEUR: hyringEUR(item.salary),
+      savingsEUR: savingsEUR(item.salary),
+      competitorEUR: competitorEUR(item.salary),
+    });
+  });
+});

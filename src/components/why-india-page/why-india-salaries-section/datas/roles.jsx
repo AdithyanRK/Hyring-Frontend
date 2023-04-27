@@ -1,45 +1,70 @@
-import { FrontendDeveloperData } from './graph-datas'
-console.log("🚀 ~ file: roles.jsx:2 ~ FrontendDeveloperData:", FrontendDeveloperData)
+import {
+  FinalFrontendDeveloperData,
+  FinalBackendDeveloperData,
+  FinalSystemDesignerData,
+  FinalDataEngineerData,
+  FinalFullstackDeveloperData,
+  FinalDevopsEngineerData,
+  FinalMobileApplicationDeveloperData,
+  FinalQAEngineerData,
+  FinalUIUXDesignerData,
+  FinalProjectManagerData,
+  FinalBusinessAnalystData,
+  FinalDigitalMarketingManagerData,
+  FinalSeniorSocialMediaExecutiveData
+} from "./graph-datas";
 
-export  const Roles =[
-    {
-        title: "Frontend Developer",
-        data:FrontendDeveloperData,
-      },
-      {
-        title: "Backend Developer",
-      },
-      {
-        title: "System Designer",
-      },
-      {
-        title: "Data Engineer",
-      },
-      {
-        title: "Fullstack Developer",
-      },
-      {
-        title: "Devops Engineer",
-      },
-      {
-        title: "Mobile Application Developer",
-      },
-      {
-        title: "QA Engineer",
-      },
-      {
-        title: "UI UX Designer",
-      },
-      {
-        title: "Project Manager",
-      },
-      {
-        title: "Business Analyst",
-      },
-      {
-        title: "Digital Marketing Manager",
-      },
-      {
-        title: "Senior Social Media Executive",
-      },
-]
+export const Roles = [
+  {
+    title: "Frontend Developer",
+    data: FinalFrontendDeveloperData,
+  },
+  {
+    title: "Backend Developer",
+    data: FinalBackendDeveloperData,
+  },
+  {
+    title: "System Designer",
+    data: FinalSystemDesignerData,
+  },
+  {
+    title: "Data Engineer",
+    data: FinalDataEngineerData,
+  },
+  {
+    title: "Fullstack Developer",
+    data: FinalFullstackDeveloperData,
+  },
+  {
+    title: "Devops Engineer",
+    data: FinalDevopsEngineerData,
+  },
+  {
+    title: "Mobile Application Developer",
+    data: FinalMobileApplicationDeveloperData,
+  },
+  {
+    title: "QA Engineer",
+    data: FinalQAEngineerData,
+  },
+  {
+    title: "UI UX Designer",
+    data: FinalUIUXDesignerData,
+  },
+  {
+    title: "Project Manager",
+    data: FinalProjectManagerData,
+  },
+  {
+    title: "Business Analyst",
+    data: FinalBusinessAnalystData,
+  },
+  {
+    title: "Digital Marketing Manager",
+    data: FinalDigitalMarketingManagerData,
+  },
+  {
+    title: "Senior Social Media Executive",
+    data: FinalSeniorSocialMediaExecutiveData,
+  },
+];

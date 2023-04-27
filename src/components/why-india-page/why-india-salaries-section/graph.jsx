@@ -15,24 +15,44 @@ import DropdownSalaries from "./dropdown";
 
 
 
-export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
+export default function Chart({ activeRole, Roles,hyringData,competitorData,currency,setCurrency}) {
   const [focusBar, setFocusBar] = useState(null);
   const data=Roles[activeRole].data
 
   const CustomTooltip = ({ active, payload, label }) => {
-    console.log("🚀 ~ file: graph.jsx:17 ~ CustomTooltip ~ payload:", payload)
     if (active) {
       return (
         <div className="border font-primary  border-primary-brown rounded-md bg-white pt-[10px] px-3 pb-[5px]">
           
             <p>
-              Salary : <span className="font-primaryMedium">{payload[0].payload.salaryRupees}</span>
+              Salary : <span className="font-primaryMedium">
+                {
+                  currency == "IND" ? payload[0].payload.salaryRupees
+                : currency == "USD" ? payload[0].payload.salaryUSD 
+                : currency == "AUSD" ? payload[0].payload.salaryAUSD 
+                : currency == "EUR" ? payload[0].payload.salaryEUR  : null
+                }
+                </span>
             </p>
             <p>
-            Hyring Fees : <span className="font-primaryMedium">{payload[0].payload.hyringFees}</span>
+            Hyring Fees : <span className="font-primaryMedium">
+              {
+                    currency == "IND" ? payload[0].payload.hyringRupees
+                  : currency == "USD" ? payload[0].payload.hyringUSD 
+                  : currency == "AUSD" ? payload[0].payload.hyringAUSD 
+                  : currency == "EUR" ? payload[0].payload.hyringEUR  : null
+              }
+              </span>
             </p>
             <p>
-            Savings : <span className="font-primaryMedium">{payload[0].payload.savings}</span>
+            Savings : <span className="font-primaryMedium">
+              {
+                  currency == "IND" ? payload[0].payload.savingsRupees
+                  : currency == "USD" ? payload[0].payload.savingsUSD 
+                  : currency == "AUSD" ? payload[0].payload.savingsAUSD 
+                  : currency == "EUR" ? payload[0].payload.savingsEUR  : null
+              }
+              </span>
             </p>
            
          
@@ -56,11 +76,11 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData}) {
           <div className="flex justify-between">
             <h2 className="text-lg md:text-2xl basis-[60%] md:basis-[100%] font-primaryMedium">
               Avg. Monthly Salary
-              <span className="text-[#EAA24B]">
+              <span className="text-[#EAA24B] mx-2">
                 {Roles[activeRole].title}
               </span>
             </h2>
-            <DropdownSalaries/>
+            <DropdownSalaries currency={currency} setCurrency={setCurrency}/>
           </div>
          <div className="w-[300px] h-[300px] lg:w-[400px]  xl:w-[700px] lg:h-[350px]">
          <ResponsiveContainer width="100%" height="100%">

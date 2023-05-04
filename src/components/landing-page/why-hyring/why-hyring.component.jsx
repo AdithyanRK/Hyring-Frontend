@@ -8,7 +8,7 @@ import LogoWhySection from "@/assets/icons/landing-page/logo-why-section";
 const WhyHyringComponent = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [hide, setHide] = useState(false);
-  const mHeight = useMotionValue(730);
+  const mHeight = useMotionValue(30);
 
   const handleDrag = React.useCallback((event, info) => {
     let newHeight = mHeight.get() + info.delta.y;

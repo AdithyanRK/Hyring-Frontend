@@ -64,6 +64,7 @@ export default function Index() {
           priority
         />
         <NavbarComponent />
+       
         <div
           data-aos="fade-up"
           data-aos-duration="600"
@@ -93,6 +94,8 @@ export default function Index() {
         >
           <AboutUsNetwork />
         </div>
+
+       
         <FooterComponent />
       </div>
     </>

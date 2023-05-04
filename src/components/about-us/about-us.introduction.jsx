@@ -13,7 +13,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const AboutUsIntroductionComponent = () => {
   return (
-    <div>
+    <div className="max-w-[1800px] mx-auto my-0">
       <div className="flex flex-col items-center gap-6 ">
         <div className="font-primaryBold text-[40px] lg:text-[58px] mt-5  lg:mt-[40px] text-center  ">
           Introducing

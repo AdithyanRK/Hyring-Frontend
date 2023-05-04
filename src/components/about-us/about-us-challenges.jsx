@@ -12,8 +12,8 @@ import React from "react";
 
 const AboutUsChallengesComponent = () => {
   return (
-    <div className="h-full">
-      <div className=" w-[95vw] mx-auto">
+    <div className="h-full max-w-[1800px] mx-auto my-0">
+      <div className=" mx-auto">
         <BoxTheme
           top="8px"
           left="7px"

@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
 import SlotMachine from "/public/Slot_machine.json";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
+
 export default function TalentSection() {
+  const router = useRouter();
   const [play, setPlay] = useState(false);
 
   const { ref, inView, entry } = useInView({
@@ -14,7 +17,7 @@ export default function TalentSection() {
   useEffect(() => {
     if (entry?.isIntersecting) {
       setPlay(true);
-      console.log("RUNNING",play);
+      console.log("RUNNING", play);
     }
   }, [entry?.isIntersecting]);
 
@@ -24,11 +27,11 @@ export default function TalentSection() {
     autoPlay: true,
   };
 
-
   return (
     <div
+      onClick={() => router.push("/why-india")}
       ref={ref}
-      className={`w-screen py-[5vh] md:py-[8vh] flex flex-col gap-8 sm:gap-0 justify-center items-center min-h-[520px]  max-h-screen bg-[url('../../public/bgtheme.svg')] overflow-hidden`}
+      className={`w-screen py-[5vh] md:py-[8vh] flex flex-col gap-8 sm:gap-0 justify-center items-center min-h-[520px]  max-h-screen bg-[url('../../public/bgtheme.svg')] overflow-hidden !cursor-default`}
       id="whyIndia"
     >
       <div
@@ -38,11 +41,12 @@ export default function TalentSection() {
         Why Hire Indian Talents
       </div>
 
-      <div className=" select-none scale-[1.5] xs:scale-[1.4] sm:scale-[1.25] md:scale-[1.1]  h-[70vh]">
+      <div className=" select-none scale-[1.5] xs:scale-[1.4] sm:scale-[1.25] md:scale-[1.1]  h-[70vh] !cursor-default">
         <Lottie options={lottieOptions} isClickToPauseDisabled={true} />
       </div>
       <div
         className="flex justify-center "
+        onClick={() => router.push("/why-india")}
       >
         <KnowMoreButton />
       </div>

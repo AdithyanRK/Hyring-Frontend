@@ -41,7 +41,7 @@ const NavbarComponent = ({ className }) => {
               Why India
             </Link>
             <Link
-              href={"/#pricing"}
+              href={"/pricing"}
               scroll={false}
               className="nav_bar_text_hover"
             >

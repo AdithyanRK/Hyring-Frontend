@@ -61,52 +61,25 @@ export default function Index() {
           quality={100}
           priority
         />
-        
+
         <NavbarComponent />
+
         <div
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-easing="linear"
         >
-       <WhyIndiaHeroSection/>
+          <PricingSection />
         </div>
         <div
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-easing="linear"
         >
-          <WhyIndiaAccordianSection/>
+          <WhyIndiaSalariesSection />
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
-        >
-          <WhyIndiaHubsSection/>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
-        >
-          <WhyIndiaSkillsSection/>
-        </div>
-        {/* <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
-        >
-          <PricingSection/>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="600"
-          data-aos-easing="linear"
-        >
-          <WhyIndiaSalariesSection/>
-        </div> */}
-       
-       <Footer/>
+
+        <Footer />
       </div>
     </>
   );

@@ -49,7 +49,7 @@ export default function WhyIndiaHeroSectionCard() {
           left="7px"
           key={index}
           className={
-            "h-[87px] xs:h-[119px] md:h-[139px] lg:h-[171px]  w-fit  cursor-pointer m-auto"
+            "h-[87px] xs:h-[119px] md:h-[139px] lg:h-[171px]  w-fit  cursor-pointer m-auto hover:scale-110"
           }
           boxStyle={` h-[78px] xs:h-[110px] md:h-[130px] lg:h-[162px] 
                   w-[160px]  xs:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[334px]  !justify-start 

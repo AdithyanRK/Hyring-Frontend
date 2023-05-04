@@ -11,6 +11,8 @@ import BoxTheme from "@/element/landing-page/box-theme/box-theme";
 const AboutUsNetwork = () => {
   return (
     //   <div className="flex justify-center items-center min-w-[600px] w-full h-[400px] mt-20 flex-wrap flex-shrink-0 p-10">
+    <div className="max-w-[1800px] mx-auto my-0">
+
     <BoxTheme
       top="2px"
       left="3px"
@@ -77,6 +79,8 @@ const AboutUsNetwork = () => {
       </div>
       {/* </div> */}
     </BoxTheme>
+    </div>
+
   );
 };
 

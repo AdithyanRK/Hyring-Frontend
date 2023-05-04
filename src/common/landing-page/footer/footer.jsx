@@ -308,15 +308,15 @@ export default function Footer({ className }) {
         </div>
         <div className="basis-[300px] text-center mob-logo pt-0 md:pt-60 lg:pt-5">
           <Logo className="m-auto" />
-          <p className="text-2xl mt-5 mb-10">
+          <p className="text-xl font-primary mt-5 mb-10">
             Meet the new gold standard in contract Hyring
           </p>
           {/* <GetStartedButton boxColor={"bg-primary-orange"} className="mb-5" /> */}
         </div>
-        <div className="flex xl:gap-24 items-start md:items-center md:px-4 gap-x-2 md:gap-x-12 justify-center max-w-fit m-auto pt-6">
+        <div className="flex xl:gap-24 items-start md:items-start md:px-4 gap-x-2 md:gap-x-12 justify-center max-w-fit m-auto pt-6 mt-5">
           <div className="basis-[300px] desk-logo">
             <Logo />
-            <p className="text-2xl mt-5 mb-10">
+            <p className="text-xl font-primary mt-5 mb-10">
               Meet the new gold standard in contract Hyring
             </p>
             {/* <GetStartedButton boxColor={"bg-primary-orange"} /> */}
@@ -350,7 +350,7 @@ export default function Footer({ className }) {
             </p>
             {/* <p className="text-lg font-primary">Cancellation Policy</p> */}
           </div>
-          <div className="desk-soc flex-col gap-y-12 mt-7">
+          <div className="desk-soc flex-col gap-y-12">
             <div className="flex flex-col gap-y-7">
               <h2 className="text-[22px]  ">Social</h2>
               <div className="flex items-center gap-5">

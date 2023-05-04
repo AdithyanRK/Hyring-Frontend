@@ -93,19 +93,19 @@ export default function Footer({ className }) {
               <Avatar
                 className={`${hoverFirst ? "avatar" : ""}`}
                 alt="Remy"
-                src="https://hyring.com/wp-content/uploads/2023/03/emp1-ava.png"
+                src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/avatarone.png"
                 style={{ border: "none" }}
               />
               <Avatar
                 className={`${hoverFirst ? "avatar" : ""}`}
                 alt="Travis"
-                src="https://hyring.com/wp-content/uploads/2023/03/emp2-ava.png"
+                src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/avatartwo.png"
                 style={{ border: "none" }}
               />
               <Avatar
                 className={`${hoverFirst ? "avatar" : ""}`}
                 alt="Cindy"
-                src="https://hyring.com/wp-content/uploads/2023/03/emp3-ava.png"
+                src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/avatarthree.png"
                 style={{ border: "none" }}
               />
             </AvatarGroup>
@@ -149,19 +149,19 @@ export default function Footer({ className }) {
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Remy"
-                src={"https://hyring.com/wp-content/uploads/2023/04/emp3.png"}
+                src={"https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companyone.png"}
                 style={{ border: "none" }}
               />
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Travis"
-                src="https://hyring.com/wp-content/uploads/2023/04/emp2.png"
+                src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companytwo.png"
                 style={{ border: "none" }}
               />
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Cindy"
-                src="https://hyring.com/wp-content/uploads/2023/04/emp1.png"
+                src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companythree.png"
                 style={{ border: "none" }}
               />
             </AvatarGroup>
@@ -208,19 +208,19 @@ export default function Footer({ className }) {
                 <Avatar
                   className={`${hoverFirst ? "avatar" : ""}`}
                   alt="Remy"
-                  src="https://hyring.com/wp-content/uploads/2023/03/emp1-ava.png"
+                  src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/avatarone.png"
                   style={{ border: "none" }}
                 />
                 <Avatar
                   className={`${hoverFirst ? "avatar" : ""}`}
                   alt="Travis"
-                  src="https://hyring.com/wp-content/uploads/2023/03/emp2-ava.png"
+                  src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/avatartwo.png"
                   style={{ border: "none" }}
                 />
                 <Avatar
                   className={`${hoverFirst ? "avatar" : ""}`}
                   alt="Cindy"
-                  src="https://hyring.com/wp-content/uploads/2023/03/emp3-ava.png"
+                  src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/avatarthree.png"
                   style={{ border: "none" }}
                 />
               </AvatarGroup>
@@ -264,19 +264,19 @@ export default function Footer({ className }) {
                 <Avatar
                   className={`${hoverSecond ? "avatar" : ""}`}
                   alt="Remy"
-                  src={"https://hyring.com/wp-content/uploads/2023/04/emp3.png"}
+                  src={"https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companyone.png"}
                   style={{ border: "none" }}
                 />
                 <Avatar
                   className={`${hoverSecond ? "avatar" : ""}`}
                   alt="Travis"
-                  src="https://hyring.com/wp-content/uploads/2023/04/emp2.png"
+                  src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companytwo.png"
                   style={{ border: "none" }}
                 />
                 <Avatar
                   className={`${hoverSecond ? "avatar" : ""}`}
                   alt="Cindy"
-                  src="https://hyring.com/wp-content/uploads/2023/04/emp1.png"
+                  src="https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companythree.png"
                   style={{ border: "none" }}
                 />
               </AvatarGroup>

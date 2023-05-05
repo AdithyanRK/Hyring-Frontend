@@ -64,7 +64,7 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData,curr
   };
   
   return (
-    <div className="w-full h-[76%]  ">
+    <div className="w-full h-[80%]  ">
       <BoxTheme
         top={"7px"}
         left={"5px"}
@@ -82,7 +82,7 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData,curr
             </h2>
             <DropdownSalaries currency={currency} setCurrency={setCurrency}/>
           </div>
-         <div className="w-[300px] h-[300px] lg:w-[400px]  xl:w-[700px] lg:h-[350px]">
+         <div className="w-full mx-auto h-[300px] lg:w-[460px] xl:w-[650px] 2xl:w-[800px] 2xl:h-[380px] xl:h-[350px]">
          <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
@@ -107,8 +107,9 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData,curr
               tickLine={false}
               label={{
                 value: "Avg. Salary (in Lakhs)",
-                offset: 20,
+                offset: 0,
                 position: "bottom",
+                style: { fontFamily: '__whyteMedium_2bf28c' }
               }}
             />
             {/* <YAxis /> */}
@@ -119,7 +120,9 @@ export default function Chart({ activeRole, Roles,hyringData,competitorData,curr
               label={{
                 value: "Salaries Reported",
                 angle: -90,
-                position: "left",
+                offset: 0,
+                position: "Left",
+                style: { fontFamily: '__whyteMedium_2bf28c' }
               }}
             />
             <Tooltip content={<CustomTooltip />} />

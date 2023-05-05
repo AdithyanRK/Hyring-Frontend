@@ -53,7 +53,7 @@ const HomeBannerSection = ({handleOpen}) => {
 
 
   return (
-    <div className="w-[100vw]  mt-3 md:mt-20">
+    <div className="w-[100vw]  mt-3 md:mt-20 ">
       <div className="mx-auto w-[92vw] mb-20">
         <div className="flex flex-col lg:flex-row max-w-[1800px] mx-auto my-0">
           <div className="basis-3/5 ">
@@ -104,8 +104,8 @@ const HomeBannerSection = ({handleOpen}) => {
         </div>
       </div>
 
-     <div className="w-screen    -rotate-3 border border-primary-brown  " >
-        <div className="h-[71px] bg-primary-brown w-full">
+     <div className="w-screen     " >
+        <div className="h-[71px] bg-primary-brown w-[99.2vw] mx-auto -rotate-3 border border-primary-brown ">
           <Slider {...settings1} className="py-5 ">
             {[
               { text: "System Designer", icon: <Union /> },

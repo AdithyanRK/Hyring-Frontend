@@ -4,7 +4,7 @@ import React from "react";
 
 export default function NotesSalraies() {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <BoxTheme
         top={"7px"}
         left={"5px"}

@@ -7,7 +7,7 @@ import React from "react";
 
 export default function FilterSalaries({setHyringData,setCompetitorData,hyringData,competitorData}) {
   return (
-    <div className="w-full h-[18%]  ">
+    <div className="w-full h-[16%]  ">
       <BoxTheme
         top={"7px"}
         left={"5px"}
@@ -15,7 +15,7 @@ export default function FilterSalaries({setHyringData,setCompetitorData,hyringDa
         boxStyle={`w-full h-full !justify-start   border-2 bg-white rounded-[14px] border-primary-brown    `}
         bgBoxStyle={`w-full  rounded-[14px] h-full  bg-primary-brown   `}
       >
-        <div className="p-3 xl:px-8  flex gap-2 lg:gap-4 xl:gap-6 flex-col xs:flex-row">
+        <div className="p-3 lg:px-8  flex gap-2 lg:gap-4 xl:gap-6 flex-col xs:flex-row">
           <div className="flex  items-center gap-4 text-lg md:text-base xl:text-2xl font-primaryBold">
             <FilterIcon />
             Filter :

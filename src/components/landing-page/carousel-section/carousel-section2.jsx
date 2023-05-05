@@ -57,6 +57,7 @@ export default function CarouselSection2() {
     slidesToScroll: 1,
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />,
+    arrows: false,
   };
 
   const settings1 = {

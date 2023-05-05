@@ -34,7 +34,7 @@ export default function ResponsiveNavbar({ isNavOpen, setIsNavOpen }) {
           Why India
         </Link>
         <Link
-          href={"/#pricing"}
+          href={"/pricing"}
           scroll={false}
           onClick={() => {
             setIsNavOpen(false);

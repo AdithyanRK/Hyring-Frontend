@@ -10,7 +10,6 @@ body {
   height: 100%;
 }
 
-
 /* * {
   background: #000 !important;
   color: #0f0 !important;
@@ -380,7 +379,7 @@ html {
 .footer {
   background-image: url("../assets/icons/landing-page/mesh.png");
   background-color: #fff;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 
 .drag-button {
@@ -411,8 +410,8 @@ html {
 .arrow-left {
   margin-right: 10px;
 }
-.copy-sec{
-padding-bottom: 5px;
+.copy-sec {
+  padding-bottom: 5px;
 }
 /* .copy-sec {
   margin-left: 5px;
@@ -479,6 +478,12 @@ padding-bottom: 5px;
   font-family: var(--font-whyte-light);
 }
 
+@media (min-width: 1400px) and (max-width: 1450px) {
+  .footer_adjust {
+    width: 42% !important;
+  }
+}
+
 /* modal */
 
 .modal-video {
@@ -488,8 +493,6 @@ padding-bottom: 5px;
 .modal-video-close-btn {
   top: -33px !important;
 }
-
-
 
 /* Zig-Zag bottom */
 .carousel_zigzag {
@@ -554,7 +557,7 @@ padding-bottom: 5px;
 
   .network_circle_rotate-item-circle {
     position: absolute;
-    left: 28%;
+    left: 34%;
     top: 30%;
   }
   @keyframes spinRight {

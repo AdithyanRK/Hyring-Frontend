@@ -78,8 +78,9 @@ export default function Index() {
         >
           <WhyIndiaSalariesSection />
         </div>
-
-        <Footer />
+        <div className="overflow-hidden">
+          <Footer />
+        </div>
       </div>
     </>
   );

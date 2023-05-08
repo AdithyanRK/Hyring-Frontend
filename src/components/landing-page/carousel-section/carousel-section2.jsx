@@ -90,7 +90,11 @@ export default function CarouselSection2() {
               "Intelligent technology seamlessly combined with personal interaction"
             }
             Svg={<AiSvg />}
-            boxStyleColor={"bg-custom-blue"}
+            // boxStyleColor={"bg-custom-blue"}
+            // starColor1={"fill-custom-yellow"}
+            // starColor2={"fill-custom-green"}
+            // starColor3={"fill-custom-yellow"}
+            boxStyleColor={"bg-custom-yellow"}
             starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-yellow"}
@@ -101,10 +105,10 @@ export default function CarouselSection2() {
               "Find pre-screened, high-quality candidates through HR expertise"
             }
             Svg={<SearchSvg />}
-            boxStyleColor={"bg-custom-red"}
-            starColor1={"fill-custom-red"}
+            boxStyleColor={"bg-custom-green"}
+            starColor1={"fill-custom-blue"}
             starColor2={"fill-custom-yellow"}
-            starColor3={"fill-custom-red"}
+            starColor3={"fill-custom-yellow"}
           />
           <CarouselSectionCard
             text={"Leave Management"}
@@ -119,16 +123,16 @@ export default function CarouselSection2() {
             text={"Employee Management"}
             Svg={<EmployeeManagementSvg />}
             subText={"Streamline workforce organization and coordination"}
-            boxStyleColor={"bg-custom-green"}
-            starColor1={"fill-custom-blue"}
-            starColor2={"fill-custom-yellow"}
+            boxStyleColor={"bg-custom-red"}
+            starColor1={"fill-custom-yellow"}
+            starColor2={"fill-custom-blue"}
             starColor3={"fill-custom-yellow"}
           />
           <CarouselSectionCard
             text={"Monitor Billing"}
             subText={"Track and oversee invoicing and financial transactions"}
             Svg={<BillMonitoring />}
-            boxStyleColor={"bg-custom-yellow"}
+            boxStyleColor={"bg-custom-blue"}
             starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-yellow"}
@@ -137,7 +141,7 @@ export default function CarouselSection2() {
             text={"Contract Tracking"}
             subText={"Manage and stay up-to-date on contractual agreements"}
             Svg={<ContractTracking />}
-            boxStyleColor={"bg-custom-blue"}
+            boxStyleColor={"bg-custom-yellow"}
             starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-yellow"}
@@ -146,8 +150,8 @@ export default function CarouselSection2() {
             text={"Interview Management"}
             subText={"Coordinate and facilitate seamless candidate interviews"}
             Svg={<InterviewManagement />}
-            boxStyleColor={"bg-custom-red"}
-            starColor1={"fill-custom-blue"}
+            boxStyleColor={"bg-custom-green"}
+            starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-blue"}
           />
@@ -164,10 +168,10 @@ export default function CarouselSection2() {
             text={"Cyber Security Management"}
             subText={"Monitor and review employee work hours and productivity"}
             Svg={<CyberSecurity />}
-            boxStyleColor={"bg-custom-green"}
+            boxStyleColor={"bg-custom-red"}
             starColor1={"fill-custom-yellow"}
-            starColor2={"fill-custom-green"}
-            starColor3={"fill-custom-blue"}
+            starColor2={"fill-custom-blue"}
+            starColor3={"fill-custom-yellow"}
           />
           <CarouselSectionCard
             text={"Asset Administration"}
@@ -175,7 +179,7 @@ export default function CarouselSection2() {
               "Effectively manage and maintain company resources and inventory"
             }
             Svg={<Assets />}
-            boxStyleColor={"bg-custom-yellow"}
+            boxStyleColor={"bg-custom-blue"}
             starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-yellow"}
@@ -192,7 +196,7 @@ export default function CarouselSection2() {
           <CarouselSectionTabs
             text={"AI with human touch"}
             index={1}
-            color={1}
+            color={5}
           />
         </div>
         <div
@@ -203,7 +207,7 @@ export default function CarouselSection2() {
           <CarouselSectionTabs
             text={"Discover HR-vetted Candidates"}
             index={2}
-            color={2}
+            color={4}
           />
         </div>
         <div
@@ -221,7 +225,7 @@ export default function CarouselSection2() {
           <CarouselSectionTabs
             text={"Employee Management"}
             index={4}
-            color={4}
+            color={2}
           />
         </div>
         <div
@@ -229,14 +233,14 @@ export default function CarouselSection2() {
             sliderRef.current.slickGoTo(4);
           }}
         >
-          <CarouselSectionTabs text={"Monitor Billing"} index={5} color={5} />
+          <CarouselSectionTabs text={"Monitor Billing"} index={5} color={1} />
         </div>
         <div
           onClick={() => {
             sliderRef.current.slickGoTo(5);
           }}
         >
-          <CarouselSectionTabs text={"Contract Tracking"} index={6} color={1} />
+          <CarouselSectionTabs text={"Contract Tracking"} index={6} color={5} />
         </div>
         <div
           onClick={() => {
@@ -246,7 +250,7 @@ export default function CarouselSection2() {
           <CarouselSectionTabs
             text={"Interview Management"}
             index={7}
-            color={2}
+            color={4}
           />
         </div>
         <div
@@ -268,7 +272,7 @@ export default function CarouselSection2() {
           <CarouselSectionTabs
             text={"Cyber Security Management"}
             index={9}
-            color={4}
+            color={2}
           />
         </div>
         <div
@@ -279,7 +283,7 @@ export default function CarouselSection2() {
           <CarouselSectionTabs
             text={"Asset Administration"}
             index={10}
-            color={5}
+            color={1}
           />
         </div>
       </Slider>

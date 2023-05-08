@@ -45,7 +45,7 @@ const AboutUsIntroductionComponent = () => {
         </p>
       </div>
       <div className="">
-        <div className="flex justify-between  my-10 lg:my-28 ">
+        <div className="flex justify-between  my-10 lg:my-28 md:px-10">
           <div className="relative">
             <div className="absolute -top-32 -right-40 hidden lg:flex">
               <PersonVerified3 />

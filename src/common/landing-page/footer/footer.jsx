@@ -149,7 +149,9 @@ export default function Footer({ className }) {
               <Avatar
                 className={`${hoverSecond ? "avatar" : ""}`}
                 alt="Remy"
-                src={"https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companyone.png"}
+                src={
+                  "https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companyone.png"
+                }
                 style={{ border: "none" }}
               />
               <Avatar
@@ -191,11 +193,11 @@ export default function Footer({ className }) {
           </div>
         </BoxTheme>
       </div>
-      <div className="footer font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-full rounded-[30px] pt-10 mt-10 md:pt-20 max-w-[2000px] pb-2 my-0 md:mt-60">
+      <div className="footer font-primaryMedium w-[95vw] mx-auto border-2 relative border-primary-brown xl:h-[488px] h-full rounded-[30px] pt-10 mt-10 md:pt-20 max-w-[1800px] pb-2 my-0 md:mt-60">
         <div className="hidden md:flex  lg:flex-row flex-col items-center -top-40  absolute z-10 lg:-top-40 left-0 right-0 justify-center gap-5 lg:gap-20   ">
           <BoxTheme
             disableAnimate={true}
-            className={`${className} xl:w-[40%]  cursor-pointer  `}
+            className={`${className} xl:w-[40%] cursor-pointer  footer_adjust`}
             boxStyle={`!item-start !justify-start  border-2 bg-white  border-primary-brown !bg-custom-green  rounded-lg relative w-full`}
             bgBoxStyle={`w-full h-full rounded-lg bg-primary-brown top-[5px] left-[5px]`}
             setHoverFirst={setHoverFirst}
@@ -264,7 +266,9 @@ export default function Footer({ className }) {
                 <Avatar
                   className={`${hoverSecond ? "avatar" : ""}`}
                   alt="Remy"
-                  src={"https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companyone.png"}
+                  src={
+                    "https://hyring.nyc3.cdn.digitaloceanspaces.com/static/companyone.png"
+                  }
                   style={{ border: "none" }}
                 />
                 <Avatar
@@ -308,12 +312,12 @@ export default function Footer({ className }) {
         </div>
         <div className="basis-[300px] text-center mob-logo pt-0 md:pt-60 lg:pt-5">
           <Logo className="m-auto" />
-          <p className="text-xl font-primary mt-5 mb-10">
+          <p className="text-xl font-primary mt-5 mb-0 sm:mb-10">
             Meet the new gold standard in contract Hyring
           </p>
           {/* <GetStartedButton boxColor={"bg-primary-orange"} className="mb-5" /> */}
         </div>
-        <div className="max-w-fit lg:max-w-[1200px] xl:max-w-[1200px] flex xl:gap-24 items-start md:items-start md:px-4 gap-x-2 md:gap-x-12 justify-center m-auto pt-6 mt-5">
+        <div className="max-w-fit lg:max-w-[1200px] xl:max-w-[1200px] 2xl:max-w-[85%] flex xl:gap-24 items-start md:items-start md:px-4 gap-x-2 md:gap-x-12 justify-center m-auto pt-6 mt-0 sm:mt-5 px-6">
           <div className="basis-[300px] desk-logo">
             <Logo />
             <p className="text-xl font-primary mt-5 mb-10">
@@ -389,7 +393,7 @@ export default function Footer({ className }) {
                     <Twitter />
                   </a>
                 </motion.button>
-             </div>
+              </div>
             </div>
             <div className="flex flex-col gap-y-7">
               <h2 className="text-[22px]  ">Subscribe Newsletter</h2>

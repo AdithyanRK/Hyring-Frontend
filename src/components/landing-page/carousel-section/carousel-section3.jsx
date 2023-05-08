@@ -87,15 +87,6 @@ export default function CarouselSection3() {
         <div className="px-0 xxs:px-[40px] md:px-[30px] xs:px-[45px] sm:px-[65px] xxxl:pt-28 py-10 md:pt-8 md:pb-0 lg:py-14">
           <Slider {...settings} ref={sliderRef}>
             <CarouselSectionCard
-              text={"Income Tax"}
-              subText={"Streamline workforce organization and coordination"}
-              Svg={<PercentageSvg />}
-              boxStyleColor={"bg-custom-blue"}
-              starColor1={"fill-custom-yellow"}
-              starColor2={"fill-custom-green"}
-              starColor3={"fill-custom-yellow"}
-            />
-            <CarouselSectionCard
               text={"Employee Provident Fund (EPF)"}
               subText={"Managing EPF contributions and regulations"}
               Svg={<EpfSvg />}
@@ -151,7 +142,9 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Sexual Harassment Prevention"}
-              subText={"Implementing prevention measures and addressing incidents"}
+              subText={
+                "Implementing prevention measures and addressing incidents"
+              }
               Svg={<DangerSvg />}
               boxStyleColor={"bg-custom-violet"}
               starColor1={"fill-custom-blue"}
@@ -180,13 +173,13 @@ export default function CarouselSection3() {
         </div>
 
         <Slider {...settings1} className="py-4 md:py-2 xxxl:pt-20">
-          <div
+          {/* <div
             onClick={() => {
               sliderRef.current.slickGoTo(0);
             }}
           >
             <CarouselSectionTabs text={"Income Tax"} index={1} color={1} />
-          </div>
+          </div> */}
           <div
             onClick={() => {
               sliderRef.current.slickGoTo(1);
@@ -194,7 +187,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Employee Provident Fund (EPF)"}
-              index={2}
+              index={1}
               color={2}
             />
           </div>
@@ -205,7 +198,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Employee State Insurance (ESI)"}
-              index={3}
+              index={2}
               color={3}
             />
           </div>
@@ -216,7 +209,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Professional Tax"}
-              index={4}
+              index={3}
               color={4}
             />
           </div>
@@ -227,7 +220,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Goods and Services Tax (GST)"}
-              index={5}
+              index={4}
               color={5}
             />
           </div>
@@ -238,7 +231,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Tax Deducted at Source (TDS)"}
-              index={6}
+              index={5}
               color={1}
             />
           </div>
@@ -249,7 +242,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Payroll Compliance"}
-              index={7}
+              index={6}
               color={2}
             />
           </div>
@@ -260,7 +253,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Sexual Harassment Prevention"}
-              index={8}
+              index={7}
               color={3}
             />
           </div>
@@ -271,7 +264,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Contract Labour Regulations"}
-              index={9}
+              index={8}
               color={4}
             />
           </div>
@@ -282,7 +275,7 @@ export default function CarouselSection3() {
           >
             <CarouselSectionTabs
               text={"Equal Remuneration"}
-              index={10}
+              index={9}
               color={5}
             />
           </div>

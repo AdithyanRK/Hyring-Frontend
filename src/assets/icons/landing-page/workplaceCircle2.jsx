@@ -4,10 +4,10 @@ function WorkplaceCircleIcon2(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="67"
+      width="83"
       height="82"
       fill="none"
-      viewBox="0 0 67 82"
+      viewBox="0 0 83 82"
       {...props}
     >
       <circle cx="42.257" cy="42.255" r="39.745" fill="#462B34"></circle>

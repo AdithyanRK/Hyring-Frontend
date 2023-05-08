@@ -51,7 +51,7 @@ const AboutUsIntroductionComponent = () => {
               <PersonVerified3 />
             </div>
             <div className="absolute w-14 h-14 -top-8 hidden lg:flex">
-              <PersonVerified2 width="90%" />
+              <PersonVerified2 />
             </div>
           </div>
           <div className="flex scale-[0.9] lg:basis-[65%]  items-center justify-center  ">

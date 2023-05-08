@@ -34,7 +34,7 @@ const WhyHyringComponentMobile = () => {
       text: "Health insurance for employees, spouses, children, and parents",
     },
     { text: "High-config Apple or equivalent Windows laptop" },
-    { text: "Prepaid model for companies" },
+    { text: "Monthly Payments" },
     { text: "Recognised as employee of the contracted company in LinkedIn" },
   ];
 

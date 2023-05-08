@@ -3,7 +3,7 @@ import React from "react";
 
 export default function HomeListComponent({className}) {
   return (
-   <div className={`${className} flex justify-center my-4 lg:max-w-[640px] xl:max-w-[710px] xl3:max-w-[860px]`}>
+   <div className={`${className} flex justify-center my-4 lg:max-w-[640px] xl:max-w-[860px] xl3:max-w-[860px]`}>
      <div className={`sm:grid  sm:grid-cols-2 items-start  `}>
       <div className="">
         <HeroList>AI-Powered Hyring App </HeroList>

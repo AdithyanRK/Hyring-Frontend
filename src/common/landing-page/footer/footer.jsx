@@ -313,7 +313,7 @@ export default function Footer({ className }) {
           </p>
           {/* <GetStartedButton boxColor={"bg-primary-orange"} className="mb-5" /> */}
         </div>
-        <div className="flex xl:gap-24 items-start md:items-start md:px-4 gap-x-2 md:gap-x-12 justify-center max-w-fit m-auto pt-6 mt-5">
+        <div className="max-w-fit lg:max-w-[1200px] xl:max-w-[1200px] flex xl:gap-24 items-start md:items-start md:px-4 gap-x-2 md:gap-x-12 justify-center m-auto pt-6 mt-5">
           <div className="basis-[300px] desk-logo">
             <Logo />
             <p className="text-xl font-primary mt-5 mb-10">
@@ -389,7 +389,7 @@ export default function Footer({ className }) {
                     <Twitter />
                   </a>
                 </motion.button>
-              </div>
+             </div>
             </div>
             <div className="flex flex-col gap-y-7">
               <h2 className="text-[22px]  ">Subscribe Newsletter</h2>
@@ -500,7 +500,7 @@ export default function Footer({ className }) {
           handleClose={handleClose}
         />
         {/* <Toaster setOpenSuccess /> */}
-        <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-3 border-solid xl:mt-8 mt-0 xxs:mt-10 ml-24 mr-24">
+        <div className="copy-sec border-t-[1px] font-primary border-[#593a25] justify-center flex pt-[4px] border-solid xl:mt-8 mt-0 xxs:mt-10 ml-24 mr-24">
           Copyright © {currentYear} Hyring. All rights reserved.
         </div>
       </div>

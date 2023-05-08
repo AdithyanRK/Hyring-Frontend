@@ -11,6 +11,7 @@ export default function CarouselSectionCard({
   starColor1,
   starColor2,
   starColor3,
+  subText
 }) {
   return (
     <BoxTheme
@@ -26,24 +27,27 @@ export default function CarouselSectionCard({
                     rounded-[16px]  bg-primary-brown  `}
     >
       <div className="flex  items-center justify-between w-full gap-1 md:gap-4 p-2 md:p-5">
-        <div className="basis-3/5 ">
-          <div className="relative">
-            <Star2
+        <div className="basis-4/5">
+          <div className="relative flex">
+            {/* <Star2
               className={`scale-[0.45] xs:scale-[0.5] md:scale-[0.8] lg:scale-[1] ${starColor1}`}
             />
             <Star1
               className={`ml-6 -mt-6 md:ml-9 md:-mt-4 scale-[0.45] md:scale-[0.8] lg:scale-[1]  ${starColor2}`}
-            />
-          </div>
-          <div className="text-base xxs:text-xl xs:text-2xl sm:text-3xl md:text-[40px] lg:leading-[50px] lg:text-[46px] font-primary mt-3">
+            /> */}
+              <div className="text-base xxs:text-xl xs:text-2xl sm:text-3xl md:text-[40px] lg:leading-[50px] lg:text-[46px] font-primary mt-3">
             {text}
           </div>
+          </div>
+          <div className="text-base xxs:text-l xs:text-l sm:text-l md:text-[20px] lg:leading-[35px] lg:text-[24px] font-primary mt-3">
+            {subText}
+          </div>
+        
         </div>
         <div className="basis-2/5">
           <div className="relative flex items-center  justify-center scale-[0.35] md:scale-[0.6] lg:scale-[1] ">
             <MeshSvg className="absolute z-[10]" />
             <div className="absolute z-[20]">{Svg}</div>
-
             <Star2
               className={`absolute z-[30]  top-[70px] -left-[70px] lg:top-[80px] lg:left-[0px] fill-custom-red animate-scaleIn`}
             />

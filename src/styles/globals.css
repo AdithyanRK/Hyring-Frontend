@@ -363,6 +363,7 @@ html {
 .footer {
   background-image: url("../assets/icons/landing-page/mesh.png");
   background-color: #fff;
+  margin-bottom:40px;
 }
 
 .drag-button {
@@ -392,6 +393,9 @@ html {
 }
 .arrow-left {
   margin-right: 10px;
+}
+.copy-sec{
+padding-bottom: 5px;
 }
 /* .copy-sec {
   margin-left: 5px;

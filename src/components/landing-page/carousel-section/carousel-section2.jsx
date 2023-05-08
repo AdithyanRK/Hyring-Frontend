@@ -85,7 +85,10 @@ export default function CarouselSection2() {
       <div className="px-0 xxs:px-[40px] md:px-[30px] xs:px-[45px] sm:px-[65px] xxxl:pt-28 py-10 md:pt-8 md:pb-0 lg:py-14">
         <Slider {...settings} ref={sliderRef}>
           <CarouselSectionCard
-            text={"AI-powered with human touch"}
+            text={"AI with human touch"}
+            subText={
+              "Intelligent technology seamlessly combined with personal interaction"
+            }
             Svg={<AiSvg />}
             boxStyleColor={"bg-custom-blue"}
             starColor1={"fill-custom-yellow"}
@@ -94,6 +97,9 @@ export default function CarouselSection2() {
           />
           <CarouselSectionCard
             text={"Discover HR-vetted Candidates"}
+            subText={
+              "Find pre-screened, high-quality candidates through HR expertise"
+            }
             Svg={<SearchSvg />}
             boxStyleColor={"bg-custom-red"}
             starColor1={"fill-custom-red"}
@@ -104,6 +110,7 @@ export default function CarouselSection2() {
             text={"Leave Management"}
             Svg={<CalendarSvg />}
             boxStyleColor={"bg-custom-violet"}
+            subText={"Efficiently track and manage employee time-off requests"}
             starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
             starColor3={"fill-custom-red"}
@@ -111,6 +118,7 @@ export default function CarouselSection2() {
           <CarouselSectionCard
             text={"Employee Management"}
             Svg={<EmployeeManagementSvg />}
+            subText={"Streamline workforce organization and coordination"}
             boxStyleColor={"bg-custom-green"}
             starColor1={"fill-custom-blue"}
             starColor2={"fill-custom-yellow"}
@@ -118,6 +126,7 @@ export default function CarouselSection2() {
           />
           <CarouselSectionCard
             text={"Monitor Billing"}
+            subText={"Track and oversee invoicing and financial transactions"}
             Svg={<BillMonitoring />}
             boxStyleColor={"bg-custom-yellow"}
             starColor1={"fill-custom-yellow"}
@@ -126,6 +135,7 @@ export default function CarouselSection2() {
           />
           <CarouselSectionCard
             text={"Contract Tracking"}
+            subText={"Manage and stay up-to-date on contractual agreements"}
             Svg={<ContractTracking />}
             boxStyleColor={"bg-custom-blue"}
             starColor1={"fill-custom-yellow"}
@@ -134,6 +144,7 @@ export default function CarouselSection2() {
           />
           <CarouselSectionCard
             text={"Interview Management"}
+            subText={"Coordinate and facilitate seamless candidate interviews"}
             Svg={<InterviewManagement />}
             boxStyleColor={"bg-custom-red"}
             starColor1={"fill-custom-blue"}
@@ -142,6 +153,7 @@ export default function CarouselSection2() {
           />
           <CarouselSectionCard
             text={"Timesheet Supervision"}
+            subText={"Monitor and review employee work hours and productivity"}
             Svg={<TimeSheet />}
             boxStyleColor={"bg-custom-violet"}
             starColor1={"fill-custom-blue"}
@@ -150,6 +162,7 @@ export default function CarouselSection2() {
           />
           <CarouselSectionCard
             text={"Cyber Security Management"}
+            subText={"Monitor and review employee work hours and productivity"}
             Svg={<CyberSecurity />}
             boxStyleColor={"bg-custom-green"}
             starColor1={"fill-custom-yellow"}
@@ -158,6 +171,9 @@ export default function CarouselSection2() {
           />
           <CarouselSectionCard
             text={"Asset Administration"}
+            subText={
+              "Effectively manage and maintain company resources and inventory"
+            }
             Svg={<Assets />}
             boxStyleColor={"bg-custom-yellow"}
             starColor1={"fill-custom-yellow"}
@@ -174,7 +190,7 @@ export default function CarouselSection2() {
           }}
         >
           <CarouselSectionTabs
-            text={"AI-powered with human touch"}
+            text={"AI with human touch"}
             index={1}
             color={1}
           />

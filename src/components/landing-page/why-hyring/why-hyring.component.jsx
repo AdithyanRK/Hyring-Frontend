@@ -58,7 +58,7 @@ const WhyHyringComponent = () => {
       text: "No-compromise health insurance for employees, spouses, children, and parents",
     },
     { text: "High-config Apple or equivalent Windows laptop" },
-    { text: "Prepaid model for companies" },
+    { text: "Monthly payments" },
     { text: "Recognised as employee of the contracted company in LinkedIn" },
   ];
 

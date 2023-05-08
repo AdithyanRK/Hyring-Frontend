@@ -12,26 +12,26 @@ import React from "react";
 
 const AboutUsChallengesComponent = () => {
   return (
-    <div className="h-full max-w-[1800px] mx-auto my-0">
+    <div className="h-full max-w-[1400px] mx-auto my-0">
       <div className=" mx-auto">
         <BoxTheme
           top="8px"
           left="7px"
-          className={` w-full`}
-          boxStyle={`w-full !justify-start  bg-white   rounded-[9px]  `}
+          className={`w-ful`}
+          boxStyle={`border-3  w-full !justify-start  bg-white   rounded-[9px] border-primary-brown`}
           bgBoxStyle={
             "w-full h-full lg:h-full  rounded-[9px] bg-primary-brown border-3 border-white"
           }
           isButton={false}
         >
           <div className="p-5 md:p-10 w-full">
-            <div className="flex flex-wrap-reverse gap-2 justify-between items-center ">
+            <div className="px-0 flex-wrap-reverse md:px-20 md:flex-nowrap flex  gap-2 justify-between items-center  ">
               <div className="flex flex-col gap-2">
                 <div className="text-3xl md:text-5xl flex flex-col   font-primaryBold">
                   <h2>Challenges in</h2>
                   <h2 className="whitespace-nowrap">Staff Augmentation</h2>
                 </div>
-                <p className="font-[400] text-md md:text-xl  font-primaryLight lg:w-9/12 ">
+                <p className="font-[400] text-md md:text-xl  font-primaryLight lg:w-9/12 mt-5 ">
                   Despite the widespread adoption of staff augmentation models,
                   many businesses have encountered obstacles such as
                 </p>
@@ -40,7 +40,7 @@ const AboutUsChallengesComponent = () => {
                 <ExclamationBadge />
               </div>
             </div>
-            <div className="border w-full my-10 border-[#000000] " />
+            <div className="border w-full my-10 border-[#000000] max-w-[1150px] mx-auto" />
             <div className=" grid grid-cols-fluid sm:justify-items-center w-full ">
               <div>
                 <div>
@@ -55,8 +55,8 @@ const AboutUsChallengesComponent = () => {
                 <div>
                   <ChallengesIcon1 />
                   <div className="flex flex-row sm:flex-col  gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
-                    <h3 className=" whitespace-nowrap  ">High-Commission</h3>
-                    <h3 className=" ">Agencies</h3>
+                    <h3 className=" whitespace-nowrap  ">Hefty</h3>
+                    <h3 className=" ">Commission</h3>
                   </div>
                 </div>
               </div>
@@ -73,8 +73,8 @@ const AboutUsChallengesComponent = () => {
                 <div>
                   <ChallengesIcon3 />
                   <div className="flex flex-row sm:flex-col gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
-                    <h3 className="  ">Inadequate</h3>
-                    <h3 className=" whitespace-nowrap ">Employee Portals</h3>
+                    <h3 className="  ">Outdated</h3>
+                    <h3 className=" whitespace-nowrap ">Portals</h3>
                   </div>
                 </div>
               </div>
@@ -114,10 +114,10 @@ const AboutUsChallengesComponent = () => {
                     </div>
                   </div>
                 </div>
-                <div className="font-primaryBold text-center text-2xl md:text-left md:text-3xl  md:w-1/2  ">
+                <div className="font-primary text-center text-2xl md:text-left md:text-3xl  md:w-1/2  ">
                   <h2>
                     With Hyring, you can focus on your core business while we
-                    expertly manage your hiring process.
+                    expertly manage your contract employees.
                   </h2>
                 </div>
               </div>

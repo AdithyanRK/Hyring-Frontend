@@ -10,8 +10,7 @@ const AboutUsHyringDifference = () => {
   };
 
   return (
-    <div className="max-w-[1800px] mx-auto my-0">
-
+    <div className="max-w-[1400px] mx-auto my-0">
     <div className="flex flex-wrap flex-col md:flex-row md:flex-nowrap w-full min-h-[40vh] font-primary">
       <div className="flex-1 bg-[#462B34] text-[#FAFAFA] p-5 md:p-14 flex justify-center md:justify-start items-center flex-col xl:justify-center min-h-[250px]">
         <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl mb-5 text-left">
@@ -53,7 +52,7 @@ const AboutUsHyringDifference = () => {
             className="text-md md:text-lg lg:text-xl xl:text-2xl tick_lottie_text_opacity"
             style={{ "--d": "2s" }}
           >
-            Straightforward contracts
+            Straight forward contracts
           </p>
           <p
             className="text-md md:text-lg lg:text-xl xl:text-2xl tick_lottie_text_opacity"

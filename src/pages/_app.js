@@ -19,7 +19,7 @@ import "aos/dist/aos.css";
 
 //GTM
 
-import TagManager from 'react-gtm-module';
+import TagManager from "react-gtm-module";
 
 // font declaration
 const whyteRegular = localFont({
@@ -51,15 +51,14 @@ const App = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   const tagManagerArgs = {
-    gtmId: 'GTM-PBRH79L'
-  }
+    gtmId: "GTM-PBRH79L",
+  };
 
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-    TagManager.initialize(tagManagerArgs)
+    TagManager.initialize(tagManagerArgs);
   }, []);
-  
 
   return (
     <CacheProvider value={emotionCache}>

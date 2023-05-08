@@ -88,6 +88,7 @@ export default function CarouselSection3() {
           <Slider {...settings} ref={sliderRef}>
             <CarouselSectionCard
               text={"Income Tax"}
+              subText={"Streamline workforce organization and coordination"}
               Svg={<PercentageSvg />}
               boxStyleColor={"bg-custom-blue"}
               starColor1={"fill-custom-yellow"}
@@ -96,6 +97,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Employee Provident Fund (EPF)"}
+              subText={"Managing EPF contributions and regulations"}
               Svg={<EpfSvg />}
               boxStyleColor={"bg-custom-red"}
               starColor1={"fill-custom-red"}
@@ -104,6 +106,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Employee State Insurance (ESI)"}
+              subText={"Overseeing ESI coverage and related obligations"}
               Svg={<EsiSvg />}
               boxStyleColor={"bg-custom-violet"}
               starColor1={"fill-custom-yellow"}
@@ -112,6 +115,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Professional Tax"}
+              subText={"Handling professional tax requirements and filings"}
               Svg={<ProfessionalTax />}
               boxStyleColor={"bg-custom-green"}
               starColor1={"fill-custom-blue"}
@@ -120,6 +124,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Goods and Services Tax (GST)"}
+              subText={"Maintaining compliance with GST regulations"}
               Svg={<GstSvg />}
               boxStyleColor={"bg-custom-yellow"}
               starColor1={"fill-custom-yellow"}
@@ -128,6 +133,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Tax Deducted at Source (TDS)"}
+              subText={"Safeguarding TDS adherence and proper deductions"}
               Svg={<TdsSvg />}
               boxStyleColor={"bg-custom-blue"}
               starColor1={"fill-custom-yellow"}
@@ -136,6 +142,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Payroll Compliance"}
+              subText={" Upholding payroll standards and legal requirements"}
               Svg={<PayrollSvg />}
               boxStyleColor={"bg-custom-red"}
               starColor1={"fill-custom-blue"}
@@ -144,6 +151,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Sexual Harassment Prevention"}
+              subText={"Implementing prevention measures and addressing incidents"}
               Svg={<DangerSvg />}
               boxStyleColor={"bg-custom-violet"}
               starColor1={"fill-custom-blue"}
@@ -152,6 +160,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Contract Labour Regulations"}
+              subText={"Administering regulations for contract workers"}
               Svg={<LabourSvg />}
               boxStyleColor={"bg-custom-green"}
               starColor1={"fill-custom-yellow"}
@@ -160,6 +169,7 @@ export default function CarouselSection3() {
             />
             <CarouselSectionCard
               text={"Equal Remuneration"}
+              subText={"Ensuring fair pay practices and equal compensation"}
               Svg={<MoneySvg />}
               boxStyleColor={"bg-custom-yellow"}
               starColor1={"fill-custom-yellow"}

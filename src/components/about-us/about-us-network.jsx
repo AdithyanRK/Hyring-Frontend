@@ -23,7 +23,7 @@ const AboutUsNetwork = () => {
         "min-w-[200px] w-[100.8%] h-[100.8%] md:h-[510px] rounded-[44px]  bg-primary-brown"
       }
     >
-      <div className="relative">
+      <div className="relative pl-0 md:pl-8">
         <div className="network_circle_rotate ">
           <div
             className="network_circle_rotate-item scale-75"
@@ -74,7 +74,7 @@ const AboutUsNetwork = () => {
           Work with consolidated top 5% of talent pool of over{" "}
           <span className="font-primaryMedium">500,000 </span>
           professionals, including designers, developers, marketers, analysts,
-          data scientists, and cybersecurity experts.
+          data scientists, testers and cybersecurity experts.
         </p>
       </div>
       {/* </div> */}

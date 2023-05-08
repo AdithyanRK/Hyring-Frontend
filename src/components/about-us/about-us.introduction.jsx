@@ -11,6 +11,7 @@ import WorkplaceCircleIcon2 from "@/assets/icons/landing-page/workplaceCircle2";
 import WorkplaceCircleIcon3 from "@/assets/icons/landing-page/workplaceCircle3";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const AboutUsIntroductionComponent = () => {
   return (
     <div className="max-w-[1800px] mx-auto my-0">
@@ -25,18 +26,19 @@ const AboutUsIntroductionComponent = () => {
           </p>
         </div>
         <p className="font-primaryLight text-[18px] font-semibold lg:font-normal lg:text-[28px] w-[95vw] md:w-3/5 text-center">
-          Hyring is revolutionizing the IT staff augmentation industry by
-          harnessing the power of AI to connect the Top 5% of Indian talent with
-          world-class companies around the globe.
+          <Link href="/">Hyring </Link>
+           is revolutionizing the <b>IT staff augmentation</b> industry by
+          harnessing the power of AI to connect the <b>Top 5% of Indian talent</b> with<b className="pl-[6px]">world-class companies</b> around the globe.
         </p>
         <p className="font-primaryLight text-[18px] font-semibold  lg:font-normal lg:text-[28px] w-[95vw] md:w-3/5 text-center ">
           Born amid the pandemic, Hyring’s journey began when the demand for IT
-          resources surged exponentially. Leveraging a decade of staff
-          augmentation experience from Domaincer, our IT firm, we were able to
+          resources surged exponentially. Leveraging a <b>decade of staff
+          augmentation experience</b> from <Link href="https://domaincer.com/" target="_">Domaincer</Link>, our IT firm, we were able to
           swiftly match hundreds of skilled developers with rapidly growing
           companies and innovative startups within just one year.
         </p>
       </div>
+      <div className="">
       <div className="flex justify-between  my-10 lg:my-28 ">
         <div className="relative">
           <div className="absolute -top-32 -right-40 hidden lg:flex">
@@ -91,6 +93,8 @@ const AboutUsIntroductionComponent = () => {
           </div>
         </div>
       </div>
+      </div>
+      
     </div>
   );
 };

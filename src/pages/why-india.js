@@ -13,27 +13,27 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>Contact Hyring | India’s leading Contract-to-hire portal</title>
+        <title>Why India | India’s leading Contract-to-hire portal</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta
           name="title"
-          content="Contact Hyring | India’s leading Contract-to-hire portal"
+          content="Why India | India’s leading Contract-to-hire portal"
         />
         <meta
           name="description"
-          content="Contact Hyring | India’s leading Contract-to-hire portal"
+          content="Why India | India’s leading Contract-to-hire portal"
         />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hyring.com/" />
         <meta
           property="og:title"
-          content="Contact Hyring | India’s leading Contract-to-hire portal"
+          content="Why India | India’s leading Contract-to-hire portal"
         />
         <meta
           property="og:description"
-          content="Contact Hyring | India’s leading Contract-to-hire portal"
+          content="Why India | India’s leading Contract-to-hire portal"
         />
         <meta
           property="og:image"
@@ -43,7 +43,7 @@ export default function Index() {
         <meta property="twitter:url" content="https://hyring.com/" />
         <meta
           property="twitter:title"
-          content="Contact Hyring | India’s leading Contract-to-hire portal"
+          content="Why India | India’s leading Contract-to-hire portal"
         />
         <meta property="twitter:description" content="" />
         <meta

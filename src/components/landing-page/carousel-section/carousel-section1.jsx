@@ -85,6 +85,7 @@ export default function CarouselSection1() {
           <CarouselSectionCard
             text={"Apple Laptop Benefits"}
             Svg={<MackBookSvg />}
+            subText={'MacBook for most employees post probationary period'}
             boxStyleColor={"bg-custom-blue"}
             starColor1={"fill-custom-yellow"}
             starColor2={"fill-custom-green"}
@@ -92,6 +93,7 @@ export default function CarouselSection1() {
           />
           <CarouselSectionCard
             text={"Luxurious Retreat Parties"}
+            subText={'Featuring team building activities, entertainment, food & drinks'}
             Svg={<RetreatSvg />}
             boxStyleColor={"bg-custom-red"}
             starColor1={"fill-custom-red"}
@@ -100,6 +102,7 @@ export default function CarouselSection1() {
           />
           <CarouselSectionCard
             text={"Monthly Gold Coin Awards"}
+            subText={'For the extra-milers and top performers on the team'}
             Svg={<RewardSvg />}
             boxStyleColor={"bg-custom-violet"}
             starColor1={"fill-custom-yellow"}
@@ -108,6 +111,7 @@ export default function CarouselSection1() {
           />
           <CarouselSectionCard
             text={"Substantial Annual Bonuses"}
+            subText={'Significant performance-based incentives for employees'}
             Svg={<BonusSvg />}
             boxStyleColor={"bg-custom-green"}
             starColor1={"fill-custom-blue"}
@@ -115,7 +119,8 @@ export default function CarouselSection1() {
             starColor3={"fill-custom-yellow"}
           />
           <CarouselSectionCard
-            text={"Health Insurance Covering Self, Spouse, Children & Parents"}
+            text={"Health Insurance"}
+            subText={'Not only for you, but also for your spouse, children, & parents too!'}
             Svg={<AwardWithCheckSvg />}
             boxStyleColor={"bg-custom-yellow"}
             starColor1={"fill-custom-yellow"}
@@ -124,6 +129,7 @@ export default function CarouselSection1() {
           />
           <CarouselSectionCard
             text={"Grand Diwali Presents"}
+            subText={'Embrace the festive spirit with special Diwali gifts'}
             Svg={<GiftSvg />}
             boxStyleColor={"bg-custom-blue"}
             starColor1={"fill-custom-yellow"}
@@ -132,6 +138,7 @@ export default function CarouselSection1() {
           />
           <CarouselSectionCard
             text={"Flexible 4/5-Day Work Week"}
+            subText={'Based on the client, a 4 or 5-day work setup will be planned'}
             Svg={<FlexibleSvg />}
             boxStyleColor={"bg-custom-red"}
             starColor1={"fill-custom-blue"}
@@ -140,6 +147,7 @@ export default function CarouselSection1() {
           />
           <CarouselSectionCard
             text={"Trendy Offices Located Across India"}
+            subText={'With tie-ups around the nation, work from the comfort of an office'}
             Svg={<OfficeSvg />}
             boxStyleColor={"bg-custom-violet"}
             starColor1={"fill-custom-blue"}
@@ -148,6 +156,7 @@ export default function CarouselSection1() {
           />
           <CarouselSectionCard
             text={"Exclusive Co-Branded Merchandise"}
+            subText={'Merchandise throughout the year from t-shirts to AirPods'}
             Svg={<MerchandiseSvg />}
             boxStyleColor={"bg-custom-green"}
             starColor1={"fill-custom-yellow"}

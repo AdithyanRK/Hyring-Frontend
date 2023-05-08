@@ -18,9 +18,9 @@ export default function CarouselSectionMobileCard({
       left="7px"
       className={" h-[280px] md:h-[270px] lg:h-[330px]   xl3:h-[370px] xl4:h-[445px]     w-fit  cursor-pointer m-auto"}
       boxStyle={` h-[240px] md:h-[240px] lg:h-[300px]  xl3:h-[340px] xl4:h-[415px]
-                  w-[290px] xs:w-[340px] sm:w-[400px] md:w-[340px] lg:w-[500px] xl3:w-[610px] xl3:w-[650px] !justify-start
+                  w-[290px] xs:w-[340px] sm:w-[400px] md:w-[340px] lg:w-[500px] xl3:w-[610px] xl4:w-[650px] !justify-start
                    border-2 ${boxStyleColor} rounded-[16px] border-primary-brown`}
-      bgBoxStyle={`w-[290px] xs:w-[340px] sm:w-[400px] md:w-[340px] lg:w-[500px] xl3:w-[610px] xl3:w-[650px]
+      bgBoxStyle={`w-[290px] xs:w-[340px] sm:w-[400px] md:w-[340px] lg:w-[500px] xl3:w-[610px] xl4:w-[650px]
                     h-[240px] md:h-[240px] lg:h-[300px] xl3:h-[340px]  xl4:h-[415px]
                     rounded-[16px]  bg-primary-brown  `}
     >

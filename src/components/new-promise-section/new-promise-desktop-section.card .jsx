@@ -77,7 +77,7 @@ const NewPromiseDesktopSection = () => {
              ${
                 activeSlide === 0 &&  index === 0 ? "font-primaryBold" :  activeSlide ===1 && index === 1  ? "font-primaryBold" : activeSlide ===2 && index === 2  ? "font-primaryBold" :activeSlide ===3 && index === 3  ? "font-primaryBold" : ""
               }
-          hidden md:block  text-left mt-0.5 lg:mt-1.5 xl3:mt-3.5 transition duration-1000 font-primary text-lg xl:text-xl xl3:text-2xl`}
+          hidden whitespace-nowrap md:block  text-left mt-1.5 lg:mt-3 xl3:mt-3.5 xl4:mt-5 transition duration-1000 font-primary text-base lg:text-lg xl:text-xl xl3:text-2xl `}
           >
             {values[index].header}
           </div>
@@ -92,9 +92,9 @@ const NewPromiseDesktopSection = () => {
  
   
   return (
-    <div className="w-screen  flex justify-center  md:-translate-x-[22%] xl:-translate-x-[18%]">
-      <div className=" md:max-w-[400px] lg:max-w-[900px] !h-[300px] ">
-        <Slider {...settings} ref={sliderRef} className=" " >
+    <div className="w-screen  flex justify-center   md:-translate-x-[24%] lg:-translate-x-[22%] xl:-translate-x-[18%]">
+      <div className=" md:max-w-[400px] lg:max-w-[700px] xl:max-w-[700px] xl3:max-w-[800px] !h-[300px] ">
+        <Slider {...settings} ref={sliderRef} >
           <CarouselSectionMobileCard
             text={"Explore Indian Talents"}
             content="Uncover top-notch skilled professionals from India."

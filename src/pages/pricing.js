@@ -71,13 +71,13 @@ export default function Index() {
         >
           <PricingSection />
         </div>
-        {/* <div
+        <div
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-easing="linear"
         >
           <WhyIndiaSalariesSection />
-        </div> */}
+        </div>
 
         <Footer />
       </div>

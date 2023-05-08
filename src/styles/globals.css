@@ -82,7 +82,7 @@ html {
 @media screen and (min-width: 1024px) {
   .slick-dots {
     top: -400px !important;
-    left: 75vw !important;
+    left: 60vw !important;
   }
   .slick-dots li {
     width: 380px !important;
@@ -91,7 +91,7 @@ html {
 }
 @media screen and (min-width: 1150px) {
   .slick-dots {
-    left: 95% !important;
+    left: 100% !important;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -118,6 +118,23 @@ html {
     margin-top: 100px !important;
   }
 }
+
+.navLink:hover p span{
+  display: block;
+}
+#navLink:hover path {
+  animation: draw 500ms linear forwards ;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 535;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 /* contact page hover effect  */
 .contact-tab {
   overflow: hidden;

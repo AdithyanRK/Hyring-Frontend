@@ -4,10 +4,11 @@ import SignUpButton from "@/element/landing-page/button/sign-up-button";
 import Link from "next/link";
 import React, { useState } from "react";
 import ResponsiveNavbar from "./responsive-nav-component";
+import TextMark from "@/assets/icons/landing-page/text-mark";
+import NavTextMark from "@/assets/icons/landing-page/nav-text-mark";
 
 const NavbarComponent = ({ className }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-
   return (
     <div className="pt-[14px]">
       <BoxTheme
@@ -19,40 +20,63 @@ const NavbarComponent = ({ className }) => {
           "w-full h-[63px] md:h-[93px] rounded-[10px] bg-primary-brown "
         }
       >
-        <div className="flex justify-between  px-5 lg:px-10 items-center font-primaryMedium w-full text-lg lg:text-xl     ">
+        <div className="flex justify-between  px-5 lg:px-10 items-center font-primaryMedium w-full text-[17px] lg:text-xl     ">
           <div className="scale-[0.6] md:scale-[0.8] lg:scale-[1] -ml-7 lg:-ml-0">
             <Link href={"/"} scroll={false}>
               <Logo />
             </Link>
           </div>
-          <div className="md:flex gap-10 items-center hidden">
+          <div className="md:flex gap-8 lg:gap-10 xl3:gap-16 xl4:gap-20 items-center hidden">
             <Link
               href={"/about-us"}
               scroll={false}
-              className="nav_bar_text_hover"
+              className="navLink"
             >
-              About Us
+             <p className="relative inline-block">
+                <span className="absolute   -left-[14px] -top-4 lg:-left-1  scale-[0.85] lg:scale-[1.1]  ">
+                  <NavTextMark />
+                </span>
+                About Us
+              </p>
             </Link>
             <Link
               href={"/why-india"}
               scroll={false}
-              className="nav_bar_text_hover"
+              className="navLink"
             >
-              Why India
+               <p className="relative inline-block ">
+                <span className="absolute   -left-[14px] -top-4 lg:-left-1  scale-[0.95] lg:scale-[1.1]  ">
+                  <NavTextMark />
+                </span>
+                Why India
+              </p>
+              
             </Link>
             <Link
               href={"/pricing"}
               scroll={false}
-              className="nav_bar_text_hover"
+              className="navLink"
             >
-              Pricing
+              <p className="relative inline-block ">
+                <span className="absolute   -left-[22px] -top-4 lg:-left-[18px]  scale-[0.8] lg:scale-[1]  ">
+                  <NavTextMark />
+                </span>
+                Pricing
+              </p>
+             
             </Link>
             <Link
               href={"/contact-us"}
               scroll={false}
-              className="nav_bar_text_hover"
+              className="navLink"
             >
-              Contact Us
+               <p className="relative inline-block ">
+                <span className="absolute   -left-[8px] -top-4 lg:left-[2px]  scale-[1.05] lg:scale-[1.2]  ">
+                  <NavTextMark />
+                </span>
+                Contact Us
+              </p>
+              
             </Link>
           </div>
           <div className="md:flex gap-1 md:gap-6 items-center hidden">

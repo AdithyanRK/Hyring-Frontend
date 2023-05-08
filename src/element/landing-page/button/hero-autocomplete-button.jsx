@@ -35,7 +35,7 @@ export default function HeroAutocompleteButton({ className }) {
   const handleInputChange = (event, newInputValue) => {
       setInputValue(newInputValue);
   
-      if (newInputValue.length >= 2) {
+      if (newInputValue.length >= 3) {
           // Fetch suggestions from API or set options 
           setOptions(object);
           if(focus){
@@ -648,6 +648,7 @@ export default function HeroAutocompleteButton({ className }) {
                   fontFamily: "inherit",
                   fontSize:"inherit",
                   lineHeight:"2rem",
+                  textOverflow: "ellipsis",
 
                 },
                 "& .MuiOutlinedInput-notchedOutline": { display: "none" },

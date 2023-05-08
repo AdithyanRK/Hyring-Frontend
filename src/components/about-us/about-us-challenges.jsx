@@ -9,22 +9,26 @@ import HyringLogoCircle from "@/assets/icons/landing-page/hyringLogoCircle";
 import LocationIcon from "@/assets/icons/landing-page/location";
 import BoxTheme from "@/element/landing-page/box-theme/box-theme";
 import React from "react";
+import { useState } from "react";
 
 const AboutUsChallengesComponent = () => {
+  const [hoverChange, setHoverChange] = useState(false);
   return (
-    <div className="h-full max-w-[1400px] mx-auto my-0">
-      <div className=" mx-auto">
+    <div className="h-full max-w-[1400px] mx-auto  my-0">
+      <div className="px-5 mx-auto">
         <BoxTheme
           top="8px"
-          left="7px"
-          className={`w-ful`}
-          boxStyle={`border-3  w-full !justify-start  bg-white   rounded-[9px] border-primary-brown`}
-          bgBoxStyle={
-            "w-full h-full lg:h-full  rounded-[9px] bg-primary-brown border-3 border-white"
-          }
+          left="10px"
+          className={`w-full border rounded-[9px] border-primary-brown `}
+          boxStyle={`border-3   w-full !justify-start  bg-white   rounded-[9px] border-primary-brown`}
+          bgBoxStyle={`w-full h-full lg:h-full  rounded-[9px] bg-primary-brown border-3 border-white`}
           isButton={false}
         >
-          <div className="p-5 md:p-10 w-full">
+          <div
+            className="p-5 md:p-10 w-full"
+            onMouseEnter={() => setHoverChange(true)}
+            onMouseLeave={() => setHoverChange(false)}
+          >
             <div className="px-0 flex-wrap-reverse md:px-20 md:flex-nowrap flex  gap-2 justify-between items-center  ">
               <div className="flex flex-col gap-2">
                 <div className="text-3xl md:text-5xl flex flex-col   font-primaryBold">
@@ -41,19 +45,19 @@ const AboutUsChallengesComponent = () => {
               </div>
             </div>
             <div className="border w-full my-10 border-[#000000] max-w-[1150px] mx-auto" />
-            <div className=" grid grid-cols-fluid sm:justify-items-center w-full ">
+            <div className=" grid grid-cols-fluid  sm:justify-items-center w-full ">
               <div>
                 <div>
-                  <ChallengesIcon4 />
-                  <div className="flex flex-row sm:flex-col gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
+                  <ChallengesIcon4  className="hover:fill-primary-brown"/>
+                  <div className="flex flex-row  sm:flex-col gap-2 my-2 w-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className="  ">Subpar</h3>
                     <h3 className=" ">Developers</h3>
                   </div>
                 </div>
               </div>
               <div>
-                <div>
-                  <ChallengesIcon1 />
+                <div >
+                  <ChallengesIcon1 className="hover:fill-primary-brown"  />
                   <div className="flex flex-row sm:flex-col  gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className=" whitespace-nowrap  ">Hefty</h3>
                     <h3 className=" ">Commission</h3>
@@ -62,7 +66,7 @@ const AboutUsChallengesComponent = () => {
               </div>
               <div>
                 <div>
-                  <ChallengesIcon2 />
+                  <ChallengesIcon2 className="hover:fill-primary-brown" />
                   <div className="flex flex-row sm:flex-col gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className="  ">Ambiguous</h3>
                     <h3 className=" ">Contracts</h3>
@@ -71,7 +75,7 @@ const AboutUsChallengesComponent = () => {
               </div>
               <div>
                 <div>
-                  <ChallengesIcon3 />
+                  <ChallengesIcon3 className="hover:fill-primary-brown" />
                   <div className="flex flex-row sm:flex-col gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className="  ">Outdated</h3>
                     <h3 className=" whitespace-nowrap ">Portals</h3>

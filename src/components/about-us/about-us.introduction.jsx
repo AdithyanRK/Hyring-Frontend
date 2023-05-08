@@ -25,76 +25,81 @@ const AboutUsIntroductionComponent = () => {
             Hyring
           </p>
         </div>
-        <p className="font-primaryLight text-[18px] font-semibold lg:font-normal lg:text-[28px] w-[95vw] md:w-3/5 text-center">
+        <p className="font-primaryLight text-[18px] font-[500] lg:font-normal lg:text-[28px] w-[95vw] md:w-3/5 text-center">
           <Link href="/">Hyring </Link>
-           is revolutionizing the <b>IT staff augmentation</b> industry by
-          harnessing the power of AI to connect the <b>Top 5% of Indian talent</b> with<b className="pl-[6px]">world-class companies</b> around the globe.
+          is revolutionizing the <b>IT staff augmentation</b> industry by
+          harnessing the power of AI to connect the{" "}
+          <b>Top 5% of Indian talent</b> with
+          <b className="pl-[6px]">world-class companies</b> around the globe.
         </p>
-        <p className="font-primaryLight text-[18px] font-semibold  lg:font-normal lg:text-[28px] w-[95vw] md:w-3/5 text-center ">
+        <p className="font-primaryLight text-[18px] font-[500]  lg:font-normal lg:text-[28px] w-[95vw] md:w-3/5 text-center ">
           Born amid the pandemic, Hyring’s journey began when the demand for IT
-          resources surged exponentially. Leveraging a <b>decade of staff
-          augmentation experience</b> from <Link href="https://domaincer.com/" target="_">Domaincer</Link>, our IT firm, we were able to
-          swiftly match hundreds of skilled developers with rapidly growing
-          companies and innovative startups within just one year.
+          resources surged exponentially. Leveraging a{" "}
+          <b>decade of staff augmentation experience</b> from{" "}
+          <Link href="https://domaincer.com/" target="_">
+            Domaincer
+          </Link>
+          , our IT firm, we were able to swiftly match hundreds of skilled
+          developers with rapidly growing companies and innovative startups
+          within just one year.
         </p>
       </div>
       <div className="">
-      <div className="flex justify-between  my-10 lg:my-28 ">
-        <div className="relative">
-          <div className="absolute -top-32 -right-40 hidden lg:flex">
-            <PersonVerified3 />
-          </div>
-          <div className="absolute w-14 h-14 -top-8 hidden lg:flex">
-            <PersonVerified2 width="90%" />
-          </div>
-        </div>
-        <div className="flex scale-[0.9] lg:basis-10/12  items-center justify-center  ">
-          {/* <div className="border-dashed border-2 border-primary-brown w-full gap-6"></div> */}
-          <div>
-            <PersonVerified1 />
-          </div>
-          <motion.div
-            style={{ x: "100%" }}
-            animate={{ x: "0" }}
-            transition={{ duration: 3 }}
-            className="w-full -z-10"
-          >
-            <DottedLine height={2} width="100%" />
-          </motion.div>
+        <div className="flex justify-between  my-10 lg:my-28 ">
           <div className="relative">
-            <div className="absolute   -right-4 -top-3">
-              <IntroductionStarGreenIcon className={` animate-scaleOut`} />
+            <div className="absolute -top-32 -right-40 hidden lg:flex">
+              <PersonVerified3 />
             </div>
-            <div className="">
-              <HyringLogoCircle />
-            </div>
-            <div className="absolute -left-6 -bottom-[10px]  ">
-              <IntroductionStarYellowIcon className={` animate-scaleIn`} />
+            <div className="absolute w-14 h-14 -top-8 hidden lg:flex">
+              <PersonVerified2 width="90%" />
             </div>
           </div>
-          <motion.div
-            style={{ x: "-100%" }}
-            animate={{ x: "0" }}
-            transition={{ duration: 3 }}
-            className="w-full -z-10"
-          >
-            <DottedLine height={2} width="100%" />
-          </motion.div>
-          <div>
-            <WorkplaceCircleIcon />
+          <div className="flex scale-[0.9] lg:basis-[65%]  items-center justify-center  ">
+            {/* <div className="border-dashed border-2 border-primary-brown w-full gap-6"></div> */}
+            <div>
+              <PersonVerified1 />
+            </div>
+            <motion.div
+              style={{ x: "100%" }}
+              animate={{ x: "0" }}
+              transition={{ duration: 3 }}
+              className="w-full -z-10"
+            >
+              <DottedLine height={2} width="100%" />
+            </motion.div>
+            <div className="relative">
+              <div className="absolute   -right-4 -top-3">
+                <IntroductionStarGreenIcon className={` animate-scaleOut`} />
+              </div>
+              <div className="">
+                <HyringLogoCircle />
+              </div>
+              <div className="absolute -left-6 -bottom-[10px]  ">
+                <IntroductionStarYellowIcon className={` animate-scaleIn`} />
+              </div>
+            </div>
+            <motion.div
+              style={{ x: "-100%" }}
+              animate={{ x: "0" }}
+              transition={{ duration: 3 }}
+              className="w-full -z-10"
+            >
+              <DottedLine height={2} width="100%" />
+            </motion.div>
+            <div>
+              <WorkplaceCircleIcon />
+            </div>
           </div>
-        </div>
-        <div className="relative self-end">
-          <div className="absolute -top-36 right-10 hidden lg:flex ">
-            <WorkplaceCircleIcon3 />
-          </div>
-          <div className=" hidden lg:flex">
-            <WorkplaceCircleIcon2 width="90%" />
+          <div className="relative self-end">
+            <div className="absolute -top-36 right-10 hidden lg:flex ">
+              <WorkplaceCircleIcon3 />
+            </div>
+            <div className=" hidden lg:flex">
+              <WorkplaceCircleIcon2 width="90%" />
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      
     </div>
   );
 };

@@ -15,7 +15,7 @@ function ChallengesIcon4(props) {
         height="113"
         x="4"
         y="4"
-        fill="#462B34"
+        // fill="#462B34"
         rx="56.5"
       ></rect>
       <rect

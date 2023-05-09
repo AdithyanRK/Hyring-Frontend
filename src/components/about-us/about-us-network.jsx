@@ -11,10 +11,10 @@ import BoxTheme from "@/element/landing-page/box-theme/box-theme";
 const AboutUsNetwork = () => {
   return (
     //   <div className="flex justify-center items-center min-w-[600px] w-full h-[400px] mt-20 flex-wrap flex-shrink-0 p-10">
-    <div className="max-w-[1400px] mx-auto my-0">
+    <div className="max-w-[1800px] mx-auto my-0">
       <BoxTheme
-         top="8px"
-         left="10px"
+        top="8px"
+        left="10px"
         boxStyle={
           "flex justify-center items-center min-w-[200px] border-2 border-primary-brown w-full h-full md:h-[500px] mt-20 flex-wrap px-10 py-2 bg-[#FDFDFD] rounded-[44px] w-[95vw] mx-auto gap:3 xs:gap-5 sm:gap-12 lg:gap-20 overflow-hidden"
         }

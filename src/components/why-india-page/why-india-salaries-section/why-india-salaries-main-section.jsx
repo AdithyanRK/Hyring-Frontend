@@ -5,12 +5,11 @@ import NotesSalraies from "./notes";
 import RolesTab from "./role-tabs";
 import { Roles } from "./datas/roles";
 
-
 export default function WhyIndiaSalariesSection() {
   const [activeRole, setActiveRole] = useState(0);
   const [hyringData, setHyringData] = useState(true);
   const [competitorData, setCompetitorData] = useState(false);
-  const [currency,setCurrency]=useState("IND")
+  const [currency, setCurrency] = useState("IND");
   return (
     <div
       className="mt-5 lg:mt-20 mx-auto flex w-[95vw] 2xl:w-[90vw] flex-col items-center  max-w-[1800px]  my-0"
@@ -30,7 +29,7 @@ export default function WhyIndiaSalariesSection() {
             />
           </div>
 
-          <div className="lg:basis-[50%] xl4:basis-[60%] h-[full] flex flex-col gap-5 lg:gap-0 justify-between  ">
+          <div className="lg:basis-[60%] xl4:basis-[70%] h-[full] flex flex-col gap-5 lg:gap-0 justify-between  ">
             <FilterSalaries
               setHyringData={setHyringData}
               setCompetitorData={setCompetitorData}
@@ -44,7 +43,6 @@ export default function WhyIndiaSalariesSection() {
               Roles={Roles}
               currency={currency}
               setCurrency={setCurrency}
-
             />
           </div>
         </div>

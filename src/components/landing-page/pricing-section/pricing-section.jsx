@@ -11,7 +11,7 @@ export default function PricingSection() {
   const [hoverChange, setHoverChange] = useState(true);
   return (
     <div
-      className="mt-5 lg:mt-20 mx-auto flex w-[85vw] xl:w-[80vw] 2xl:w-[75vw] flex-col items-center  max-w-[1800px]  my-0"
+      className="mt-5 lg:mt-20 mx-auto flex w-[95vw] flex-col items-center  max-w-[1800px]  my-0"
       id="pricing"
     >
       <div className="text-center my-5 md:my-10 w-full text-3xl md:text-4xl lg:text-[58px]  font-primaryBold pb-3">
@@ -19,7 +19,7 @@ export default function PricingSection() {
       </div>
 
       <div className="flex gap-5 flex-col w-full   md:flex-row">
-        <div className="flex gap-7 md:gap-3 basis-1/4 items-center flex-col xs:justify-around md:justify-around xs:flex-row md:flex-col">
+        <div className="flex gap-7 md:gap-3 basis-1/4 items-center md:items-start flex-col xs:justify-around md:justify-around xs:flex-row md:flex-col">
           <PricingSectionCard
             title={"Job Seekers"}
             svg={<JobPriceSvg />}

@@ -64,7 +64,7 @@ const WhyHyringComponent = () => {
 
   return (
     <>
-      <div className="max-w-[1400px] mx-auto my-0">
+      <div className="max-w-[1800px] mx-auto my-0">
         <div className="h-[750px] relative mx-5">
           <div className="bg-primary-brown h-[93vh] md:h-[780px] flex flex-col pt-8 rounded-t-2xl rounded-b-xl  border-[1px] border-primary-brown pb-6">
             <div className="px-2 lg:px-20 lg:py-4 pt-4 lg:pt-1">

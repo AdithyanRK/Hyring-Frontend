@@ -34,24 +34,24 @@ export default function TalentSection() {
       className={`w-screen justify-center flex items-center min-h-[540px]  h-screen bg-[url('../../public/bgtheme.svg')] overflow-hidden !cursor-default`}
       id="whyIndia"
     >
-    <div className="max-h-[600px] flex flex-col py-4 gap-0 sm:gap-0 justify-center items-center ">
-    <div
-        className="text-center text-[2rem] sm:text-[2.25rem] md:text-[2.5rem]  lg:text-5xl  leading-[50px] 
+      <div className="max-h-[600px] flex flex-col py-4 gap-0 sm:gap-0 justify-center items-center ">
+        <div
+          className="text-center text-[2rem] sm:text-[2.25rem] md:text-[2.5rem]  lg:text-5xl  leading-[50px] 
         text-white  font-primaryBold px-5 "
-      >
-        Why Hire Indian Talents
-      </div>
+        >
+          Why Hire Indian Talents
+        </div>
 
-      <div className=" select-none scale-[1.4] xs:scale-[1.4] sm:scale-[1.25] md:scale-[1.1]  h-[70vh] !cursor-default">
-        <Lottie options={lottieOptions} isClickToPauseDisabled={true} />
+        <div className=" select-none scale-[1.4] xs:scale-[1.4] sm:scale-[1.25] md:scale-[1.1]  h-[70vh] !cursor-default">
+          <Lottie options={lottieOptions} isClickToPauseDisabled={true} />
+        </div>
+        <div
+          className="flex justify-center "
+          onClick={() => router.push("/why-india")}
+        >
+          <KnowMoreButton />
+        </div>
       </div>
-      <div
-        className="flex justify-center "
-        onClick={() => router.push("/why-india")}
-      >
-        <KnowMoreButton />
-      </div>
-    </div>
     </div>
   );
 }

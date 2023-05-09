@@ -11,7 +11,7 @@ const AboutUsHyringDifference = () => {
 
   return (
     <div className="w-full flex justify-center mx-auto my-0 bg-[#462B34] after:content-[''] after:absolute after:bg-[#361C24] after:right-0 after:w-1/2 after:h-full z-10">
-      <div className="max-w-[1400px] flex flex-wrap flex-col md:flex-row md:flex-nowrap w-full min-h-[40vh] font-primary z-20">
+      <div className="max-w-[1800px] flex flex-wrap flex-col md:flex-row md:flex-nowrap w-full min-h-[40vh] font-primary z-20">
         <div className="flex-1 bg-[#462B34] text-[#FAFAFA] p-5 md:p-14 flex justify-center md:justify-start items-center flex-col xl:justify-center min-h-[250px]">
           <p className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl mb-5 text-left">
             The Hyring Difference

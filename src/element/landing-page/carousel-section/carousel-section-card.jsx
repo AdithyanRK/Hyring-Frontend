@@ -11,7 +11,7 @@ export default function CarouselSectionCard({
   starColor1,
   starColor2,
   starColor3,
-  subText
+  subText,
 }) {
   return (
     <BoxTheme
@@ -35,14 +35,13 @@ export default function CarouselSectionCard({
             <Star1
               className={`ml-6 -mt-6 md:ml-9 md:-mt-4 scale-[0.45] md:scale-[0.8] lg:scale-[1]  ${starColor2}`}
             /> */}
-              <div className="text-base xxs:text-xl xs:text-2xl sm:text-3xl md:text-[40px] lg:leading-[50px] lg:text-[46px] font-primary mt-3">
-            {text}
+            <div className="text-base xxs:text-xl xs:text-2xl sm:text-3xl md:text-[40px] lg:leading-[50px] lg:text-[46px] font-primary mt-3">
+              {text}
+            </div>
           </div>
-          </div>
-          <div className="text-base xxs:text-l xs:text-l sm:text-l md:text-[20px] lg:leading-[35px] lg:text-[24px] font-primary mt-3">
+          <div className="text-xs xxs:text-l xs:text-l sm:text-l md:text-[20px] lg:leading-[35px] lg:text-[24px] font-primary mt-3">
             {subText}
           </div>
-        
         </div>
         <div className="basis-2/5">
           <div className="relative flex items-center  justify-center scale-[0.35] md:scale-[0.6] lg:scale-[1] ">

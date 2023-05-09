@@ -14,7 +14,7 @@ import { useState } from "react";
 const AboutUsChallengesComponent = () => {
   const [hoverChange, setHoverChange] = useState(false);
   return (
-    <div className="h-full max-w-[1400px] mx-auto  my-0">
+    <div className="h-full max-w-[1800px] mx-auto  my-0">
       <div className="px-5 mx-auto">
         <BoxTheme
           top="8px"
@@ -45,38 +45,38 @@ const AboutUsChallengesComponent = () => {
               </div>
             </div>
             <div className="border w-full my-10 border-[#000000] max-w-[1150px] mx-auto" />
-            <div className=" grid grid-cols-fluid  sm:justify-items-center w-full ">
+            <div className=" grid grid-cols-fluid place-items-center gap-y-5 sm:justify-items-center w-full ">
               <div>
-                <div>
+                <div className="flex flex-col items-center">
                   <ChallengesIcon4 className="hover:fill-primary-brown" />
-                  <div className="flex flex-row  sm:flex-col gap-2 my-2 w-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
+                  <div className="flex flex-row  sm:flex-col gap-2 my-2 w-full md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className="  ">Subpar</h3>
                     <h3 className=" ">Developers</h3>
                   </div>
                 </div>
               </div>
               <div>
-                <div>
+                <div className="flex flex-col items-center">
                   <ChallengesIcon1 className="hover:fill-primary-brown" />
-                  <div className="flex flex-row sm:flex-col  gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
+                  <div className="flex flex-row sm:flex-col  gap-2 my-2 w-full md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className=" whitespace-nowrap  ">Hefty</h3>
                     <h3 className=" ">Commission</h3>
                   </div>
                 </div>
               </div>
               <div>
-                <div>
+                <div className="flex flex-col items-center">
                   <ChallengesIcon2 className="hover:fill-primary-brown" />
-                  <div className="flex flex-row sm:flex-col gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
+                  <div className="flex flex-row sm:flex-col gap-2 my-2 w-full md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className="  ">Ambiguous</h3>
                     <h3 className=" ">Contracts</h3>
                   </div>
                 </div>
               </div>
               <div>
-                <div>
+                <div className="flex flex-col items-center">
                   <ChallengesIcon3 className="hover:fill-primary-brown" />
-                  <div className="flex flex-row sm:flex-col gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
+                  <div className="flex flex-row sm:flex-col gap-2 my-2 w-full md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className="  ">Outdated</h3>
                     <h3 className=" whitespace-nowrap ">Portals</h3>
                   </div>

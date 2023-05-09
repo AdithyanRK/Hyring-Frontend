@@ -12,7 +12,7 @@ const SmileExpression = (props) => (
     <motion.path
       initial={{ pathLength: 0, opacity: 0 }}
       animate={{ pathLength: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
+      transition={{ duration: 0.5, delay: 1.5 }}
       d="M1.37936 22.9708L6.23047 1"
       stroke="#462B34"
       stroke-width="2"
@@ -21,7 +21,7 @@ const SmileExpression = (props) => (
     <motion.path
       initial={{ pathLength: 0, opacity: 0 }}
       animate={{ pathLength: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1.5 }}
+      transition={{ duration: 0.5, delay: 2.5 }}
       d="M15.3764 33.0891L36.7305 26"
       stroke="#462B34"
       stroke-width="2"
@@ -30,7 +30,7 @@ const SmileExpression = (props) => (
     <motion.path
       initial={{ pathLength: 0, opacity: 0 }}
       animate={{ pathLength: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1 }}
+      transition={{ duration: 0.5, delay: 2 }}
       d="M10.3801 24.5635L20.0078 14"
       stroke="#462B34"
       stroke-width="2"

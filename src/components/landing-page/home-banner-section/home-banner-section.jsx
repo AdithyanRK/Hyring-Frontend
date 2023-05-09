@@ -20,6 +20,7 @@ import TextMark from "@/assets/icons/landing-page/text-mark";
 import PlayVideoIcon from "@/assets/icons/landing-page/play_video";
 import HomeListComponent from "./home-list-items-component/home-list-items-component";
 import HomeBannerModal from "./home-modal-section";
+import Arrow from "@/assets/icons/landing-page/arrow";
 
 const HomeBannerSection = ({handleOpen}) => {
   const [switchValue, SetSwitchValue] = useState(true);
@@ -73,7 +74,7 @@ const HomeBannerSection = ({handleOpen}) => {
             </div>
             <div className="text-base xl:text-lg font-primaryMedium lg:w-[700px]  flex flex-wrap lg:flex-nowrap gap-4 items-center mb-6 sm:mb-[50px] justify-center lg:justify-start">
               I Need <HeroAwitchButton switchValue={switchValue} SetSwitchValue={SetSwitchValue}/>
-              in <div className="whitespace-nowrap flex gap-4 items-center">
+              <Arrow/> <div className="whitespace-nowrap flex gap-4 items-center">
               <HeroAutocompleteButton  />
               <HeroSubmitButton  switchValue={switchValue} />
               </div>

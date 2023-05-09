@@ -118,6 +118,7 @@ html {
   }
 }
 
+/* nav links hover effect  */
 .navLink:hover p span{
   display: block;
 }

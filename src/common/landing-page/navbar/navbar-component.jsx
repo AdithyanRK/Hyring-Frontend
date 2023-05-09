@@ -6,9 +6,12 @@ import React, { useState } from "react";
 import ResponsiveNavbar from "./responsive-nav-component";
 import TextMark from "@/assets/icons/landing-page/text-mark";
 import NavTextMark from "@/assets/icons/landing-page/nav-text-mark";
+import { useRouter } from "next/router";
 
 const NavbarComponent = ({ className }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const router =useRouter();
+  console.log("router",router.pathname)
   return (
     <div className="pt-[14px]">
       <BoxTheme
@@ -32,10 +35,11 @@ const NavbarComponent = ({ className }) => {
               scroll={false}
               className="navLink"
             >
-             <p className="relative inline-block">
+               <p className="relative inline-block">
                 <span className="absolute   -left-[14px] -top-4 lg:-left-1  scale-[0.85] lg:scale-[1.1]  ">
-                  <NavTextMark />
+                  {router.pathname == "/about-us" ? <TextMark/> : <NavTextMark />}
                 </span>
+                
                 About Us
               </p>
             </Link>
@@ -46,7 +50,7 @@ const NavbarComponent = ({ className }) => {
             >
                <p className="relative inline-block ">
                 <span className="absolute   -left-[14px] -top-4 lg:-left-1  scale-[0.95] lg:scale-[1.1]  ">
-                  <NavTextMark />
+                {router.pathname == "/why-india" ? <TextMark/> : <NavTextMark />}
                 </span>
                 Why India
               </p>
@@ -59,7 +63,7 @@ const NavbarComponent = ({ className }) => {
             >
               <p className="relative inline-block ">
                 <span className="absolute   -left-[22px] -top-4 lg:-left-[18px]  scale-[0.8] lg:scale-[1]  ">
-                  <NavTextMark />
+                {router.pathname == "/pricing" ? <TextMark/> : <NavTextMark />}
                 </span>
                 Pricing
               </p>
@@ -72,7 +76,7 @@ const NavbarComponent = ({ className }) => {
             >
                <p className="relative inline-block ">
                 <span className="absolute   -left-[8px] -top-4 lg:left-[2px]  scale-[1.05] lg:scale-[1.2]  ">
-                  <NavTextMark />
+                {router.pathname == "/contact-us" ? <TextMark/> : <NavTextMark />}
                 </span>
                 Contact Us
               </p>

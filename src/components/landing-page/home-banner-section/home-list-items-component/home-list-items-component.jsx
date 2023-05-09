@@ -3,14 +3,14 @@ import React from "react";
 
 export default function HomeListComponent({className}) {
   return (
-   <div className={`${className} flex justify-center my-4 lg:max-w-[640px] xl:max-w-[860px] xl3:max-w-[860px]`}>
+   <div className={`${className} flex justify-center my-4 lg:max-w-[650px] xl:max-w-[860px] xl3:max-w-[860px]`}>
      <div className={`sm:grid  sm:grid-cols-2 items-start  `}>
-      <div className="">
+      <div >
         <HeroList>AI-Powered Hyring App </HeroList>
         <HeroList>Salaries up to ₹1 Crore</HeroList>
         <HeroList>Health Insurance for the Entire Family</HeroList>
       </div>
-      <div className="">
+      <div >
         <HeroList>Transparent Salary Info. - No Hanky-Panky</HeroList>
         <HeroList>Indian Taxation & Compliance Covered</HeroList>
         <HeroList>Cool Office Spaces Located Across India</HeroList>

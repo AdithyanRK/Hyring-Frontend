@@ -13,13 +13,13 @@ const AboutUsNetwork = () => {
     //   <div className="flex justify-center items-center min-w-[600px] w-full h-[400px] mt-20 flex-wrap flex-shrink-0 p-10">
     <div className="max-w-[1400px] mx-auto my-0">
       <BoxTheme
-        top="2px"
-        left="3px"
+         top="8px"
+         left="10px"
         boxStyle={
-          "flex justify-center items-center min-w-[200px] w-full h-full md:h-[500px] mt-20 flex-wrap px-10 py-2 bg-[#FDFDFD] rounded-[44px] w-[95vw] mx-auto gap:3 xs:gap-5 sm:gap-12 lg:gap-20 overflow-hidden"
+          "flex justify-center items-center min-w-[200px] border-2 border-primary-brown w-full h-full md:h-[500px] mt-20 flex-wrap px-10 py-2 bg-[#FDFDFD] rounded-[44px] w-[95vw] mx-auto gap:3 xs:gap-5 sm:gap-12 lg:gap-20 overflow-hidden"
         }
         bgBoxStyle={
-          "min-w-[200px] w-[100.4%] h-[100%] md:h-[507px] rounded-[44px]  bg-primary-brown"
+          "min-w-[200px] w-[100%] h-[100%] md:h-[500px] rounded-[44px]  bg-primary-brown"
         }
       >
         <div className="relative pl-0 md:pl-8">

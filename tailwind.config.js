@@ -63,7 +63,7 @@ module.exports = {
         4: "4",
       },
       gridTemplateColumns: {
-        fluid: "repeat(auto-fit, minmax(15rem, 1fr))",
+        fluid: "repeat(auto-fit, minmax(13.5rem, 1fr))",
       },
       backgroundImage: {
         "body-background": "url('../../public/Rectangle.svg')",

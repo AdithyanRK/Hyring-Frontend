@@ -19,7 +19,7 @@ const AboutUsChallengesComponent = () => {
         <BoxTheme
           top="8px"
           left="10px"
-          className={`w-full border rounded-[9px] border-primary-brown `}
+          className={`w-full border-2 rounded-[9px] border-primary-brown `}
           boxStyle={`border-3   w-full !justify-start  bg-white   rounded-[9px] border-primary-brown`}
           bgBoxStyle={`w-full h-full lg:h-full  rounded-[9px] bg-primary-brown border-3 border-white`}
           isButton={false}
@@ -48,7 +48,7 @@ const AboutUsChallengesComponent = () => {
             <div className=" grid grid-cols-fluid  sm:justify-items-center w-full ">
               <div>
                 <div>
-                  <ChallengesIcon4  className="hover:fill-primary-brown"/>
+                  <ChallengesIcon4 className="hover:fill-primary-brown" />
                   <div className="flex flex-row  sm:flex-col gap-2 my-2 w-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className="  ">Subpar</h3>
                     <h3 className=" ">Developers</h3>
@@ -56,8 +56,8 @@ const AboutUsChallengesComponent = () => {
                 </div>
               </div>
               <div>
-                <div >
-                  <ChallengesIcon1 className="hover:fill-primary-brown"  />
+                <div>
+                  <ChallengesIcon1 className="hover:fill-primary-brown" />
                   <div className="flex flex-row sm:flex-col  gap-2 my-2 md:text-3xl sm:text-2xl text-xl font[400] font-primary">
                     <h3 className=" whitespace-nowrap  ">Hefty</h3>
                     <h3 className=" ">Commission</h3>

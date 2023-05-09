@@ -52,7 +52,6 @@ export default function Index() {
           property="twitter:image"
           content="https://hyring.com/wp-content/uploads/2022/01/about-us-home.png"
         ></meta>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="relative text-primary-brown  ">
         <Image

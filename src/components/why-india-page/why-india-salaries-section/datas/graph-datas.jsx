@@ -24,24 +24,24 @@ const competitorFull = (val) => {
 
 const salaryRupees = (val) => {
   let result = "";
-  result = val + "Lakh";
+  result = "INR " + Math.round((val* 100000 /12)/100)*100 ;
   return result;
 };
 const hyringRupees = (val) => {
   let result = "";
 
-  result = (val * 0.2).toFixed(2) + "Lakh";
+  result = "INR " + Math.round((val * 0.2 * 100000 /12)/100)*100  ;
 
   return result;
 };
 const competitorRupees = (val) => {
   let result = "";
-  result = (val * 0.8).toFixed(2) + "Lakh";
+  result = "INR " + Math.round((val * 2 * 100000 /12)/100)*100 ;
   return result;
 };
 const savingsRupees = (val) => {
   let result = "";
-  result = (val * 2 - val - val * 0.2).toFixed(2) + "Lakh";
+  result = "INR " + Math.round(((val * 0.8 - val * 0.2)* 100000 /12)/100)*100   ;
   return result;
 };
 
@@ -66,7 +66,7 @@ const competitorUSD = (val) => {
 const savingsUSD = (val) => {
   let result = "";
 
-  result = "USD " + (((val * 2 - val - val * 0.2) * 100000) / 82).toFixed(0);
+  result = "USD " + (((val * 0.8 - val * 0.2) * 100000) / 82).toFixed(0);
   return result;
 };
 
@@ -131,12 +131,13 @@ export let FinalSeniorSocialMediaExecutiveData = [];
 const FrontendDeveloperSalriesReported = [
   { salary: 2.9, Reporters: 153 },
   { salary: 4.4, Reporters: 174 },
+  { salary: 5.9, Reporters: 174 },
   { salary: 7.4, Reporters: 120 },
-  { salary: 8.9, Reporters: 62 },
-  { salary: 8.9, Reporters: 62 },
-  { salary: 10.4, Reporters: 31 },
-  { salary: 13.4, Reporters: 36 },
-  { salary: 14.9, Reporters: 12 },
+  { salary: 9, Reporters: 62  },
+  { salary: 10.5, Reporters: 62 },
+  { salary: 12, Reporters: 31 },
+  { salary: 13.5, Reporters: 36 },
+  { salary: 15, Reporters: 12 },
 ];
 
 const BackendDeveloperSalriesReported = [
@@ -289,11 +290,11 @@ let data = [
 data.map((mainitem) => {
   mainitem.data.forEach((item, index) => {
     mainitem.final.push({
-      name: "",
-      salary: salary(item.Reporters),
-      hyring: hyring(item.Reporters),
-      competitor: competitor(item.Reporters),
-      competitorFull: competitorFull(item.Reporters),
+      name: index == 0 ? "Junior": index == 8 ?" Expert" : index == 4 ? "Senior" : "",
+      salary: salary(item.salary),
+      hyring: hyring(item.salary),
+      competitor: competitor(item.salary),
+      competitorFull: competitorFull(item.salary),
       reported: item.Reporters,
 
       salaryRupees: salaryRupees(item.salary),

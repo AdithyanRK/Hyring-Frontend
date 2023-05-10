@@ -346,12 +346,16 @@ export default function Footer({ className }) {
           </div>
           <div className="company-sec flex-1 flex flex-col gap-y-5 mb-16">
             <h2 className="text-[22px]  ">Legal</h2>
-            <p className="text-lg font-primary hover:opacity-70 cursor-pointer">
-              Privacy Policy
-            </p>
-            <p className="text-lg font-primary hover:opacity-70 cursor-pointer">
-              Terms & Conditions
-            </p>
+            <Link href="/privacy-policy">
+              <p className="text-lg font-primary hover:opacity-70 cursor-pointer">
+                Privacy Policy
+              </p>
+            </Link>
+            <Link href="/terms-conditions">
+              <p className="text-lg font-primary hover:opacity-70 cursor-pointer">
+                Terms & Conditions
+              </p>
+            </Link>
             {/* <p className="text-lg font-primary">Cancellation Policy</p> */}
           </div>
           <div className="desk-soc flex-col gap-y-12">

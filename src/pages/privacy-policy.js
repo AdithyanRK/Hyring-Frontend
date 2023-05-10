@@ -1,9 +1,8 @@
 import Head from "next/head";
 import NavbarComponent from "@/common/landing-page/navbar/navbar-component";
 import Image from "next/image";
-import PricingSection from "@/components/landing-page/pricing-section/pricing-section";
 import Footer from "@/common/landing-page/footer/footer";
-import TermsAndCondition from "@/components/landing-page/terms-condition-section/terms-condition";
+import PrivacyPolicy from "@/components/landing-page/privacy-policy-section/privacy-policy-section";
 
 export default function Index() {
   return (
@@ -58,7 +57,7 @@ export default function Index() {
         />
 
         <NavbarComponent />
-        <TermsAndCondition />
+        <PrivacyPolicy />
         <div className="overflow-hidden">
           <Footer />
         </div>

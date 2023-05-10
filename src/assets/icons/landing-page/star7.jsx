@@ -2,8 +2,8 @@ import * as React from "react"
 const Star7 = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={37}
-    height={37}
+    width={27}
+    height={27}
     fill="none"
     {...props}
     className="scale-[0.6] md:scale-[0.8] lg:scale-[0.9] "

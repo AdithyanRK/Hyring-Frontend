@@ -12,7 +12,7 @@ export default function WhyIndiaSalariesSection() {
   const [currency, setCurrency] = useState("IND");
   return (
     <div
-      className="mt-5 lg:mt-20 mx-auto flex w-[95vw] 2xl:w-[90vw] flex-col items-center  max-w-[1800px]  my-0"
+      className="mt-5 lg:mt-20 mx-auto flex w-[95vw] flex-col items-center  max-w-[1800px]  my-0"
       id="pricing"
     >
       <div className="text-center my-5 md:my-10 w-full px-5 text-3xl md:text-4xl lg:text-[58px]  font-primaryBold pb-3">
@@ -20,8 +20,8 @@ export default function WhyIndiaSalariesSection() {
       </div>
 
       <div className="w-full pb-10">
-        <div className="flex gap-5 flex-col justify-center  lg:flex-row mb-5 md:mb-10">
-          <div className="lg:basis-[50%]   xl4:basis-[40%] lg:max-w-[540px] h-full">
+        <div className="flex gap-5 xl:gap-10 flex-col justify-center  lg:flex-row mb-5 md:mb-10">
+          <div className=" lg:w-[440px] 2xl:w-[500px] flex-shrink-0 ">
             <RolesTab
               activeRole={activeRole}
               setActiveRole={setActiveRole}
@@ -29,7 +29,7 @@ export default function WhyIndiaSalariesSection() {
             />
           </div>
 
-          <div className="lg:basis-[60%] xl4:basis-[70%] h-[full] flex flex-col gap-5 lg:gap-0 justify-between  ">
+          <div className=" w-full  flex-shrink flex flex-col gap-5 lg:gap-0 justify-between  ">
             <FilterSalaries
               setHyringData={setHyringData}
               setCompetitorData={setCompetitorData}

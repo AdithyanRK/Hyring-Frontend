@@ -10,10 +10,10 @@ function AUSD() {
       fill="none"
       viewBox="0 0 23 23"
     >
-      <circle cx="11.5" cy="11.5" r="11.5" fill="url(#pattern0)"></circle>
+      <circle cx="11.5" cy="11.5" r="11.5" fill="url(#patterng1)"></circle>
       <defs>
         <pattern
-          id="pattern0"
+          id="patterng1"
           width="1"
           height="1"
           patternContentUnits="objectBoundingBox"

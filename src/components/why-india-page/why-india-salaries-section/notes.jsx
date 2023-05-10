@@ -12,15 +12,15 @@ export default function NotesSalraies() {
         boxStyle={`w-full h-fit !justify-start !items-start  border-2 bg-white rounded-[14px] border-primary-brown    `}
         bgBoxStyle={`w-full  rounded-[14px] h-full  bg-primary-brown   `}
       >
-        <div className="md:pl-8 md:pr-8 py-2">
+        <div className="px-4 lg:px-0  ">
           <div className="flex flex-col md:flex-row  items-center ">
             <div className="flex w-full md:w-fit   p-2">
               <BoxTheme
                 top={"2px"}
                 left={"2px"}
                 className={` h-fit w-fit   `}
-                boxStyle={`w-[30px] h-[30px]   border-2 bg-custom-blue rounded-full border-primary-brown    `}
-                bgBoxStyle={`w-[30px]  rounded-full h-[30px]  bg-primary-brown   `}
+                boxStyle={`w-[48px] h-[48px]   border-2 bg-custom-blue rounded-full border-primary-brown    `}
+                bgBoxStyle={`w-[48px]  rounded-full h-[48px]  bg-primary-brown   `}
               >
                 <div className="text-2xl font-primary">i</div>
               </BoxTheme>
@@ -32,7 +32,7 @@ export default function NotesSalraies() {
               </AccordianListWhyIndia>
               <AccordianListWhyIndia>
                 The above Hyring Fees is marked with 20% fees which may vary
-                upto 40% depending on number of employees hired or if you want
+                upto 40% depending on number of employees   hired or if you want
                 to migrate your existing Indian employees for payroll &
                 benefits.
               </AccordianListWhyIndia>

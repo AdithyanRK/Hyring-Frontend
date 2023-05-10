@@ -66,7 +66,6 @@ export default function Chart({
          }
          {
           competitorData ? (
-            <>
             <div className="flex  items-center gap-2">
             <div className="w-3 h-3 border border-primary-brown bg-[#EA6B6B] mt-1"></div>
             <p>
@@ -83,8 +82,9 @@ export default function Chart({
                   : null}
               </span>
             </p>
-          </div>
-          <div className="flex  items-center gap-2">
+          </div> ): null }
+          { competitorData && hyringData  ?
+          (<div className="flex  items-center gap-2">
             <div className="w-3 h-3 border border-primary-brown bg-[#FFB65E] mt-1 invisible"></div>
             <p>
               Savings :{" "}
@@ -101,7 +101,6 @@ export default function Chart({
               </span>
             </p>
           </div>
-            </>
           ) : null
          }
         </div>
@@ -112,7 +111,7 @@ export default function Chart({
   };
 
   return (
-    <div className="w-full h-[80%]  ">
+    <div className="w-full h-[80%] ">
       <BoxTheme
         top={"7px"}
         left={"5px"}
@@ -120,9 +119,9 @@ export default function Chart({
         boxStyle={`w-full h-full !justify-start   border-2 bg-white rounded-[14px] border-primary-brown    `}
         bgBoxStyle={`w-full  rounded-[14px] h-full  bg-primary-brown   `}
       >
-        <div className="p-4 md:px-8  mx-auto w-full ">
-          <div className="flex justify-between">
-            <h2 className="text-lg md:text-2xl basis-[60%] md:basis-[100%] font-primaryMedium">
+        <div className="p-4 md:px-8   w-full max-w-[1000px] ">
+          <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row gap-2 sm:gap-4 justify-between">
+            <h2 className="text-lg md:text-2xl  font-primaryMedium">
               Avg. Monthly Salary
               <span className="text-[#EAA24B] mx-2">
                 {Roles[activeRole].title}
@@ -130,15 +129,12 @@ export default function Chart({
             </h2>
             <DropdownSalaries currency={currency} setCurrency={setCurrency} />
           </div>
-          <div className="w-full mx-auto h-[300px] lg:w-[460px] xl:w-[650px] 2xl:w-[800px] 2xl:h-[380px] xl:h-[350px]">
+          <div className=" w-[95%] h-[350px]">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={data}
                 margin={{
-                  top: 20,
-                  right: 30,
-                  left: 20,
-                  bottom: 50,
+                  bottom: 15,
                 }}
                 onMouseMove={(state) => {
                   if (state.isTooltipActive) {

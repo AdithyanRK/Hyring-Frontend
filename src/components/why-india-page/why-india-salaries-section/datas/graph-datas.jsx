@@ -36,81 +36,82 @@ const hyringRupees = (val) => {
 };
 const competitorRupees = (val) => {
   let result = "";
-  result = "INR " + Math.round((val * 2 * 100000 /12)/100)*100 ;
+  result = "INR " + Math.round((val  * 100000 /12)/100)*100 ;
   return result;
 };
 const savingsRupees = (val) => {
   let result = "";
-  result = "INR " + Math.round(((val * 0.8 - val * 0.2)* 100000 /12)/100)*100   ;
+  result = "INR " + Math.round(((val   - val * 0.2)* 100000 /12)/100)*100   ;
   return result;
 };
 
 // calculations for usd conversion
 const salaryUSD = (val) => {
   let result = "";
-  result = "USD " + ((val * 100000) / 82).toFixed(0);
+  result = "USD " + Math.round((val* 100000 /82/12)/10)*10  ;
   return result;
 };
 const hyringUSD = (val) => {
   let result = "";
 
-  result = "USD " + ((val * 0.2 * 100000) / 82).toFixed(0);
+  result = "USD " + Math.round((val * 0.2 * 100000 /82 /12)/10)*10  ;
   return result;
 };
 const competitorUSD = (val) => {
   let result = "";
 
-  result = "USD " + ((val * 0.8 * 100000) / 82).toFixed(0);
+  result = "USD " + Math.round((val  * 100000 /82/12)/10)*10 ;
   return result;
 };
 const savingsUSD = (val) => {
   let result = "";
 
-  result = "USD " + (((val * 0.8 - val * 0.2) * 100000) / 82).toFixed(0);
+  result = "USD " +  Math.round(((val   - val * 0.2)* 100000 /82/12)/10)*10 ;
   return result;
 };
 
 // calculations for AUSD conversion
 const salaryAUSD = (val) => {
   let result = "";
-  result = "AUSD " + ((val * 100000) / 54).toFixed(0);
+  result = "AUSD " +Math.round((val* 100000 /55.5/12)/10)*10 ;
   return result;
 };
 const hyringAUSD = (val) => {
   let result = "";
-  result = "AUSD " + ((val * 0.2 * 100000) / 54).toFixed(0);
+  result = "AUSD " +  Math.round((val * 0.2 * 100000 /55.5 /12)/10)*10 ;
   return result;
 };
 const competitorAUSD = (val) => {
   let result = "";
-  result = "AUSD " + ((val * 0.8 * 100000) / 54).toFixed(0);
+  result = "AUSD " + Math.round((val  * 100000 /55.5/12)/10)*10 ;
   return result;
 };
 const savingsAUSD = (val) => {
   let result = "";
-  result = "AUSD " + (((val * 2 - val - val * 0.2) * 100000) / 54).toFixed(0);
+  result = "AUSD " +  Math.round(((val   - val * 0.2)* 100000 /55.5/12)/10)*10 ;
   return result;
 };
 
 // calculations for EUR conversion
 const salaryEUR = (val) => {
   let result = "";
-  result = "EUR " + ((val * 100000) / 90).toFixed(0);
+  result = "EUR " + Math.round((val* 100000 /90/12)/10)*10 ;
   return result;
 };
 const hyringEUR = (val) => {
   let result = "";
-  result = "EUR " + ((val * 0.2 * 100000) / 90).toFixed(0);
+  
+  result = "EUR " +  Math.round((val * 0.2 * 100000 /90 /12)/10)*10 ;
   return result;
 };
 const competitorEUR = (val) => {
   let result = "";
-  result = "EUR " + ((val * 0.8 * 100000) / 90).toFixed(0);
+  result = "EUR " + Math.round((val  * 100000 /90/12)/10)*10 ;
   return result;
 };
 const savingsEUR = (val) => {
   let result = "";
-  result = "EUR " + (((val * 2 - val - val * 0.2) * 100000) / 90).toFixed(0);
+  result = "EUR " +  Math.round(((val   - val * 0.2)* 100000 /90/12)/10)*10 ;
   return result;
 };
 

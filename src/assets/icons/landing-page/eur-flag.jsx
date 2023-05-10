@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon() {
+function EUR() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -10,10 +10,10 @@ function Icon() {
       fill="none"
       viewBox="0 0 23 23"
     >
-      <circle cx="11.5" cy="11.5" r="11.5" fill="url(#pattern0)"></circle>
+      <circle cx="11.5" cy="11.5" r="11.5" fill="url(#patterng4)"></circle>
       <defs>
         <pattern
-          id="pattern0"
+          id="patterng4"
           width="1"
           height="1"
           patternContentUnits="objectBoundingBox"
@@ -34,4 +34,4 @@ function Icon() {
   );
 }
 
-export default Icon;
+export default EUR;

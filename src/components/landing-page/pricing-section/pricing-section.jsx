@@ -19,7 +19,7 @@ export default function PricingSection() {
       </div>
 
       <div className="flex gap-5 flex-col w-full   md:flex-row">
-        <div className="flex gap-7 md:gap-3 basis-1/4 items-center md:items-start flex-col xs:justify-around md:justify-around xs:flex-row md:flex-col">
+        <div className="flex gap-7  basis-[20%] items-start flex-col xs:justify-around md:justify-around xs:flex-row md:flex-col">
           <PricingSectionCard
             title={"Job Seekers"}
             svg={<JobPriceSvg />}
@@ -46,7 +46,7 @@ export default function PricingSection() {
             setHoverChange={setHoverChange}
           />
         </div>
-        <div className="basis-3/4 ">
+        <div className="basis-[80%] ">
           <PricingAccordian hoverChange={hoverChange} />
         </div>
       </div>

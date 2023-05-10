@@ -19,7 +19,7 @@ export default function PricingSection() {
       </div>
 
       <div className="flex gap-5 flex-col w-full   md:flex-row">
-        <div className="flex gap-7  basis-[20%] items-start flex-col xs:justify-around md:justify-around xs:flex-row md:flex-col">
+        <div className="flex gap-7  basis-[20%] flex-col items-center xs:justify-around md:justify-around xs:flex-row md:flex-col">
           <PricingSectionCard
             title={"Job Seekers"}
             svg={<JobPriceSvg />}

@@ -25,7 +25,7 @@ export default function DropdownSalaries({ currency, setCurrency }) {
       defaultValue={options[3]}
       onChange={handleSelectChange}
       options={options}
-      className="w-[190px]"
+      className="w-[140px]"
       getOptionLabel={(option) =>
       (
         <div className="flex gap-2">

@@ -6,7 +6,7 @@ export default function AccordianListWhyIndia({ children }) {
     <div className='text-[14px] sm:text-base pr-4 flex gap-[6px] md:gap-[18px] text-justify leading-7   font-primary font-normal my-4 '>
 
       <div>
-      <Star1/>
+      <Star1 className="fill-custom-green"/>
       </div>
       <div>{children}</div>
     </div>

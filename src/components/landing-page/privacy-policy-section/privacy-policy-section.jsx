@@ -4,8 +4,8 @@ import React from "react";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="hidden md:w-[95vw] mx-auto mb-20 mt-3 md:mt-16 max-w-[1800px] md:flex gap-10">
-      <div className="h-fit min-w-[350px] flex">
+    <div className=" md:w-[95vw] mx-auto mb-20 mt-3 md:mt-16 max-w-[1800px] md:flex gap-10">
+      <div className="h-fit min-w-[350px] hidden md:flex">
         <BoxTheme
           top="8px"
           left="8px"
@@ -82,7 +82,7 @@ const PrivacyPolicy = () => {
         </BoxTheme>
       </div>
 
-      <div className="font-primary">
+      <div className="font-primary w-[95vw] mx-auto">
         <p className="font-primaryMedium text-4xl mb-5">
           Hyring Privacy Policy
         </p>

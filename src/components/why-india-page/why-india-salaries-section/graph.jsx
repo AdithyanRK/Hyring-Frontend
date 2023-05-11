@@ -114,7 +114,7 @@ export default function Chart({
   };
 
   const CustomXAxisLabel = ({ x, y, value }) => (
-    <g  className="translate-y-[330px] translate-x-[120px] xxxs:translate-x-[150px] xxs:translate-x-[190px] xs:translate-x-[230px] 
+    <g  className="translate-y-[335px] translate-x-[120px] xxxs:translate-x-[150px] xxs:translate-x-[190px] xs:translate-x-[230px] 
     sm:translate-x-[280px]  md:translate-x-[330px]  mf:translate-x-[380px] lg:translate-x-[230px] xl:translate-x-[340px] 
     xl3:translate-x-[420px] 
     ">
@@ -135,9 +135,9 @@ export default function Chart({
         boxStyle={`w-full h-full !justify-start   border-2 bg-white rounded-[14px] border-primary-brown    `}
         bgBoxStyle={`w-full  rounded-[14px] h-full  bg-primary-brown   `}
       >
-        <div className="p-4 md:px-8   w-full max-w-[1000px] ">
-          <div className="flex  gap-2 sm:gap-4 justify-between">
-            <h2 className="text-lg md:text-2xl  font-primaryMedium">
+        <div className="p-4 md:px-8  w-full max-w-[1000px] ">
+          <div className="flex flex-col mt-2 sm:flex-row lg:flex-col xl:flex-row gap-4 justify-between">
+            <h2 className="text-base xs:text-lg md:text-2xl   font-primaryMedium">
               Avg. Monthly Salary
               <span className="text-[#EAA24B] mx-2">
                 {Roles[activeRole].title}
@@ -150,10 +150,10 @@ export default function Chart({
           <div className="-ml-6 md:w-[95%] h-[350px] mt-4">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
-                style={{ fontFamily: "__whyteMedium_2bf28c" }}
+                style={{ fontFamily: "__whyteMedium_2bf28c",fontSize:"14px" }}
                 data={data}
                 margin={{
-                  bottom: 15,
+                  bottom: 30,
                 }}
                 onMouseMove={(state) => {
                   if (state.isTooltipActive) {

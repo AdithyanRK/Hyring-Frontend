@@ -327,10 +327,10 @@ export default function Footer({ className }) {
           </div>
           <div className="company-sec flex-1 flex flex-col gap-y-5 mb-16">
             <h2 className="text-[22px]">Company</h2>
-            <Link href={"/why-india"} scroll={false}>
+            <Link href={"/why-india"} >
               <p className="text-lg font-primary hover:opacity-70">Why India</p>
             </Link>
-            <Link href={"/#pricing"} scroll={false}>
+            <Link href={"/pricing"} >
               <p className="text-lg font-primary hover:opacity-70">Pricing</p>
             </Link>
             <Link href="/contact-us">

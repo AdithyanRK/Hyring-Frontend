@@ -182,7 +182,7 @@ export default function CarouselSection3() {
           </div> */}
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(1);
+              sliderRef.current.slickGoTo(0);
             }}
           >
             <CarouselSectionTabs
@@ -193,7 +193,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(2);
+              sliderRef.current.slickGoTo(1);
             }}
           >
             <CarouselSectionTabs
@@ -204,7 +204,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(3);
+              sliderRef.current.slickGoTo(2);
             }}
           >
             <CarouselSectionTabs
@@ -215,7 +215,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(4);
+              sliderRef.current.slickGoTo(3);
             }}
           >
             <CarouselSectionTabs
@@ -226,7 +226,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(5);
+              sliderRef.current.slickGoTo(4);
             }}
           >
             <CarouselSectionTabs
@@ -237,7 +237,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(6);
+              sliderRef.current.slickGoTo(5);
             }}
           >
             <CarouselSectionTabs
@@ -248,7 +248,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(7);
+              sliderRef.current.slickGoTo(6);
             }}
           >
             <CarouselSectionTabs
@@ -259,7 +259,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(8);
+              sliderRef.current.slickGoTo(7);
             }}
           >
             <CarouselSectionTabs
@@ -270,7 +270,7 @@ export default function CarouselSection3() {
           </div>
           <div
             onClick={() => {
-              sliderRef.current.slickGoTo(9);
+              sliderRef.current.slickGoTo(8);
             }}
           >
             <CarouselSectionTabs

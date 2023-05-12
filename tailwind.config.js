@@ -33,6 +33,7 @@ module.exports = {
         "custom-sandal": "#FFC682",
         "custom-dark-green": "#61E396",
         "custom-rose":"#ECB6DA",
+        "custom-orange":"#FFB65E",
       },
       keyframes: {
         scaleIn: {

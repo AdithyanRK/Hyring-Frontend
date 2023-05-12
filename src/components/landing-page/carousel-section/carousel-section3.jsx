@@ -18,46 +18,19 @@ import PayrollSvg from "@/assets/icons/landing-page/payroll";
 import DangerSvg from "@/assets/icons/landing-page/danger";
 import LabourSvg from "@/assets/icons/landing-page/labourAct";
 import MoneySvg from "@/assets/icons/landing-page/moneySvg";
+import { useWindowHeight } from "@react-hook/window-size";
+import Marquee from "react-fast-marquee";
 
 export default function CarouselSection3() {
   const sliderRef = useRef(null);
-
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} !top-[215px] !right-[40%] xxs:!top-2/4 xxs:!-right-[10px] xxs:!-mt-5`}
-        style={{ ...style, display: "block" }}
-        onClick={onClick}
-      >
-        <SliderButton className="scale-[0.5] xs:scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1]" />
-      </div>
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={`${className} !top-[215px] !left-[30%] xxs:!top-2/4 xxs: xxs:!-left-[45px] xxs:!-mt-5`}
-        style={{ ...style, display: "block" }}
-        onClick={onClick}
-      >
-        <SliderButton
-          IconRotate={"rotate-180"}
-          className="scale-[0.5] xs:scale-[0.6] sm:scale-[0.7] md:scale-[0.8] lg:scale-[1]"
-        />
-      </div>
-    );
-  }
+  let onlyHeight = useWindowHeight();
+  
 
   var settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
     arrows: false,
   };
 
@@ -75,25 +48,73 @@ export default function CarouselSection3() {
     swipeToSlide: true,
     arrows: false,
   };
+  if (onlyHeight == 0) {
+    return " ";
+  }
 
   return (
     <div>
-      <div className="w-full h-[100vh] bg-white border-2 mt-20 border-primary-brown rounded-t-[60px] lg:rounded-t-[140px] px-[10px] xs:px-[20px] md:px-10 lg:px-[80px]  pt-[50px] lg:pt-[60px] md:pb-[36px] !border-b-0">
-        <div className="flex justify-between text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-primaryMedium  ">
+       <div
+      className={`w-full h-[100vh] grid grid-cols-1 justify-center 
+            px-2   bg-white border-2  xs:px-[20px] md:px-10 lg:px-16 xl:px-[80px]
+          ${onlyHeight < 440 ? "pt-6 rounded-t-[60px]  " : " "}
+        ${onlyHeight >= 440 && onlyHeight < 540 ? "pt-9 rounded-t-[60px] sm:rounded-t-[80px] lg:rounded-t-[120px] xl:rounded-t-[140px] " : " "}
+        ${onlyHeight >= 540 && onlyHeight < 640 ? "pt-11 rounded-t-[60px] sm:rounded-t-[100px] lg:rounded-t-[120px] xl:rounded-t-[140px]  " : " "}
+        ${onlyHeight >= 640  ? "pt-14 rounded-t-[60px] sm:rounded-t-[100px] lg:rounded-t-[120px] xl:rounded-t-[140px] " : " "}
+       
+       
+
+         border-primary-brown !border-b-0  `}
+    > 
+         <div>
+         <div
+          className={`flex justify-between 
+      
+        ${onlyHeight < 440 ? "text-3xl " : " "}
+        ${
+          onlyHeight >= 440 && onlyHeight < 768
+            ? "text-3xl sm:text-4xl lg:text-[46px]"
+            : " "
+        }
+        ${
+          onlyHeight >= 768
+            ? "text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[54px] "
+            : " "
+        }
+
+        font-primaryMedium  `}
+        >
           <h1>Compliance Covered</h1> <p>03</p>
         </div>
-        <div className=" border sm:border-2 border-primary-brown mt-[22px] mb-[20px] lg:mt-[34px] xxxl:mt-[45px] xxxl:mb-[55px]"></div>
+        <div
+          className={`
+       ${
+         onlyHeight < 440
+           ? "mt-[10px] mb-[15px] "
+           : onlyHeight >= 440 && onlyHeight < 540
+           ? "mt-[20px] mb-[30px] "
+           : onlyHeight >= 540 && onlyHeight < 640
+           ? "mt-[30px] mb-[30px] "
+           : onlyHeight >= 640
+           ? "mt-[30px] mb-[50px]  "
+           : " "
+       }
+      
+      border sm:border-2 border-primary-brown  `}
+        ></div>
 
-        <div className="px-0 xxs:px-[40px] md:px-[30px] xs:px-[45px] sm:px-[65px] xxxl:pt-28 py-10 md:pt-8 md:pb-0 lg:py-14">
+
+        <div className=" xxs:px-[40px] md:px-[30px] xs:px-[45px] sm:px-[50px]   ">
           <Slider {...settings} ref={sliderRef}>
             <CarouselSectionCard
               text={"Employee Provident Fund (EPF)"}
               subText={"Managing EPF contributions and regulations"}
               Svg={<EpfSvg />}
               boxStyleColor={"bg-custom-red"}
-              starColor1={"fill-custom-red"}
+              starColor1={"fill-custom-violet"}
               starColor2={"fill-custom-yellow"}
-              starColor3={"fill-custom-red"}
+              starColor3={"fill-custom-blue"}
+               starColor4={"fill-custom-dark-green"}
             />
             <CarouselSectionCard
               text={"Employee State Insurance (ESI)"}
@@ -103,6 +124,7 @@ export default function CarouselSection3() {
               starColor1={"fill-custom-yellow"}
               starColor2={"fill-custom-green"}
               starColor3={"fill-custom-red"}
+               starColor4={"fill-custom-blue"}
             />
             <CarouselSectionCard
               text={"Professional Tax"}
@@ -111,16 +133,18 @@ export default function CarouselSection3() {
               boxStyleColor={"bg-custom-green"}
               starColor1={"fill-custom-blue"}
               starColor2={"fill-custom-yellow"}
-              starColor3={"fill-custom-yellow"}
+              starColor3={"fill-custom-red"}
+               starColor4={"fill-custom-dark-green"}
             />
             <CarouselSectionCard
               text={"Goods and Services Tax (GST)"}
               subText={"Maintaining compliance with GST regulations"}
               Svg={<GstSvg />}
               boxStyleColor={"bg-custom-yellow"}
-              starColor1={"fill-custom-yellow"}
-              starColor2={"fill-custom-green"}
-              starColor3={"fill-custom-yellow"}
+              starColor1={"fill-custom-orange"}
+              starColor2={"fill-custom-dark-green"}
+              starColor3={"fill-custom-violet"}
+               starColor4={"fill-custom-red"}
             />
             <CarouselSectionCard
               text={"Tax Deducted at Source (TDS)"}
@@ -128,8 +152,9 @@ export default function CarouselSection3() {
               Svg={<TdsSvg />}
               boxStyleColor={"bg-custom-blue"}
               starColor1={"fill-custom-yellow"}
-              starColor2={"fill-custom-green"}
-              starColor3={"fill-custom-yellow"}
+              starColor2={"fill-custom-orange"}
+              starColor3={"fill-custom-green"}
+               starColor4={"fill-custom-rose"}
             />
             <CarouselSectionCard
               text={"Payroll Compliance"}
@@ -138,7 +163,8 @@ export default function CarouselSection3() {
               boxStyleColor={"bg-custom-red"}
               starColor1={"fill-custom-blue"}
               starColor2={"fill-custom-green"}
-              starColor3={"fill-custom-blue"}
+              starColor3={"fill-custom-yellow"}
+               starColor4={"fill-custom-violet"}
             />
             <CarouselSectionCard
               text={"Sexual Harassment Prevention"}
@@ -147,9 +173,10 @@ export default function CarouselSection3() {
               }
               Svg={<DangerSvg />}
               boxStyleColor={"bg-custom-violet"}
-              starColor1={"fill-custom-blue"}
+              starColor1={"fill-custom-orange"}
               starColor2={"fill-custom-green"}
-              starColor3={"fill-custom-blue"}
+              starColor3={"fill-custom-rose"}
+               starColor4={"fill-custom-yellow"}
             />
             <CarouselSectionCard
               text={"Contract Labour Regulations"}
@@ -157,22 +184,31 @@ export default function CarouselSection3() {
               Svg={<LabourSvg />}
               boxStyleColor={"bg-custom-green"}
               starColor1={"fill-custom-yellow"}
-              starColor2={"fill-custom-green"}
+              starColor2={"fill-custom-orange"}
               starColor3={"fill-custom-blue"}
+               starColor4={"fill-custom-red"}
             />
             <CarouselSectionCard
               text={"Equal Remuneration"}
               subText={"Ensuring fair pay practices and equal compensation"}
               Svg={<MoneySvg />}
               boxStyleColor={"bg-custom-yellow"}
-              starColor1={"fill-custom-yellow"}
-              starColor2={"fill-custom-green"}
-              starColor3={"fill-custom-yellow"}
+              starColor1={"fill-custom-orange"}
+              starColor2={"fill-custom-dark-green"}
+              starColor3={"fill-custom-rose"}
+               starColor4={"fill-custom-blue"}
             />
           </Slider>
         </div>
 
-        <Slider {...settings1} className="py-4 md:py-2 xxxl:pt-20">
+        <Marquee  className={`
+       ${onlyHeight < 440 ? "py-2 " : " "}
+       ${onlyHeight >= 440 && onlyHeight < 540 ? "py-3 " : " "}
+        ${onlyHeight >= 540 && onlyHeight < 640 ? "py-6 " : " "}
+        ${onlyHeight >= 640 && onlyHeight < 768 ? "py-9 " : " "}
+        ${onlyHeight >= 768 ? "py-16  " : " "}
+
+         `}>
           {/* <div
             onClick={() => {
               sliderRef.current.slickGoTo(0);
@@ -279,8 +315,9 @@ export default function CarouselSection3() {
               color={5}
             />
           </div>
-        </Slider>
+        </Marquee>
       </div>
+         </div>
       <div className="promise_bg_image">
         <div className="carousel_zigzag h-20 overflow-hidden"> </div>
       </div>

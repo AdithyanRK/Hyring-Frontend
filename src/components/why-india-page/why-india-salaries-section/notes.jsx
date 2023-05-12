@@ -14,7 +14,7 @@ export default function NotesSalraies() {
       >
         <div className="px-4 lg:px-0  ">
           <div className="flex flex-col md:flex-row  items-center ">
-            <div className="flex w-full md:w-fit   p-2  md:px-5 lg:px-10">
+            <div className="hidden w-full md:flex  md:w-fit   p-2  md:px-5 lg:px-10">
               <BoxTheme
                 top={"2px"}
                 left={"2px"}

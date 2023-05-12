@@ -21,7 +21,7 @@ import PlayVideoIcon from "@/assets/icons/landing-page/play_video";
 import HomeListComponent from "./home-list-items-component/home-list-items-component";
 import HomeBannerModal from "./home-modal-section";
 import Arrow from "@/assets/icons/landing-page/arrow";
-
+import Marquee from "react-fast-marquee";
 const HomeBannerSection = ({handleOpen}) => {
   const [switchValue, SetSwitchValue] = useState(true);
 
@@ -46,7 +46,7 @@ const HomeBannerSection = ({handleOpen}) => {
 
   const RunnerList = ({ text, icon }) => {
     return (
-      <div className=" flex w-fit items-center text-white gap-2 font-primary font-lg font-normal ">
+      <div className="mx-3 flex w-fit items-center text-white gap-2 font-primary font-lg font-normal ">
         {icon} {text}
       </div>
     );
@@ -107,7 +107,9 @@ const HomeBannerSection = ({handleOpen}) => {
 
      <div className="w-screen     " >
         <div className="h-[71px] bg-primary-brown w-[99.2vw] mx-auto -rotate-3 border border-primary-brown ">
-          <Slider {...settings1} className="py-5 ">
+          
+          {/* <Slider {...settings1} className="py-5 "> */}
+          <Marquee className="py-5 "> 
             {[
               { text: "System Designer", icon: <Union /> },
               { text: "Full-Stack Engineer", icon: <Diamond /> },
@@ -137,8 +139,8 @@ const HomeBannerSection = ({handleOpen}) => {
               { text: "Social Media Marketer", icon: <Star6 /> },
             ].map((data, index) => (
               <RunnerList text={data.text} icon={data.icon} key={index} />
-            ))}
-          </Slider>
+            ))}</Marquee>
+          {/* </Slider> */}
         </div>
       </div>
     </div>

@@ -22,6 +22,7 @@ import { useRouter } from "next/router";
 import Loader from "../../public/Loader.json";
 import Lottie from "react-lottie";
 import HomeBannerModal from "@/components/landing-page/home-banner-section/home-modal-section";
+import CarouselSectionMain from "@/components/landing-page/carousel-section/carousel-section-main";
 export default function Home() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -148,17 +149,8 @@ export default function Home() {
             <motion.div className="relative overflow-hidden">
               <TalentSection />
             </motion.div>
-            <div className="relative min-h-[90vh] mt-20 max-w-[1800px] mx-auto my-0">
-              <div className="sticky  top-0 h-full">
-                <CarouselSection1 />
-              </div>
-              <div className="sticky top-8 h-full">
-                <CarouselSection2 />
-              </div>
-              <div className="sticky top-16 z-20 h-full">
-                <CarouselSection3 />
-              </div>
-              <div className="sticky top-2 h-[20vh]"></div>
+            <div>
+              <CarouselSectionMain/>
             </div>
             <div>
               <PricingSection />

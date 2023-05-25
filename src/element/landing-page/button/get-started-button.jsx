@@ -32,7 +32,7 @@ export default function GetStartedButton({ className, boxColor, hover, role }) {
     >
       <div className="flex items-center gap-1  ">
         <div className="  font-primaryMedium text-base sm:text-lg  lg:text-xl">
-          Get Started
+          Request Invite
         </div>
         <motion.div
           animate={{

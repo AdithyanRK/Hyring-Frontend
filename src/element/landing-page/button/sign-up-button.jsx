@@ -19,7 +19,7 @@ export default function SignUpButton() {
       width={"w-full"}
     >
       <div className="flex items-center gap-1   ">
-        <div className="  font-primaryMedium text-lg  md:text-xl">Sign Up</div>
+        <div className="  font-primaryMedium text-lg  md:text-xl">Get Invite</div>
         <motion.div
           animate={{
             translateX: [0, 9, 0],

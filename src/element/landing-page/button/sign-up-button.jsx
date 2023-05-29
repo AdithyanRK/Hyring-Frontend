@@ -10,16 +10,16 @@ export default function SignUpButton() {
       left="5px"
       className={"lg:h-[57px] w-full lg:w-[160px] cursor-pointer"}
       boxStyle={
-        "w-full md:w-[140px]  lg:w-[155px] h-[42px] lg:h-[52px] border bg-[#FFB65E] rounded-[4px] border-primary-brown animate-glow"
+        "w-full md:w-[180px]  lg:w-[180px] h-[42px] lg:h-[52px] border bg-[#FFB65E] rounded-[4px] border-primary-brown animate-glow"
       }
       bgBoxStyle={
-        "w-full md:w-[140px] lg:w-[155px] h-[42px] lg:h-[52px] border-2 rounded-[4px] bg-  custom-bg border-primary-brown "
+        "w-full md:w-[180px] lg:w-[180px] h-[42px] lg:h-[52px] border-2 rounded-[4px] bg-  custom-bg border-primary-brown "
       }
       isButton={true}
       width={"w-full"}
     >
       <div className="flex items-center gap-1   ">
-        <div className="  font-primaryMedium text-lg  md:text-xl">Get Invite</div>
+        <div className="  font-primaryMedium text-lg  md:text-lg">Request Invite</div>
         <motion.div
           animate={{
             translateX: [0, 9, 0],
